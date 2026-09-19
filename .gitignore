@@ -1,0 +1,25 @@
+# Archivos auxiliares de LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Salida compilada del documento principal
+/main.pdf
+
+# Archivos temporales del sistema y del editor
+.DS_Store
+Thumbs.db
+*~
