@@ -1,0 +1,541 @@
+\subsection{Esquemas regulatorios}
+
+Esta subsección especifica los cinco diseños regulatorios considerados en el modelo. El esquema \(A_0\) constituye el punto de referencia institucional, mientras que \(A\), \(A'\), \(A''\) y \(B\) introducen modificaciones sucesivas en cuatro dimensiones: la composición del ICG, el universo utilizado para verificar el avance financiero, la regla de activación de las consecuencias pecuniarias y la forma de verificación aplicable a las intervenciones de \(R^{F}\). La tecnología de ejecución, la producción de resultados, el tratamiento del ahorro y las bases definidas en la Subsección~4.1 son comunes a todos los diseños.
+
+La transición \(A_0\to A\) modifica simultáneamente varias dimensiones y se utiliza como \textit{benchmark} institucional. En cambio, la secuencia \(A\to A'\to A''\to B\) introduce cambios más acotados: \(A\to A'\) elimina el umbral agregado de activación; \(A'\to A''\) retira el avance financiero focalizado del ICG y sustituye su verificación por indicadores físicos o funcionales; y \(A''\to B\) concentra el ICG en los resultados del servicio. De acuerdo con la estructura de la Subsección~4.1, \(ICG^m\), \(\chi^m\) y \(M^m\) se evalúan para los niveles de cumplimiento correspondientes a cada esquema.
+
+\subsubsection{Definición de los esquemas}
+
+De acuerdo con la regla de promedio aritmético adoptada para el ICG, cada indicador individual incluido en un esquema recibe el mismo peso. Como \(C_S\) y \(C_G\) son, respectivamente, los promedios de los indicadores de \(J^{S}\) y \(J^{G}\), sus ponderaciones externas dependen del número de indicadores de cada grupo que permanecen dentro del índice. Sea \(N^m\) el número total de indicadores individuales incorporados en el ICG del esquema \(m\). Dado que \(n_S\equiv|J^{S}|\) y \(n_G\equiv|J^{G}|\), definidos en la Subsección~4.1, se tiene
+
+\begin{equation}
+\label{eq:numero_componentes_icg}
+\begin{aligned}
+N^{A_0}
+&=
+n_S+n_G+2,
+&
+N^{A}
+=
+N^{A'}
+&=
+n_S+n_G+1,
+\\
+N^{A''}
+&=
+n_S+n_G,
+&
+N^{B}
+&=
+n_S.
+\end{aligned}
+\end{equation}
+
+Los dos componentes adicionales de \(A_0\) son el avance financiero general \(f_R\) y la relación de trabajo \(c_{RT}\); \(A\) y \(A'\) mantienen únicamente el avance financiero focalizado \(f_F\) además de los indicadores de \(J^{S}\) y \(J^{G}\). En \(A''\) permanecen solo estos dos grupos de indicadores y, en \(B\), únicamente los resultados del servicio.
+
+La representación agregada es equivalente al promedio de los indicadores individuales. Para \(H\in\{S,G\}\),
+
+\begin{equation}
+\label{eq:equivalencia_promedio_bloques}
+\frac{1}{N^m}
+\sum_{j\in J^{H}}c_j
+=
+\frac{n_H}{N^m}C_H.
+\end{equation}
+
+Por tanto, las medidas agregadas de desempeño quedan definidas por
+
+\begin{subequations}
+\label{eq:icg_esquemas}
+\begin{align}
+ICG^{A_0}
+&=
+\frac{n_S}{N^{A_0}}C_S
++
+\frac{n_G}{N^{A_0}}C_G
++
+\frac{1}{N^{A_0}}f_R
++
+\frac{1}{N^{A_0}}c_{RT},
+\label{eq:icg_a0_esquemas}
+\\
+ICG^{A}
+&=
+\frac{n_S}{N^{A}}C_S
++
+\frac{n_G}{N^{A}}C_G
++
+\frac{1}{N^{A}}f_F,
+\label{eq:icg_a}
+\\
+ICG^{A'}
+&=
+ICG^{A},
+\label{eq:icg_ap}
+\\
+ICG^{A''}
+&=
+\frac{n_S}{N^{A''}}C_S
++
+\frac{n_G}{N^{A''}}C_G,
+\label{eq:icg_app}
+\\
+ICG^{B}
+&=
+C_S.
+\label{eq:icg_b}
+\end{align}
+\end{subequations}
+
+Para el canal reputacional definido en la Subsección~4.1, se distingue esta ponderación regulatoria de la composición del desempeño percibido \(P^m\). En las comparaciones del modelo se supone que los bloques que integran la señal pública corresponden a los componentes de desempeño incorporados en cada diseño, de modo que
+
+\begin{equation}
+\label{eq:bloques_reputacionales_esquemas}
+\begin{aligned}
+\mathcal H^{A_0}
+&=
+\{S,G,F,RT\},
+&
+\mathcal H^{A}
+=
+\mathcal H^{A'}
+&=
+\{S,G,F\},
+\\
+\mathcal H^{A''}
+&=
+\{S,G\},
+&
+\mathcal H^{B}
+&=
+\{S\}.
+\end{aligned}
+\end{equation}
+
+Las ponderaciones reputacionales \(\alpha_H^m\) se obtienen, por tanto, a partir de las saliencias \(s_H\) definidas en la Subsección~4.1 y no de los cocientes \(n_H/N^m\). Estos últimos continúan siendo exclusivamente las ponderaciones regulatorias del ICG.
+
+La reasignación de ponderaciones es, por tanto, una consecuencia mecánica de la salida de indicadores del ICG. En particular,
+
+\begin{equation}
+\label{eq:reasignacion_pesos_icg}
+\frac{n_S}{N^{A}}
+>
+\frac{n_S}{N^{A_0}},
+\qquad
+\frac{n_S}{N^{A''}}
+>
+\frac{n_S}{N^{A'}},
+\qquad
+\frac{n_G}{N^{A''}}
+>
+\frac{n_G}{N^{A'}},
+\end{equation}
+
+siempre que \(n_S>0\) y \(n_G>0\). Así, \(A_0\to A\) incrementa el peso regulatorio relativo de los resultados del servicio dentro del ICG; \(A'\to A''\) incrementa simultáneamente los pesos regulatorios relativos de \(C_S\) y \(C_G\); y \(A''\to B\) concentra el ICG en \(C_S\). La estática comparada de la Subsección~4.3 distinguirá estas ponderaciones regulatorias de las ponderaciones reputacionales \(\alpha_H^m\).
+
+La verificación financiera se aplica únicamente en \(A_0\), \(A\) y \(A'\). De acuerdo con la notación de la Subsección~4.1,
+
+\begin{equation}
+\label{eq:verificacion_financiera_esquemas}
+\begin{aligned}
+f^{A_0}&=f_R,
+&
+\mathcal U_F^{A_0}&=R,
+\\
+f^{A}=f^{A'}&=f_F,
+&
+\mathcal U_F^{A}=\mathcal U_F^{A'}&=R^{F}.
+\end{aligned}
+\end{equation}
+
+En \(A''\) y \(B\), las intervenciones de \(R^{F}\) se verifican mediante indicadores específicos de \(J^{F}\) sobre su cumplimiento físico o funcional. Para identificar compactamente la presencia de una base financiera se mantiene
+
+\begin{equation}
+\label{eq:indicador_base_financiera}
+\eta_F^m
+=
+\begin{cases}
+1,
+&
+m\in\{A_0,A,A'\},
+\\[4pt]
+0,
+&
+m\in\{A'',B\}.
+\end{cases}
+\end{equation}
+
+Las reglas de activación son
+
+\begin{subequations}
+\label{eq:activacion_esquemas}
+\begin{align}
+\chi^{A_0}
+&=
+\mathbf{1}\{ICG^{A_0}<\tau\},
+\label{eq:chi_a0}
+\\
+\chi^{A}
+&=
+\mathbf{1}\{ICG^{A}<\tau\},
+\label{eq:chi_a}
+\\
+\chi^{A'}
+&=
+\chi^{A''}
+=
+\chi^{B}
+=
+1.
+\label{eq:chi_sin_umbral}
+\end{align}
+\end{subequations}
+
+En particular, \(A_0\) y \(A\) condicionan la consecuencia pecuniaria al umbral agregado del ICG, mientras que desde \(A'\) los incumplimientos configurados dejan de depender de esa condición adicional.
+
+Combinando las bases definidas en la Subsección~4.1 con las reglas anteriores, las multas por esquema son
+
+\begin{subequations}
+\label{eq:multas_esquemas}
+\begin{align}
+M^{A_0}
+&=
+\chi^{A_0}\,
+\mathrm{WACC}
+\left(
+B_S+B_G+B_{RT}+B_{\mathrm{fin}}^{A_0}
+\right),
+\label{eq:multa_base_a0}
+\\
+M^{A}
+&=
+\chi^{A}\,
+\mathrm{WACC}
+\left(
+B_S+B_G+B_{\mathrm{fin}}^{A}
+\right),
+\label{eq:multa_a}
+\\
+M^{A'}
+&=
+\mathrm{WACC}
+\left(
+B_S+B_G+B_{\mathrm{fin}}^{A'}
+\right),
+\label{eq:multa_ap}
+\\
+M^{A''}
+&=
+\mathrm{WACC}
+\left(
+B_S+B_G+B_F
+\right),
+\label{eq:multa_app}
+\\
+M^{B}
+&=
+\mathrm{WACC}
+\left(
+B_S+B_G+B_F
+\right).
+\label{eq:multa_b}
+\end{align}
+\end{subequations}
+
+En \(A_0\), una misma intervención de \(R^{S}\) o \(R^{G}\) puede incidir en la base física correspondiente a su propia meta, en la relación de trabajo y, además, en el avance financiero general. La transición \(A_0\to A\) elimina estas dos últimas fuentes de superposición para dichas intervenciones. Por su parte, la salida de \(f_F\) en \(A''\) no elimina la exigibilidad de \(R^{F}\), sino que sustituye la referencia financiera por los indicadores específicos de \(J^{F}\). Del mismo modo, la salida de \(C_G\) en \(B\) lo retira del ICG y, bajo la composición reputacional de \eqref{eq:bloques_reputacionales_esquemas}, concentra \(P^B\) en \(C_S\), pero no modifica la exigibilidad de las metas de \(J^{G}\).
+
+\subsubsection{Exposición sancionadora por esquema}
+
+Las diferencias anteriores se trasladan a la exposición sancionadora \(\mu_r^m\) definida en \eqref{eq:exposicion_sancionadora_r}. Esta exposición no constituye una multa adicional: representa cuánto aumenta la multa total cuando la intervención \(r\) pasa del estado de culminación al de no culminación, manteniendo constantes las demás condiciones relevantes.
+
+Considérese una región regulatoria en la que la configuración de las demás obligaciones y la regla de activación \(\chi^m\) permanecen constantes entre ambos estados. Sea \(\delta_r^m\geq0\) el número de bases físicas activas en las que la no culminación de \(r\) incrementa la base sancionadora en \(\bar I_r\). Su valor es local y depende del esquema, de las obligaciones incumplidas y de las bases activas en el estado considerado.
+
+Dentro de esa región, la exposición puede descomponerse como
+
+\begin{subequations}
+\label{eq:descomposicion_exposicion_esquemas}
+\begin{align}
+\mu_{r,\mathrm{fis}}^m
+&=
+\chi^m\,
+\mathrm{WACC}\,
+\bar I_r\,
+\delta_r^m,
+\label{eq:exposicion_fisica_esquemas}
+\\
+\mu_{r,\mathrm{fin}}^m
+&=
+\eta_F^m\,
+\chi^m\,
+\mathrm{WACC}
+\left(
+B_{\mathrm{fin},N}^m
+-
+B_{\mathrm{fin},C}^m
+\right),
+\label{eq:exposicion_financiera_esquemas}
+\\
+\mu_r^m
+&=
+\mu_{r,\mathrm{fis}}^m
++
+\mu_{r,\mathrm{fin}}^m.
+\label{eq:exposicion_total_esquemas}
+\end{align}
+\end{subequations}
+
+El componente financiero es nulo cuando \(\eta_F^m=0\) o cuando \(r\notin\mathcal U_F^m\). La multiplicidad \(\delta_r^m\) recoge, en cambio, la posible superposición de bases físicas. En \(A_0\), por ejemplo, una intervención de \(R^{S}\) o \(R^{G}\) puede participar simultáneamente en la base de su propia meta y en \(B_{RT}\); desde \(A\), esta última fuente de superposición desaparece. Para \(R^{F}\), \(B_F\) en \(A''\) y \(B\) sustituye el mecanismo financiero utilizado en \(A\) y \(A'\).
+
+La Tabla~\ref{tab:multiplicidad_bases_fisicas} muestra la multiplicidad física máxima que puede alcanzar una inversión en cada esquema. Estos valores son cotas superiores: el valor efectivo de \(\delta_r^m\) es local y depende de que las obligaciones correspondientes se encuentren configuradas como incumplidas en la región considerada.
+
+\begin{table}[t]
+\centering
+\caption{Multiplicidad potencial de bases físicas por esquema}
+\label{tab:multiplicidad_bases_fisicas}
+\scriptsize
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{3pt}
+
+\begin{tabularx}{\columnwidth}{
+@{}
+>{\centering\arraybackslash}p{0.13\columnwidth}
+>{\centering\arraybackslash}p{0.24\columnwidth}
+>{\centering\arraybackslash}p{0.20\columnwidth}
+>{\raggedright\arraybackslash}X
+@{}
+}
+\hline
+\textbf{Esquema}
+&
+\textbf{\(r\in R^{S}\cup R^{G}\)}
+&
+\textbf{\(r\in R^{F}\)}
+&
+\textbf{Bases físicas potenciales}
+\\
+\hline
+
+\(A_0\)
+&
+\(\delta_r^{A_0}\leq2\)
+&
+\(\delta_r^{A_0}\leq1\)
+&
+Meta propia y \(RT\) para \(R^{S}\cup R^{G}\); \(RT\) para \(R^{F}\).
+\\[3pt]
+
+\(A,\,A'\)
+&
+\(\delta_r^m\leq1\)
+&
+\(\delta_r^m=0\)
+&
+Meta propia para \(R^{S}\cup R^{G}\); \(R^{F}\) se verifica financieramente.
+\\[3pt]
+
+\(A'',\,B\)
+&
+\(\delta_r^m\leq1\)
+&
+\(\delta_r^m\leq1\)
+&
+Meta propia para \(R^{S}\cup R^{G}\) e indicador específico de \(J^{F}\) para \(R^{F}\).
+\\
+
+\hline
+\end{tabularx}
+
+\vspace{1mm}
+
+\begin{minipage}{0.96\columnwidth}
+\raggedright
+\footnotesize
+\textit{Nota:} Las cotas consideran únicamente bases físicas. La exposición total puede incluir además el componente financiero de \eqref{eq:exposicion_financiera_esquemas}. Cuando una obligación no se encuentra configurada como incumplida, su contribución a \(\delta_r^m\) es nula.
+\end{minipage}
+
+\end{table}
+
+La descomposición muestra que los esquemas modifican la exposición sancionadora mediante tres canales: la multiplicidad de bases físicas \(\delta_r^m\), la presencia de una base financiera \(\eta_F^m\) y la regla de activación \(\chi^m\). Por ello, no se impone un ordenamiento general de \(\mu_r^m\): la comparación depende de la intervención, de las obligaciones configuradas y del estado regulatorio considerado.
+
+En particular, \(A_0\to A\) reduce las fuentes potenciales de superposición para \(R^{S}\) y \(R^{G}\), al retirar estas intervenciones del avance financiero general y eliminar la relación de trabajo de la estructura sancionadora. Ello puede reducir \(\mu_r^m\), pero no permite inferir por sí solo un ordenamiento del esfuerzo, pues simultáneamente cambian la composición y las ponderaciones regulatorias del ICG, así como la composición y legibilidad de la señal reputacional \(P^m\), además de otros canales continuos de incentivo. Esta comparación se desarrolla en la Subsección~4.3.
+
+La descomposición de \eqref{eq:descomposicion_exposicion_esquemas} requiere que \(\chi^m\) permanezca constante entre los estados de culminación y no culminación. En \(A_0\) y \(A\), la culminación de una intervención puede modificar el ICG y hacer que se cruce el umbral \(\tau\). Cuando ello ocurre, \(M_{r,N}^m-M_{r,C}^m\) incorpora además un cambio de régimen de activación y no puede representarse únicamente mediante las contribuciones física y financiera anteriores. Este efecto pertenece al margen discreto de activación definido en la Subsección~4.1 y se considera separadamente en las comparaciones de la Subsección~4.3.
+
+\subsubsection{Resumen de los esquemas}
+
+La Tabla~\ref{tab:resumen_esquemas_regulatorios} resume las diferencias institucionales que sustentan la estática comparada posterior. La columna \(N^m\) muestra el número de indicadores individuales que integran el ICG y determina únicamente sus ponderaciones regulatorias de los bloques agregados mediante \eqref{eq:equivalencia_promedio_bloques}; las ponderaciones reputacionales se rigen separadamente por \eqref{eq:ponderaciones_reputacionales}.
+
+\begin{table*}[t]
+\centering
+\caption{Composición del ICG y consecuencias pecuniarias por esquema}
+\label{tab:resumen_esquemas_regulatorios}
+\scriptsize
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{2.0pt}
+
+\begin{tabularx}{\textwidth}{
+@{}
+>{\centering\arraybackslash}p{0.045\textwidth}
+>{\centering\arraybackslash}p{0.105\textwidth}
+>{\centering\arraybackslash}p{0.225\textwidth}
+>{\centering\arraybackslash}p{0.105\textwidth}
+>{\centering\arraybackslash}p{0.145\textwidth}
+>{\centering\arraybackslash}p{0.12\textwidth}
+>{\centering\arraybackslash}X
+@{}
+}
+\hline
+
+\textbf{Esquema}
+&
+\textbf{\(N^m\)}
+&
+\textbf{\(ICG^m\)}
+&
+\textbf{Verificación financiera}
+&
+\textbf{Obligaciones con consecuencia}
+&
+\textbf{Activación}
+&
+\textbf{Consecuencia pecuniaria \(M^m\)}
+\\
+
+\hline
+
+\(A_0\)
+&
+\(\displaystyle n_S+n_G+2\)
+&
+\(\displaystyle
+\frac{n_S}{N^{A_0}}C_S
++
+\frac{n_G}{N^{A_0}}C_G
++
+\frac{f_R+c_{RT}}{N^{A_0}}
+\)
+&
+\(R\)
+&
+\(J^{S},\,J^{G},\,RT,\,f_R\)
+&
+\(\displaystyle
+\mathbf{1}\{ICG^{A_0}<\tau\}
+\)
+&
+\(\displaystyle
+\chi^{A_0}\mathrm{WACC}
+\left(
+B_S+B_G+B_{RT}+B_{\mathrm{fin}}^{A_0}
+\right)
+\)
+\\[8pt]
+
+\(A\)
+&
+\(\displaystyle n_S+n_G+1\)
+&
+\(\displaystyle
+\frac{n_S}{N^{A}}C_S
++
+\frac{n_G}{N^{A}}C_G
++
+\frac{f_F}{N^{A}}
+\)
+&
+\(R^{F}\)
+&
+\(J^{S},\,J^{G},\,f_F\)
+&
+\(\displaystyle
+\mathbf{1}\{ICG^{A}<\tau\}
+\)
+&
+\(\displaystyle
+\chi^{A}\mathrm{WACC}
+\left(
+B_S+B_G+B_{\mathrm{fin}}^{A}
+\right)
+\)
+\\[8pt]
+
+\(A'\)
+&
+\(\displaystyle n_S+n_G+1\)
+&
+\(\displaystyle
+ICG^{A}
+\)
+&
+\(R^{F}\)
+&
+\(J^{S},\,J^{G},\,f_F\)
+&
+\(1\)
+&
+\(\displaystyle
+\mathrm{WACC}
+\left(
+B_S+B_G+B_{\mathrm{fin}}^{A'}
+\right)
+\)
+\\[8pt]
+
+\(A''\)
+&
+\(\displaystyle n_S+n_G\)
+&
+\(\displaystyle
+\frac{n_S}{N^{A''}}C_S
++
+\frac{n_G}{N^{A''}}C_G
+\)
+&
+---
+&
+\(J^{S},\,J^{G},\,J^{F}\)
+&
+\(1\)
+&
+\(\displaystyle
+\mathrm{WACC}
+\left(
+B_S+B_G+B_F
+\right)
+\)
+\\[8pt]
+
+\(B\)
+&
+\(\displaystyle n_S\)
+&
+\(\displaystyle
+C_S
+\)
+&
+---
+&
+\(J^{S},\,J^{G},\,J^{F}\)
+&
+\(1\)
+&
+\(\displaystyle
+\mathrm{WACC}
+\left(
+B_S+B_G+B_F
+\right)
+\)
+\\
+
+\hline
+\end{tabularx}
+
+\vspace{1mm}
+
+\begin{minipage}{0.98\textwidth}
+\raggedright
+\footnotesize
+\textit{Nota:} \(N^m\) corresponde al número de indicadores individuales incluidos en el ICG de cada esquema. Los coeficientes de \(C_S\) y \(C_G\) resultan de agregar, respectivamente, \(n_S\) y \(n_G\) indicadores con ponderación individual \(1/N^m\); estas ponderaciones son regulatorias y no deben confundirse con las ponderaciones reputacionales \(\alpha_H^m\). En \(A''\) y \(B\), la ausencia de verificación financiera indica que \(R^{F}\) se evalúa mediante indicadores específicos de \(J^{F}\) sobre su cumplimiento físico o funcional. La transición \(A_0\to A\) modifica simultáneamente la composición del ICG, el universo financiero y la estructura de consecuencias; las transiciones posteriores aíslan sucesivamente la activación por umbral, la verificación financiera y la concentración del ICG en los resultados del servicio.
+\end{minipage}
+
+\end{table*}

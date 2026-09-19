@@ -1,0 +1,116 @@
+\begin{figure}[t]
+\centering
+\caption{Canales de impacto del esfuerzo gerencial sobre el ICG mixto}
+\label{fig:canales_icg_mixto}
+\vspace{0.15cm}
+
+\resizebox{0.95\columnwidth}{!}{%
+\begin{tikzpicture}[
+    x=1cm,
+    y=1cm,
+    every node/.style={font=\small},
+    nodoVariable/.style={
+        inner sep=1.2pt
+    },
+    canal/.style={
+        font=\footnotesize,
+        align=right,
+        anchor=east,
+        text width=2.0cm
+    },
+    indice/.style={
+        draw,
+        rounded corners=2pt,
+        inner xsep=6pt,
+        inner ysep=4pt
+    },
+    flujo/.style={
+        -{Latex[length=1.6mm]},
+        semithick
+    },
+    flujoef/.style={
+        -{Latex[length=1.6mm]},
+        semithick,
+        dashed
+    }
+]
+
+% Rótulos de canales
+\node[canal] (labO) at (1.9,0.78)
+{\textbf{Canal financiero}\\[-1pt]
+\(r\in R^{O}\)};
+
+\node[canal] (labQ) at (1.9,-0.78)
+{\textbf{Canal de resultados}\\[-1pt]
+\(r\in R_j\subseteq R^{Q}\)};
+
+% Canal financiero
+\node[nodoVariable] (eO)  at (2.55,0.78) {$e_r$};
+\node[nodoVariable] (IrO) at (3.35,0.78) {$I_r$};
+\node[nodoVariable] (Cr)  at (4.15,0.78) {$C_r$};
+\node[nodoVariable] (fr)  at (4.95,0.78) {$f_r$};
+\node[nodoVariable] (fO)  at (5.75,0.78) {$f_O$};
+
+% Esfuerzo de eficiencia
+\node[nodoVariable] (gO) at (4.15,1.48) {$g_r$};
+
+% Canal de resultados
+\node[nodoVariable] (eQ)  at (2.55,-0.78) {$e_r$};
+\node[nodoVariable] (IrQ) at (3.35,-0.78) {$I_r$};
+\node[nodoVariable] (qj)  at (4.15,-0.78) {$q_j$};
+\node[nodoVariable] (cj)  at (4.95,-0.78) {$c_j$};
+\node[nodoVariable] (CQ)  at (5.75,-0.78) {$C_Q$};
+
+% Índice mixto
+\node[indice] (ICG) at (7.15,0) {$ICG^A$};
+
+% Flujos del canal financiero
+\draw[flujo] (eO) -- (IrO);
+\draw[flujo] (IrO) -- (Cr);
+\draw[flujo] (Cr) -- (fr);
+\draw[flujo] (fr) -- (fO);
+
+% Efecto de g_r sobre C_r
+\draw[flujoef]
+    (gO.south) --
+    node[
+        right=1pt,
+        font=\footnotesize,
+        fill=white,
+        inner sep=1pt
+    ] {\(-\)}
+    (Cr.north);
+
+% Flujos del canal de resultados
+\draw[flujo] (eQ) -- (IrQ);
+\draw[flujo] (IrQ) -- (qj);
+\draw[flujo] (qj) -- (cj);
+\draw[flujo] (cj) -- (CQ);
+
+% Agregación final
+\draw[flujo]
+    (fO.east) --
+    node[
+        pos=0.32,
+        above=2pt,
+        font=\footnotesize,
+        fill=white,
+        inner sep=1pt
+    ] {\(w_A\)}
+    (ICG.north west);
+
+\draw[flujo]
+    (CQ.east) --
+    node[
+        pos=0.48,
+        below=2pt,
+        xshift=3pt,
+        font=\footnotesize,
+        fill=white,
+        inner sep=1pt
+    ] {\(1-w_A\)}
+    (ICG.south west);
+
+\end{tikzpicture}%
+}
+\end{figure}

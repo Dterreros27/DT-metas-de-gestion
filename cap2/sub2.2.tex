@@ -1,0 +1,98 @@
+\subsection{Medición, agregación y fiscalización del cumplimiento} 
+ 
+En este marco, el cumplimiento de cada meta de gestión se mide a partir de la comparación entre el valor meta aprobado y el valor obtenido para el indicador correspondiente. El valor meta representa el nivel aprobado por la Sunass que la empresa debe alcanzar al cierre de cada año regulatorio, mientras que el valor obtenido refleja el nivel efectivamente alcanzado. A partir de ambos se calcula el Índice de Cumplimiento Individual (ICI), que mide el grado de cumplimiento de cada meta como la razón entre el valor obtenido y el valor meta, multiplicada por cien: 
+ 
+\begin{equation} 
+ICI_{m,t} 
+= 
+\frac{VO_{m,t}}{VM_{m,t}} 
+\times 100, 
+\end{equation} 
+ 
+donde \(VO_{m,t}\) representa el valor obtenido de la meta \(m\) en el año regulatorio \(t\), y \(VM_{m,t}\) el valor meta correspondiente.\footnote{La forma de cálculo puede variar según la naturaleza del indicador. Cuando un mejor desempeño implica un menor valor, como en la relación de trabajo, la razón se invierte: \(ICI_{m,t}=(VM_{m,t}/VO_{m,t})\times100\). Por ejemplo, si el valor meta es 70 y el valor obtenido es 60, el ICI previo a la aplicación del tope asciende a 116,7\%.} En las metas acumulativas, como el reemplazo de medidores, la recuperación de conexiones inactivas, el avance físico o financiero del programa de inversiones o la ejecución de reservas, la evaluación puede considerar los valores acumulados hasta el año regulatorio correspondiente. 
+ 
+Sobre este cálculo, cabe precisar que, cuando el ICI supera el \(100\%\), se considera, por regla general, un cumplimiento individual de \(100\%\) para efectos de la evaluación regulatoria. De este modo, el índice reconoce el grado de cumplimiento hasta alcanzar la meta, pero no incorpora las mejoras adicionales obtenidas una vez superado dicho nivel. 
+ 
+El cálculo del ICI depende, además, del ámbito territorial para el cual se definió la meta. Los ICI pueden evaluarse a nivel de empresa prestadora o de localidad. Cuando la meta se establece para el conjunto del ámbito de responsabilidad de la empresa, el ICI corresponde directamente al nivel de empresa prestadora. Si se define para localidades específicas, el cumplimiento se verifica primero mediante un ICI a nivel de localidad y luego se agrega a nivel de empresa ponderando por la cantidad de conexiones de agua potable: 
+ 
+\begin{equation} 
+ICI^{EP}_{m,t} 
+= 
+\sum_{\ell \in L_m} 
+\left( 
+\frac{C_{\ell,t}} 
+{\sum_{\ell \in L_m}C_{\ell,t}} 
+\right) 
+ICI_{\ell,m,t}, 
+\end{equation} 
+ 
+donde \(ICI^{EP}_{m,t}\) representa el ICI de la meta \(m\) a nivel de empresa prestadora en el año regulatorio \(t\), \(ICI_{\ell,m,t}\) el ICI de dicha meta en la localidad \(\ell\), \(C_{\ell,t}\) el número de conexiones de agua potable de esa localidad y \(L_m\) el conjunto de localidades consideradas para la evaluación. Esta agregación permite identificar incumplimientos localizados y reflejar, al mismo tiempo, la importancia relativa de cada localidad dentro del ámbito de prestación. 
+ 
+En un siguiente nivel de agregación, los ICI a nivel de empresa prestadora se integran en el Índice de Cumplimiento Global (ICG), que mide el cumplimiento promedio del conjunto de metas correspondiente a un año regulatorio. El ICG se calcula como la media aritmética de los ICI de las metas evaluadas: 
+ 
+\begin{equation} 
+ICG_t 
+= 
+\frac{1}{N} 
+\sum_{m=1}^{N} 
+ICI^{EP}_{m,t}, 
+\end{equation} 
+ 
+donde \(N\) representa el número total de metas evaluadas, \(ICI^{EP}_{m,t}\) el índice de cumplimiento individual de la meta \(m\) a nivel de empresa prestadora e \(ICG_t\) el índice de cumplimiento global. Cada meta recibe, por tanto, el mismo peso individual, equivalente a \(1/N\), dentro del promedio. La ponderación efectiva de cada dimensión depende del número de metas mediante las cuales se encuentre representada en el estudio tarifario,\footnote{Por ejemplo, si una dimensión comprende cinco metas y otra solo una, la primera concentra \(5/N\) del ICG y la segunda \(1/N\), por lo que su incidencia en el índice es cinco veces mayor.}. Con estos dos niveles de agregación, el régimen distingue entre el cumplimiento individual de cada meta, el cumplimiento por localidad cuando corresponde y el desempeño agregado de la empresa respecto del conjunto de metas aprobadas. 
+ 
+Estos niveles de agregación no solo permiten evaluar el desempeño de las empresas prestadoras respecto de las metas aprobadas, sino que además sirven de referencia para la fiscalización de su cumplimiento. Según el numeral 168.4 del Reglamento de la Ley del Servicio Universal, la Sunass realiza dicha fiscalización conforme con su normativa aplicable y, cuando verifica un incumplimiento, aplica las sanciones correspondientes y publica la información, los criterios y los resultados de las evaluaciones efectuadas. En ese marco, el \textit{Reglamento General de Fiscalización y Sanción}\footnote{Aprobado mediante Resolución de Consejo Directivo N.\textdegree~003-2007-SUNASS-CD.} utiliza el ICG y los ICI para determinar el cumplimiento de las metas de gestión, estableciendo, dentro del grupo de tipificaciones A, denominado ``Régimen tarifario y metas de gestión'', tres supuestos de incumplimiento que se configuran cuando dichos indicadores se sitúan por debajo de determinados umbrales. La Tabla~\ref{tab:tipificaciones_metas_gestion} resume estas tipificaciones, aplicables al conjunto de metas evaluadas mediante el ICG, al ICI de una meta a nivel de empresa prestadora y al ICI de una meta a nivel de localidad.
+ 
+\begin{table}[!t] 
+\centering 
+\caption{Tipificaciones aplicables al incumplimiento de metas de gestión} 
+\label{tab:tipificaciones_metas_gestion} 
+\scriptsize 
+\renewcommand{\arraystretch}{1.15} 
+\setlength{\tabcolsep}{3pt} 
+ 
+\begin{tabularx}{\columnwidth}{ 
+    >{\centering\arraybackslash}p{0.95cm} 
+    >{\raggedright\arraybackslash}p{2.1cm} 
+    >{\raggedright\arraybackslash}X 
+    >{\centering\arraybackslash}p{1.05cm} 
+} 
+\hline 
+ 
+\parbox[c][0.75cm][c]{0.95cm}{\centering\textbf{Tipifi-\\cación}} & 
+\parbox[c][0.75cm][c]{2.1cm}{\centering\textbf{Índice evaluado}} & 
+\parbox[c][0.75cm][c]{\linewidth}{\centering\textbf{Supuesto de incumplimiento}} & 
+\parbox[c][0.75cm][c]{1.05cm}{\centering\textbf{Umbral}} \\ 
+\hline 
+ 
+A--4.1 & 
+Índice de Cumplimiento Global (ICG) & 
+La empresa prestadora obtiene un ICG inferior al umbral establecido para las metas de gestión correspondientes al año regulatorio respectivo. & 
+Menor a 85\% \\ 
+ 
+A--4.2 & 
+ICI a nivel de empresa prestadora & 
+La empresa prestadora obtiene un ICI inferior al umbral establecido en una o más metas de gestión evaluadas a nivel de empresa prestadora. & 
+Menor a 80\% \\ 
+ 
+A--4.3 & 
+ICI a nivel de localidad & 
+La empresa prestadora obtiene un ICI inferior al umbral establecido en una o más metas de gestión evaluadas a nivel de localidad. & 
+Menor a 80\% \\ 
+ 
+\hline 
+\end{tabularx} 
+ 
+\vspace{0.12cm} 
+ 
+\begin{minipage}{\columnwidth} 
+\footnotesize 
+\textit{Nota:} La sanción prevista es amonestación escrita o multa. 
+\end{minipage} 
+ 
+\end{table} 
+ 
+Cabe precisar que, los umbrales establecidos para estas tipificaciones no determinan, por sí solos, la imposición automática de una sanción. El numeral 169.2 del Reglamento de la Ley del Servicio Universal prevé supuestos de exclusión cuando el incumplimiento se origina en la aplicación del Programa de Ejecución de Metas Físico-Financieras o en causas no atribuibles a la empresa prestadora. Así, el régimen combina los umbrales aplicables al ICG y a los ICI con criterios de atribución que permiten distinguir los incumplimientos que corresponden a la empresa de aquellos asociados con factores externos. 
+ 
+Cuando corresponde imponer una multa, su cuantificación responde a una lógica económica de disuasión, según la cual la sanción esperada debe neutralizar la ventaja derivada del incumplimiento, considerando el beneficio ilícito y la probabilidad de detección.\footnote{Este enfoque fue desarrollado a partir de \citet{becker1968crime} y sistematizado posteriormente por \citet{stigler1970optimum} y \citet{polinsky2000economic,polinsky2007theory}.} En este marco, el beneficio ilícito puede comprender costos evitados o postergados asociados con gastos o inversiones que debieron ejecutarse oportunamente. En particular, para el incumplimiento de metas de gestión se viene considerando como beneficio ilícito el costo postergado de las acciones o inversiones no ejecutadas en la oportunidad prevista. El procedimiento de cálculo y sus componentes se desarrollan en el Anexo~\ref{app:calculo_sancionador}.
+ 
+La metodología descrita articula la medición individual de las metas, su agregación territorial cuando corresponde y la evaluación global del conjunto aprobado para cada año regulatorio. Sobre estos resultados opera el régimen de fiscalización y sanción, sujeto tanto a los umbrales previstos para el ICG y los ICI como a la determinación de si el incumplimiento resulta atribuible a la empresa y, cuando corresponde imponer una multa, a su cuantificación conforme con la metodología sancionadora aplicable.

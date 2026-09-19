@@ -1,0 +1,163 @@
+\section{Cálculo de la multa por incumplimiento de metas de gestión}
+\label{app:calculo_sancionador}
+
+Este anexo describe, de manera simplificada, la secuencia utilizada para determinar las multas asociadas con el incumplimiento de las metas de gestión. El punto de partida es la infracción verificada a partir del Índice de Cumplimiento Global (ICG), el Índice de Cumplimiento Individual (ICI) a nivel de empresa prestadora o el ICI a nivel de localidad, según corresponda.
+
+Conforme a la Tabla 4.1 del Anexo N.º 4, \textit{Tabla de infracciones, sanciones, escala de multas y de factores agravantes y atenuantes}, del Reglamento General de Fiscalización y Sanción, aprobado por Resolución de Consejo Directivo N.° 003-2007-SUNASS-CD, las infracciones asociadas con estos índices son pasibles de sanción mediante amonestaciones escritas o multas de tipo \textit{ad hoc}, cuyos montos se determinan caso por caso. Para estas últimas, la metodología sancionadora establece que la multa se calcula considerando el beneficio ilícito obtenido por la empresa prestadora, la probabilidad de detección y sanción, así como los factores agravantes y atenuantes aplicables. En términos generales:
+
+\begin{equation}
+\label{eq:anexo_formula_general_multa}
+M
+=
+\frac{B}{P}
+F,
+\end{equation}
+
+donde \(M\) representa la multa, \(B\) el beneficio ilícito, \(P\) la probabilidad de detección y sanción y \(F\) el factor de agravantes y atenuantes. El beneficio ilícito puede adoptar la forma de ingreso ilícito, costo evitado o costo postergado. En los procedimientos sancionadores por incumplimiento de metas de gestión, la base utilizada corresponde al costo postergado: la empresa obtiene temporalmente una ventaja al no realizar oportunamente los gastos, costos o inversiones necesarios para alcanzar el nivel de cumplimiento exigido.\footnote{Véanse, por ejemplo, el Informe de Decisión N.\textdegree~011-2026-SUNASS-DS, correspondiente a EPS Municipal Mantaro S.A., y el Informe de Decisión N.\textdegree~006-2026-SUNASS-DS, correspondiente a EPS Selva Central S.A., que forman parte integrante de las Resoluciones N.\textdegree~013-2026-SUNASS-DS y N.\textdegree~007-2026-SUNASS-DS, respectivamente.}
+
+\subsection*{A.1. Determinación del nivel mínimo de cumplimiento}
+
+El primer paso en la cuantificación de la multa consiste en determinar el nivel de cumplimiento que habría permitido a la empresa evitar la infracción. Este procedimiento difiere según el incumplimiento corresponda a un ICI o al ICG.
+
+Cuando se evalúa el ICI a nivel de empresa prestadora o de localidad, el nivel mínimo se encuentra establecido directamente por la regulación. En el régimen vigente, la infracción se configura cuando el ICI es inferior al 80\%, por lo que el nivel de referencia es \(\bar c=80\).
+
+El procedimiento es menos directo cuando la infracción corresponde al ICG. Dado que este índice es un promedio de los ICI, el umbral global de 85\% no determina \textit{ex ante} cuánto debe alcanzar cada meta individual. Para traducir el incumplimiento agregado en valores correspondientes a metas específicas se construye, por ello, un ICG simulado igual al umbral exigido y se determina el nivel que deberían alcanzar determinados ICI para obtener dicho resultado, manteniendo constantes las demás metas.
+
+Sea \(S\) el conjunto de metas cuyos ICI se modifican en la simulación, \(N\) el número total de metas y \(c_j\) el ICI observado de cada meta. Si a las metas incluidas en \(S\) se les asigna un mismo ICI simulado \(x\), este puede representarse como:
+
+\begin{equation}
+\label{eq:anexo_ici_simulado_icg}
+x
+=
+\frac{
+N\bar G
+-
+\displaystyle\sum_{j\notin S}c_j
+}{
+|S|
+},
+\qquad
+\bar G=85.
+\end{equation}
+
+Sea \(\tau_j\) el nivel de referencia aplicable a la meta \(j\). Este equivale a \(\bar c\) cuando la infracción se basa en el ICI y a \(x\) cuando se basa en el ICG, para las metas \(j\in S\). Para los indicadores de cumplimiento directo, el valor mínimo que habría permitido alcanzar dicho nivel es:
+
+\begin{equation}
+\label{eq:anexo_valor_minimo}
+VO_j^{\min}
+=
+\frac{\tau_j}{100}
+VM_j,
+\end{equation}
+
+donde \(VO_j^{\min}\) representa el valor mínimo a obtener y \(VM_j\) el valor meta. La brecha respecto del valor efectivamente alcanzado se define como:
+
+\begin{equation}
+\label{eq:brecha_cumplimiento}
+\Delta VO_j
+=
+\max\left\{
+VO_j^{\min}-VO_j,\,
+0
+\right\},
+\end{equation}
+
+donde \(VO_j\) representa el valor efectivamente alcanzado. Esta brecha constituye la referencia que posteriormente se traduce en términos económicos para determinar el beneficio ilícito asociado con el incumplimiento.
+
+La operación debe adaptarse a la fórmula específica de cada meta. En los indicadores en los que un menor valor representa un mejor desempeño, o en aquellos cuya evaluación es acumulativa, el valor compatible con el nivel de referencia se obtiene aplicando la correspondiente regla de cálculo del ICI.
+
+La diferencia fundamental entre ambos tipos de infracción radica en la determinación de dicho nivel de referencia. Mientras que para el ICI este se encuentra definido \textit{ex ante} por la regulación, para el ICG debe reconstruirse \textit{ex post} un nivel individual compatible con el umbral agregado. En consecuencia, el resultado depende del conjunto de metas considerado en la simulación y de los ICI de aquellas que se mantienen constantes.
+
+\subsection*{A.2. Determinación del monto dejado de invertir}
+
+Una vez establecido el valor que habría permitido evitar la infracción, la diferencia respecto del valor obtenido se traduce en un monto económico. Las hojas de cálculo sancionadoras identifican este componente como ``monto dejado de invertir'' y utilizan para ello la inversión programada, el costo unitario u otra referencia económica contenida principalmente en el estudio tarifario.
+
+Sea \(U_j\) el monto dejado de invertir asociado con la meta \(j\). Su determinación depende de la naturaleza del indicador y se calcula a partir del valor obtenido \(VO_j\), del valor mínimo requerido \(VO_j^{\min}\) y de la referencia económica aplicable, que puede corresponder a la inversión programada, un costo unitario u otro parámetro pertinente.
+
+No existe necesariamente una única regla de conversión para todas las metas. Cuando el indicador se expresa en unidades físicas y existe un costo unitario identificable, la brecha puede valorarse a partir de las unidades pendientes y dicho costo. En las metas de avance financiero del programa de inversiones o de ejecución de reservas, la valorización se efectúa a partir de los montos considerados en el estudio tarifario y de la proporción asociada con el nivel de cumplimiento requerido. Cuando se reconocen montos cuya falta de ejecución no resulta atribuible a la empresa, estos no deberían integrar la base utilizada para estimar el beneficio ilícito.
+
+Este paso permite establecer la correspondencia entre la infracción y su base económica. El ICI o el ICG identifica una brecha regulatoria, pero la multa no se calcula directamente sobre los puntos porcentuales incumplidos. La brecha debe convertirse previamente en el gasto, costo o inversión cuya ejecución se considera postergada.
+
+\subsection*{A.3. Cálculo del costo postergado}
+
+Como se indicó, el beneficio ilícito se determina en estos casos a partir del costo postergado. Su lógica consiste en aproximar la ventaja financiera obtenida por la empresa al disponer temporalmente de recursos que debieron utilizarse para cumplir oportunamente la meta.
+
+Sea \(r\) la tasa anual utilizada para valorar la postergación y \(T\) el número de días correspondiente al periodo considerado. El costo postergado asociado con la meta \(j\) puede expresarse como:
+
+\begin{equation}
+\label{eq:anexo_costo_postergado}
+CP_j
+=
+U_j
+\left[
+(1+r)^{T/360}-1
+\right].
+\end{equation}
+
+El término entre corchetes representa la tasa efectiva correspondiente al periodo de postergación, calculada a partir de la tasa anual bajo un año financiero de 360 días. La tasa utilizada corresponde a la referencia financiera aplicable a la empresa, mientras que el periodo se determina a partir de las fechas consideradas en el procedimiento para valorar la postergación. De este modo, el beneficio ilícito no corresponde al monto total dejado de invertir, sino al beneficio financiero asociado con la postergación temporal de su ejecución.
+
+\subsection*{A.4. Probabilidad de detección y factores de graduación}
+
+Retomando la fórmula general de la Ecuación~\eqref{eq:anexo_formula_general_multa}, el beneficio ilícito \(B\) corresponde en estos casos al costo postergado \(CP_j\). La multa asociada con la meta \(j\) puede expresarse entonces como:
+
+\begin{equation}
+\label{eq:anexo_multa_meta}
+M_j
+=
+\frac{CP_j}{P_j}
+F_j,
+\end{equation}
+
+donde \(P_j\) representa la probabilidad de detección y sanción y \(F_j\) el factor resultante de los criterios agravantes y atenuantes aplicables a la meta.\footnote{La metodología distingue cinco niveles de probabilidad de detección y sanción: muy alta (\(P=1\)), alta (\(P=0{,}75\)), media (\(P=0{,}50\)), baja (\(P=0{,}25\)) y muy baja (\(P=0{,}10\)). En los procedimientos examinados por incumplimiento de metas de gestión se aplicó \(P=1\).}
+
+El factor \(F_j\) incorpora los criterios de graduación previstos en el régimen sancionador, entre ellos el daño causado, la reincidencia, la continuidad del incumplimiento, la mitigación del daño, la intencionalidad y la conducta durante el procedimiento, según corresponda. La aplicación conjunta de estos elementos convierte el costo postergado en la multa monetaria asociada con la meta evaluada.
+
+\subsection*{A.5. Determinación de la multa por tipificación y aplicación de la regla de concurso}
+
+Una vez calculados los montos correspondientes a las metas incumplidas, la metodología determina la multa para cada tipificación configurada. De este modo, pueden obtenerse multas distintas por: i) un ICG inferior al 85\%; ii) uno o más ICI a nivel de empresa prestadora inferiores al 80\%; y iii) uno o más ICI a nivel de localidad inferiores al 80\%.
+
+La multa correspondiente a una tipificación puede comprender más de una meta. Por ello, debe distinguirse entre el monto asociado con una meta específica y el resultado correspondiente a la tipificación en su conjunto. La determinación de este último considera las metas comprendidas en la respectiva infracción conforme a la metodología sancionadora aplicable.
+
+En el caso del ICG, el procedimiento descrito en la Subsección A.1 modifica la referencia utilizada para las metas incluidas en la reconstrucción, porque el ICI empleado en la simulación no es necesariamente 80\%, sino aquel que permite alcanzar un ICG de 85\%. Esta diferencia incide en el valor mínimo a obtener y, con ello, en el monto dejado de invertir y el costo postergado utilizados para determinar la multa correspondiente a dicha tipificación.
+
+Cuando una misma conducta configura simultáneamente las infracciones vinculadas con el ICG y los ICI, se aplica la regla de concurso prevista en el Reglamento General de Fiscalización y Sanción y se selecciona la sanción que represente el mayor monto. Para las tipificaciones asociadas con metas de gestión, esta regla puede representarse de manera simplificada como:
+
+\begin{equation}
+\label{eq:anexo_concurso}
+M^{MG}
+=
+\max
+\left\{
+M^{ICG},
+M^{ICI,EP},
+M^{ICI,L}
+\right\},
+\end{equation}
+
+considerando únicamente las tipificaciones efectivamente configuradas.
+
+A continuación, se verifican los límites máximos establecidos por tipo de empresa prestadora y por ingresos tarifarios. De manera esquemática:
+
+\begin{equation}
+\label{eq:anexo_multa_final}
+M^{MG}_{\mathrm{aplicable}}
+=
+\min
+\left\{
+M^{MG},
+\overline M^{\,tipo},
+\overline M^{\,ingresos}
+\right\}.
+\end{equation}
+
+Esta secuencia se aplica sin perjuicio de las reglas adicionales sobre amonestación, reconocimiento de responsabilidad, reducciones por pago u otros criterios que resulten aplicables en cada procedimiento. Asimismo, cuando concurren infracciones distintas del incumplimiento de las metas de gestión, resultan aplicables las reglas específicas de concurso previstas en el régimen sancionador.
+
+\subsection*{A.6. Correspondencia entre el índice incumplido y la base económica}
+
+Como se indicó en la Subsección A.2, la multa no se obtiene aplicando directamente un porcentaje sancionador sobre el índice incumplido. La secuencia descrita muestra, además, que entre la verificación del ICI o del ICG y la determinación de la sanción existe una etapa intermedia en la que la brecha regulatoria debe traducirse en un valor físico o financiero, luego en un monto dejado de invertir y, finalmente, en el costo asociado con su postergación.
+
+Como se señaló en la Subsección A.1, la reconstrucción \textit{ex post} requerida por el incumplimiento del ICG introduce una dependencia adicional: la base económica puede variar según el conjunto de metas considerado en la simulación y el nivel de cumplimiento observado en las demás metas.
+
+La dificultad puede aumentar cuando una misma inversión contribuye al cumplimiento de varias metas o cuando una meta depende de diversas intervenciones. En estos supuestos, utilizar una misma inversión como base económica en más de un componente del cálculo puede generar una valoración que no coincida con el monto efectivamente postergado. Las reglas de concurso evitan acumular determinadas sanciones cuando una misma conducta configura simultáneamente infracciones vinculadas con el ICG y los ICI, pero no resuelven por sí mismas una eventual duplicación dentro de la construcción de la base económica de cada tipificación.
+
+Esta característica resulta relevante para una eventual separación entre la medición del desempeño y la fiscalización de las inversiones. Una tipificación vinculada directamente con una obligación de inversión previamente identificada permitiría establecer la correspondencia entre conducta, monto postergado y sanción sin necesidad de reconstruir un nivel hipotético de ICI a partir del incumplimiento de un índice agregado.

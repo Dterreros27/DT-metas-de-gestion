@@ -1,0 +1,243 @@
+  \RequirePackage{etex}
+\documentclass{pas}
+
+%=================================================================
+% Idioma y citas
+%=================================================================
+\usepackage[spanish]{babel}
+\usepackage[authoryear]{natbib}
+
+%=================================================================
+% Figuras y gráficos
+%=================================================================
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning,fit,arrows.meta,babel}
+\usepackage{svg}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{stfloats}
+
+%=================================================================
+% Tablas, números y formato
+%=================================================================
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\sisetup{
+  group-separator = {,},
+  group-minimum-digits = 4
+}
+
+%-----------------------------------------------------------------
+% Formato de títulos de tablas
+%-----------------------------------------------------------------
+\captionsetup[table]{
+    name=Tabla,
+    position=top,
+    font=small,
+    labelfont=bf,
+    textfont=normalfont,
+    labelsep=newline,
+    justification=raggedright,
+    singlelinecheck=false,
+    skip=5pt
+}
+
+%-----------------------------------------------------------------
+% Formato de títulos de figuras
+%-----------------------------------------------------------------
+\captionsetup[figure]{
+    name=Figura,
+    position=top,
+    font=small,
+    labelfont=bf,
+    textfont=normalfont,
+    labelsep=newline,
+    justification=raggedright,
+    singlelinecheck=false,
+    skip=5pt
+}
+
+%=================================================================
+% Matemáticas y símbolos
+%=================================================================
+\let\gtrsim\relax
+\let\lesssim\relax
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+
+\newtheorem{proposition}{Proposición}[section]
+
+\newtheoremstyle{proposicion}
+{6pt}          % Espacio antes
+{6pt}          % Espacio después
+{\normalfont}  % Fuente del cuerpo
+{}             % Sangría
+{\bfseries}    % Fuente del encabezado
+{.}            % Puntuación después del encabezado
+{0.5em}        % Espacio después del encabezado
+{}             % Formato del encabezado
+
+%=================================================================
+% Cajas de resultados
+%=================================================================
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox[
+  auto counter
+]{resultadobox}[1]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=black,
+  boxrule=0.5pt,
+  arc=0pt,
+  outer arc=0pt,
+  left=6pt,
+  right=6pt,
+  top=5pt,
+  bottom=5pt,
+  before skip=6pt,
+  after skip=6pt,
+  title={\textbf{Resultado~\thetcbcounter\ (#1).}},
+  fonttitle=\normalfont,
+  coltitle=black,
+  attach title to upper,
+  after title={\par\smallskip}
+}
+
+%=================================================================
+% Otros paquetes y configuración
+%=================================================================
+\usepackage{needspace}
+\usepackage{titlesec}
+
+% Espaciado de párrafos
+\setlength{\parskip}{0.3ex}
+\setlength{\parindent}{1.5em}
+
+% Control de figuras y tablas de doble columna
+\setcounter{dbltopnumber}{1}
+\renewcommand{\dbltopfraction}{0.85}
+\renewcommand{\dblfloatpagefraction}{0.75}
+
+% Espaciado de títulos
+% {indent}{before}{after}
+\titlespacing*{\section}
+{0pt}
+{1.0ex plus 0.3ex minus 0.2ex}
+{0.6ex}
+
+\titlespacing*{\subsection}
+{0pt}
+{0.8ex plus 0.2ex minus 0.2ex}
+{0.4ex}
+
+%=================================================================
+% Formato de "Figura" y "Tabla"
+%=================================================================
+% La clase pas redefine internamente estas etiquetas.
+% Este parche asegura:
+%
+% Figura 1.
+% Título de la figura
+%
+% Tabla 1.
+% Título de la tabla
+%=================================================================
+
+\makeatletter
+\AtBeginDocument{%
+  \renewcommand{\figurename}{Figura}%
+  \renewcommand{\tablename}{Tabla}%
+  %
+  % Punto después del número de la figura
+  \def\fnum@figure{%
+    \figcaptionnumfont{\figurename}~\thefigure.%
+  }%
+  %
+  % Formato propio de tablas utilizado por la clase pas
+  \def\tabnum{%
+    \tablecaptionnumfont\uppercase{\tablename}~\thetable%
+  }%
+}
+\makeatother
+
+%=================================================================
+% Opcional: hipervínculos y \autoref
+%=================================================================
+% \usepackage{hyperref}
+% \renewcommand{\figureautorefname}{Figura}
+% \renewcommand{\tableautorefname}{Tabla}
+
+%=================================================================
+\begin{document}
+
+\jnlPage{1}{23}
+\jnlDoiYr{2026}
+% \doival{10.1017/pasa.xxxx.xx}
+
+%=================================================================
+% Datos del artículo
+%=================================================================
+\title{Diseño regulatorio de las metas de gestión en los servicios de agua potable y saneamiento: separación de instrumentos e incentivos al desempeño}
+
+\author{David Terreros Ingaruca}
+
+\affil{Dirección de Políticas y Normas (DPN) -- Sunass}
+
+\corresp{A. David Terreros, Email: dterreros@sunass.gob.pe}
+
+%=================================================================
+% Resumen y palabras clave
+%=================================================================
+\begin{abstract}
+
+Este estudio examina el diseño de las metas de gestión en la regulación peruana de los servicios de agua potable y saneamiento y evalúa una arquitectura orientada a metas de desempeño. El problema central es que el Índice de Cumplimiento Global (ICG) combina resultados de la prestación con capacidades de gestión, actividades y ejecución de recursos, aunque estos objetos pueden requerir instrumentos regulatorios distintos. El análisis utiliza evidencia de las fiscalizaciones de la Sunass durante 2024 y desarrolla un modelo de esfuerzo gerencial, reputación e incentivos que compara secuencialmente distintos esquemas. La comparación aísla los efectos de focalizar la medición financiera, eliminar la activación agregada de las sanciones, sustituir la verificación financiera por indicadores de cumplimiento físico o funcional y concentrar el ICG en resultados. La evidencia muestra menores niveles de cumplimiento en metas vinculadas con inversiones, reservas y programas específicos. El modelo indica que la verificación financiera puede penalizar el ahorro eficiente, que el umbral agregado puede desactivar sanciones aun cuando subsistan obligaciones pendientes y que la incorporación de variables distintas de resultados diluye la señal del ICG. Una extensión examina un reconocimiento acotado del sobrecumplimiento. Los resultados sugieren separar la evaluación del desempeño, la fiscalización y sanción de las obligaciones de implementación y el eventual reconocimiento del sobrecumplimiento.
+
+\end{abstract}
+
+\begin{keywords}
+
+Metas de gestión, metas de desempeño, separación de instrumentos, incentivos multitarea, agua potable y saneamiento, bonificación por desempeño
+
+\end{keywords}
+
+
+\maketitle
+
+%=================================================================
+% Numeración de notas al pie del cuerpo del artículo
+%=================================================================
+\setcounter{footnote}{0}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+%=================================================================
+% Contenido del artículo
+%=================================================================
+\input{cap1}
+\input{cap2}
+\input{cap3}
+\input{cap4}
+\input{cap5}
+\input{cap6}
+\input{cap7}
+
+%=================================================================
+% Bibliografía
+%=================================================================
+\bibliographystyle{apalike}
+\bibliography{cap9_ref}
+
+%=================================================================
+% Anexos
+%=================================================================
+\input{anexos}
+
+\end{document}

@@ -1,0 +1,130 @@
+\subsection{Síntesis de resultados}
+
+Las Subsecciones~4.3 y~4.4 muestran que las modificaciones regulatorias afectan de manera distinta la ejecución, los resultados del servicio, el cumplimiento de otras metas, la eficiencia y el bienestar. La secuencia principal \(A\to A'\to A''\to B\) aísla cambios específicos del diseño; \(A_0\to A\) se mantiene como \textit{benchmark} institucional y \(B\to B^{+}\) incorpora el reconocimiento acotado del sobrecumplimiento. Todos los ordenamientos están sujetos a las condiciones metodológicas y locales establecidas previamente.
+
+La Tabla~\ref{tab:sintesis_resultados_esquemas} resume los resultados sin reproducir sus derivaciones.
+
+\begin{table*}[t]
+\centering
+\caption{Síntesis de los principales resultados por transición}
+\label{tab:sintesis_resultados_esquemas}
+\scriptsize
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{2.3pt}
+
+\begin{tabularx}{\textwidth}{
+@{}
+>{\centering\arraybackslash}p{0.075\textwidth}
+>{\raggedright\arraybackslash}p{0.205\textwidth}
+>{\raggedright\arraybackslash}p{0.17\textwidth}
+>{\raggedright\arraybackslash}p{0.19\textwidth}
+>{\raggedright\arraybackslash}X
+@{}
+}
+\hline
+
+\textbf{Transición}
+&
+\textbf{Ejecución y resultados del servicio}
+&
+\textbf{Cumplimiento de gestión (\(C_G\))}
+&
+\textbf{Eficiencia}
+&
+\textbf{Bienestar regulatorio}
+\\
+
+\hline
+
+\(A_0\to A\)
+&
+Orden abierto; bajo saturación y \eqref{eq:condicion_focalizacion_a_a0}, \(\widetilde q_S^{A}\geq\widetilde q_S^{A_0}\) (Resultado~\ref{res:desempeno_agregado}).
+&
+Orden abierto.
+&
+Mejora débil para \(R^{S}\cup R^{G}\); orden abierto para \(R^{F}\) (Resultado~\ref{res:eficiencia_benchmark_a0_a}).
+&
+Mejora condicionada; véase el Resultado~\ref{res:bienestar_a0_a}.
+\\[5pt]
+
+\(A\to A'\)
+&
+\(\widetilde q_S^{A'}\geq\widetilde q_S^{A}\) (Resultados~\ref{res:incentivo_ejecucion_rs} y~\ref{res:desempeno_agregado}).
+&
+\(C_G^{A'}\geq C_G^{A}\) (Resultado~\ref{res:cumplimiento_agregado_g}).
+&
+Sin cambio para \(R^{S}\cup R^{G}\); \(g_r^{A,*}\geq g_r^{A',*}\) para \(R^{F}\) (Resultado~\ref{res:eficiencia_secuencia_principal}).
+&
+Sujeto a \eqref{eq:condicion_general_mejora_bienestar}; véase el Resultado~\ref{res:bienestar_secuencia_principal}.
+\\[5pt]
+
+\(A'\to A''\)
+&
+\(\widetilde q_S^{A''}\geq\widetilde q_S^{A'}\); ejecución de \(R^{F}\) con orden abierto (Resultado~\ref{res:desempeno_agregado}).
+&
+\(C_G^{A''}\geq C_G^{A'}\) (Resultado~\ref{res:cumplimiento_agregado_g}).
+&
+\(g_r^{A'',*}\geq g_r^{A',*}\) para \(R^{F}\) (Resultado~\ref{res:eficiencia_secuencia_principal}).
+&
+Sujeto a \eqref{eq:condicion_general_mejora_bienestar}; véase el Resultado~\ref{res:bienestar_secuencia_principal}.
+\\[5pt]
+
+\(A''\to B\)
+&
+Bajo \eqref{eq:condicion_lambda_b}, \(\widetilde q_S^{B}\geq\widetilde q_S^{A''}\) (Resultado~\ref{res:desempeno_agregado}).
+&
+\(C_G^{A''}\geq C_G^{B}\) (Resultado~\ref{res:cumplimiento_agregado_g}).
+&
+Sin cambio bajo las normalizaciones locales.
+&
+Sujeto a \eqref{eq:condicion_general_mejora_bienestar}, incluida la oposición entre \(\widetilde q_S\) y \(C_G\).
+\\[5pt]
+
+\(B\to B^{+}\)
+&
+\(\widetilde q_S^{B^{+}}\geq\widetilde q_S^{B}\) y \(Q^{B^{+}}\geq Q^{B}\) (Resultado~\ref{res:desempeno_bplus}).
+&
+Sin canal directo adicional.
+&
+Sin efecto tecnológico directo de \(g_r\) sobre el sobrecumplimiento o la bonificación.
+&
+Sujeto a \eqref{eq:condicion_bienestar_bplus}; véase el Resultado~\ref{res:bienestar_bplus}.
+\\
+
+\hline
+\end{tabularx}
+
+\vspace{1mm}
+
+\begin{minipage}{0.98\textwidth}
+\raggedright
+\footnotesize
+\textit{Nota:} Los ordenamientos se interpretan bajo las condiciones locales de las Subsecciones~4.1--4.4. Las comparaciones de bienestar del modelo base remiten a \eqref{eq:condicion_general_mejora_bienestar}; la extensión \(B^{+}\) incorpora además el costo neto de la bonificación.
+\end{minipage}
+
+\end{table*}
+
+\begin{resultadobox}
+{Ordenamiento condicionado con sobrecumplimiento}
+\label{res:ordenamiento_bienestar_bplus}
+Si \(A\) satisface las condiciones del Resultado~\ref{res:bienestar_a0_a} respecto de \(A_0\), cada transición de \(A\to A'\to A''\to B\) satisface \eqref{eq:condicion_general_mejora_bienestar} y \(B\to B^{+}\) satisface \eqref{eq:condicion_bienestar_bplus}, entonces
+
+\begin{equation}
+\label{eq:ordenamiento_bienestar_bplus}
+\mathcal W_R^{B^{+}}
+>
+\mathcal W_R^{B}
+>
+\mathcal W_R^{A''}
+>
+\mathcal W_R^{A'}
+>
+\mathcal W_R^{A}
+>
+\mathcal W_R^{A_0}.
+\end{equation}
+
+La cadena constituye un ordenamiento condicionado y no una dominancia automática: cada transición requiere que el valor regulatorio de la modificación exceda sus costos.
+\end{resultadobox}
+
+En conjunto, el modelo separa progresivamente tres funciones que en los diseños iniciales aparecen parcialmente superpuestas: la evaluación regulatoria mediante el \(ICG^m\), la señal reputacional resumida por \(P^m\) y la estructura de consecuencias. La salida de componentes del ICG reasigna mecánicamente sus ponderaciones regulatorias, mientras que la composición de \(P^m\) determina, a partir de las saliencias \(s_H\), el peso reputacional de los bloques que permanecen. Esta separación puede corregir distorsiones, pero no implica que todas las transiciones mejoren simultáneamente todos los márgenes. Un diseño puede fortalecer los incentivos de una tarea específica o elevar los resultados directos del servicio y, aun así, no mejorar el bienestar regulatorio. Esta última conclusión exige que el efecto conjunto sobre \(Q(\widetilde q_S,C_G)\), la carga sancionadora y los costos sea favorable. Bajo las condiciones del modelo, \(B^{+}\) completa el ordenamiento condicionado como el esquema de mayor bienestar entre los considerados; fuera de ellas, la comparación debe realizarse transición por transición.

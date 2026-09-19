@@ -1,0 +1,679 @@
+\subsection{Decisión gerencial, ejecución de inversiones y mecanismo de incentivos}
+
+Esta subsección formaliza el entorno común a los distintos diseños regulatorios y el problema de decisión del gerente. Asimismo, caracteriza el margen de culminación de las inversiones y el límite de la respuesta del esfuerzo de ejecución ante una mayor exposición sancionadora.
+
+\subsubsection{Entorno y clasificación de las inversiones}
+
+El programa de inversiones se representa mediante tres grupos de inversiones, según la obligación regulatoria con la que se encuentran principalmente vinculadas:
+
+\begin{equation}
+\label{eq:particion_inversiones}
+R
+=
+R^{S}
+\mathbin{\dot\cup}
+R^{G}
+\mathbin{\dot\cup}
+R^{F}.
+\end{equation}
+
+Las inversiones de \(R^{S}\) se vinculan con resultados observables del servicio representados por los indicadores de \(J^{S}\), principalmente en las dimensiones de cobertura y calidad. Por su parte, \(R^{G}\) comprende las inversiones asociadas con metas que verifican capacidades, instrumentos de gestión o ejecución física, representadas por los indicadores de \(J^{G}\). Para efectos del modelo, los indicadores que, aun cuando se encuentren institucionalmente ubicados en los grupos de cobertura o calidad, miden directamente ejecución física se tratan como parte de \(J^{G}\), reservando \(J^{S}\) para resultados de la prestación.
+
+Para cada \(j\in J^{H}\), con \(H\in\{S,G\}\), \(R_j^{H}\subseteq R^{H}\) reúne las inversiones vinculadas con el indicador correspondiente. En \(J^{S}\), se trata de las inversiones que contribuyen al resultado del servicio y, en \(J^{G}\), de las asociadas con la meta respectiva. Para simplificar el análisis, cada inversión se asigna a un único subconjunto \(R_j^{H}\), según el resultado o meta con el que mantiene su vínculo principal. Esto no excluye que una misma inversión pueda contribuir a varias dimensiones regulatorias ni que pueda incidir adicionalmente en obligaciones de alcance transversal, como el avance financiero o la relación de trabajo.
+
+Por otro lado, \(R^{F}\) agrupa las inversiones cuyo impacto no puede ser evaluado mediante otro indicador aplicable. Dependiendo del diseño regulatorio, estas inversiones pueden verificarse mediante una medida de avance financiero o mediante indicadores específicos de cumplimiento físico o funcional representados por \(J^{F}\).\footnote{Esta delimitación corresponde al criterio previsto para los indicadores de avance financiero EP-57 y EP-57-A, cuya aplicación se reserva a inversiones y medidas de mejora cuyo impacto no pueda ser medido mediante otro indicador aplicable.} Para cada \(j\in J^{F}\), \(R_j^{F}\subseteq R^{F}\) reúne las inversiones verificadas mediante dicho indicador y se supone, de manera análoga, que estos subconjuntos particionan \(R^{F}\).
+
+\subsubsection{Ejecución física, resultados y cumplimiento de metas}
+
+La ejecución de cada inversión se representa mediante una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\) y un esfuerzo de eficiencia \(g_r\). El grado de avance físico y la magnitud alcanzada al cierre del periodo se representan como
+
+\begin{equation}
+\label{eq:ejecucion_fisica}
+a_r
+=
+a_r(e_r;\bar I_r,g_r),
+\qquad
+F_r
+=
+\bar F_r a_r,
+\qquad
+0
+\leq
+a_r
+\leq
+1.
+\end{equation}
+
+Aquí, \(a_r\) representa el grado de avance físico de la inversión y \(F_r\) la magnitud efectivamente alcanzada. La especificación concentra el análisis en la relación entre las decisiones gerenciales, los recursos programados y la ejecución, sin modelar separadamente otros factores que también pueden afectar este resultado.\footnote{La evidencia documenta la relevancia de factores gerenciales, institucionales, financieros y geográficos para la ejecución de inversiones de las empresas prestadoras; véase \citet{escobar2025determinantes}. Su omisión explícita responde al carácter reducido del modelo y no implica atribuir al esfuerzo gerencial una interpretación causal exclusiva.}
+
+Para analizar el margen de culminación, se mantienen dados \(\bar I_r\) y \(g_r\) y, por economía de notación, se escribe \(a_r(e_r)\). Se supone que existe un nivel finito \(e_r^{\mathrm{sat}}=e_r^{\mathrm{sat}}(\bar I_r,g_r)\) a partir del cual un mayor esfuerzo de ejecución deja de incrementar el avance físico. Antes de alcanzar ese nivel, el esfuerzo aumenta \(a_r\), aunque a una tasa no creciente; una vez alcanzado, el avance permanece constante en \(\bar a_r=\bar a_r(\bar I_r,g_r)\leq1\). Formalmente,
+
+\begin{equation}
+\label{eq:saturacion_probabilidad}
+\begin{aligned}
+a_r'(e_r)>0,\qquad a_r''(e_r)\leq0,
+&\qquad e_r<e_r^{\mathrm{sat}},
+\\
+a_r(e_r)=\bar a_r,
+&\qquad e_r\geq e_r^{\mathrm{sat}}.
+\end{aligned}
+\end{equation}
+
+Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\) y se admite un quiebre en dicho punto, con \(a_{r,-}'(e_r^{\mathrm{sat}})>0\) y \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). La dependencia de \(e_r^{\mathrm{sat}}\) y \(\bar a_r\) respecto de \(\bar I_r\) y \(g_r\) recoge, de forma reducida, que los recursos disponibles y la eficiencia condicionan hasta dónde un mayor esfuerzo de ejecución puede traducirse en un mayor avance físico. Cuando \(\bar a_r=1\), la culminación es alcanzable; cuando \(\bar a_r<1\), permanece una brecha física que un mayor esfuerzo de ejecución no puede reducir. A partir de \(e_r^{\mathrm{sat}}\), otros canales, como el asociado con el esfuerzo de eficiencia \(g_r\), pueden continuar operando mientras exista margen para reducir los recursos necesarios para alcanzar una magnitud física dada.
+
+Para las inversiones pertenecientes a \(R^{S}\), la magnitud física ejecutada contribuye a la producción de resultados del servicio. Sea \(q_j\) el resultado correspondiente a \(j\in J^{S}\), orientado de manera que un mayor valor represente un mejor desempeño:
+
+\begin{equation}
+\label{eq:produccion_calibracion_resultado}
+q_j
+=
+q_{j,0}(X_j)
++
+\sum_{r\in R_j^{S}}
+\beta_{rj}F_r,
+\qquad
+\beta_{rj}>0.
+\end{equation}
+
+El término \(q_{j,0}(X_j)\) reúne la contribución de la infraestructura existente, las condiciones operativas y estructurales, las decisiones no modeladas y otros factores recogidos en \(X_j\), mientras que \(\beta_{rj}\) mide cuánto contribuye una mayor ejecución física de la inversión \(r\) al resultado \(j\). La ecuación~\eqref{eq:produccion_calibracion_resultado} representa la relación considerada en la regulación tarifaria entre las inversiones previstas y los resultados esperados del servicio, de modo que las metas sean alcanzables bajo las condiciones previstas al momento de su determinación.
+
+Para cada \(j\in J^{S}\), el regulador fija una meta \(\bar q_j>0\), cuyo grado de cumplimiento se define como
+
+\begin{equation}
+\label{eq:cumplimiento_s}
+c_j
+\equiv
+\min
+\left\{
+\frac{q_j}{\bar q_j},
+1
+\right\},
+\qquad
+0\leq c_j\leq1.
+\end{equation}
+
+Mientras \(q_j<\bar q_j\), una mayor ejecución física de cualquier \(r\in R_j^{S}\) incrementa \(q_j\) y, con ello, \(c_j\); una vez alcanzada la meta, \(c_j\) permanece igual a uno.
+
+Para las metas de \(J^{G}\), el grado de cumplimiento depende directamente del avance físico de las inversiones asociadas. El mismo criterio se aplica a los indicadores de \(J^{F}\) cuando estos se utilizan para verificar el cumplimiento físico o funcional de las inversiones de \(R^{F}\). Para \(H\in\{G,F\}\) y \(j\in J^{H}\), se define
+
+\begin{equation}
+\label{eq:cumplimiento_g_f}
+c_j
+=
+\sum_{r\in R_j^{H}}
+\eta_{rj}^{H}a_r,
+\qquad
+\eta_{rj}^{H}\geq0,
+\qquad
+\sum_{r\in R_j^{H}}\eta_{rj}^{H}=1.
+\end{equation}
+
+Para los indicadores de \(J^{S}\), \(J^{G}\) y \(J^{F}\), se considera incumplimiento cuando \(c_j<1\), sin incorporar los umbrales específicos aplicables a cada indicador en la práctica. Los agregados utilizados para representar los resultados del servicio y las demás metas de gestión se definen como
+
+\begin{equation}
+\label{eq:agregados_cumplimiento}
+\begin{aligned}
+C_S
+&=
+\frac{1}{n_S}
+\sum_{j\in J^{S}}c_j,
+&
+n_S
+&\equiv
+|J^{S}|,
+\\
+C_G
+&=
+\frac{1}{n_G}
+\sum_{j\in J^{G}}c_j,
+&
+n_G
+&\equiv
+|J^{G}|.
+\end{aligned}
+\end{equation}
+
+Equivalentemente, \(\omega_j^{S}=1/n_S\) y \(\omega_j^{G}=1/n_G\). Esta especificación reproduce la media aritmética de los indicadores individuales dentro de cada grupo. Así, \(C_S\) resume el cumplimiento promedio de las metas asociadas con los resultados del servicio y \(C_G\) el de las demás obligaciones de gestión o ejecución consideradas en la medida agregada de los esquemas que las incorporan. Estos agregados se utilizan posteriormente para caracterizar la señal reputacional y, en el caso de \(C_G\), su posible contribución neta a los resultados valorados por el regulador.
+
+\subsubsection{Ejecución financiera, relación de trabajo y ahorro}
+
+Además del esfuerzo destinado a completar físicamente cada inversión, el gerente decide cuánto esfuerzo dedicar a reducir los recursos necesarios para ejecutarla. Para distinguir la inversión de los recursos destinados a su ejecución, \(I_r\) denota el monto ejecutado en la inversión \(r\). Este monto depende de la magnitud física alcanzada y del esfuerzo de eficiencia \(g_r\):
+
+\begin{equation}
+\label{eq:inversion_ejecutada}
+I_r
+=
+I_r(F_r,g_r),
+\qquad
+0\leq I_r\leq\bar I_r,
+\qquad
+f_r
+\equiv
+\frac{I_r}{\bar I_r},
+\qquad
+0\leq f_r\leq1.
+\end{equation}
+
+El término \(\bar I_r>0\) representa los recursos programados para financiar la inversión, mientras que \(f_r\) mide el grado de ejecución financiera reconocido para efectos del cumplimiento. Se supone \(I_{r,F}>0\) e \(I_{r,g}<0\): una mayor magnitud física requiere más recursos de inversión, mientras que, para una magnitud física dada, un mayor esfuerzo de eficiencia reduce los recursos necesarios para ejecutarla. La restricción \(I_r\leq\bar I_r\) recoge que la ejecución financiera reconocida no puede exceder los recursos programados considerados en el modelo. Cuando estos recursos resultan insuficientes para completar la magnitud física programada, dicha limitación se refleja de forma reducida en \(\bar a_r(\bar I_r,g_r)<1\) y en el correspondiente punto de saturación \(e_r^{\mathrm{sat}}(\bar I_r,g_r)\): un mayor esfuerzo de ejecución no puede sustituir el financiamiento faltante.
+
+A partir de los avances financieros individuales se construyen dos medidas agregadas. \(f_R\) recoge el avance del programa de inversiones en su conjunto, mientras que \(f_F\) mide el avance financiero focalizado exclusivamente en las inversiones de \(R^{F}\):
+
+\begin{equation}
+\label{eq:avance_financiero_agregado}
+f_R
+=
+\sum_{r\in R}
+\nu_r^{R}f_r,
+\qquad
+f_F
+=
+\sum_{r\in R^{F}}
+\nu_r^{F}f_r,
+\end{equation}
+
+con ponderadores no negativos y normalizados en sus respectivos dominios. Esta formulación distingue dos márgenes de decisión: \(e_r\) incide en la magnitud física ejecutada dentro de los recursos disponibles, mientras que \(g_r\) incide en los recursos requeridos para alcanzarla. Por ello, el avance físico \(a_r\) y el avance financiero \(f_r\) no tienen por qué coincidir.
+
+A diferencia de las metas asociadas con subconjuntos específicos de inversiones, la relación de trabajo puede depender de la ejecución física del programa de inversiones en su conjunto:
+
+\begin{equation}
+\label{eq:relacion_trabajo}
+RT
+=
+RT(\mathbf F),
+\qquad
+\mathbf F=(F_r)_{r\in R}.
+\end{equation}
+
+El vector \(\mathbf F\) reúne la magnitud física ejecutada de cada inversión. Esta representación permite que el indicador responda a la ejecución física del programa sin depender directamente del monto monetario invertido, que también puede variar por efecto de \(g_r\). Dado que un menor valor de la relación de trabajo representa un mejor desempeño, su cumplimiento normalizado se define como
+
+\begin{equation}
+\label{eq:cumplimiento_rt}
+c_{RT}
+=
+\min
+\left\{
+\frac{\overline{RT}}
+{RT(\mathbf F)},
+1
+\right\},
+\end{equation}
+
+con \(\overline{RT}>0\) como valor meta.
+
+Dado que el avance físico y financiero pueden diferir, una inversión puede completar su alcance utilizando un monto inferior a la inversión programada y generar un ahorro. Se define
+
+\begin{equation}
+\label{eq:ahorro_inversion}
+S_r
+=
+\begin{cases}
+\bar I_r-I_r,
+&
+\text{si } a_r=1,
+\\[4pt]
+0,
+&
+\text{en otro caso}.
+\end{cases}
+\end{equation}
+
+La restricción \(0\leq I_r\leq\bar I_r\) garantiza que \(S_r\geq0\) siempre que el ahorro sea reconocido. El ahorro agregado reconocido es común a los esquemas del modelo base:
+
+\begin{equation}
+\label{eq:ahorro_agregado}
+S
+\equiv
+\sum_{r\in R}S_r,
+\qquad
+S^m\equiv S.
+\end{equation}
+
+El superíndice \(m\) se utiliza únicamente para mantener una notación homogénea en la función reputacional. El ahorro permanece en el fondo de inversiones y reservas, por lo que no constituye un recurso de libre disposición de la empresa gestionada por el gerente.
+
+\subsubsection{Configuración y cuantificación de las consecuencias}
+
+Las consecuencias pecuniarias consideradas en el modelo distinguen tres elementos: la configuración del incumplimiento, que determina si la obligación fue incumplida; la activación de la consecuencia, representada por una regla específica de cada diseño; y su cuantificación, que determina la base sobre la cual se calcula la multa.
+
+Para las obligaciones verificadas mediante indicadores de \(J^{S}\), \(J^{G}\) o \(J^{F}\), las bases físicas comparten una misma estructura. Para \(H\in\{S,G,F\}\), se define
+
+\begin{equation}
+\label{eq:base_fisica_generica}
+B_H
+\equiv
+\sum_{j\in J^{H}}
+\mathbf{1}\{c_j<1\}
+\sum_{r\in R_j^{H}}
+\bar I_r(1-a_r).
+\end{equation}
+
+Así, \(B_S\), \(B_G\) y \(B_F\) toman como referencia la inversión programada asociada con el alcance físico pendiente de las inversiones vinculadas con cada meta incumplida. Cuando la relación de trabajo constituye una obligación sancionable, su base se representa como
+
+\begin{equation}
+\label{eq:base_rt}
+B_{RT}
+\equiv
+\mathbf{1}\{c_{RT}<1\}
+\sum_{r\in R}
+\bar I_r(1-a_r).
+\end{equation}
+
+El avance financiero requiere un tratamiento adicional, pues una ejecución financiera inferior a la programada no necesariamente implica que exista alcance físico pendiente. En los esquemas en los que se evalúa esta obligación, sea \(f^m\) la medida aplicable y \(\mathcal U_F^m\subseteq R\) el conjunto de inversiones comprendidas en dicha medida, de modo que
+
+\begin{equation}
+\label{eq:universo_financiero}
+\mathcal U_F^m
+=
+\begin{cases}
+R,
+&
+\text{si } f^m=f_R,
+\\[4pt]
+R^{F},
+&
+\text{si } f^m=f_F.
+\end{cases}
+\end{equation}
+
+El incumplimiento de la meta de avance financiero se define entonces como
+
+\begin{equation}
+\label{eq:incumplimiento_avance_financiero}
+d_F^m
+\equiv
+\mathbf{1}\{f^m<1\}
+\mathbf{1}
+\left\{
+\sum_{r\in\mathcal U_F^m}
+\bar I_r(1-a_r)>0
+\right\},
+\qquad
+d_F^m\in\{0,1\}.
+\end{equation}
+
+De este modo, una ejecución financiera inferior a la programada configura incumplimiento cuando existe alcance físico pendiente entre las inversiones evaluadas. En cambio, una brecha financiera originada exclusivamente en ahorros reconocidos de inversiones cuyo alcance ha sido completado no activa \(d_F^m\). Cuando el incumplimiento se determina a partir del avance financiero, la base correspondiente se define como
+
+\begin{equation}
+\label{eq:base_financiera}
+B_{\mathrm{fin}}^m
+\equiv
+d_F^m
+(1-f^m)
+\sum_{r\in\mathcal U_F^m}
+\bar I_r.
+\end{equation}
+
+Una misma inversión puede incidir en más de una base cuando participa simultáneamente en una meta específica y en una obligación de alcance transversal. Esta superposición es relevante porque puede aumentar la exposición sancionadora atribuible a una misma brecha de ejecución. La composición de las bases aplicables, el universo financiero \(\mathcal U_F^m\) y la regla de activación \(\chi^m\in\{0,1\}\) dependen del diseño regulatorio considerado.
+
+\subsubsection{Problema del gerente e incentivos marginales}
+
+A partir de los elementos anteriores, el problema del gerente se formula de manera común para cualquiera de los esquemas \(m\in\{A_0,A,A',A'',B\}\). La multa \(M^m\) corresponde a la determinada por las reglas regulatorias del esquema \(m\), bajo el supuesto de detección cierta utilizado para su cuantificación. El gerente, en cambio, percibe una probabilidad de detección \(p\in(0,1]\), común a todos los esquemas.
+
+Bajo esta estructura, el gerente elige los esfuerzos de ejecución y eficiencia resolviendo
+
+\begin{equation}
+\label{eq:problema_gerente}
+\max_{\{e_r,g_r\}_{r\in R}}
+\quad
+U_G^{m}
+=
+V\left(\mathcal R^{m}\right)
+-
+p\rho M^{m}
+-
+\sum_{r\in R}
+\left[
+\psi_r(e_r)
++
+\xi_r(g_r)
+\right].
+\end{equation}
+
+La señal reputacional combina tres dimensiones observables: el desempeño derivado de las metas publicadas, el ahorro reconocido, \(S^m\), y la multa asociada con los incumplimientos, \(M^m\). Para distinguir la ponderación regulatoria utilizada en el \(ICG^m\) de la importancia reputacional de sus componentes, se define el desempeño percibido como
+
+\begin{equation}
+\label{eq:desempeno_percibido}
+\begin{aligned}
+P^m
+&=
+\alpha_S^m C_S
++
+\alpha_G^m C_G
++
+\alpha_F^m f^m
++
+\alpha_{RT}^m c_{RT},
+\\
+&\hspace{0.5cm}
+\alpha_H^m\geq0,
+\qquad
+\sum_{H\in\{S,G,F,RT\}}\alpha_H^m=1.
+\end{aligned}
+\end{equation}
+
+Los coeficientes \(\alpha_H^m\) recogen la saliencia reputacional relativa de cada bloque de información publicado en el esquema \(m\). Los términos \(C_S\) y \(C_G\) mantienen la definición de la ecuación~\eqref{eq:agregados_cumplimiento}: son agregados de los grupos \(J^S\) y \(J^G\), respectivamente, y no indicadores individuales. Cuando un componente no forma parte de la señal publicada en un esquema, su ponderación se fija en cero. Para disciplinar la comparación entre diseños, se supone que las saliencias intrínsecas \(s_H>0\) son comunes entre esquemas y que las ponderaciones se obtienen normalizando sobre los componentes efectivamente publicados,
+
+\begin{equation}
+\label{eq:ponderaciones_reputacionales}
+\alpha_H^m
+=
+\frac{s_H\,\mathbf 1\{H\in\mathcal H^m\}}
+{\displaystyle\sum_{K\in\{S,G,F,RT\}}
+s_K\,\mathbf 1\{K\in\mathcal H^m\}},
+\end{equation}
+
+donde \(\mathcal H^m\) denota el conjunto de bloques que integra la señal pública del esquema \(m\). En particular, se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) se mantiene como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas del esquema cuando corresponda.
+
+Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
+
+\begin{equation}
+\label{eq:reputacion_estructural}
+\mathcal R^m
+=
+d_I\ell_I^m R_I(P^m)
++
+d_E\ell_E R_E(S^m)
+-
+p\,d_M\ell_M R_M(M^m).
+\end{equation}
+
+Los parámetros \(d_I,d_E,d_M\in[0,1]\) recogen la difusión de cada señal, mientras que \(\ell_I^m,\ell_E,\ell_M\in[0,1]\) representan su legibilidad. La difusión determina el alcance de la información y la legibilidad refleja qué tan claramente puede ser interpretada por los agentes externos. En el canal de desempeño, \(\ell_I^m\) resume la facilidad con la que el conjunto de metas publicado puede ser interpretado y se distingue de la saliencia capturada por \(s_H\). Las funciones \(R_I\), \(R_E\) y \(R_M\) son crecientes y diferenciables, con \(R_M(0)=0\), de modo que el efecto reputacional asociado con la sanción depende de la magnitud de la multa.
+
+La función \(V(\mathcal R^m)\) transforma la reputación de la empresa en utilidad gerencial. Una evaluación externa más favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, en línea con la lógica de los modelos de \textit{career concerns}, en los que el gerente valora los efectos de su desempeño sobre su reputación profesional futura \citep{holmstrom1999managerial,dewatripont1999economics}. El término \(-p\rho M^m\), con \(\rho\in[0,1]\), representa el costo monetario que el gerente internaliza de la sanción, una vez consideradas la probabilidad de detección que percibe y la fracción del costo pecuniario de la empresa que se transmite directamente hacia quien decide el esfuerzo. Este término se mantiene fuera de \(\mathcal R^m\) para distinguir el costo monetario de la sanción de su efecto reputacional.\footnote{El modelo base abstrae de premios, penalidades o compensaciones asociados directamente con indicadores individuales. La incorporación de un término común a todos los esquemas no alteraría las comparaciones centrales siempre que dicho término no dependa de la ejecución financiera ni de las reglas regulatorias que varían entre esquemas.}
+
+Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan, respectivamente, los costos gerenciales de los esfuerzos de ejecución y eficiencia.\footnote{La separación entre ambas dimensiones sigue la lógica de los modelos multitarea, en los que las actividades pueden presentar distinta visibilidad y distinto retorno para el agente \citep{holmstrom1991multitask}.} Se supone \(V'(\mathcal R^m)>0\), \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\). Dentro de cada región en la que los componentes continuos de la función objetivo son diferenciables se supone concavidad suficiente para caracterizar el óptimo local. Asimismo, la capacidad gerencial no constituye una restricción vinculante, por lo que el esfuerzo destinado a una inversión no desplaza mecánicamente el asignado a las demás.
+
+Las comparaciones de esfuerzo se basan en comparativa estática monótona: si el beneficio marginal se desplaza débilmente hacia arriba para todo nivel del esfuerzo en la región relevante, el costo marginal es creciente y el óptimo es único, entonces el esfuerzo óptimo no disminuye. Los ordenamientos resultantes se interpretan, por tanto, como comparaciones \textit{ceteris paribus} de los canales regulatorios modificados.
+
+La presencia de umbrales y reglas discretas requiere distinguir entre los efectos marginales que operan dentro de una misma región regulatoria y aquellos asociados con el paso de una región a otra. Las condiciones generales para un óptimo interior pueden escribirse como
+
+\begin{subequations}
+\label{eq:foc_esperadas}
+\begin{align}
+\psi_r'(e_r)
+&=
+\frac{\partial}{\partial e_r}
+\left[
+V(\mathcal R^m)-p\rho M^m
+\right],
+\label{eq:foc_e_esperada}
+\\
+\xi_r'(g_r)
+&=
+\frac{\partial}{\partial g_r}
+\left[
+V(\mathcal R^m)-p\rho M^m
+\right].
+\label{eq:foc_g_esperada}
+\end{align}
+\end{subequations}
+
+Para identificar los distintos canales del incentivo marginal, considérese una región en la que los indicadores discretos que determinan la configuración y activación de la multa permanecen constantes. Los componentes continuos de los incentivos marginales se definen como
+
+\begin{subequations}
+\label{eq:incentivos_marginales_continuos}
+\begin{align}
+\mathcal B_{r,e}^{m}
+&\equiv
+\lambda^m
+\frac{\partial P^m}{\partial e_r}
++
+\varpi^m
+\frac{\partial S^m}{\partial e_r}
+-
+\gamma^m
+\frac{\partial M^m}{\partial e_r},
+\label{eq:incentivo_marginal_e}
+\\
+\mathcal B_{r,g}^{m}
+&\equiv
+\lambda^m
+\frac{\partial P^m}{\partial g_r}
++
+\varpi^m
+\frac{\partial S^m}{\partial g_r}
+-
+\gamma^m
+\frac{\partial M^m}{\partial g_r}.
+\label{eq:incentivo_marginal_g}
+\end{align}
+\end{subequations}
+
+Los retornos marginales que intervienen en estas expresiones son
+
+\begin{subequations}
+\label{eq:componentes_incentivos}
+\begin{align}
+\lambda^m
+&\equiv
+V'(\mathcal R^m)
+d_I\ell_I^m
+R_I'(P^m),
+\label{eq:lambda_m}
+\\
+\varpi^m
+&\equiv
+V'(\mathcal R^m)
+d_E\ell_E
+R_E'(S^m),
+\label{eq:varpi_m}
+\\
+\gamma^m
+&\equiv
+p
+\left[
+V'(\mathcal R^m)
+d_M\ell_M
+R_M'(M^m)
++
+\rho
+\right].
+\label{eq:gamma_m}
+\end{align}
+\end{subequations}
+
+Así, \(\lambda^m\) mide el retorno marginal asociado con el desempeño percibido \(P^m\), \(\varpi^m\) la valoración marginal del ahorro reconocido y \(\gamma^m\) el costo marginal de una mayor multa percibido por el gerente, considerando tanto su efecto reputacional como el costo monetario directamente internalizado. La separación entre \(P^m\) e \(ICG^m\) permite que el peso reputacional de un bloque difiera de su ponderación regulatoria sin modificar las reglas formales del índice. Como \(p\) es común a todos los esquemas, no constituye una fuente de diferencias entre diseños, aunque reduce la intensidad con la que una misma multa regulatoria se transmite hacia el gerente. Estos términos tienen una interpretación local y no se consideran parámetros globales de la función objetivo.
+
+Los esfuerzos también pueden modificar las condiciones en las que cambian \(\mathbf 1\{c_j<1\}\), \(d_F^m\), \(\chi^m\) o el reconocimiento de \(S_r\). Sean \(\mathcal D_{r,e}^m\) y \(\mathcal D_{r,g}^m\) los efectos asociados con estos cambios discretos. Las condiciones marginales pueden expresarse entonces como
+
+\begin{subequations}
+\label{eq:foc_completas}
+\begin{align}
+\psi_r'(e_r)
+&=
+\mathcal B_{r,e}^{m}
++
+\mathcal D_{r,e}^{m},
+\label{eq:foc_e_completa}
+\\
+\xi_r'(g_r)
+&=
+\mathcal B_{r,g}^{m}
++
+\mathcal D_{r,g}^{m}.
+\label{eq:foc_g_completa}
+\end{align}
+\end{subequations}
+
+Esta separación distingue el margen intensivo, que modifica continuamente los resultados dentro de una misma región regulatoria, del margen discreto, asociado con el paso de una región a otra. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) introduce un incentivo asociado con la culminación de la inversión, mientras que \(\mathbf 1\{c_j<1\}\), \(d_F^m\) y \(\chi^m\) generan efectos adicionales cuando el esfuerzo modifica la configuración o activación de la multa.
+
+El esfuerzo de ejecución \(e_r\) actúa a través de \(F_r\) y sus efectos dependen del grupo al que pertenece la inversión. Para \(r\in R^{S}\), una mayor ejecución física puede elevar el resultado \(q_j\) y su grado de cumplimiento \(c_j\). Para \(r\in R^{G}\), incrementa directamente el cumplimiento de la meta asociada a través de \(a_r\); la misma lógica se aplica a \(r\in R^{F}\) cuando estas inversiones se verifican mediante indicadores de \(J^{F}\). Asimismo, \(e_r\) puede modificar la relación de trabajo, el avance financiero a través de \(F_r\) y las bases de las multas al reducir el alcance físico pendiente, siempre que los recursos disponibles permitan materializar ese mayor avance.
+
+El esfuerzo de eficiencia \(g_r\), por su parte, reduce \(I_r\) para una magnitud física dada y puede incrementar el ahorro reconocido cuando la inversión completa su alcance. Al mismo tiempo, una menor inversión reduce \(f_r\) y, por esa vía, puede disminuir la medida de avance financiero correspondiente. Cuando esta medida forma parte del \(ICG^m\) o de la señal publicada \(P^m\), una ejecución más eficiente puede reducir la medida correspondiente; cuando además determina una base financiera de la multa, puede aumentar \(B_{\mathrm{fin}}^m\), siempre que exista alcance físico pendiente en el conjunto de inversiones evaluado.
+
+\subsubsection{Exposición sancionadora y saturación del margen de culminación}
+
+Esta subsubsección formaliza el límite de la respuesta del esfuerzo de ejecución ante una mayor exposición sancionadora. Una misma inversión puede incidir en varios componentes de la multa, de modo que la superposición de bases puede elevar la exposición asociada con una misma brecha de avance físico.
+
+Para aislar este margen, considérese una región regulatoria en la que los indicadores discretos que determinan la configuración y activación de la multa permanecen constantes. Localmente, la parte de la multa atribuible a la brecha física de la inversión \(r\) puede representarse como
+
+\begin{equation}
+\label{eq:exposicion_sancionadora_r}
+M^m
+=
+M_{-r}^m
++
+\mu_r^m(1-a_r),
+\qquad
+\mu_r^m\geq0,
+\end{equation}
+
+donde \(M_{-r}^m\) reúne los componentes de la multa que, en la región considerada, no varían directamente con \(a_r\), mientras que \(\mu_r^m\) recoge la exposición sancionadora nominal asociada con una brecha unitaria de avance físico. Si una misma inversión participa simultáneamente en varios componentes activos de la multa, esa superposición se refleja en un mayor \(\mu_r^m\).
+
+Dado \eqref{eq:exposicion_sancionadora_r}, el retorno marginal que el gerente obtiene al reducir la brecha física por efecto de la sanción puede escribirse como
+
+\begin{equation}
+\label{eq:ganancia_evitar_incumplimiento}
+\Gamma_r^m(\mu_r^m)
+\equiv
+\gamma^m(\mu_r^m)\mu_r^m,
+\qquad
+\Gamma_r^m(\mu_r^m)\geq0.
+\end{equation}
+
+Se supone que \(\Gamma_r^m(\mu)\) es continua y creciente en \(\mu\) en la región relevante. Esta expresión incorpora tanto la probabilidad de detección \(p\) como la transmisión monetaria \(\rho\) y el efecto reputacional de la sanción a través de \(\gamma^m\).
+
+Para separar este canal de los demás incentivos, sea \(\mathcal C_{r,e}^m(e_r)\) el beneficio marginal de ejecución proveniente del desempeño reputacional, el ahorro, otros componentes de la multa y los cambios discretos, excluyendo el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. En el tramo no saturado, la condición marginal puede escribirse como
+
+\begin{equation}
+\label{eq:foc_probabilidad_cumplimiento}
+\psi_r'(e_r)
+=
+\mathcal C_{r,e}^{m}(e_r)
++
+a_r'(e_r)
+\Gamma_r^m(\mu_r^m),
+\qquad
+e_r<e_r^{\mathrm{sat}}.
+\end{equation}
+
+El primer término del lado derecho reúne los demás canales que afectan el esfuerzo de ejecución, mientras que el segundo identifica el retorno adicional de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), una mayor exposición sancionadora puede incrementar este componente e inducir un mayor esfuerzo de ejecución.
+
+Supóngase inicialmente que
+
+\begin{equation}
+\label{eq:condicion_exposicion_positiva}
+\psi_r'(e_r^{\mathrm{sat}})
+-
+\mathcal C_{r,e}^{m}(e_r^{\mathrm{sat}})
+>
+0.
+\end{equation}
+
+Se supone además que \(\Gamma_r^m(\mu)\) alcanza, para alguna exposición finita, el nivel requerido para llevar este canal hasta \(e_r^{\mathrm{sat}}\). Bajo esta condición existe una exposición mínima suficiente \(\mu_r^{m,*}<\infty\). Cuando esta exposición es positiva, queda caracterizada por
+
+\begin{equation}
+\label{eq:multa_suficiente}
+a_{r,-}'(e_r^{\mathrm{sat}})
+\Gamma_r^m(\mu_r^{m,*})
+=
+\psi_r'(e_r^{\mathrm{sat}})
+-
+\mathcal C_{r,e}^{m}(e_r^{\mathrm{sat}}).
+\end{equation}
+
+La exposición suficiente depende de los demás incentivos que actúan sobre la misma inversión. Cuanto mayor sea el retorno proveniente del desempeño reputacional, del ahorro u otros canales recogidos en \(\mathcal C_{r,e}^{m}\), menor será, manteniendo lo demás constante, la exposición sancionadora necesaria para llevar el esfuerzo de ejecución hasta su región saturada. Se define \(\mu_r^{m,*}=0\) cuando \(\mathcal C_{r,e}^{m}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), pues los canales restantes son suficientes para alcanzar dicha región.
+
+Bajo las condiciones de concavidad local, para \(\mu_r^m<\mu_r^{m,*}\) una mayor exposición puede seguir incrementando el esfuerzo a través de \(a_r'(e_r)\Gamma_r^m(\mu_r^m)\). Cuando \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para que el esfuerzo alcance al menos la región en la que el avance físico se encuentra saturado. Por tanto,
+
+\begin{equation}
+\label{eq:plateau_esfuerzo}
+e_r^{m,*}
+\geq
+e_r^{\mathrm{sat}},
+\qquad
+a_r(e_r^{m,*})
+=
+\bar a_r(\bar I_r,g_r),
+\qquad
+a_r'(e_r^{m,*})
+=
+0,
+\qquad
+\mu_r^m
+\geq
+\mu_r^{m,*}.
+\end{equation}
+
+La ecuación~\eqref{eq:plateau_esfuerzo} establece un efecto techo sobre el canal de ejecución asociado con la brecha física. Una vez que \(e_r\) alcanza \(e_r^{\mathrm{sat}}\), una exposición adicional no incrementa \(a_r\) y, por tanto, deja de generar un beneficio marginal adicional a través de este canal. Los demás canales pueden continuar operando mientras los resultados correspondientes sigan siendo sensibles a las decisiones del gerente.
+
+Existe \emph{subdisuasión} respecto de este canal cuando \(\mu_r^m<\mu_r^{m,*}\) y una mayor exposición todavía puede incrementar el esfuerzo de ejecución. Puede existir \emph{sobresanción} cuando la exposición nominal es elevada, pero una probabilidad de detección \(p<1\) o una transmisión monetaria débil hacia el gerente reducen su efecto efectivo y permiten que la exposición permanezca por debajo del nivel suficiente. Existe \emph{sobredisuasión} respecto de este canal cuando la exposición supera el nivel suficiente y un incremento adicional deja de mejorar el avance físico. Para caracterizar sobredisuasión del diseño en sentido más amplio debe verificarse, además, que la mayor exposición no genere mejoras compensatorias relevantes a través de otros márgenes de comportamiento.
+
+Cuando \(\bar a_r<1\), la saturación deja una brecha física \(1-\bar a_r(\bar I_r,g_r)>0\). En ese caso, una mayor exposición sancionadora continúa imponiendo un costo al gerente sin aumentar el avance físico. A partir de \eqref{eq:exposicion_sancionadora_r}, y manteniendo constantes los demás componentes y márgenes de respuesta, se obtiene
+
+\begin{equation}
+\label{eq:utilidad_multa_excesiva}
+\frac{\partial
+U_G^m}
+{\partial \mu_r^m}
+\bigg|_{e_r\geq e_r^{\mathrm{sat}}}
+=
+-
+\left[
+1-\bar a_r(\bar I_r,g_r)
+\right]
+p
+\left[
+\rho
++
+d_M\ell_M
+V'\!\left(\mathcal R^m\right)
+R_M'\!\left(M^m\right)
+\right]
+<
+0.
+\end{equation}
+
+Por tanto, cuando el avance físico se encuentra saturado por debajo de la culminación, una mayor exposición deja de aportar incentivo por esa vía y continúa imponiendo un costo al gerente sobre la brecha física remanente.
+
+\subsubsection{Criterio reducido del regulador}
+
+El problema del gerente determina la respuesta de esfuerzo inducida por cada diseño, pero la evaluación regulatoria requiere además valorar los resultados obtenidos y los recursos que la estructura sancionadora detrae de la empresa. Como \(C_S\) mide cumplimiento y se encuentra truncado en uno, se distingue de un agregado no truncado de resultados del servicio:
+
+\begin{equation}
+\label{eq:resultado_servicio_no_truncado}
+\widetilde q_S^m
+\equiv
+\sum_{j\in J^S}
+\vartheta_j
+\frac{q_j^m}{\bar q_j},
+\qquad
+\vartheta_j\geq0,
+\qquad
+\sum_{j\in J^S}\vartheta_j=1.
+\end{equation}
+
+Esta medida permite que mejoras de los resultados por encima de las metas regulatorias sigan siendo valoradas por el regulador, aun cuando ya no modifiquen \(C_S\). Sobre esta base, se define el criterio reducido de bienestar regulatorio como
+
+\begin{equation}
+\label{eq:bienestar_regulador}
+\mathcal W_R^m
+\equiv
+\Phi\!\left(
+Q(\widetilde q_S^m,C_G^m)
+\right)
+-
+C_{OM}^m
+-
+M^m,
+\end{equation}
+
+con
+
+\begin{equation}
+\label{eq:propiedades_resultado_regulador}
+\frac{\partial Q}{\partial \widetilde q_S}
+>
+0,
+\qquad
+\frac{\partial Q}{\partial C_G}
+\geq
+0.
+\end{equation}
+
+La función \(Q(\widetilde q_S^m,C_G^m)\) representa, en forma reducida, el agregado de resultados valorado por el regulador. El primer argumento recoge directamente los resultados alcanzados en las dimensiones de la prestación, sin truncarlos en las metas regulatorias. El segundo permite que las metas de \(J^G\), aun cuando no constituyan resultados finales del servicio, contribuyan a ellos a través de capacidades, instrumentos de gestión o ejecución física que facilitan su obtención. Esta relación resume dentro de un modelo de un periodo vínculos tecnológicos y organizacionales que, en la práctica, pueden materializarse con distinta intensidad. Dado que \(C_G\) agrega indicadores heterogéneos, la condición \(\partial Q/\partial C_G\geq0\) se interpreta como una propiedad neta del bloque y es compatible con que algunos componentes individuales de \(J^G\) tengan un vínculo nulo con los resultados finales.
+
+El término \(C_{OM}^m\) recoge los costos de operación y mantenimiento asociados con la prestación, mientras que \(-M^m\) representa la detracción de recursos que la multa impone a la empresa dentro del criterio regulatorio considerado. A diferencia del gerente, el regulador valora \(M^m\) bajo el supuesto de detección cierta utilizado para su cuantificación. La dependencia de \(Q\) respecto de \(C_G^m\) y la utilización de \(\widetilde q_S^m\) modifican únicamente el criterio de evaluación del regulador y no el problema del gerente ni los incentivos marginales definidos anteriormente.
+
+La inclusión de \(-M^m\) no supone que la multa constituya necesariamente una pérdida social pura. La sanción cumple una función instrumental: puede resultar conveniente cuando modifica la conducta del gerente y genera una mejora compensatoria en los resultados u otros componentes valorados por el regulador, pero representa una carga cuando una mayor severidad no induce beneficios adicionales. Por ello, \(\mathcal W_R^m\) debe interpretarse como un criterio reducido de evaluación regulatoria y no como una función exhaustiva de bienestar social.
+
+El regulador evalúa cada diseño tomando como dadas las respuestas óptimas del gerente, de modo que \(\mathcal W_R^m\) depende de \(\mathbf e^{m,*}\) y \(\mathbf g^{m,*}\). En consecuencia, las comparaciones de bienestar entre esquemas deben considerar tanto los cambios en \(\widetilde q_S^m\) como los inducidos en \(C_G^m\), además de las diferencias en costos de operación y mantenimiento y en multas.
