@@ -58,7 +58,7 @@ h_j
 \end{align}
 \end{subequations}
 
-El indicador \(\zeta_j\) toma el valor uno cuando el resultado adicional es verificable, se obtiene bajo las condiciones de recursos reconocidas para las intervenciones correspondientes y satisface los demás criterios de elegibilidad. Así, \(h_j\) es nulo cuando no existe sobrecumplimiento elegible, aumenta con \(q_j\) dentro del rango reconocido y queda acotado en \(\bar h_j\). Las comparaciones marginales posteriores se realizan dentro de una región en la que \(\zeta_j\) permanece constante; un cambio en su valor constituye un cambio de estado.
+El indicador \(\zeta_j\) toma el valor uno únicamente cuando el resultado adicional: i) puede verificarse con la misma periodicidad y trazabilidad que la meta base; ii) es atribuible a intervenciones o decisiones reconocidas por el regulador; iii) preserva las condiciones de calidad, capacidad y sostenibilidad exigibles; y iv) no se obtiene mediante recursos destinados a obligaciones pendientes. Si alguna condición falla, \(\zeta_j=0\). Así, \(h_j\) es nulo cuando no existe sobrecumplimiento elegible, aumenta con \(q_j\) dentro del rango reconocido y queda acotado en \(\bar h_j\). Las comparaciones marginales posteriores se realizan dentro de una región en la que \(\zeta_j\) permanece constante; un cambio en su valor constituye un cambio de estado.
 
 El rango reconocido debe ser compatible con las posibilidades físicas de las intervenciones asociadas con el resultado. Como \(F_r\leq\bar F_r\), la tecnología de la Subsección~4.1 implica
 
@@ -80,7 +80,7 @@ q_j^{\max}.
 \end{align}
 \end{subequations}
 
-La segunda condición impide reconocer un rango de sobrecumplimiento superior al resultado máximo compatible con la tecnología del modelo.
+La segunda condición impide reconocer un rango de sobrecumplimiento superior al resultado máximo compatible con la tecnología del modelo. En particular, si \(\bar q_j=q_j^{\max}\), no existe holgura tecnológica y necesariamente \(\bar h_j=0\); en ese caso, \(B^{+}\) no agrega un incentivo de sobrecumplimiento para la meta \(j\).
 
 Como \(B^{+}\) conserva el mismo conjunto \(J^{S}\) que \(B\), la regla de promedio aritmético continúa asignando a cada indicador individual el peso \(1/n_S\). Para mantener la medida regulatoria separada de la señal reputacional, se define el ICG extendido como
 
@@ -114,7 +114,7 @@ T
 \end{align}
 \end{subequations}
 
-Por construcción, la bonificación es nula hasta alcanzar la meta, aumenta a una tasa \(\kappa_jb_j\) dentro del rango reconocido y queda acotada en \(\kappa_jb_j\bar h_j\). El estudio tarifario determina \(b_j\), \(\kappa_j\) y \(\bar h_j\), incluida la compatibilidad física de \eqref{eq:compatibilidad_sobrecumplimiento_bplus}; su calibración se desarrolla en el Apéndice~\ref{ap:calibracion_bonificacion}.
+Por construcción, la bonificación es nula hasta alcanzar la meta, aumenta a una tasa \(\kappa_jb_j\) dentro del rango reconocido y queda acotada en \(\kappa_jb_j\bar h_j\). El estudio tarifario determina \(b_j\), \(\kappa_j\) y \(\bar h_j\), incluida la compatibilidad física de \eqref{eq:compatibilidad_sobrecumplimiento_bplus}. La calibración debe verificar ex ante la holgura tecnológica, la adicionalidad y trazabilidad del resultado, el costo regulatorio neto de la bonificación y el riesgo de desplazar recursos desde obligaciones pendientes.
 
 \begin{figure}[!t]
     \centering
