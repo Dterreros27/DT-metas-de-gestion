@@ -285,28 +285,21 @@ R^{F},
 \end{cases}
 \end{equation}
 
-El incumplimiento de la meta de avance financiero se define entonces como
+El incumplimiento de la meta de avance financiero se define como
 
 \begin{equation}
 \label{eq:incumplimiento_avance_financiero}
-\begin{aligned}
 d_F^m
-&\equiv
+\equiv
 \mathbf{1}\{f^m<1\}
-\\
-&\quad\times
 \mathbf{1}
 \left\{
 \sum_{r\in\mathrm{Fin}^m}
 \bar I_r(1-a_r)>0
-\right\},
-\\
-d_F^m
-&\in\{0,1\}.
-\end{aligned}
+\right\}.
 \end{equation}
 
-De este modo, una ejecución financiera inferior a la programada configura incumplimiento cuando existe alcance físico pendiente entre las inversiones evaluadas. En cambio, una brecha financiera originada exclusivamente en ahorros reconocidos de inversiones cuyo alcance ha sido completado no activa \(d_F^m\). Cuando el incumplimiento se determina a partir del avance financiero, la base correspondiente se define como
+Por construcción, \(d_F^m\in\{0,1\}\). Una ejecución financiera inferior a la programada configura incumplimiento únicamente cuando existe alcance físico pendiente entre las inversiones evaluadas. En cambio, una brecha financiera originada exclusivamente en el ahorro generado por inversiones culminadas no activa \(d_F^m\). Cuando el incumplimiento se determina a partir del avance financiero, la base correspondiente se define como
 
 \begin{equation}
 \label{eq:base_financiera}
@@ -562,19 +555,15 @@ Para separar este canal de los demás incentivos, sea \(\mathrm{BM}_{r,e}^{m,-\m
 
 \begin{equation}
 \label{eq:foc_probabilidad_cumplimiento}
-\begin{aligned}
 \psi_r'(e_r)
-&=
+=
 \mathrm{BM}_{r,e}^{m,-\mu}(e_r)
 +
 a_r'(e_r)
-\Gamma_r^m(\mu_r^m),
-\\
-&e_r<e_r^{\mathrm{sat}}.
-\end{aligned}
+\Gamma_r^m(\mu_r^m).
 \end{equation}
 
-El primer término del lado derecho reúne los demás canales que afectan el esfuerzo de ejecución, mientras que el segundo identifica el retorno adicional de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), una mayor exposición sancionadora puede incrementar este componente e inducir un mayor esfuerzo de ejecución.
+Esta condición se aplica cuando \(e_r<e_r^{\mathrm{sat}}\). El primer término del lado derecho reúne los demás canales que afectan el esfuerzo de ejecución, mientras que el segundo identifica el retorno adicional de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), una mayor exposición sancionadora puede incrementar este componente e inducir un mayor esfuerzo de ejecución.
 
 Supóngase inicialmente que
 
@@ -591,44 +580,30 @@ Se supone además que \(\Gamma_r^m(\mu)\) alcanza, para alguna exposición finit
 
 \begin{equation}
 \label{eq:multa_suficiente}
-\begin{aligned}
 a_{r,-}'(e_r^{\mathrm{sat}})
 \Gamma_r^m(\mu_r^{m,*})
-&=
+=
 \psi_r'(e_r^{\mathrm{sat}})
-\\
-&\quad
 -
 \mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}}).
-\end{aligned}
 \end{equation}
 
 La exposición suficiente depende de los demás incentivos que actúan sobre la misma inversión. Cuanto mayor sea el retorno proveniente del desempeño reputacional, del ahorro u otros canales recogidos en \(\mathrm{BM}_{r,e}^{m,-\mu}\), menor será, manteniendo lo demás constante, la exposición sancionadora necesaria para llevar el esfuerzo de ejecución hasta su región saturada. Se define \(\mu_r^{m,*}=0\) cuando \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), pues los canales restantes son suficientes para alcanzar dicha región.
 
-Bajo las condiciones de concavidad local, para \(\mu_r^m<\mu_r^{m,*}\) una mayor exposición puede seguir incrementando el esfuerzo a través de \(a_r'(e_r)\Gamma_r^m(\mu_r^m)\). Cuando \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para llevar el esfuerzo al punto en que el avance físico se satura. Como \(e_r\) solo produce beneficios mediante variables que dependen de \(a_r\) y \(\psi_r'(e_r)>0\), ningún óptimo elige esfuerzo estrictamente mayor que \(e_r^{\mathrm{sat}}\), manteniendo \(g_r\) fijo. Por tanto,
+Bajo las condiciones de concavidad local, cuando \(\mu_r^m<\mu_r^{m,*}\), una mayor exposición puede seguir incrementando el esfuerzo mediante \(a_r'(e_r)\Gamma_r^m(\mu_r^m)\). Si \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para llevar el esfuerzo hasta el punto de saturación. Como \(e_r\) solo genera beneficios a través de variables que dependen de \(a_r\) y \(\psi_r'(e_r)>0\), manteniendo \(g_r\) fijo ningún óptimo elige un esfuerzo superior a \(e_r^{\mathrm{sat}}\). Por tanto, para \(\mu_r^m\geq\mu_r^{m,*}\),
 
 \begin{equation}
 \label{eq:plateau_esfuerzo}
-\begin{aligned}
 e_r^{m,*}
-&=
+=
 e_r^{\mathrm{sat}},
-&
-\mu_r^m
-&\geq
-\mu_r^{m,*},
-\\
+\qquad
 a_r(e_r^{m,*})
-&=
-\bar a_r(\bar I_r,g_r),
-&
-a_r'(e_r^{m,*})
-&=
-0.
-\end{aligned}
+=
+\bar a_r(\bar I_r,g_r).
 \end{equation}
 
-La ecuación~\eqref{eq:plateau_esfuerzo} establece un efecto techo sobre el canal de ejecución asociado con la brecha física. Una vez que \(e_r\) alcanza \(e_r^{\mathrm{sat}}\), una exposición adicional no incrementa \(a_r\) y, por tanto, deja de generar un beneficio marginal adicional a través de este canal. Los demás canales pueden continuar operando mientras los resultados correspondientes sigan siendo sensibles a las decisiones del gerente.
+La ecuación~\eqref{eq:plateau_esfuerzo} establece un efecto techo sobre el canal de ejecución asociado con la brecha física. A partir de \(e_r^{\mathrm{sat}}\), el avance permanece constante y su derivada por la derecha es nula, \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). En consecuencia, una exposición adicional deja de generar beneficios mediante este canal. Otros márgenes de decisión, como el esfuerzo de eficiencia \(g_r\), pueden continuar operando mientras los resultados correspondientes permanezcan sensibles a ellos.
 
 Existe \emph{subdisuasión} respecto de este canal cuando \(\mu_r^m<\mu_r^{m,*}\) y una mayor exposición todavía puede incrementar el esfuerzo de ejecución. Puede existir \emph{sobresanción} cuando la exposición nominal es elevada, pero una probabilidad de detección \(p<1\) o una transmisión monetaria débil hacia el gerente reducen su efecto efectivo y permiten que la exposición permanezca por debajo del nivel suficiente. Existe \emph{sobredisuasión} respecto de este canal cuando la exposición supera el nivel suficiente y un incremento adicional deja de mejorar el avance físico. Para caracterizar sobredisuasión del diseño en sentido más amplio debe verificarse, además, que la mayor exposición no genere mejoras compensatorias relevantes a través de otros márgenes de comportamiento.
 
@@ -636,46 +611,33 @@ Cuando \(\bar a_r<1\), la saturación deja una brecha física \(1-\bar a_r(\bar 
 
 \begin{equation}
 \label{eq:utilidad_multa_excesiva}
-\begin{aligned}
 \left.
 \frac{\partial U_G^m}{\partial \mu_r^m}
 \right|_{e_r\geq e_r^{\mathrm{sat}}}
-&=
--
-\gamma^m
-\\
-&\quad\times
+=
+-\gamma^m
 \left[
 1-\bar a_r(\bar I_r,g_r)
 \right]
-<
-0.
-\end{aligned}
+<0.
 \end{equation}
 
 Por tanto, cuando el avance físico se encuentra saturado por debajo de la culminación, una mayor exposición deja de aportar incentivo por esa vía y continúa imponiendo un costo al gerente sobre la brecha física remanente.
 
-\subsubsection{Criterio reducido del regulador}
+\subsubsection{Problema de elección del regulador: versión reducida}
 
-El problema del gerente determina la respuesta de esfuerzo inducida por cada diseño, pero la evaluación regulatoria requiere además valorar los resultados obtenidos y los recursos que la estructura sancionadora detrae de la empresa. Como \(C_S\) mide cumplimiento y se encuentra truncado en uno, se distingue de un agregado no truncado de resultados del servicio:
+El problema del gerente determina la respuesta de esfuerzo inducida por cada diseño, pero la evaluación regulatoria requiere además valorar los resultados obtenidos y los recursos que la estructura sancionadora detrae de la empresa. Como \(C_S\) mide el cumplimiento y se encuentra truncado en uno, se define un agregado no truncado de los resultados del servicio. Sean \(\vartheta_j\geq0\) ponderadores tales que \(\sum_{j\in J^S}\vartheta_j=1\). Entonces,
 
 \begin{equation}
 \label{eq:resultado_servicio_no_truncado}
-\begin{aligned}
 \widetilde q_S^m
-&\equiv
+\equiv
 \sum_{j\in J^S}
 \vartheta_j
-\frac{q_j^m}{\bar q_j},
-\\
-\vartheta_j
-&\geq0,
-\qquad
-\sum_{j\in J^S}\vartheta_j=1.
-\end{aligned}
+\frac{q_j^m}{\bar q_j}.
 \end{equation}
 
-Esta medida permite que mejoras de los resultados por encima de las metas regulatorias sigan siendo valoradas por el regulador, aun cuando ya no modifiquen \(C_S\). El costo de inversión inducido por cada esquema se define como
+Esta medida permite que las mejoras por encima de las metas regulatorias continúen siendo valoradas por el regulador, aun cuando ya no modifiquen \(C_S\). El costo de inversión inducido por cada esquema se define como
 
 \begin{equation}
 \label{eq:costo_inversion_regulador}
@@ -688,7 +650,7 @@ g_r^{m,*}
 \right).
 \end{equation}
 
-Sobre esta base, se define el criterio reducido de bienestar regulatorio como
+Sobre esta base, se define el criterio reducido de evaluación regulatoria como
 
 \begin{equation}
 \label{eq:bienestar_regulador}
@@ -702,30 +664,14 @@ C_I^m
 -
 C_{OM}^m
 -
-\Omega\!\left(M^m\right),
+\Omega(M^m).
 \end{equation}
 
-donde
+La función \(Q(\widetilde q_S^m,C_G^m)\) representa, en forma reducida, el agregado de resultados valorado por el regulador. Se supone que es estrictamente creciente en los resultados del servicio, \(\partial Q/\partial\widetilde q_S>0\), y no decreciente en el cumplimiento de las metas de gestión, \(\partial Q/\partial C_G\geq0\).
 
-\begin{equation}
-\label{eq:propiedades_resultado_regulador}
-\frac{\partial Q}{\partial \widetilde q_S}
->
-0,
-\qquad
-\frac{\partial Q}{\partial C_G}
-\geq
-0.
-\end{equation}
+El primer argumento recoge directamente los resultados alcanzados en las distintas dimensiones de la prestación, sin truncarlos en las metas regulatorias. El segundo permite que las metas de \(J^G\), aun cuando no constituyan resultados finales del servicio, contribuyan a ellos mediante capacidades, instrumentos de gestión o ejecución física que facilitan su obtención. Esta relación resume, dentro de un modelo de un periodo, vínculos tecnológicos y organizacionales que en la práctica pueden materializarse con distinta intensidad. Dado que \(C_G\) agrega indicadores heterogéneos, la condición \(\partial Q/\partial C_G\geq0\) se interpreta como una propiedad neta del bloque y es compatible con que algunos componentes de \(J^G\) tengan un vínculo nulo con los resultados finales.
 
-\begin{equation}
-\label{eq:propiedades_carga_multa}
-\Omega(0)=0,
-\qquad
-\Omega'(M)>0.
-\end{equation}
-
-La función \(Q(\widetilde q_S^m,C_G^m)\) representa, en forma reducida, el agregado de resultados valorado por el regulador. El primer argumento recoge directamente los resultados alcanzados en las dimensiones de la prestación, sin truncarlos en las metas regulatorias. El segundo permite que las metas de \(J^G\), aun cuando no constituyan resultados finales del servicio, contribuyan a ellos a través de capacidades, instrumentos de gestión o ejecución física que facilitan su obtención. Esta relación resume dentro de un modelo de un periodo vínculos tecnológicos y organizacionales que, en la práctica, pueden materializarse con distinta intensidad. Dado que \(C_G\) agrega indicadores heterogéneos, la condición \(\partial Q/\partial C_G\geq0\) se interpreta como una propiedad neta del bloque y es compatible con que algunos componentes individuales de \(J^G\) tengan un vínculo nulo con los resultados finales.
+La función \(\Omega(M^m)\) representa la carga sectorial efectiva de las multas y satisface \(\Omega(0)=0\) y \(\Omega'(M)>0\).
 
 El término \(C_I^m\) incorpora los recursos de inversión efectivamente utilizados, mientras que \(C_{OM}^m\) recoge los costos de operación y mantenimiento asociados con la prestación. Su inclusión permite distinguir entre esquemas que alcanzan resultados semejantes utilizando distintos montos de inversión, en línea con la literatura que evalúa conjuntamente los incentivos de eficiencia en costos y de calidad \citep{ovaere2023}.
 
