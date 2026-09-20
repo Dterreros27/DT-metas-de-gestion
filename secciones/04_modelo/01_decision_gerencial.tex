@@ -257,11 +257,11 @@ B_{RT}
 \bar I_r(1-a_r).
 \end{equation}
 
-El avance financiero requiere un tratamiento adicional, pues una ejecución financiera inferior a la programada no necesariamente implica que exista alcance físico pendiente. En los esquemas en los que se evalúa esta obligación, sea \(f^m\) la medida aplicable y \(\mathcal U_F^m\subseteq R\) el conjunto de inversiones comprendidas en dicha medida, de modo que
+El avance financiero requiere un tratamiento adicional, pues una ejecución financiera inferior a la programada no necesariamente implica que exista alcance físico pendiente. En los esquemas en los que se evalúa esta obligación, sea \(f^m\) la medida aplicable y \(\mathrm{Fin}^m\subseteq R\) el conjunto de inversiones comprendidas en dicha medida, de modo que
 
 \begin{equation}
 \label{eq:universo_financiero}
-\mathcal U_F^m
+\mathrm{Fin}^m
 =
 \begin{cases}
 R,
@@ -283,7 +283,7 @@ d_F^m
 \mathbf{1}\{f^m<1\}
 \mathbf{1}
 \left\{
-\sum_{r\in\mathcal U_F^m}
+\sum_{r\in\mathrm{Fin}^m}
 \bar I_r(1-a_r)>0
 \right\},
 \qquad
@@ -298,11 +298,11 @@ B_{\mathrm{fin}}^m
 \equiv
 d_F^m
 (1-f^m)
-\sum_{r\in\mathcal U_F^m}
+\sum_{r\in\mathrm{Fin}^m}
 \bar I_r.
 \end{equation}
 
-Una misma inversión puede incidir en más de una base cuando participa simultáneamente en una meta específica y en una obligación de alcance transversal. Esta superposición es relevante porque puede aumentar la exposición sancionadora atribuible a una misma brecha de ejecución. La composición de las bases aplicables, el universo financiero \(\mathcal U_F^m\) y la regla de activación \(\chi^m\in\{0,1\}\) dependen del diseño regulatorio considerado.
+Una misma inversión puede incidir en más de una base cuando participa simultáneamente en una meta específica y en una obligación de alcance transversal. Esta superposición es relevante porque puede aumentar la exposición sancionadora atribuible a una misma brecha de ejecución. La composición de las bases aplicables, el universo financiero \(\mathrm{Fin}^m\) y la regla de activación \(\chi^m\in\{0,1\}\) dependen del diseño regulatorio considerado.
 
 \subsubsection{Problema del gerente e incentivos marginales}
 
@@ -316,7 +316,7 @@ Bajo esta estructura, el gerente elige los esfuerzos de ejecución y eficiencia 
 \quad
 U_G^{m}
 =
-V\left(\mathcal R^{m}\right)
+V\left(\mathrm{Rep}^{m}\right)
 -
 p\rho M^{m}
 -
@@ -356,18 +356,18 @@ Los coeficientes \(\alpha_H^m\) recogen la saliencia reputacional relativa de ca
 \label{eq:ponderaciones_reputacionales}
 \alpha_H^m
 =
-\frac{s_H\,\mathbf 1\{H\in\mathcal H^m\}}
+\frac{s_H\,\mathbf 1\{H\in\mathrm{Sig}^m\}}
 {\displaystyle\sum_{K\in\{S,G,F,RT\}}
-s_K\,\mathbf 1\{K\in\mathcal H^m\}},
+s_K\,\mathbf 1\{K\in\mathrm{Sig}^m\}},
 \end{equation}
 
-donde \(\mathcal H^m\) denota el conjunto de bloques que integra la señal pública del esquema \(m\). En particular, se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) se mantiene como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas del esquema cuando corresponda.
+donde \(\mathrm{Sig}^m\) denota el conjunto de bloques que integra la señal pública del esquema \(m\). En particular, se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) se mantiene como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas del esquema cuando corresponda.
 
 Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
 
 \begin{equation}
 \label{eq:reputacion_estructural}
-\mathcal R^m
+\mathrm{Rep}^m
 =
 d_I\ell_I^m R_I(P^m)
 +
@@ -378,9 +378,9 @@ p\,d_M\ell_M R_M(M^m).
 
 Los parámetros \(d_I,d_E,d_M\in[0,1]\) recogen la difusión de cada señal, mientras que \(\ell_I^m,\ell_E,\ell_M\in[0,1]\) representan su legibilidad. La difusión determina el alcance de la información y la legibilidad refleja qué tan claramente puede ser interpretada por los agentes externos. En el canal de desempeño, \(\ell_I^m\) resume la facilidad con la que el conjunto de metas publicado puede ser interpretado y se distingue de la saliencia capturada por \(s_H\). Las funciones \(R_I\), \(R_E\) y \(R_M\) son crecientes y diferenciables, con \(R_M(0)=0\), de modo que el efecto reputacional asociado con la sanción depende de la magnitud de la multa.
 
-La función \(V(\mathcal R^m)\) transforma la reputación de la empresa en utilidad gerencial. Una evaluación externa más favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, en línea con la lógica de los modelos de \textit{career concerns}, en los que el gerente valora los efectos de su desempeño sobre su reputación profesional futura \citep{holmstrom1999managerial,dewatripont1999economics}. El término \(-p\rho M^m\), con \(\rho\in[0,1]\), representa el costo monetario que el gerente internaliza de la sanción, una vez consideradas la probabilidad de detección que percibe y la fracción del costo pecuniario de la empresa que se transmite directamente hacia quien decide el esfuerzo. Este término se mantiene fuera de \(\mathcal R^m\) para distinguir el costo monetario de la sanción de su efecto reputacional.\footnote{El modelo base abstrae de premios, penalidades o compensaciones asociados directamente con indicadores individuales. La incorporación de un término común a todos los esquemas no alteraría las comparaciones centrales siempre que dicho término no dependa de la ejecución financiera ni de las reglas regulatorias que varían entre esquemas.}
+La función \(V(\mathrm{Rep}^m)\) transforma la reputación de la empresa en utilidad gerencial. Una evaluación externa más favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, en línea con la lógica de los modelos de \textit{career concerns}, en los que el gerente valora los efectos de su desempeño sobre su reputación profesional futura \citep{holmstrom1999managerial,dewatripont1999economics}. El término \(-p\rho M^m\), con \(\rho\in[0,1]\), representa el costo monetario que el gerente internaliza de la sanción, una vez consideradas la probabilidad de detección que percibe y la fracción del costo pecuniario de la empresa que se transmite directamente hacia quien decide el esfuerzo. Este término se mantiene fuera de \(\mathrm{Rep}^m\) para distinguir el costo monetario de la sanción de su efecto reputacional.\footnote{El modelo base abstrae de premios, penalidades o compensaciones asociados directamente con indicadores individuales. La incorporación de un término común a todos los esquemas no alteraría las comparaciones centrales siempre que dicho término no dependa de la ejecución financiera ni de las reglas regulatorias que varían entre esquemas.}
 
-Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan, respectivamente, los costos gerenciales de los esfuerzos de ejecución y eficiencia.\footnote{La separación entre ambas dimensiones sigue la lógica de los modelos multitarea, en los que las actividades pueden presentar distinta visibilidad y distinto retorno para el agente \citep{holmstrom1991multitask}.} Se supone \(V'(\mathcal R^m)>0\), \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\). Dentro de cada región en la que los componentes continuos de la función objetivo son diferenciables se supone concavidad suficiente para caracterizar el óptimo local. Asimismo, la capacidad gerencial no constituye una restricción vinculante, por lo que el esfuerzo destinado a una inversión no desplaza mecánicamente el asignado a las demás.
+Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan, respectivamente, los costos gerenciales de los esfuerzos de ejecución y eficiencia.\footnote{La separación entre ambas dimensiones sigue la lógica de los modelos multitarea, en los que las actividades pueden presentar distinta visibilidad y distinto retorno para el agente \citep{holmstrom1991multitask}.} Se supone \(V'(\mathrm{Rep}^m)>0\), \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\). Dentro de cada región en la que los componentes continuos de la función objetivo son diferenciables se supone concavidad suficiente para caracterizar el óptimo local. Asimismo, la capacidad gerencial no constituye una restricción vinculante, por lo que el esfuerzo destinado a una inversión no desplaza mecánicamente el asignado a las demás.
 
 Las comparaciones de esfuerzo se basan en comparativa estática monótona: si el beneficio marginal se desplaza débilmente hacia arriba para todo nivel del esfuerzo en la región relevante, el costo marginal es creciente y el óptimo es único, entonces el esfuerzo óptimo no disminuye. Los ordenamientos resultantes se interpretan, por tanto, como comparaciones \textit{ceteris paribus} de los canales regulatorios modificados.
 
@@ -393,7 +393,7 @@ La presencia de umbrales y reglas discretas requiere distinguir entre los efecto
 &=
 \frac{\partial}{\partial e_r}
 \left[
-V(\mathcal R^m)-p\rho M^m
+V(\mathrm{Rep}^m)-p\rho M^m
 \right],
 \label{eq:foc_e_esperada}
 \\
@@ -401,7 +401,7 @@ V(\mathcal R^m)-p\rho M^m
 &=
 \frac{\partial}{\partial g_r}
 \left[
-V(\mathcal R^m)-p\rho M^m
+V(\mathrm{Rep}^m)-p\rho M^m
 \right].
 \label{eq:foc_g_esperada}
 \end{align}
@@ -412,7 +412,7 @@ Para identificar los distintos canales del incentivo marginal, considérese una 
 \begin{subequations}
 \label{eq:incentivos_marginales_continuos}
 \begin{align}
-\mathcal B_{r,e}^{m}
+\mathrm{BM}_{r,e}^{m}
 &\equiv
 \lambda^m
 \frac{\partial P^m}{\partial e_r}
@@ -424,7 +424,7 @@ Para identificar los distintos canales del incentivo marginal, considérese una 
 \frac{\partial M^m}{\partial e_r},
 \label{eq:incentivo_marginal_e}
 \\
-\mathcal B_{r,g}^{m}
+\mathrm{BM}_{r,g}^{m}
 &\equiv
 \lambda^m
 \frac{\partial P^m}{\partial g_r}
@@ -445,14 +445,14 @@ Los retornos marginales que intervienen en estas expresiones son
 \begin{align}
 \lambda^m
 &\equiv
-V'(\mathcal R^m)
+V'(\mathrm{Rep}^m)
 d_I\ell_I^m
 R_I'(P^m),
 \label{eq:lambda_m}
 \\
 \varpi^m
 &\equiv
-V'(\mathcal R^m)
+V'(\mathrm{Rep}^m)
 d_E\ell_E
 R_E'(S^m),
 \label{eq:varpi_m}
@@ -461,7 +461,7 @@ R_E'(S^m),
 &\equiv
 p
 \left[
-V'(\mathcal R^m)
+V'(\mathrm{Rep}^m)
 d_M\ell_M
 R_M'(M^m)
 +
@@ -473,23 +473,23 @@ R_M'(M^m)
 
 Así, \(\lambda^m\) mide el retorno marginal asociado con el desempeño percibido \(P^m\), \(\varpi^m\) la valoración marginal del ahorro reconocido y \(\gamma^m\) el costo marginal de una mayor multa percibido por el gerente, considerando tanto su efecto reputacional como el costo monetario directamente internalizado. La separación entre \(P^m\) e \(ICG^m\) permite que el peso reputacional de un bloque difiera de su ponderación regulatoria sin modificar las reglas formales del índice. Como \(p\) es común a todos los esquemas, no constituye una fuente de diferencias entre diseños, aunque reduce la intensidad con la que una misma multa regulatoria se transmite hacia el gerente. Estos términos tienen una interpretación local y no se consideran parámetros globales de la función objetivo.
 
-Los esfuerzos también pueden modificar las condiciones en las que cambian \(\mathbf 1\{c_j<1\}\), \(d_F^m\), \(\chi^m\) o el reconocimiento de \(S_r\). Sean \(\mathcal D_{r,e}^m\) y \(\mathcal D_{r,g}^m\) los efectos asociados con estos cambios discretos. Las condiciones marginales pueden expresarse entonces como
+Los esfuerzos también pueden modificar las condiciones en las que cambian \(\mathbf 1\{c_j<1\}\), \(d_F^m\), \(\chi^m\) o el reconocimiento de \(S_r\). Sean \(\Delta_{r,e}^m\) y \(\Delta_{r,g}^m\) los efectos asociados con estos cambios discretos. Las condiciones marginales pueden expresarse entonces como
 
 \begin{subequations}
 \label{eq:foc_completas}
 \begin{align}
 \psi_r'(e_r)
 &=
-\mathcal B_{r,e}^{m}
+\mathrm{BM}_{r,e}^{m}
 +
-\mathcal D_{r,e}^{m},
+\Delta_{r,e}^{m},
 \label{eq:foc_e_completa}
 \\
 \xi_r'(g_r)
 &=
-\mathcal B_{r,g}^{m}
+\mathrm{BM}_{r,g}^{m}
 +
-\mathcal D_{r,g}^{m}.
+\Delta_{r,g}^{m}.
 \label{eq:foc_g_completa}
 \end{align}
 \end{subequations}
@@ -532,13 +532,13 @@ Dado \eqref{eq:exposicion_sancionadora_r}, el retorno marginal que el gerente ob
 
 Se supone que \(\Gamma_r^m(\mu)\) es continua y creciente en \(\mu\) en la región relevante. Esta expresión incorpora tanto la probabilidad de detección \(p\) como la transmisión monetaria \(\rho\) y el efecto reputacional de la sanción a través de \(\gamma^m\).
 
-Para separar este canal de los demás incentivos, sea \(\mathcal C_{r,e}^m(e_r)\) el beneficio marginal de ejecución proveniente del desempeño reputacional, el ahorro, otros componentes de la multa y los cambios discretos, excluyendo el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. En el tramo no saturado, la condición marginal puede escribirse como
+Para separar este canal de los demás incentivos, sea \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r)\) el beneficio marginal de ejecución proveniente del desempeño reputacional, el ahorro, otros componentes de la multa y los cambios discretos, excluyendo el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. En el tramo no saturado, la condición marginal puede escribirse como
 
 \begin{equation}
 \label{eq:foc_probabilidad_cumplimiento}
 \psi_r'(e_r)
 =
-\mathcal C_{r,e}^{m}(e_r)
+\mathrm{BM}_{r,e}^{m,-\mu}(e_r)
 +
 a_r'(e_r)
 \Gamma_r^m(\mu_r^m),
@@ -554,7 +554,7 @@ Supóngase inicialmente que
 \label{eq:condicion_exposicion_positiva}
 \psi_r'(e_r^{\mathrm{sat}})
 -
-\mathcal C_{r,e}^{m}(e_r^{\mathrm{sat}})
+\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})
 >
 0.
 \end{equation}
@@ -568,10 +568,10 @@ a_{r,-}'(e_r^{\mathrm{sat}})
 =
 \psi_r'(e_r^{\mathrm{sat}})
 -
-\mathcal C_{r,e}^{m}(e_r^{\mathrm{sat}}).
+\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}}).
 \end{equation}
 
-La exposición suficiente depende de los demás incentivos que actúan sobre la misma inversión. Cuanto mayor sea el retorno proveniente del desempeño reputacional, del ahorro u otros canales recogidos en \(\mathcal C_{r,e}^{m}\), menor será, manteniendo lo demás constante, la exposición sancionadora necesaria para llevar el esfuerzo de ejecución hasta su región saturada. Se define \(\mu_r^{m,*}=0\) cuando \(\mathcal C_{r,e}^{m}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), pues los canales restantes son suficientes para alcanzar dicha región.
+La exposición suficiente depende de los demás incentivos que actúan sobre la misma inversión. Cuanto mayor sea el retorno proveniente del desempeño reputacional, del ahorro u otros canales recogidos en \(\mathrm{BM}_{r,e}^{m,-\mu}\), menor será, manteniendo lo demás constante, la exposición sancionadora necesaria para llevar el esfuerzo de ejecución hasta su región saturada. Se define \(\mu_r^{m,*}=0\) cuando \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), pues los canales restantes son suficientes para alcanzar dicha región.
 
 Bajo las condiciones de concavidad local, para \(\mu_r^m<\mu_r^{m,*}\) una mayor exposición puede seguir incrementando el esfuerzo a través de \(a_r'(e_r)\Gamma_r^m(\mu_r^m)\). Cuando \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para que el esfuerzo alcance al menos la región en la que el avance físico se encuentra saturado. Por tanto,
 
@@ -616,7 +616,7 @@ p
 \rho
 +
 d_M\ell_M
-V'\!\left(\mathcal R^m\right)
+V'\!\left(\mathrm{Rep}^m\right)
 R_M'\!\left(M^m\right)
 \right]
 <
@@ -646,7 +646,7 @@ Esta medida permite que mejoras de los resultados por encima de las metas regula
 
 \begin{equation}
 \label{eq:bienestar_regulador}
-\mathcal W_R^m
+W_R^m
 \equiv
 \Phi\!\left(
 Q(\widetilde q_S^m,C_G^m)
@@ -674,6 +674,6 @@ La función \(Q(\widetilde q_S^m,C_G^m)\) representa, en forma reducida, el agre
 
 El término \(C_{OM}^m\) recoge los costos de operación y mantenimiento asociados con la prestación, mientras que \(-M^m\) representa la detracción de recursos que la multa impone a la empresa dentro del criterio regulatorio considerado. A diferencia del gerente, el regulador valora \(M^m\) bajo el supuesto de detección cierta utilizado para su cuantificación. La dependencia de \(Q\) respecto de \(C_G^m\) y la utilización de \(\widetilde q_S^m\) modifican únicamente el criterio de evaluación del regulador y no el problema del gerente ni los incentivos marginales definidos anteriormente.
 
-La inclusión de \(-M^m\) no supone que la multa constituya necesariamente una pérdida social pura. La sanción cumple una función instrumental: puede resultar conveniente cuando modifica la conducta del gerente y genera una mejora compensatoria en los resultados u otros componentes valorados por el regulador, pero representa una carga cuando una mayor severidad no induce beneficios adicionales. Por ello, \(\mathcal W_R^m\) debe interpretarse como un criterio reducido de evaluación regulatoria y no como una función exhaustiva de bienestar social.
+La inclusión de \(-M^m\) no supone que la multa constituya necesariamente una pérdida social pura. La sanción cumple una función instrumental: puede resultar conveniente cuando modifica la conducta del gerente y genera una mejora compensatoria en los resultados u otros componentes valorados por el regulador, pero representa una carga cuando una mayor severidad no induce beneficios adicionales. Por ello, \(W_R^m\) debe interpretarse como un criterio reducido de evaluación regulatoria y no como una función exhaustiva de bienestar social.
 
-El regulador evalúa cada diseño tomando como dadas las respuestas óptimas del gerente, de modo que \(\mathcal W_R^m\) depende de \(\mathbf e^{m,*}\) y \(\mathbf g^{m,*}\). En consecuencia, las comparaciones de bienestar entre esquemas deben considerar tanto los cambios en \(\widetilde q_S^m\) como los inducidos en \(C_G^m\), además de las diferencias en costos de operación y mantenimiento y en multas.
+El regulador evalúa cada diseño tomando como dadas las respuestas óptimas del gerente, de modo que \(W_R^m\) depende de \(\mathbf e^{m,*}\) y \(\mathbf g^{m,*}\). En consecuencia, las comparaciones de bienestar entre esquemas deben considerar tanto los cambios en \(\widetilde q_S^m\) como los inducidos en \(C_G^m\), además de las diferencias en costos de operación y mantenimiento y en multas.

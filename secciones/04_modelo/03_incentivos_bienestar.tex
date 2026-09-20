@@ -96,7 +96,7 @@ f_x^m
 x\in\{e_r,g_r\}.
 \end{equation}
 
-Por construcción, \(f_x^m=0\) cuando \(r\notin\mathcal U_F^m\). Cuando \(r\in\mathcal U_F^m\), se supone
+Por construcción, \(f_x^m=0\) cuando \(r\notin\mathrm{Fin}^m\). Cuando \(r\in\mathrm{Fin}^m\), se supone
 
 \begin{equation}
 \label{eq:signos_avance_financiero}
@@ -131,7 +131,7 @@ K_{r,x}^{m}
 d_F^m\,
 \mathrm{WACC}
 \left(
-\sum_{s\in\mathcal U_F^m}
+\sum_{s\in\mathrm{Fin}^m}
 \bar I_s
 \right)
 f_x^{m},
@@ -139,7 +139,7 @@ f_x^{m},
 x\in\{e_r,g_r\}.
 \end{equation}
 
-Mientras \(d_F^m\) permanezca constante y \(r\in\mathcal U_F^m\), se tiene \(K_{r,e}^{m}>0\) y \(K_{r,g}^{m}<0\). Utilizando además la multiplicidad \(\delta_r^m\) definida en la Subsección~4.2, los efectos continuos de los esfuerzos sobre la multa pueden escribirse como
+Mientras \(d_F^m\) permanezca constante y \(r\in\mathrm{Fin}^m\), se tiene \(K_{r,e}^{m}>0\) y \(K_{r,g}^{m}<0\). Utilizando además la multiplicidad \(\delta_r^m\) definida en la Subsección~4.2, los efectos continuos de los esfuerzos sobre la multa pueden escribirse como
 
 \begin{subequations}
 \label{eq:derivadas_multa_esfuerzos}
@@ -283,9 +283,9 @@ La transición \(A\to A'\) es la más simple de la secuencia: no cambia la compo
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_a_ap_rh}
-\mathcal B_{r,e}^{A'}
+\mathrm{BM}_{r,e}^{A'}
 -
-\mathcal B_{r,e}^{A}
+\mathrm{BM}_{r,e}^{A}
 =
 \gamma
 (1-\chi^A)
@@ -301,9 +301,9 @@ La transición \(A'\to A''\) opera por una razón distinta. El canal sancionador
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_ap_app_rh}
-\mathcal B_{r,e}^{A''}
+\mathrm{BM}_{r,e}^{A''}
 -
-\mathcal B_{r,e}^{A'}
+\mathrm{BM}_{r,e}^{A'}
 =
 \lambda
 \left(
@@ -322,9 +322,9 @@ La última transición concentra la señal pública en los resultados del servic
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_app_b_rs}
-\mathcal B_{r,e}^{B}
+\mathrm{BM}_{r,e}^{B}
 -
-\mathcal B_{r,e}^{A''}
+\mathrm{BM}_{r,e}^{A''}
 =
 \left[
 \lambda^B
@@ -345,7 +345,7 @@ Una condición suficiente para que el incentivo no disminuya es
 \frac{s_S}{s_S+s_G}\lambda.
 \end{equation}
 
-Dado que \(\lambda^m=V'(\mathcal R^m)d_I\ell_I^mR_I'(P^m)\), la mayor legibilidad de \(B\) facilita el cumplimiento de \eqref{eq:condicion_lambda_b}, pero no lo garantiza: cambios suficientemente grandes en \(V'(\mathcal R^m)\) o \(R_I'(P^m)\) pueden compensar ese efecto.
+Dado que \(\lambda^m=V'(\mathrm{Rep}^m)d_I\ell_I^mR_I'(P^m)\), la mayor legibilidad de \(B\) facilita el cumplimiento de \eqref{eq:condicion_lambda_b}, pero no lo garantiza: cambios suficientemente grandes en \(V'(\mathrm{Rep}^m)\) o \(R_I'(P^m)\) pueden compensar ese efecto.
 
 \begin{resultadobox}
 {Ejecución en \(R^{S}\): secuencia principal}
@@ -369,9 +369,9 @@ Las inversiones vinculadas con \(J^{G}\) siguen la misma lógica en las dos prim
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_app_b_rg}
-\mathcal B_{r,e}^{B}
+\mathrm{BM}_{r,e}^{B}
 -
-\mathcal B_{r,e}^{A''}
+\mathrm{BM}_{r,e}^{A''}
 =
 -
 \lambda
@@ -404,9 +404,9 @@ El caso de \(R^{F}\) es distinto porque \(A'\to A''\) cambia simultáneamente la
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_ap_app_rf}
-\mathcal B_{r,e}^{A''}
+\mathrm{BM}_{r,e}^{A''}
 -
-\mathcal B_{r,e}^{A'}
+\mathrm{BM}_{r,e}^{A'}
 =
 -
 \lambda
@@ -483,7 +483,7 @@ Por tanto, la transición aumenta la ponderación reputacional de \(C_S\), adem�
 La transición \(A_0\to A\) no permite establecer un orden general del esfuerzo de ejecución. Una señal más focalizada puede reforzar el retorno de \(C_S\), pero al mismo tiempo elimina otros canales reputacionales y sancionadores; antes de la saturación, también importa la diferencia de exposición.
 \end{resultadobox}
 
-Para no dejar esta ambigüedad como una afirmación abstracta, conviene mostrar de dónde proviene mediante un caso concreto. Supóngase que una intervención pendiente \(r\in R_j^{S}\) participa en la base de su propia meta y en \(B_{RT}\) bajo \(A_0\), mientras que en \(A\) permanece únicamente la primera y la consecuencia está activa en ambos esquemas. Entonces, \(\delta_r^{A_0}=2\) y \(\delta_r^{A}=1\). Para aislar estos canales, se mantienen localmente \(V'(\mathcal R^{A})=V'(\mathcal R^{A_0})\equiv V'\), \(R_I'(P^{A})=R_I'(P^{A_0})\equiv R_I'\), \(d_I\) y \(\gamma^{A_0}=\gamma^{A}\equiv\gamma\), y se definen
+Para no dejar esta ambigüedad como una afirmación abstracta, conviene mostrar de dónde proviene mediante un caso concreto. Supóngase que una intervención pendiente \(r\in R_j^{S}\) participa en la base de su propia meta y en \(B_{RT}\) bajo \(A_0\), mientras que en \(A\) permanece únicamente la primera y la consecuencia está activa en ambos esquemas. Entonces, \(\delta_r^{A_0}=2\) y \(\delta_r^{A}=1\). Para aislar estos canales, se mantienen localmente \(V'(\mathrm{Rep}^{A})=V'(\mathrm{Rep}^{A_0})\equiv V'\), \(R_I'(P^{A})=R_I'(P^{A_0})\equiv R_I'\), \(d_I\) y \(\gamma^{A_0}=\gamma^{A}\equiv\gamma\), y se definen
 
 \begin{equation}
 \label{eq:componentes_benchmark_a0_a}
@@ -735,9 +735,9 @@ En \(R^{S}\) y \(R^{G}\), la secuencia principal no modifica el incentivo margin
 \begin{subequations}
 \label{eq:diferencias_eficiencia_secuencia}
 \begin{align}
-\mathcal B_{r,g}^{A'}
+\mathrm{BM}_{r,g}^{A'}
 -
-\mathcal B_{r,g}^{A}
+\mathrm{BM}_{r,g}^{A}
 &=
 \gamma
 (1-\chi^A)
@@ -746,9 +746,9 @@ K_{r,g}^{A'}
 0,
 \label{eq:diferencia_eficiencia_a_ap}
 \\
-\mathcal B_{r,g}^{A''}
+\mathrm{BM}_{r,g}^{A''}
 -
-\mathcal B_{r,g}^{A'}
+\mathrm{BM}_{r,g}^{A'}
 &=
 -\lambda
 \alpha_F^{A'}
@@ -760,9 +760,9 @@ K_{r,g}^{A'}
 0,
 \label{eq:diferencia_eficiencia_ap_app}
 \\
-\mathcal B_{r,g}^{A''}
+\mathrm{BM}_{r,g}^{A''}
 -
-\mathcal B_{r,g}^{A}
+\mathrm{BM}_{r,g}^{A}
 &=
 -\lambda
 \alpha_F^{A}
@@ -801,9 +801,9 @@ Para \(R^{S}\) y \(R^{G}\), bajo \(A_0\) una reducción eficiente del costo dism
 
 \begin{equation}
 \label{eq:diferencia_eficiencia_a_a0}
-\mathcal B_{r,g}^{A}
+\mathrm{BM}_{r,g}^{A}
 -
-\mathcal B_{r,g}^{A_0}
+\mathrm{BM}_{r,g}^{A_0}
 =
 -\lambda^{A_0}
 \alpha_F^{A_0}
@@ -941,9 +941,9 @@ Entonces,
 
 \begin{equation}
 \label{eq:cambio_bienestar_transicion}
-\mathcal W_R^{m'}
+W_R^{m'}
 -
-\mathcal W_R^{m}
+W_R^{m}
 =
 \Delta_{\Phi}^{m,m'}
 +
@@ -996,7 +996,7 @@ Por tanto,
 
 \begin{equation}
 \label{eq:bienestar_exposicion_excesiva_general}
-\frac{\partial\mathcal W_R^m}
+\frac{\partialW_R^m}
 {\partial\mu_r^m}
 \bigg|_{e_r\geq e_r^{\mathrm{sat}}}
 =
@@ -1006,7 +1006,7 @@ Por tanto,
 0.
 \end{equation}
 
-Así, una vez agotado el margen de culminación, una mayor exposición deja de aportar mejoras por esa vía y, si tampoco mejora otros componentes del criterio regulatorio, reduce \(\mathcal W_R^m\). En particular, si dos diseños mantienen el avance físico saturado y generan localmente los mismos \(Q\) y \(C_{OM}\), el diseño con menor exposición sancionadora obtiene mayor bienestar regulatorio. Esta comparación constituye una mejora de eficiencia sancionadora y no una dominancia global cuando los diseños modifican simultáneamente otros canales.
+Así, una vez agotado el margen de culminación, una mayor exposición deja de aportar mejoras por esa vía y, si tampoco mejora otros componentes del criterio regulatorio, reduce \(W_R^m\). En particular, si dos diseños mantienen el avance físico saturado y generan localmente los mismos \(Q\) y \(C_{OM}\), el diseño con menor exposición sancionadora obtiene mayor bienestar regulatorio. Esta comparación constituye una mejora de eficiencia sancionadora y no una dominancia global cuando los diseños modifican simultáneamente otros canales.
 
 \paragraph{\(A_0\to A\): exposición redundante y focalización.}
 
@@ -1028,7 +1028,7 @@ Para una intervención cuya brecha física saturada es \(1-\bar a_r>0\), la redu
 0.
 \end{equation}
 
-Esta expresión identifica únicamente la contribución de la exposición de \(r\); el orden de la multa total requiere considerar los demás componentes e intervenciones. En términos agregados, una condición suficiente para \(\mathcal W_R^A>\mathcal W_R^{A_0}\) es
+Esta expresión identifica únicamente la contribución de la exposición de \(r\); el orden de la multa total requiere considerar los demás componentes e intervenciones. En términos agregados, una condición suficiente para \(W_R^A>W_R^{A_0}\) es
 
 \begin{equation}
 \label{eq:condicion_bienestar_a_a0}
@@ -1064,9 +1064,9 @@ M^{A_0},
 \end{equation}
 se obtiene
 \begin{equation}
-\mathcal W_R^{A}
+W_R^{A}
 >
-\mathcal W_R^{A_0}.
+W_R^{A_0}.
 \end{equation}
 Fuera de estas condiciones, el orden permanece abierto.
 \end{resultadobox}
@@ -1118,9 +1118,9 @@ C_G^{A''}
 \label{res:bienestar_secuencia_principal}
 Para cada transición consecutiva \(m\to m'\) de \(A\to A'\to A''\to B\), si se cumple \eqref{eq:condicion_general_mejora_bienestar}, entonces
 \begin{equation}
-\mathcal W_R^{m'}
+W_R^{m'}
 >
-\mathcal W_R^{m}.
+W_R^{m}.
 \end{equation}
 En \(A''\to B\), esta condición debe incorporar explícitamente la posible oposición entre la mejora de \(\widetilde q_S\) y la reducción de \(C_G\). Las fuentes de la ganancia pueden diferir entre transiciones; por ello, el resultado es condicionado y no se deriva únicamente del ordenamiento de los resultados directos del servicio.
 \end{resultadobox}
@@ -1129,15 +1129,15 @@ Combinando el Resultado~\ref{res:bienestar_a0_a} con el Resultado~\ref{res:biene
 
 \begin{equation}
 \label{eq:ordenamiento_bienestar_condicionado}
-\mathcal W_R^{B}
+W_R^{B}
 >
-\mathcal W_R^{A''}
+W_R^{A''}
 >
-\mathcal W_R^{A'}
+W_R^{A'}
 >
-\mathcal W_R^{A}
+W_R^{A}
 >
-\mathcal W_R^{A_0}.
+W_R^{A_0}.
 \end{equation}
 
 \begin{resultadobox}

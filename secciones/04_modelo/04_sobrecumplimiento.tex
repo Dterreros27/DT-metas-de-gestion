@@ -102,14 +102,14 @@ Además del reconocimiento dentro del indicador agregado, \(B^{+}\) incorpora un
 \begin{subequations}
 \label{eq:bonificacion_bplus}
 \begin{align}
-\mathcal P_j
+T_j
 &=
 \kappa_j b_j h_j,
 \label{eq:premio_individual}
 \\
-\mathcal P
+T
 &=
-\sum_{j\in J^{S}}\mathcal P_j.
+\sum_{j\in J^{S}}T_j.
 \label{eq:premio_agregado}
 \end{align}
 \end{subequations}
@@ -133,13 +133,13 @@ Por construcción, la bonificación es nula hasta alcanzar la meta, aumenta a un
     \end{minipage}
 \end{figure}
 
-El monto reconocido mediante \(\mathcal P\) se incorpora tarifariamente y permanece afectado al financiamiento de inversiones. Para evitar una doble contabilización, \(S^{B^{+}}\) recoge los recursos que permanecen efectivamente sin utilizar después de ejecutar el alcance que genera el resultado observado, mientras que \(\mathcal P\) representa el reconocimiento regulatorio asociado con el sobrecumplimiento. Los recursos utilizados para producir el resultado adicional no se contabilizan simultáneamente como ahorro. En el canal reputacional, ambas formas de valor reconocido se consideran conjuntamente mediante \(R_E(S^{B^{+}}+\mathcal P)\).
+El monto reconocido mediante \(T\) se incorpora tarifariamente y permanece afectado al financiamiento de inversiones. Para evitar una doble contabilización, \(S^{B^{+}}\) recoge los recursos que permanecen efectivamente sin utilizar después de ejecutar el alcance que genera el resultado observado, mientras que \(T\) representa el reconocimiento regulatorio asociado con el sobrecumplimiento. Los recursos utilizados para producir el resultado adicional no se contabilizan simultáneamente como ahorro. En el canal reputacional, ambas formas de valor reconocido se consideran conjuntamente mediante \(R_E(S^{B^{+}}+T)\).
 
 \subsubsection{Reputación e incentivo de ejecución bajo \(B^{+}\)}
 
 El esquema \(B^{+}\) conserva las reglas de fiscalización y sanción de \(B\). Las metas de \(J^{G}\) y los indicadores específicos asociados con \(R^{F}\) permanecen fuera del ICG y mantienen sus mecanismos propios de verificación. La modificación se limita al reconocimiento acotado de resultados superiores a las metas.
 
-Se supone que \(\mathcal P\) no es apropiable por el gerente y no entra como compensación monetaria directa en \(U_G^{B^{+}}\). Su efecto opera únicamente a través de la valoración reputacional de los recursos reconocidos. Como \(B\) concentra la señal publicada en los resultados del servicio, el desempeño percibido bajo la extensión se define como
+Se supone que \(T\) no es apropiable por el gerente y no entra como compensación monetaria directa en \(U_G^{B^{+}}\). Su efecto opera únicamente a través de la valoración reputacional de los recursos reconocidos. Como \(B\) concentra la señal publicada en los resultados del servicio, el desempeño percibido bajo la extensión se define como
 
 \begin{equation}
 \label{eq:desempeno_percibido_bplus}
@@ -157,13 +157,13 @@ Así, \(P^{B^{+}}=P^B=C_S\) cuando no existe sobrecumplimiento elegible. La repu
 \begin{equation}
 \label{eq:reputacion_bplus}
 \begin{aligned}
-\mathcal R^{B^{+}}
+\mathrm{Rep}^{B^{+}}
 ={}&
 d_I\ell_I^{B^{+}}
 R_I\left(P^{B^{+}}\right)
 +
 d_E\ell_E
-R_E\left(S^{B^{+}}+\mathcal P\right)
+R_E\left(S^{B^{+}}+T\right)
 \\
 &-
 p\,d_M\ell_M
@@ -178,15 +178,15 @@ Si el regulador publica separadamente el cumplimiento base y el sobrecumplimient
 \begin{align}
 \lambda^{B^{+}}
 &\equiv
-V'\!\left(\mathcal R^{B^{+}}\right)
+V'\!\left(\mathrm{Rep}^{B^{+}}\right)
 d_I\ell_I^{B^{+}}
 R_I'\!\left(P^{B^{+}}\right),
 \\
 \varpi^{B^{+}}
 &\equiv
-V'\!\left(\mathcal R^{B^{+}}\right)
+V'\!\left(\mathrm{Rep}^{B^{+}}\right)
 d_E\ell_E
-R_E'\!\left(S^{B^{+}}+\mathcal P\right).
+R_E'\!\left(S^{B^{+}}+T\right).
 \label{eq:varpi_bplus}
 \end{align}
 \end{subequations}
@@ -206,7 +206,7 @@ Considérese una intervención \(r\in R_j^{S}\). Mientras \(q_j\leq\bar q_j\), \
 >0,
 \label{eq:derivada_p_bplus}
 \\
-\frac{\partial \mathcal P}{\partial e_r}
+\frac{\partial T}{\partial e_r}
 &=
 \kappa_j b_j
 \beta_{rj}
@@ -220,9 +220,9 @@ Para una intervención aún no culminada, \(\partial S_r/\partial e_r=0\). Como 
 
 \begin{equation}
 \label{eq:incentivo_marginal_bplus}
-\mathcal B_{r,e}^{B^{+}}
+\mathrm{BM}_{r,e}^{B^{+}}
 -
-\mathcal B_{r,e}^{B}
+\mathrm{BM}_{r,e}^{B}
 =
 \left[
 \lambda^{B^{+}}
@@ -237,7 +237,7 @@ Para una intervención aún no culminada, \(\partial S_r/\partial e_r=0\). Como 
 0.
 \end{equation}
 
-El primer término recoge el retorno reputacional de reconocer el sobrecumplimiento dentro de \(P^{B^{+}}\) y el segundo la valoración reputacional de la bonificación destinada al financiamiento de inversiones. Ninguno requiere aumentar \(\mu_r^m\). La desigualdad es estricta cuando al menos uno de los nuevos canales tiene valoración positiva y la magnitud física continúa respondiendo al esfuerzo. Una vez alcanzado \(q_j\geq\bar q_j+\bar h_j\), \(h_j\) y \(\mathcal P_j\) permanecen constantes y estos retornos marginales desaparecen.
+El primer término recoge el retorno reputacional de reconocer el sobrecumplimiento dentro de \(P^{B^{+}}\) y el segundo la valoración reputacional de la bonificación destinada al financiamiento de inversiones. Ninguno requiere aumentar \(\mu_r^m\). La desigualdad es estricta cuando al menos uno de los nuevos canales tiene valoración positiva y la magnitud física continúa respondiendo al esfuerzo. Una vez alcanzado \(q_j\geq\bar q_j+\bar h_j\), \(h_j\) y \(T_j\) permanecen constantes y estos retornos marginales desaparecen.
 
 La saturación del avance físico sí limita este mecanismo. Mientras \(e_r<e_r^{\mathrm{sat}}\), una mayor ejecución puede elevar \(F_r\), \(q_j\) y el sobrecumplimiento reconocido. Una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), \(\partial F_r/\partial e_r=0\) y los retornos marginales de \eqref{eq:derivadas_sobrecumplimiento_bplus} desaparecen por este canal.
 
@@ -260,17 +260,17 @@ La desigualdad es estricta cuando el reconocimiento modifica efectivamente el ma
 
 El esfuerzo de eficiencia \(g_r\) reduce los recursos necesarios para ejecutar una magnitud física dada, pero no eleva directamente \(F_r\), \(q_j\) ni el sobrecumplimiento reconocido cuando \(e_r\) permanece constante. Por tanto, el nuevo canal introducido por \(B^{+}\) no altera directamente el retorno tecnológico de \(g_r\).
 
-Para una intervención completada, y manteniendo localmente constantes el resultado observado y \(\mathcal P\),
+Para una intervención completada, y manteniendo localmente constantes el resultado observado y \(T\),
 
 \begin{equation}
 \label{eq:incentivo_eficiencia_bplus}
-\frac{\partial (S^{B^{+}}+\mathcal P)}{\partial g_r}
+\frac{\partial (S^{B^{+}}+T)}{\partial g_r}
 =
 -
 \frac{\partial I_r}{\partial g_r}
 >0,
 \qquad
-\mathcal B_{r,g}^{B^{+}}
+\mathrm{BM}_{r,g}^{B^{+}}
 =
 \varpi^{B^{+}}
 \left(
@@ -314,22 +314,22 @@ Q^{B}.
 
 \subsubsection{Bienestar regulatorio y calibración de la bonificación}
 
-El mayor desempeño potencial de \(B^{+}\) no implica por sí solo una mejora de bienestar. A los tres componentes definidos en la Subsección~4.3 para una transición \(m\to m'\) se añade ahora el costo regulatorio neto de financiar la bonificación. Sea \(\mathcal C_{\mathcal P}(\mathcal P)\) dicho costo, con
+El mayor desempeño potencial de \(B^{+}\) no implica por sí solo una mejora de bienestar. A los tres componentes definidos en la Subsección~4.3 para una transición \(m\to m'\) se añade ahora el costo regulatorio neto de financiar la bonificación. Sea \(C_T(T)\) dicho costo, con
 
 \begin{equation}
 \label{eq:costo_bonificacion_bplus}
-\mathcal C_{\mathcal P}(0)=0,
+C_T(0)=0,
 \qquad
-\mathcal C_{\mathcal P}'(\mathcal P)>0.
+C_T'(T)>0.
 \end{equation}
 
-Si cada unidad reconocida mediante \(\mathcal P\) se contabiliza íntegramente como costo, el caso particular es \(\mathcal C_{\mathcal P}(\mathcal P)=\mathcal P\). Si parte del reconocimiento conserva valor regulatorio por permanecer afectado al financiamiento de inversiones, \(\mathcal C_{\mathcal P}(\mathcal P)\) representa únicamente el costo neto correspondiente.
+Si cada unidad reconocida mediante \(T\) se contabiliza íntegramente como costo, el caso particular es \(C_T(T)=T\). Si parte del reconocimiento conserva valor regulatorio por permanecer afectado al financiamiento de inversiones, \(C_T(T)\) representa únicamente el costo neto correspondiente.
 
 El criterio regulatorio bajo \(B^{+}\) es
 
 \begin{equation}
 \label{eq:bienestar_regulador_bplus}
-\mathcal W_R^{B^{+}}
+W_R^{B^{+}}
 =
 \Phi\!\left(
 Q^{B^{+}}
@@ -339,7 +339,7 @@ C_{OM}^{B^{+}}
 -
 M^{B^{+}}
 -
-\mathcal C_{\mathcal P}(\mathcal P),
+C_T(T),
 \end{equation}
 
 donde
@@ -357,18 +357,18 @@ Utilizando las definiciones generales de \(\Delta_\Phi^{m,m'}\), \(\Delta_M^{m,m
 
 \begin{equation}
 \label{eq:delta_p_bplus}
-\Delta_{\mathcal P}^{B,B^{+}}
+\Delta C_T^{B,B^{+}}
 \equiv
-\mathcal C_{\mathcal P}(\mathcal P).
+C_T(T).
 \end{equation}
 
 La diferencia de bienestar se reduce entonces a
 
 \begin{equation}
 \label{eq:diferencia_bienestar_bplus_b}
-\mathcal W_R^{B^{+}}
+W_R^{B^{+}}
 -
-\mathcal W_R^{B}
+W_R^{B}
 =
 \Delta_{\Phi}^{B,B^{+}}
 +
@@ -376,7 +376,7 @@ La diferencia de bienestar se reduce entonces a
 -
 \Delta_{OM}^{B,B^{+}}
 -
-\Delta_{\mathcal P}^{B,B^{+}}.
+\Delta C_T^{B,B^{+}}.
 \end{equation}
 
 La igualdad \(M^{B^{+}}=M^B\) de \eqref{eq:multa_bplus} se refiere a un mismo nivel de cumplimiento. En equilibrio, el mayor esfuerzo inducido por \(B^{+}\) puede reducir las bases sancionadoras y, con ello, generar \(\Delta_M^{B,B^{+}}\geq0\). Este canal puede reforzar la ganancia de bienestar, pero no es necesario para que la extensión resulte preferible.
@@ -391,7 +391,7 @@ De \eqref{eq:diferencia_bienestar_bplus_b}, la condición para una mejora regula
 >
 \Delta_{OM}^{B,B^{+}}
 +
-\Delta_{\mathcal P}^{B,B^{+}}.
+\Delta C_T^{B,B^{+}}.
 \end{equation}
 
 \begin{resultadobox}
@@ -401,14 +401,14 @@ De \eqref{eq:diferencia_bienestar_bplus_b}, la condición para una mejora regula
 El hecho de que \(Q^{B^{+}}\geq Q^{B}\) no implica, por sí solo, que \(B^{+}\) domine a \(B\). Si se cumple \eqref{eq:condicion_bienestar_bplus}, entonces
 
 \begin{equation}
-\mathcal W_R^{B^{+}}
+W_R^{B^{+}}
 >
-\mathcal W_R^{B}.
+W_R^{B}.
 \end{equation}
 
 Por tanto, \(B^{+}\) constituye una mejora regulatoria únicamente cuando el valor del sobrecumplimiento inducido y de cualquier reducción de la multa supera el costo neto de la bonificación y cualquier incremento de los costos de operación y mantenimiento.
 \end{resultadobox}
 
-La condición de bienestar proporciona una interpretación económica para la calibración de \(\kappa_j\) y \(\bar h_j\). Un reconocimiento demasiado bajo puede no modificar suficientemente el esfuerzo, mientras que uno excesivamente alto puede elevar \(\Delta_{\mathcal P}^{B,B^{+}}\) por encima del valor regulatorio del desempeño adicional. El límite \(\bar h_j\) evita además que el mecanismo continúe reconociendo resultados una vez agotado el rango que el regulador considera valioso.
+La condición de bienestar proporciona una interpretación económica para la calibración de \(\kappa_j\) y \(\bar h_j\). Un reconocimiento demasiado bajo puede no modificar suficientemente el esfuerzo, mientras que uno excesivamente alto puede elevar \(\Delta C_T^{B,B^{+}}\) por encima del valor regulatorio del desempeño adicional. El límite \(\bar h_j\) evita además que el mecanismo continúe reconociendo resultados una vez agotado el rango que el regulador considera valioso.
 
 La incorporación de \(B^{+}\) al ordenamiento condicionado completo de bienestar se presenta en la Subsección~4.5.
