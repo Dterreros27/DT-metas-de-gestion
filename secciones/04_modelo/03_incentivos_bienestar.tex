@@ -915,7 +915,7 @@ con las propiedades establecidas en \eqref{eq:propiedades_resultado_regulador}. 
 
 Aunque el modelo es estático, los ahorros pueden financiar inversiones posteriores. Las transiciones \(A_0\to A\) y \(A'\to A''\) eliminan, respectivamente para \(R^{S}\cup R^{G}\) y \(R^{F}\), los efectos negativos que un menor gasto podía generar mediante el avance financiero. Si los recursos permanecen destinados a inversiones, surge un canal intertemporal favorable que no forma parte de los ordenamientos contemporáneos.
 
-\subsubsection{Bienestar regulatorio}
+\subsubsection{Descomposición del criterio regulatorio}
 
 El último paso traslada los resultados agregados al criterio del regulador definido en \eqref{eq:bienestar_regulador}. Un mayor esfuerzo o un mejor resultado del servicio no bastan para preferir un esquema: \(Q^m=Q(\widetilde q_S^m,C_G^m)\) valora también las metas de gestión que contribuyen a esos resultados, y la comparación incorpora el gasto efectivo de inversión, los costos de operación y mantenimiento y la carga sectorial efectiva de las multas. El regulador evalúa estos componentes tomando como dadas las respuestas óptimas \((\mathbf e^{m,*},\mathbf g^{m,*})\).
 
@@ -971,7 +971,7 @@ W_R^{m}
 \Delta_{OM}^{m,m'},
 \end{equation}
 
-y la condición para una mejora de bienestar es
+Esta identidad descompone el cambio del criterio regulatorio en valor de resultados, carga sancionadora, inversión y operación y mantenimiento. No constituye por sí misma una condición estructural ni un resultado causal: sin formas funcionales o una calibración adicional, solo permite identificar qué magnitudes deben medirse. Algebraicamente, una mejora del criterio equivale a
 
 \begin{equation}
 \label{eq:condicion_general_mejora_bienestar}
@@ -1084,35 +1084,7 @@ C_{OM}^{A_0}.
 \end{aligned}
 \end{equation}
 
-\begin{resultadobox}
-{Bienestar regulatorio: \textit{benchmark} \(A_0\to A\)}
-\label{res:bienestar_a0_a}
-Si las exposiciones de \(A_0\) y \(A\) son suficientes para saturar el margen de culminación, \(\mu_r^{A}<\mu_r^{A_0}\), y \eqref{eq:condicion_focalizacion_a_a0} se cumple para las intervenciones relevantes de \(R^{S}\), entonces \(\widetilde q_S^A\geq\widetilde q_S^{A_0}\). Si, además,
-\begin{equation}
-Q^{A}
-\geq
-Q^{A_0},
-\qquad
-C_I^{A}
-\leq
-C_I^{A_0},
-\qquad
-C_{OM}^{A}
-\leq
-C_{OM}^{A_0},
-\qquad
-M^{A}
-<
-M^{A_0},
-\end{equation}
-se obtiene
-\begin{equation}
-W_R^{A}
->
-W_R^{A_0}.
-\end{equation}
-Fuera de estas condiciones, el orden permanece abierto.
-\end{resultadobox}
+Bajo la monotonía de \(\Phi\) y \(\Omega\), una condición suficiente y directamente auditable para que el criterio favorezca a \(A\) es que \(Q^{A}\geq Q^{A_0}\), \(C_I^{A}\leq C_I^{A_0}\), \(C_{OM}^{A}\leq C_{OM}^{A_0}\) y \(M^{A}<M^{A_0}\), con al menos una desigualdad estricta relevante. Estas desigualdades son requisitos sobre resultados y costos observables; el modelo no demuestra que se cumplan simultáneamente.
 
 \paragraph{Secuencia principal \(A\to A'\to A''\to B\).}
 
@@ -1163,37 +1135,8 @@ C_G^{A''}
 \end{aligned}
 \end{equation}
 
-\begin{resultadobox}
-{Mejora de bienestar en la secuencia principal}
-\label{res:bienestar_secuencia_principal}
-Para cada transición consecutiva \(m\to m'\) de \(A\to A'\to A''\to B\), si se cumple \eqref{eq:condicion_general_mejora_bienestar}, entonces
-\begin{equation}
-W_R^{m'}
->
-W_R^{m}.
-\end{equation}
-En \(A''\to B\), esta condición debe incorporar explícitamente la posible oposición entre la mejora de \(\widetilde q_S\) y la reducción de \(C_G\). Las fuentes de la ganancia pueden diferir entre transiciones; por ello, el resultado es condicionado y no se deriva únicamente del ordenamiento de los resultados directos del servicio.
-\end{resultadobox}
+Para cada transición, \eqref{eq:condicion_general_mejora_bienestar} funciona como regla contable de evaluación. No se presenta como proposición independiente porque afirmar que \(W_R^{m'}>W_R^m\) cuando su diferencia es positiva reproduce la definición del criterio. La comparación sustantiva exige estimar o restringir sus cuatro componentes.
 
-Combinando el Resultado~\ref{res:bienestar_a0_a} con el Resultado~\ref{res:bienestar_secuencia_principal}, si cada eslabón satisface su condición suficiente, por transitividad se obtiene
-
-\begin{equation}
-\label{eq:ordenamiento_bienestar_condicionado}
-W_R^{B}
->
-W_R^{A''}
->
-W_R^{A'}
->
-W_R^{A}
->
-W_R^{A_0}.
-\end{equation}
-
-\begin{resultadobox}
-{Ordenamiento condicionado de bienestar regulatorio}
-\label{res:ordenamiento_bienestar_condicionado}
-Si \(A\) satisface las condiciones del Resultado~\ref{res:bienestar_a0_a} respecto de \(A_0\) y cada transición de la secuencia principal satisface \eqref{eq:condicion_general_mejora_bienestar}, entonces se cumple \eqref{eq:ordenamiento_bienestar_condicionado}. La cadena no constituye una dominancia automática de los esquemas posteriores: cada eslabón requiere una ganancia regulatoria neta positiva.
-\end{resultadobox}
+Por tanto, el modelo no genera un ordenamiento general de bienestar entre \(A_0,A,A',A'',B\). Una cadena creciente solo podría establecerse después de verificar, transición por transición, que la ganancia en resultados y la reducción de la carga sancionadora superan los mayores costos de inversión y operación. Esta verificación es empírica o depende de supuestos adicionales sobre primitivas; no se obtiene por transitividad sin comprobar cada eslabón.
 
 La extensión \(B^{+}\) se analiza en la Subsección~4.4, porque introduce un reconocimiento económico por sobrecumplimiento y, con ello, un componente adicional en la comparación de bienestar.
