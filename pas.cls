@@ -718,7 +718,6 @@
 
 \usepackage{etex}
 \usepackage{amsthm}
-\usepackage{soul}
 \usepackage{ifpdf}
 \ifpdf%
 \usepackage{epstopdf}%
