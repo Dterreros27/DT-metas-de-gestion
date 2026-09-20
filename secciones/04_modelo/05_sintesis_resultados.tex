@@ -1,6 +1,6 @@
 \subsection{Síntesis de resultados}
 
-Las Subsecciones~4.3 y~4.4 muestran que las modificaciones regulatorias afectan de manera distinta la ejecución, los resultados del servicio, el cumplimiento de otras metas, la eficiencia y el bienestar. La secuencia principal \(A\to A'\to A''\to B\) aísla cambios específicos del diseño; \(A_0\to A\) se mantiene como \textit{benchmark} institucional y \(B\to B^{+}\) incorpora el reconocimiento acotado del sobrecumplimiento. Todos los ordenamientos están sujetos a las condiciones metodológicas y locales establecidas previamente.
+Las Subsecciones~4.3 y~4.4 muestran que las modificaciones regulatorias afectan de manera distinta la ejecución, los resultados del servicio, el cumplimiento de otras metas, la eficiencia y el bienestar. La secuencia principal \(A\to A'\to A''\to B\) separa progresivamente cambios específicos del diseño; \(A_0\to A\) se mantiene como \textit{benchmark} institucional y \(B\to B^{+}\) incorpora el reconocimiento acotado del sobrecumplimiento. Todos los ordenamientos están sujetos a las condiciones metodológicas y locales establecidas previamente.
 
 La Tabla~\ref{tab:sintesis_resultados_esquemas} resume los resultados sin reproducir sus derivaciones.
 
@@ -44,7 +44,7 @@ Orden abierto.
 &
 Mejora débil para \(R^{S}\cup R^{G}\); orden abierto para \(R^{F}\) (Resultado~\ref{res:eficiencia_benchmark_a0_a}).
 &
-Mejora condicionada; véase el Resultado~\ref{res:bienestar_a0_a}.
+Comparación abierta; evaluar con la descomposición \eqref{eq:cambio_bienestar_transicion}.
 \\[5pt]
 
 \(A\to A'\)
@@ -55,7 +55,7 @@ Mejora condicionada; véase el Resultado~\ref{res:bienestar_a0_a}.
 &
 Sin cambio para \(R^{S}\cup R^{G}\); \(g_r^{A,*}\geq g_r^{A',*}\) para \(R^{F}\) (Resultado~\ref{res:eficiencia_secuencia_principal}).
 &
-Sujeto a \eqref{eq:condicion_general_mejora_bienestar}; véase el Resultado~\ref{res:bienestar_secuencia_principal}.
+Evaluar con \eqref{eq:cambio_bienestar_transicion}; no hay orden automático.
 \\[5pt]
 
 \(A'\to A''\)
@@ -66,7 +66,7 @@ Sujeto a \eqref{eq:condicion_general_mejora_bienestar}; véase el Resultado~\ref
 &
 \(g_r^{A'',*}\geq g_r^{A',*}\) para \(R^{F}\) (Resultado~\ref{res:eficiencia_secuencia_principal}).
 &
-Sujeto a \eqref{eq:condicion_general_mejora_bienestar}; véase el Resultado~\ref{res:bienestar_secuencia_principal}.
+Evaluar con \eqref{eq:cambio_bienestar_transicion}; no hay orden automático.
 \\[5pt]
 
 \(A''\to B\)
@@ -77,7 +77,7 @@ Bajo \eqref{eq:condicion_lambda_b}, \(\widetilde q_S^{B}\geq\widetilde q_S^{A''}
 &
 Sin cambio bajo las normalizaciones locales.
 &
-Sujeto a \eqref{eq:condicion_general_mejora_bienestar}, incluida la oposición entre \(\widetilde q_S\) y \(C_G\).
+Comparación abierta; debe incluir la oposición entre \(\widetilde q_S\) y \(C_G\).
 \\[5pt]
 
 \(B\to B^{+}\)
@@ -88,7 +88,7 @@ Sin canal directo adicional.
 &
 Sin efecto tecnológico directo de \(g_r\) sobre el sobrecumplimiento o la bonificación.
 &
-Sujeto a \eqref{eq:condicion_bienestar_bplus}; véase el Resultado~\ref{res:bienestar_bplus}.
+Evaluar con \eqref{eq:condicion_bienestar_bplus}, incluido el costo neto de la bonificación.
 \\
 
 \hline
@@ -104,27 +104,6 @@ Sujeto a \eqref{eq:condicion_bienestar_bplus}; véase el Resultado~\ref{res:bien
 
 \end{table*}
 
-\begin{resultadobox}
-{Ordenamiento condicionado con sobrecumplimiento}
-\label{res:ordenamiento_bienestar_bplus}
-Si \(A\) satisface las condiciones del Resultado~\ref{res:bienestar_a0_a} respecto de \(A_0\), cada transición de \(A\to A'\to A''\to B\) satisface \eqref{eq:condicion_general_mejora_bienestar} y \(B\to B^{+}\) satisface \eqref{eq:condicion_bienestar_bplus}, entonces
+La tabla no implica la cadena \(W_R^{B^{+}}>W_R^{B}>W_R^{A''}>W_R^{A'}>W_R^{A}>W_R^{A_0}\). Esa cadena solo podría sostenerse después de verificar empíricamente o mediante supuestos adicionales que cada transición genera una ganancia neta positiva. El modelo identifica los canales y sus signos locales, pero deja abierto el orden global del criterio regulatorio.
 
-\begin{equation}
-\label{eq:ordenamiento_bienestar_bplus}
-W_R^{B^{+}}
->
-W_R^{B}
->
-W_R^{A''}
->
-W_R^{A'}
->
-W_R^{A}
->
-W_R^{A_0}.
-\end{equation}
-
-La cadena constituye un ordenamiento condicionado y no una dominancia automática: cada transición requiere que el valor regulatorio de la modificación exceda sus costos.
-\end{resultadobox}
-
-En conjunto, el modelo separa progresivamente tres funciones que en los diseños iniciales aparecen parcialmente superpuestas: la evaluación regulatoria mediante el \(ICG^m\), la señal reputacional resumida por \(P^m\) y la estructura de consecuencias. La salida de componentes del ICG reasigna mecánicamente sus ponderaciones regulatorias, mientras que la composición de \(P^m\) determina, a partir de las saliencias \(s_H\), el peso reputacional de los bloques que permanecen. Esta separación puede corregir distorsiones, pero no implica que todas las transiciones mejoren simultáneamente todos los márgenes. Un diseño puede fortalecer los incentivos de una tarea específica o elevar los resultados directos del servicio y, aun así, no mejorar el bienestar regulatorio. Esta última conclusión exige que el efecto conjunto sobre \(Q(\widetilde q_S,C_G)\), el gasto efectivo de inversión, los costos de operación y mantenimiento y la carga sectorial de las multas sea favorable. Bajo las condiciones del modelo, \(B^{+}\) completa el ordenamiento condicionado como el esquema de mayor bienestar entre los considerados; fuera de ellas, la comparación debe realizarse transición por transición.
+En conjunto, el modelo separa progresivamente tres funciones que en los diseños iniciales aparecen parcialmente superpuestas: la evaluación regulatoria mediante el \(ICG^m\), la señal reputacional resumida por \(P^m\) y la estructura de consecuencias. La salida de componentes del ICG reasigna mecánicamente sus ponderaciones regulatorias, mientras que la composición de \(P^m\) determina, a partir de las saliencias \(s_H\), el peso reputacional de los bloques que permanecen. Esta separación puede corregir distorsiones, pero no implica que todas las transiciones mejoren simultáneamente todos los márgenes. Un diseño puede fortalecer los incentivos de una tarea específica o elevar los resultados directos del servicio y, aun así, no mejorar el bienestar regulatorio. Esta última conclusión exige que el efecto conjunto sobre \(Q(\widetilde q_S,C_G)\), el gasto efectivo de inversión, los costos de operación y mantenimiento y la carga sectorial de las multas sea favorable. En consecuencia, incluso cuando \(B^{+}\) eleva el desempeño potencial, su posición en el criterio regulatorio depende del costo de la bonificación, de los recursos adicionales y de la carga sancionadora. La comparación debe realizarse transición por transición.
