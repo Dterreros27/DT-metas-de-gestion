@@ -917,7 +917,7 @@ Aunque el modelo es estático, los ahorros pueden financiar inversiones posterio
 
 \subsubsection{Bienestar regulatorio}
 
-El último paso traslada los resultados agregados al criterio del regulador definido en \eqref{eq:bienestar_regulador}. Un mayor esfuerzo o un mejor resultado del servicio no bastan para preferir un esquema: \(Q^m=Q(\widetilde q_S^m,C_G^m)\) valora también las metas de gestión que contribuyen a esos resultados, y la comparación incorpora los costos de operación y mantenimiento y la carga pecuniaria impuesta a la empresa. El regulador evalúa estos componentes tomando como dadas las respuestas óptimas \((\mathbf e^{m,*},\mathbf g^{m,*})\).
+El último paso traslada los resultados agregados al criterio del regulador definido en \eqref{eq:bienestar_regulador}. Un mayor esfuerzo o un mejor resultado del servicio no bastan para preferir un esquema: \(Q^m=Q(\widetilde q_S^m,C_G^m)\) valora también las metas de gestión que contribuyen a esos resultados, y la comparación incorpora el gasto efectivo de inversión, los costos de operación y mantenimiento y la carga sectorial efectiva de las multas. El regulador evalúa estos componentes tomando como dadas las respuestas óptimas \((\mathbf e^{m,*},\mathbf g^{m,*})\).
 
 Para dos esquemas consecutivos \(m\) y \(m'\), se definen
 
@@ -931,12 +931,19 @@ Para dos esquemas consecutivos \(m\) y \(m'\), se definen
 \Phi(Q^{m}),
 \label{eq:cambio_valor_resultados}
 \\
-\Delta_{M}^{m,m'}
+\Delta_{\Omega}^{m,m'}
 &\equiv
-M^{m}
+\Omega(M^{m})
 -
-M^{m'},
-\label{eq:cambio_multa_bienestar}
+\Omega(M^{m'}),
+\label{eq:cambio_carga_multa_bienestar}
+\\
+\Delta_{I}^{m,m'}
+&\equiv
+C_I^{m'}
+-
+C_I^{m},
+\label{eq:cambio_inversion_bienestar}
 \\
 \Delta_{OM}^{m,m'}
 &\equiv
@@ -957,7 +964,9 @@ W_R^{m}
 =
 \Delta_{\Phi}^{m,m'}
 +
-\Delta_M^{m,m'}
+\Delta_{\Omega}^{m,m'}
+-
+\Delta_{I}^{m,m'}
 -
 \Delta_{OM}^{m,m'},
 \end{equation}
@@ -968,8 +977,10 @@ y la condición para una mejora de bienestar es
 \label{eq:condicion_general_mejora_bienestar}
 \Delta_{\Phi}^{m,m'}
 +
-\Delta_M^{m,m'}
+\Delta_{\Omega}^{m,m'}
 >
+\Delta_{I}^{m,m'}
++
 \Delta_{OM}^{m,m'}.
 \end{equation}
 
@@ -994,7 +1005,7 @@ Por ello, una mejora de \(\widetilde q_S\) no basta por sí sola para ordenar \(
 
 \paragraph{Exposición redundante y criterio regulatorio.}
 
-La propiedad de saturación de la Subsección~4.1 permite precisar el costo regulatorio de una exposición sancionadora adicional. Supóngase que, una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), una variación marginal de \(\mu_r^m\) no modifica localmente \(\widetilde q_S^m\), \(C_G^m\) ni \(C_{OM}^m\). Si \(\bar a_r<1\), a partir de \eqref{eq:exposicion_sancionadora_r} se obtiene
+La propiedad de saturación de la Subsección~4.1 permite precisar el costo regulatorio de una exposición sancionadora adicional. Supóngase que, una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), una variación marginal de \(\mu_r^m\) no modifica localmente \(\widetilde q_S^m\), \(C_G^m\), \(C_I^m\) ni \(C_{OM}^m\). Si \(\bar a_r<1\), a partir de \eqref{eq:exposicion_sancionadora_r} se obtiene
 
 \begin{equation}
 \label{eq:derivada_multa_exposicion_regulador}
@@ -1016,6 +1027,7 @@ Por tanto,
 \right|_{e_r\geq e_r^{\mathrm{sat}}}
 &=
 -
+\Omega'\!\left(M^m\right)
 (1-\bar a_r)
 \\
 &<
@@ -1023,7 +1035,7 @@ Por tanto,
 \end{aligned}
 \end{equation}
 
-Así, una vez agotado el margen de culminación, una mayor exposición deja de aportar mejoras por esa vía y, si tampoco mejora otros componentes del criterio regulatorio, reduce \(W_R^m\). En particular, si dos diseños mantienen el avance físico saturado y generan localmente los mismos \(Q\) y \(C_{OM}\), el diseño con menor exposición sancionadora obtiene mayor bienestar regulatorio. Esta comparación constituye una mejora de eficiencia sancionadora y no una dominancia global cuando los diseños modifican simultáneamente otros canales.
+Así, una vez agotado el margen de culminación, una mayor exposición deja de aportar mejoras por esa vía y, si tampoco mejora otros componentes del criterio regulatorio, reduce \(W_R^m\). En particular, si dos diseños mantienen el avance físico saturado y generan localmente los mismos \(Q\), \(C_I\) y \(C_{OM}\), el diseño con menor exposición sancionadora obtiene mayor bienestar regulatorio. Esta comparación constituye una mejora de eficiencia sancionadora y no una dominancia global cuando los diseños modifican simultáneamente otros canales.
 
 \paragraph{\(A_0\to A\): exposición redundante y focalización.}
 
@@ -1049,17 +1061,27 @@ Esta expresión identifica únicamente la contribución de la exposición de \(r
 
 \begin{equation}
 \label{eq:condicion_bienestar_a_a0}
+\begin{aligned}
+&
 \Phi(Q^{A})
 -
 \Phi(Q^{A_0})
+\\
+&\quad
 +
-M^{A_0}
+\Omega(M^{A_0})
 -
-M^{A}
->
+\Omega(M^{A})
+\\
+&>
+C_I^{A}
+-
+C_I^{A_0}
++
 C_{OM}^{A}
 -
 C_{OM}^{A_0}.
+\end{aligned}
 \end{equation}
 
 \begin{resultadobox}
@@ -1070,6 +1092,10 @@ Si las exposiciones de \(A_0\) y \(A\) son suficientes para saturar el margen de
 Q^{A}
 \geq
 Q^{A_0},
+\qquad
+C_I^{A}
+\leq
+C_I^{A_0},
 \qquad
 C_{OM}^{A}
 \leq
@@ -1090,7 +1116,7 @@ Fuera de estas condiciones, el orden permanece abierto.
 
 \paragraph{Secuencia principal \(A\to A'\to A''\to B\).}
 
-En cada transición se aplica \eqref{eq:condicion_general_mejora_bienestar}. En \(A\to A'\), el cambio en \(Q\) y la eliminación del umbral deben compensar cualquier aumento de la multa que resulte de activar consecuencias antes desactivadas. En \(A'\to A''\), el fortalecimiento de los retornos reputacionales de \(C_S\) y \(C_G\), junto con la corrección de los incentivos de eficiencia de \(R^{F}\), debe compensar cualquier cambio desfavorable derivado de sustituir la base financiera por una física.
+En cada transición se aplica \eqref{eq:condicion_general_mejora_bienestar}. En \(A\to A'\), el cambio en \(Q\) y la eliminación del umbral deben compensar cualquier aumento de la carga efectiva de la multa y de los costos que resulte de activar consecuencias antes desactivadas. En \(A'\to A''\), el fortalecimiento de los retornos reputacionales de \(C_S\) y \(C_G\), junto con la corrección de los incentivos de eficiencia de \(R^{F}\), debe compensar cualquier cambio desfavorable en el gasto de inversión, los costos de operación y mantenimiento o la carga sancionadora derivado de sustituir la base financiera por una física.
 
 Finalmente, en \(A''\to B\), los dos argumentos de \(Q\) se mueven potencialmente en direcciones opuestas:
 
@@ -1109,7 +1135,7 @@ C_G^{A''}
 0.
 \end{equation}
 
-Por tanto, la mejora de los resultados directos del servicio debe ser suficiente para compensar, cuando exista, la pérdida asociada con el menor cumplimiento de \(J^G\), además de las diferencias en multas y costos de operación y mantenimiento. Localmente, el canal de resultados favorece a \(B\) cuando
+Por tanto, la mejora de los resultados directos del servicio debe ser suficiente para compensar, cuando exista, la pérdida asociada con el menor cumplimiento de \(J^G\), además de las diferencias en el gasto de inversión, los costos de operación y mantenimiento y la carga sectorial efectiva de las multas. Localmente, el canal de resultados favorece a \(B\) cuando
 
 \begin{equation}
 \label{eq:condicion_resultados_app_b}
