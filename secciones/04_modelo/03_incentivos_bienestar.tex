@@ -8,22 +8,7 @@ El análisis sigue la secuencia causal del modelo: incentivos de ejecución y ef
 
 \subsubsection{Supuestos y canales marginales}
 
-La Subsección~4.1 definió los coeficientes locales \(\lambda^m\), \(\varpi^m\) y \(\gamma^m\), que representan, respectivamente, el retorno marginal asociado con el desempeño percibido \(P^m\), la valoración marginal del ahorro reconocido y el costo marginal total de una mayor multa. Para ordenar localmente los efectos reputacionales asociados con la señal publicada se supone
-
-\begin{equation}
-\label{eq:orden_legibilidad_icg}
-\ell_I^B
-\geq
-\ell_I^{A''}
-=
-\ell_I^{A'}
-=
-\ell_I^A
->
-\ell_I^{A_0}.
-\end{equation}
-
-El ordenamiento refleja la claridad con que la señal publicada comunica el desempeño. En \(A_0\), \(P^{A_0}\) combina resultados del servicio, otras metas de gestión, el avance financiero general y la relación de trabajo. En \(A\), la salida de la relación de trabajo y la focalización del componente financiero en \(R^{F}\) reducen esta heterogeneidad. Entre \(A\), \(A'\) y \(A''\) la legibilidad se mantiene constante como normalización local para aislar el efecto de la composición reputacional, mientras que en \(B\) la concentración de \(P^B\) en \(C_S\) permite asociar más directamente sus variaciones con los resultados del servicio.
+La Subsección~4.1 definió los coeficientes locales \(\lambda^m\), \(\varpi^m\) y \(\gamma^m\), que representan, respectivamente, el retorno marginal asociado con el desempeño percibido \(P^m\), la valoración marginal del ahorro reconocido y el costo marginal total de una mayor multa. La legibilidad de la señal entra en \(\lambda^m\) mediante \(\ell_I^m\). En lugar de imponer un ordenamiento general entre los esquemas, su efecto se evalúa dentro de las condiciones específicas de cada transición. Una señal más focalizada puede resultar más fácil de interpretar, pero ello también depende de la forma de publicación y de la capacidad de los agentes externos para relacionarla con el desempeño; por tanto, la simplificación de su composición no implica automáticamente un aumento estricto de \(\ell_I^m\).
 
 El objetivo de cada comparación es atribuir el cambio de esfuerzo al componente del diseño que se modifica, sin mezclarlo con variaciones ajenas a esa transición. Por ello, se mantienen fijos los indicadores discretos y los coeficientes locales que no forman parte del cambio analizado. En la secuencia principal, esta estrategia se expresa mediante las normalizaciones
 
@@ -345,7 +330,7 @@ Una condición suficiente para que el incentivo no disminuya es
 \frac{s_S}{s_S+s_G}\lambda.
 \end{equation}
 
-Dado que \(\lambda^m=V'(\mathrm{Rep}^m)d_I\ell_I^mR_I'(P^m)\), la mayor legibilidad de \(B\) facilita el cumplimiento de \eqref{eq:condicion_lambda_b}, pero no lo garantiza: cambios suficientemente grandes en \(V'(\mathrm{Rep}^m)\) o \(R_I'(P^m)\) pueden compensar ese efecto.
+Dado que \(\lambda^m=V'(\mathrm{Rep}^m)d_I\ell_I^mR_I'(P^m)\), una mayor legibilidad bajo \(B\) elevaría \(\lambda^B\), manteniendo los demás términos constantes, y facilitaría el cumplimiento de \eqref{eq:condicion_lambda_b}. Sin embargo, ese aumento no se impone de antemano: la comparación queda regida por dicha condición, pues cambios en \(V'(\mathrm{Rep}^m)\) o \(R_I'(P^m)\) pueden compensar o revertir el efecto de la legibilidad.
 
 \begin{resultadobox}
 {Ejecución en \(R^{S}\): secuencia principal}
@@ -466,16 +451,7 @@ El \textit{benchmark} \(A_0\to A\) no permite aislar un único mecanismo: modifi
 \end{aligned}
 \end{equation}
 
-Como \(A\) retira el bloque \(RT\) de la señal publicada,
-
-\begin{equation}
-\label{eq:mayor_peso_cs_a_a0}
-\alpha_S^{A}
->
-\alpha_S^{A_0}.
-\end{equation}
-
-Por tanto, la transición aumenta la ponderación reputacional de \(C_S\), además de la mejora de legibilidad supuesta en \eqref{eq:orden_legibilidad_icg}. Sin embargo, desaparecen simultáneamente los retornos asociados con el avance financiero general y la relación de trabajo, se reducen bases sancionadoras superpuestas y puede cambiar la exposición \(\mu_r^m\). El signo total del efecto sobre el esfuerzo continúa siendo, en general, indeterminado.
+Como \(A\) retira el bloque \(RT\) de la señal publicada, se tiene \(\alpha_S^{A}>\alpha_S^{A_0}\). Por tanto, la transición aumenta la ponderación reputacional de \(C_S\). El efecto sobre su retorno depende además de cómo cambie la legibilidad, para la cual no se impone un ordenamiento previo. Sin embargo, desaparecen simultáneamente los retornos asociados con el avance financiero general y la relación de trabajo, se reducen bases sancionadoras superpuestas y puede cambiar la exposición \(\mu_r^m\). El signo total del efecto sobre el esfuerzo continúa siendo, en general, indeterminado.
 
 \begin{resultadobox}
 {Ejecución: \textit{benchmark} institucional \(A_0\to A\)}
@@ -483,7 +459,7 @@ Por tanto, la transición aumenta la ponderación reputacional de \(C_S\), adem�
 La transición \(A_0\to A\) no permite establecer un orden general del esfuerzo de ejecución. Una señal más focalizada puede reforzar el retorno de \(C_S\), pero al mismo tiempo elimina otros canales reputacionales y sancionadores; antes de la saturación, también importa la diferencia de exposición.
 \end{resultadobox}
 
-Para no dejar esta ambigüedad como una afirmación abstracta, conviene mostrar de dónde proviene mediante un caso concreto. Supóngase que una intervención pendiente \(r\in R_j^{S}\) participa en la base de su propia meta y en \(B_{RT}\) bajo \(A_0\), mientras que en \(A\) permanece únicamente la primera y la consecuencia está activa en ambos esquemas. Entonces, \(\delta_r^{A_0}=2\) y \(\delta_r^{A}=1\). Para aislar estos canales, se mantienen localmente \(V'(\mathrm{Rep}^{A})=V'(\mathrm{Rep}^{A_0})\equiv V'\), \(R_I'(P^{A})=R_I'(P^{A_0})\equiv R_I'\), \(d_I\) y \(\gamma^{A_0}=\gamma^{A}\equiv\gamma\), y se definen
+Para no dejar esta ambigüedad como una afirmación abstracta, conviene mostrar de dónde proviene mediante un caso concreto. Supóngase que una intervención pendiente \(r\in R_j^{S}\) participa en la base de su propia meta y en \(B_{RT}\) bajo \(A_0\), mientras que en \(A\) permanece únicamente la primera y la consecuencia está activa en ambos esquemas. Entonces, \(\delta_r^{A_0}=2\) y \(\delta_r^{A}=1\). Para aislar estos canales, se mantienen localmente \(V'(\mathrm{Rep}^{A})=V'(\mathrm{Rep}^{A_0})\equiv V'\), \(R_I'(P^{A})=R_I'(P^{A_0})\equiv R_I'\), \(d_I\) y \(\gamma^{A_0}=\gamma^{A}\equiv\gamma\). Asimismo, se supone \(\ell_I^{A}\alpha_S^{A}>\ell_I^{A_0}\alpha_S^{A_0}\), condición que recoge conjuntamente la legibilidad y la ponderación de \(C_S\). Bajo estas condiciones, se definen
 
 \begin{equation}
 \label{eq:componentes_benchmark_a0_a}
@@ -530,7 +506,7 @@ K_{r,e}^{A_0}
 \end{aligned}
 \end{equation}
 
-La desigualdad \(G_P>0\) se deriva conjuntamente de \(\ell_I^{A}>\ell_I^{A_0}\), \eqref{eq:mayor_peso_cs_a_a0} y \(C_{S,e_r}>0\). Como la diferencia total de los canales continuos es exactamente \(G_P-L_P-L_M\), en esta región \(A\) genera un mayor incentivo local de ejecución si y solo si
+La desigualdad \(G_P>0\) se deriva de la condición local \(\ell_I^{A}\alpha_S^{A}>\ell_I^{A_0}\alpha_S^{A_0}\) y de \(C_{S,e_r}>0\). Como la diferencia total de los canales continuos es exactamente \(G_P-L_P-L_M\), en esta región \(A\) genera un mayor incentivo local de ejecución si y solo si
 
 \begin{equation}
 \label{eq:condicion_incentivo_a_a0_rs}
