@@ -10,14 +10,13 @@ El estudio examina la composición del Índice de Cumplimiento Global (ICG) y co
 - `secciones/`: contenido activo del artículo, ordenado según su aparición en el documento.
 - `anexos/`: archivo integrador y anexos técnicos.
 - `figuras/`: imágenes y componentes gráficos.
-- `Tablas/`: tablas auxiliares conservadas para consulta; no se incorporan actualmente mediante `\\input`.
 - `referencias.bib`: base bibliográfica.
 - `documentacion/`: documentación de la plantilla editorial.
 - `pas.cls`, `paslike.bst` y `cup_logo.*`: archivos requeridos por la plantilla, conservados en la raíz para evitar problemas de compilación.
 
 ## Compilación
 
-El archivo raíz es `main.tex`. La bibliografía utiliza BibTeX mediante `referencias.bib`. Los archivos auxiliares que no son llamados desde `main.tex` no forman parte de la compilación.
+El archivo raíz es `main.tex`. La bibliografía utiliza BibTeX mediante `referencias.bib`. Los archivos que no son llamados desde `main.tex` no forman parte de la compilación.
 
 ## Estado del proyecto
 
