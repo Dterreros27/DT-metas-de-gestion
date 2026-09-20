@@ -1224,10 +1224,10 @@
         \hbox to \textwidth{\psplainfootfont\ \@cpr\hfill}}}%
        \def\@evenhead{%
 \hbox to 0pt{\vbox{\vspace*{5pt}%
-            {{\psplainfont\global\copoddheadtrue{\itshape\@journaltitle} (\@jnlDoiYr),\if@issue\ \textbf{\@volno},\ \@issno, \last@page\ pages\else\ \first@page--\last@page\fi}\ifMTbreak\hspace*{56pt}\else\hfill\fi\begin{picture}(0,0)\put(188.9,-12){\includegraphics{Imagen/sunass.png}}\end{picture}\vskip4.7pt\@par{\vbox{\psplainfont\doitext\@doi}}}}}}
+            {{\psplainfont\global\copoddheadtrue{\itshape\@journaltitle} (\@jnlDoiYr),\if@issue\ \textbf{\@volno},\ \@issno, \last@page\ pages\else\ \first@page--\last@page\fi}\ifMTbreak\hspace*{56pt}\else\hfill\fi\begin{picture}(0,0)\put(188.9,-12){\includegraphics{figuras/sunass.png}}\end{picture}\vskip4.7pt\@par{\vbox{\psplainfont\doitext\@doi}}}}}}
        \def\@oddhead{%
             \hbox to 0pt{\vbox{\vspace*{5pt}%
-            {{\psplainfont\global\copoddheadtrue{\itshape\@journaltitle} (\@jnlDoiYr),\if@issue\ \textbf{\@volno},\ \@issno, \last@page\ pages\else\ \first@page--\last@page\fi}\ifMTbreak\if@issue\hspace*{16pt}\else\hspace*{56pt}\fi\else\hfill\fi\begin{picture}(0,0)\put(188.9,-12){\includegraphics{Imagen/sunass.png}}\end{picture}\vskip4.7pt\@par{\vbox{\psplainfont\doitext\@doi}}}}}}}%
+            {{\psplainfont\global\copoddheadtrue{\itshape\@journaltitle} (\@jnlDoiYr),\if@issue\ \textbf{\@volno},\ \@issno, \last@page\ pages\else\ \first@page--\last@page\fi}\ifMTbreak\if@issue\hspace*{16pt}\else\hspace*{56pt}\fi\else\hfill\fi\begin{picture}(0,0)\put(188.9,-12){\includegraphics{figuras/sunass.png}}\end{picture}\vskip4.7pt\@par{\vbox{\psplainfont\doitext\@doi}}}}}}}%
 
 \let\save@clearpage\clearpage
 \let\save@outputpage\@outputpage
