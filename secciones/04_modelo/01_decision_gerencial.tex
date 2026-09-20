@@ -312,13 +312,16 @@ Bajo esta estructura, el gerente elige los esfuerzos de ejecución y eficiencia 
 
 \begin{equation}
 \label{eq:problema_gerente}
+\begin{aligned}
 \max_{\{e_r,g_r\}_{r\in R}}
 \quad
 U_G^{m}
-=
+&=
 V\left(\mathrm{Rep}^{m}\right)
 -
-p\rho M^{m}
+pK\left(M^{m}\right)
+\\
+&\quad
 -
 \sum_{r\in R}
 \left[
@@ -326,6 +329,7 @@ p\rho M^{m}
 +
 \xi_r(g_r)
 \right].
+\end{aligned}
 \end{equation}
 
 La señal reputacional combina tres dimensiones observables: el desempeño derivado de las metas publicadas, el ahorro reconocido, \(S^m\), y la multa asociada con los incumplimientos, \(M^m\). Para distinguir la ponderación regulatoria utilizada en el \(ICG^m\) de la importancia reputacional de sus componentes, se define el desempeño percibido como
@@ -378,7 +382,7 @@ p\,d_M\ell_M R_M(M^m).
 
 Los parámetros \(d_I,d_E,d_M\in[0,1]\) recogen la difusión de cada señal, mientras que \(\ell_I^m,\ell_E,\ell_M\in[0,1]\) representan su legibilidad. La difusión determina el alcance de la información y la legibilidad refleja qué tan claramente puede ser interpretada por los agentes externos. En el canal de desempeño, \(\ell_I^m\) resume la facilidad con la que el conjunto de metas publicado puede ser interpretado y se distingue de la saliencia capturada por \(s_H\). Las funciones \(R_I\), \(R_E\) y \(R_M\) son crecientes y diferenciables, con \(R_M(0)=0\), de modo que el efecto reputacional asociado con la sanción depende de la magnitud de la multa.
 
-La función \(V(\mathrm{Rep}^m)\) transforma la reputación de la empresa en utilidad gerencial. Una evaluación externa más favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, en línea con la lógica de los modelos de \textit{career concerns}, en los que el gerente valora los efectos de su desempeño sobre su reputación profesional futura \citep{holmstrom1999managerial,dewatripont1999economics}. El término \(-p\rho M^m\), con \(\rho\in[0,1]\), representa el costo monetario que el gerente internaliza de la sanción, una vez consideradas la probabilidad de detección que percibe y la fracción del costo pecuniario de la empresa que se transmite directamente hacia quien decide el esfuerzo. Este término se mantiene fuera de \(\mathrm{Rep}^m\) para distinguir el costo monetario de la sanción de su efecto reputacional.\footnote{El modelo base abstrae de premios, penalidades o compensaciones asociados directamente con indicadores individuales. La incorporación de un término común a todos los esquemas no alteraría las comparaciones centrales siempre que dicho término no dependa de la ejecución financiera ni de las reglas regulatorias que varían entre esquemas.}
+La función \(V(\mathrm{Rep}^m)\) transforma la reputación de la empresa en utilidad gerencial. Una evaluación externa más favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, en línea con la lógica de los modelos de \textit{career concerns}, en los que el gerente valora los efectos de su desempeño sobre su reputación profesional futura \citep{holmstrom1999managerial,dewatripont1999economics}. El término \(-pK(M^m)\) representa el costo monetario esperado que el gerente asocia con la multa impuesta a la empresa. Se supone que \(K(0)=0\) y \(K'(M)>0\), de modo que este costo aumenta con la magnitud de la multa sin imponer que equivalga a una fracción constante de ella. La función \(K\) es común a todos los esquemas y se mantiene fuera de \(\mathrm{Rep}^m\) para distinguir el costo monetario de la sanción de su efecto reputacional.\footnote{El modelo base abstrae de premios, penalidades o compensaciones asociados directamente con indicadores individuales. La incorporación de un término común a todos los esquemas no alteraría las comparaciones centrales siempre que dicho término no dependa de la ejecución financiera ni de las reglas regulatorias que varían entre esquemas.}
 
 Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan, respectivamente, los costos gerenciales de los esfuerzos de ejecución y eficiencia.\footnote{La separación entre ambas dimensiones sigue la lógica de los modelos multitarea, en los que las actividades pueden presentar distinta visibilidad y distinto retorno para el agente \citep{holmstrom1991multitask}.} Se supone \(V'(\mathrm{Rep}^m)>0\), \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\). Dentro de cada región en la que los componentes continuos de la función objetivo son diferenciables se supone concavidad suficiente para caracterizar el óptimo local. Asimismo, la capacidad gerencial no constituye una restricción vinculante, por lo que el esfuerzo destinado a una inversión no desplaza mecánicamente el asignado a las demás.
 
@@ -393,7 +397,7 @@ La presencia de umbrales y reglas discretas requiere distinguir entre los efecto
 &=
 \frac{\partial}{\partial e_r}
 \left[
-V(\mathrm{Rep}^m)-p\rho M^m
+V(\mathrm{Rep}^m)-pK(M^m)
 \right],
 \label{eq:foc_e_esperada}
 \\
@@ -401,7 +405,7 @@ V(\mathrm{Rep}^m)-p\rho M^m
 &=
 \frac{\partial}{\partial g_r}
 \left[
-V(\mathrm{Rep}^m)-p\rho M^m
+V(\mathrm{Rep}^m)-pK(M^m)
 \right].
 \label{eq:foc_g_esperada}
 \end{align}
@@ -465,7 +469,7 @@ V'(\mathrm{Rep}^m)
 d_M\ell_M
 R_M'(M^m)
 +
-\rho
+K'(M^m)
 \right].
 \label{eq:gamma_m}
 \end{align}
@@ -530,7 +534,7 @@ Dado \eqref{eq:exposicion_sancionadora_r}, el retorno marginal que el gerente ob
 \Gamma_r^m(\mu_r^m)\geq0.
 \end{equation}
 
-Se supone que \(\Gamma_r^m(\mu)\) es continua y creciente en \(\mu\) en la región relevante. Esta expresión incorpora tanto la probabilidad de detección \(p\) como la transmisión monetaria \(\rho\) y el efecto reputacional de la sanción a través de \(\gamma^m\).
+Se supone que \(\Gamma_r^m(\mu)\) es continua y creciente en \(\mu\) en la región relevante. Esta expresión incorpora la probabilidad de detección \(p\), el costo monetario marginal \(K'(M^m)\) y el efecto reputacional de la sanción a través de \(\gamma^m\).
 
 Para separar este canal de los demás incentivos, sea \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r)\) el beneficio marginal de ejecución proveniente del desempeño reputacional, el ahorro, otros componentes de la multa y los cambios discretos, excluyendo el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. En el tramo no saturado, la condición marginal puede escribirse como
 
@@ -613,7 +617,7 @@ U_G^m}
 \right]
 p
 \left[
-\rho
+K'(M^m)
 +
 d_M\ell_M
 V'\!\left(\mathrm{Rep}^m\right)
