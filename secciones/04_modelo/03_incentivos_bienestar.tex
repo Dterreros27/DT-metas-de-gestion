@@ -14,14 +14,15 @@ El objetivo de cada comparación es atribuir el cambio de esfuerzo al componente
 
 \begin{equation}
 \label{eq:normalizaciones_locales}
+\begin{aligned}
 \lambda^A
 =
 \lambda^{A'}
 =
 \lambda^{A''}
-\equiv
+&\equiv
 \lambda,
-\qquad
+\\
 \gamma^A
 =
 \gamma^{A'}
@@ -29,9 +30,9 @@ El objetivo de cada comparación es atribuir el cambio de esfuerzo al componente
 \gamma^{A''}
 =
 \gamma^B
-\equiv
+&\equiv
 \gamma,
-\qquad
+\\
 \varpi^A
 =
 \varpi^{A'}
@@ -39,8 +40,9 @@ El objetivo de cada comparación es atribuir el cambio de esfuerzo al componente
 \varpi^{A''}
 =
 \varpi^B
-\equiv
+&\equiv
 \varpi.
+\end{aligned}
 \end{equation}
 
 Estas igualdades no atribuyen valores estructuralmente idénticos a los parámetros; solo aíslan el efecto de cada modificación. En \(A''\to B\), \(\lambda^B\) puede diferir de \(\lambda^{A''}\) porque cambia la legibilidad de la señal; en \(A_0\to A\), esa diferencia también forma parte de la comparación. Salvo indicación expresa, los ordenamientos están condicionados a estas normalizaciones y no constituyen dominancia general.
@@ -51,34 +53,40 @@ Para \(r\in R_j^{S}\), mientras la meta se encuentre en el tramo no truncado, la
 
 \begin{equation}
 \label{eq:derivada_cs_ejecucion}
+\begin{aligned}
 C_{S,e_r}
-\equiv
+&\equiv
 \frac{\partial C_S}{\partial e_r}
-=
+\\
+&=
 \frac{1}{n_S}
 \frac{\beta_{rj}}{\bar q_j}
 \frac{\partial F_r}{\partial e_r}
 >
 0.
+\end{aligned}
 \end{equation}
 
 Para las demás dimensiones se utiliza la notación \(C_{G,e_r}\equiv\partial C_G/\partial e_r\), \(c_{RT,e_r}\equiv\partial c_{RT}/\partial e_r\) y \(c_{j,e_r}\equiv\partial c_j/\partial e_r\) para \(r\in R_j^{F}\). Asimismo,
 
 \begin{equation}
 \label{eq:derivadas_avance_financiero}
+\begin{aligned}
 f_{R,x}
-\equiv
+&\equiv
 \frac{\partial f_R}{\partial x},
-\qquad
+&
 f_{F,x}
-\equiv
+&\equiv
 \frac{\partial f_F}{\partial x},
-\qquad
+\\
 f_x^m
-\equiv
+&\equiv
 \frac{\partial f^m}{\partial x},
-\qquad
-x\in\{e_r,g_r\}.
+&
+x
+&\in\{e_r,g_r\}.
+\end{aligned}
 \end{equation}
 
 Por construcción, \(f_x^m=0\) cuando \(r\notin\mathrm{Fin}^m\). Cuando \(r\in\mathrm{Fin}^m\), se supone
@@ -94,25 +102,29 @@ La reducción marginal de una base física asociada con \(r\) se recoge mediante
 
 \begin{equation}
 \label{eq:canal_reduccion_base}
+\begin{aligned}
 H_{r,e}
-\equiv
+&\equiv
 \mathrm{WACC}\,
 \bar I_r
 \frac{\partial a_r}{\partial e_r}
-=
+\\
+&=
 \mathrm{WACC}\,
 \frac{\bar I_r}{\bar F_r}
 \frac{\partial F_r}{\partial e_r}
 >
 0.
+\end{aligned}
 \end{equation}
 
 Cuando el esquema mantiene una base financiera, se define
 
 \begin{equation}
 \label{eq:canal_financiero_marginal}
+\begin{aligned}
 K_{r,x}^{m}
-\equiv
+&\equiv
 d_F^m\,
 \mathrm{WACC}
 \left(
@@ -120,8 +132,9 @@ d_F^m\,
 \bar I_s
 \right)
 f_x^{m},
-\qquad
-x\in\{e_r,g_r\}.
+\\
+&x\in\{e_r,g_r\}.
+\end{aligned}
 \end{equation}
 
 Mientras \(d_F^m\) permanezca constante y \(r\in\mathrm{Fin}^m\), se tiene \(K_{r,e}^{m}>0\) y \(K_{r,g}^{m}<0\). Utilizando además la multiplicidad \(\delta_r^m\) definida en la Subsección~4.2, los efectos continuos de los esfuerzos sobre la multa pueden escribirse como
@@ -135,6 +148,9 @@ Mientras \(d_F^m\) permanezca constante y \(r\in\mathrm{Fin}^m\), se tiene \(K_{
 \chi^m
 \left[
 \delta_r^m H_{r,e}
+\right.
+\notag\\
+&\qquad\left.
 +
 \eta_F^m K_{r,e}^{m}
 \right],
@@ -286,11 +302,14 @@ La transición \(A'\to A''\) opera por una razón distinta. El canal sancionador
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_ap_app_rh}
+\begin{aligned}
 \mathrm{BM}_{r,e}^{A''}
 -
 \mathrm{BM}_{r,e}^{A'}
-=
+&=
 \lambda
+\\
+&\quad\times
 \left(
 \alpha_H^{A''}
 -
@@ -299,6 +318,7 @@ La transición \(A'\to A''\) opera por una razón distinta. El canal sancionador
 C_{H,e_r}
 >
 0.
+\end{aligned}
 \end{equation}
 
 \paragraph{Intervenciones vinculadas con resultados del servicio.}
@@ -307,16 +327,20 @@ La última transición concentra la señal pública en los resultados del servic
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_app_b_rs}
+\begin{aligned}
 \mathrm{BM}_{r,e}^{B}
 -
 \mathrm{BM}_{r,e}^{A''}
-=
+&=
 \left[
 \lambda^B
 -
 \alpha_S^{A''}\lambda
 \right]
+\\
+&\quad\times
 C_{S,e_r}.
+\end{aligned}
 \end{equation}
 
 Una condición suficiente para que el incentivo no disminuya es
@@ -389,14 +413,17 @@ El caso de \(R^{F}\) es distinto porque \(A'\to A''\) cambia simultáneamente la
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_ap_app_rf}
+\begin{aligned}
 \mathrm{BM}_{r,e}^{A''}
 -
 \mathrm{BM}_{r,e}^{A'}
-=
+&=
 -
 \lambda
 \alpha_F^{A'}
 f_{F,e_r}
+\\
+&\quad
 +
 \gamma
 \left[
@@ -404,6 +431,7 @@ f_{F,e_r}
 -
 K_{r,e}^{A'}
 \right].
+\end{aligned}
 \end{equation}
 
 Aquí aparece una comparación genuinamente abierta: sin restricciones adicionales sobre la magnitud relativa de los términos, no es posible ordenar el esfuerzo de ejecución. Desde \(A''\), en cambio, \(B\) mantiene la misma estructura sancionadora y \(R^{F}\) permanece fuera del ICG, por lo que ambos esquemas generan el mismo incentivo marginal bajo las normalizaciones locales.
@@ -442,6 +470,8 @@ El \textit{benchmark} \(A_0\to A\) no permite aislar un único mecanismo: modifi
 \alpha_S^{A_0}C_{S,e_r}
 +
 \alpha_F^{A_0}f_{R,e_r}
+\\
+&\quad
 +
 \alpha_{RT}^{A_0}c_{RT,e_r},
 \\
@@ -466,45 +496,41 @@ Para no dejar esta ambigüedad como una afirmación abstracta, conviene mostrar 
 \begin{aligned}
 G_P
 &\equiv
-\underbrace{
-V'd_I R_I'
+V'd_I R_I' C_{S,e_r}
+\\
+&\quad\times
 \left[
-\ell_I^{A}
-\alpha_S^{A}
+\ell_I^{A}\alpha_S^{A}
 -
-\ell_I^{A_0}
-\alpha_S^{A_0}
+\ell_I^{A_0}\alpha_S^{A_0}
 \right]
-C_{S,e_r}
-}_{\text{ganancia por focalización y legibilidad}}
 >0,
 \\[3pt]
 L_P
 &\equiv
-\underbrace{
-V'd_I R_I'
-\ell_I^{A_0}
+V'd_I R_I'\ell_I^{A_0}
+\\
+&\quad\times
 \left[
 \alpha_F^{A_0}f_{R,e_r}
 +
 \alpha_{RT}^{A_0}c_{RT,e_r}
 \right]
-}_{\text{pérdida de canales reputacionales}}
 \geq0,
 \\[3pt]
 L_M
 &\equiv
-\underbrace{
 \gamma
 \left[
 H_{r,e}
 +
 K_{r,e}^{A_0}
 \right]
-}_{\text{pérdida de canales sancionadores}}
 >0.
 \end{aligned}
 \end{equation}
+
+Los términos \(G_P\), \(L_P\) y \(L_M\) representan, respectivamente, la ganancia por focalización y legibilidad, la pérdida de canales reputacionales y la pérdida de canales sancionadores.
 
 La desigualdad \(G_P>0\) se deriva de la condición local \(\ell_I^{A}\alpha_S^{A}>\ell_I^{A_0}\alpha_S^{A_0}\) y de \(C_{S,e_r}>0\). Como la diferencia total de los canales continuos es exactamente \(G_P-L_P-L_M\), en esta región \(A\) genera un mayor incentivo local de ejecución si y solo si
 
@@ -729,6 +755,8 @@ K_{r,g}^{A'}
 -\lambda
 \alpha_F^{A'}
 f_{F,g_r}
+\notag\\
+&\quad
 -
 \gamma
 K_{r,g}^{A'}
@@ -743,6 +771,8 @@ K_{r,g}^{A'}
 -\lambda
 \alpha_F^{A}
 f_{F,g_r}
+\notag\\
+&\quad
 -
 \gamma
 \chi^A
@@ -777,19 +807,23 @@ Para \(R^{S}\) y \(R^{G}\), bajo \(A_0\) una reducción eficiente del costo dism
 
 \begin{equation}
 \label{eq:diferencia_eficiencia_a_a0}
+\begin{aligned}
 \mathrm{BM}_{r,g}^{A}
 -
 \mathrm{BM}_{r,g}^{A_0}
-=
+&=
 -\lambda^{A_0}
 \alpha_F^{A_0}
 f_{R,g_r}
+\\
+&\quad
 -
 \gamma^{A_0}
 \chi^{A_0}
 K_{r,g}^{A_0}
 \geq
 0.
+\end{aligned}
 \end{equation}
 
 Para \(R^{F}\), la focalización del componente financiero modifica simultáneamente el agregado relevante y su base sancionadora, por lo que la comparación requiere supuestos adicionales.
@@ -943,13 +977,17 @@ El cambio en \(Q^m\) incorpora dos canales. Localmente,
 
 \begin{equation}
 \label{eq:descomposicion_local_q}
+\begin{aligned}
 dQ
-=
+&=
 \frac{\partial Q}{\partial \widetilde q_S}
 \,d\widetilde q_S
+\\
+&\quad
 +
 \frac{\partial Q}{\partial C_G}
 \,dC_G.
+\end{aligned}
 \end{equation}
 
 Por ello, una mejora de \(\widetilde q_S\) no basta por sí sola para ordenar \(Q\) cuando el esquema también reduce \(C_G\). Esta distinción es especialmente relevante en \(A''\to B\), donde el Resultado~\ref{res:desempeno_agregado} favorece a \(B\) en el primer canal, mientras que el Resultado~\ref{res:cumplimiento_agregado_g} permite una pérdida en el segundo.
@@ -972,14 +1010,17 @@ Por tanto,
 
 \begin{equation}
 \label{eq:bienestar_exposicion_excesiva_general}
-\frac{\partial W_R^m}
-{\partial\mu_r^m}
-\bigg|_{e_r\geq e_r^{\mathrm{sat}}}
-=
+\begin{aligned}
+\left.
+\frac{\partial W_R^m}{\partial\mu_r^m}
+\right|_{e_r\geq e_r^{\mathrm{sat}}}
+&=
 -
 (1-\bar a_r)
-<
+\\
+&<
 0.
+\end{aligned}
 \end{equation}
 
 Así, una vez agotado el margen de culminación, una mayor exposición deja de aportar mejoras por esa vía y, si tampoco mejora otros componentes del criterio regulatorio, reduce \(W_R^m\). En particular, si dos diseños mantienen el avance físico saturado y generan localmente los mismos \(Q\) y \(C_{OM}\), el diseño con menor exposición sancionadora obtiene mayor bienestar regulatorio. Esta comparación constituye una mejora de eficiencia sancionadora y no una dominancia global cuando los diseños modifican simultáneamente otros canales.
@@ -1072,12 +1113,18 @@ Por tanto, la mejora de los resultados directos del servicio debe ser suficiente
 
 \begin{equation}
 \label{eq:condicion_resultados_app_b}
+\begin{aligned}
+&
 \frac{\partial Q}{\partial \widetilde q_S}
+\\
+&\quad\times
 \left(
 \widetilde q_S^{B}
 -
 \widetilde q_S^{A''}
 \right)
+\\
+&\quad
 +
 \frac{\partial Q}{\partial C_G}
 \left(
@@ -1087,6 +1134,7 @@ C_G^{A''}
 \right)
 \geq
 0.
+\end{aligned}
 \end{equation}
 
 \begin{resultadobox}
