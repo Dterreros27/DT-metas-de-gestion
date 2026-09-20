@@ -2035,7 +2035,7 @@
 \def\listfont{}
 \def\textlistlabel{}
 %
-\@definecounter{enumv}
+\@ifundefined{c@enumv}{\@definecounter{enumv}}{}
 \@definecounter{enumvi}
 \@definecounter{enumvii}
 \@definecounter{enumviii}
