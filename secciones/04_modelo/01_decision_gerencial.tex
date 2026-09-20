@@ -159,6 +159,8 @@ f_r
 
 El término \(\bar I_r>0\) representa los recursos programados para financiar la inversión, mientras que \(f_r\) mide el grado de ejecución financiera reconocido para efectos del cumplimiento. Se supone \(I_{r,F}>0\) e \(I_{r,g}<0\): una mayor magnitud física requiere más recursos de inversión, mientras que, para una magnitud física dada, un mayor esfuerzo de eficiencia reduce los recursos necesarios para ejecutarla. La restricción \(I_r\leq\bar I_r\) recoge que la ejecución financiera reconocida no puede exceder los recursos programados considerados en el modelo. Cuando estos recursos resultan insuficientes para completar la magnitud física programada, dicha limitación se refleja de forma reducida en \(\bar a_r(\bar I_r,g_r)<1\) y en el correspondiente punto de saturación \(e_r^{\mathrm{sat}}(\bar I_r,g_r)\): un mayor esfuerzo de ejecución no puede sustituir el financiamiento faltante.
 
+La especificación supone que el esfuerzo de eficiencia reduce los recursos requeridos para alcanzar una magnitud física dada sin afectar directamente el resultado del servicio. Se trata, por tanto, de una mejora de eficiencia condicionada a \(F_r\), y no de una reducción de costos obtenida mediante una menor calidad. Este supuesto permite aislar la distorsión que aparece cuando la ejecución financiera penaliza una inversión físicamente equivalente realizada con menos recursos. En entornos más generales, los incentivos de reducción de costos pueden afectar la calidad cuando ambas dimensiones mantienen un vínculo tecnológico, como muestra \citet{ovaere2023} para las empresas de redes de energía.
+
 A partir de los avances financieros individuales se construyen dos medidas agregadas. \(f_R\) recoge el avance del programa de inversiones en su conjunto, mientras que \(f_F\) mide el avance financiero focalizado exclusivamente en las inversiones de \(R^{F}\):
 
 \begin{equation}
@@ -672,7 +674,20 @@ El problema del gerente determina la respuesta de esfuerzo inducida por cada dis
 \end{aligned}
 \end{equation}
 
-Esta medida permite que mejoras de los resultados por encima de las metas regulatorias sigan siendo valoradas por el regulador, aun cuando ya no modifiquen \(C_S\). Sobre esta base, se define el criterio reducido de bienestar regulatorio como
+Esta medida permite que mejoras de los resultados por encima de las metas regulatorias sigan siendo valoradas por el regulador, aun cuando ya no modifiquen \(C_S\). El costo de inversión inducido por cada esquema se define como
+
+\begin{equation}
+\label{eq:costo_inversion_regulador}
+C_I^m
+\equiv
+\sum_{r\in R}
+I_r\!\left(
+F_r^{m,*},
+g_r^{m,*}
+\right).
+\end{equation}
+
+Sobre esta base, se define el criterio reducido de bienestar regulatorio como
 
 \begin{equation}
 \label{eq:bienestar_regulador}
@@ -682,12 +697,14 @@ W_R^m
 Q(\widetilde q_S^m,C_G^m)
 \right)
 -
+C_I^m
+-
 C_{OM}^m
 -
-M^m,
+\Omega\!\left(M^m\right),
 \end{equation}
 
-con
+donde
 
 \begin{equation}
 \label{eq:propiedades_resultado_regulador}
@@ -700,10 +717,19 @@ con
 0.
 \end{equation}
 
+\begin{equation}
+\label{eq:propiedades_carga_multa}
+\Omega(0)=0,
+\qquad
+\Omega'(M)>0.
+\end{equation}
+
 La función \(Q(\widetilde q_S^m,C_G^m)\) representa, en forma reducida, el agregado de resultados valorado por el regulador. El primer argumento recoge directamente los resultados alcanzados en las dimensiones de la prestación, sin truncarlos en las metas regulatorias. El segundo permite que las metas de \(J^G\), aun cuando no constituyan resultados finales del servicio, contribuyan a ellos a través de capacidades, instrumentos de gestión o ejecución física que facilitan su obtención. Esta relación resume dentro de un modelo de un periodo vínculos tecnológicos y organizacionales que, en la práctica, pueden materializarse con distinta intensidad. Dado que \(C_G\) agrega indicadores heterogéneos, la condición \(\partial Q/\partial C_G\geq0\) se interpreta como una propiedad neta del bloque y es compatible con que algunos componentes individuales de \(J^G\) tengan un vínculo nulo con los resultados finales.
 
-El término \(C_{OM}^m\) recoge los costos de operación y mantenimiento asociados con la prestación, mientras que \(-M^m\) representa la detracción de recursos que la multa impone a la empresa dentro del criterio regulatorio considerado. A diferencia del gerente, el regulador valora \(M^m\) bajo el supuesto de detección cierta utilizado para su cuantificación. La dependencia de \(Q\) respecto de \(C_G^m\) y la utilización de \(\widetilde q_S^m\) modifican únicamente el criterio de evaluación del regulador y no el problema del gerente ni los incentivos marginales definidos anteriormente.
+El término \(C_I^m\) incorpora los recursos de inversión efectivamente utilizados, mientras que \(C_{OM}^m\) recoge los costos de operación y mantenimiento asociados con la prestación. Su inclusión permite distinguir entre esquemas que alcanzan resultados semejantes utilizando distintos montos de inversión, en línea con la literatura que evalúa conjuntamente los incentivos de eficiencia en costos y de calidad \citep{ovaere2023}.
 
-La inclusión de \(-M^m\) no supone que la multa constituya necesariamente una pérdida social pura. La sanción cumple una función instrumental: puede resultar conveniente cuando modifica la conducta del gerente y genera una mejora compensatoria en los resultados u otros componentes valorados por el regulador, pero representa una carga cuando una mayor severidad no induce beneficios adicionales. Por ello, \(W_R^m\) debe interpretarse como un criterio reducido de evaluación regulatoria y no como una función exhaustiva de bienestar social.
+La función \(\Omega(M^m)\) representa la carga sectorial efectiva de la multa. Esta formulación no trata necesariamente su valor nominal como una pérdida social íntegra: la sanción puede constituir parcialmente una transferencia, pero también detraer recursos disponibles para la prestación, desplazar inversiones o generar otros costos financieros y administrativos. El caso \(\Omega(M)=M\) reproduce la especificación lineal anterior. A diferencia del gerente, el regulador evalúa esta carga bajo el supuesto de detección cierta utilizado para cuantificar \(M^m\).
 
-El regulador evalúa cada diseño tomando como dadas las respuestas óptimas del gerente, de modo que \(W_R^m\) depende de \(\mathbf e^{m,*}\) y \(\mathbf g^{m,*}\). En consecuencia, las comparaciones de bienestar entre esquemas deben considerar tanto los cambios en \(\widetilde q_S^m\) como los inducidos en \(C_G^m\), además de las diferencias en costos de operación y mantenimiento y en multas.
+La sanción cumple una función instrumental: puede resultar conveniente cuando modifica la conducta del gerente y genera una mejora compensatoria en los resultados o en otros componentes valorados por el regulador, pero representa una carga cuando una mayor severidad no induce beneficios adicionales. Como el criterio no incorpora la desutilidad privada de los esfuerzos \(\psi_r\) y \(\xi_r\) ni valora a todos los receptores de las transferencias, \(W_R^m\) debe interpretarse como una medida reducida de bienestar sectorial y no como una función exhaustiva de bienestar social.
+
+El regulador evalúa cada diseño tomando como dadas las respuestas óptimas del gerente, de modo que \(W_R^m\) depende de \(\mathbf e^{m,*}\) y \(\mathbf g^{m,*}\). En consecuencia, las comparaciones de bienestar entre esquemas deben considerar los cambios en \(\widetilde q_S^m\) y \(C_G^m\), las diferencias en los costos de inversión y de operación y mantenimiento, y la carga sectorial efectiva de las multas.
