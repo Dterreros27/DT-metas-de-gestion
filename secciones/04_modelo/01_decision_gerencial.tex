@@ -98,14 +98,17 @@ Para las metas de \(J^{G}\), el grado de cumplimiento depende directamente del a
 
 \begin{equation}
 \label{eq:cumplimiento_g_f}
+\begin{aligned}
 c_j
-=
+&=
 \sum_{r\in R_j^{H}}
 \eta_{rj}^{H}a_r,
-\qquad
-\eta_{rj}^{H}\geq0,
+\\
+\eta_{rj}^{H}
+&\geq0,
 \qquad
 \sum_{r\in R_j^{H}}\eta_{rj}^{H}=1.
+\end{aligned}
 \end{equation}
 
 Para los indicadores de \(J^{S}\), \(J^{G}\) y \(J^{F}\), se considera incumplimiento cuando \(c_j<1\), sin incorporar los umbrales específicos aplicables a cada indicador en la práctica. Los agregados utilizados para representar los resultados del servicio y las demás metas de gestión se definen como
@@ -278,16 +281,21 @@ El incumplimiento de la meta de avance financiero se define entonces como
 
 \begin{equation}
 \label{eq:incumplimiento_avance_financiero}
+\begin{aligned}
 d_F^m
-\equiv
+&\equiv
 \mathbf{1}\{f^m<1\}
+\\
+&\quad\times
 \mathbf{1}
 \left\{
 \sum_{r\in\mathrm{Fin}^m}
 \bar I_r(1-a_r)>0
 \right\},
-\qquad
-d_F^m\in\{0,1\}.
+\\
+d_F^m
+&\in\{0,1\}.
+\end{aligned}
 \end{equation}
 
 De este modo, una ejecución financiera inferior a la programada configura incumplimiento cuando existe alcance físico pendiente entre las inversiones evaluadas. En cambio, una brecha financiera originada exclusivamente en ahorros reconocidos de inversiones cuyo alcance ha sido completado no activa \(d_F^m\). Cuando el incumplimiento se determina a partir del avance financiero, la base correspondiente se define como
@@ -358,14 +366,25 @@ Los coeficientes \(\alpha_H^m\) recogen la saliencia reputacional relativa de ca
 
 \begin{equation}
 \label{eq:ponderaciones_reputacionales}
+\begin{aligned}
+D^m
+&\equiv
+\sum_{K\in\{S,G,F,RT\}}
+s_K\,
+\mathbf 1\{K\in\mathrm{Sig}^m\},
+\\
 \alpha_H^m
-=
-\frac{s_H\,\mathbf 1\{H\in\mathrm{Sig}^m\}}
-{\displaystyle\sum_{K\in\{S,G,F,RT\}}
-s_K\,\mathbf 1\{K\in\mathrm{Sig}^m\}},
+&=
+\frac{
+s_H\,
+\mathbf 1\{H\in\mathrm{Sig}^m\}
+}{
+D^m
+}.
+\end{aligned}
 \end{equation}
 
-donde \(\mathrm{Sig}^m\) denota el conjunto de bloques que integra la señal pública del esquema \(m\). En particular, se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) se mantiene como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas del esquema cuando corresponda.
+donde \(D^m\) es el factor de normalización y \(\mathrm{Sig}^m\) denota el conjunto de bloques que integra la señal pública del esquema \(m\). En particular, se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) se mantiene como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas del esquema cuando corresponda.
 
 Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
 
@@ -420,6 +439,8 @@ Para identificar los distintos canales del incentivo marginal, considérese una 
 &\equiv
 \lambda^m
 \frac{\partial P^m}{\partial e_r}
+\notag\\
+&\quad
 +
 \varpi^m
 \frac{\partial S^m}{\partial e_r}
@@ -432,6 +453,8 @@ Para identificar los distintos canales del incentivo marginal, considérese una 
 &\equiv
 \lambda^m
 \frac{\partial P^m}{\partial g_r}
+\notag\\
+&\quad
 +
 \varpi^m
 \frac{\partial S^m}{\partial g_r}
@@ -540,14 +563,16 @@ Para separar este canal de los demás incentivos, sea \(\mathrm{BM}_{r,e}^{m,-\m
 
 \begin{equation}
 \label{eq:foc_probabilidad_cumplimiento}
+\begin{aligned}
 \psi_r'(e_r)
-=
+&=
 \mathrm{BM}_{r,e}^{m,-\mu}(e_r)
 +
 a_r'(e_r)
 \Gamma_r^m(\mu_r^m),
-\qquad
-e_r<e_r^{\mathrm{sat}}.
+\\
+&e_r<e_r^{\mathrm{sat}}.
+\end{aligned}
 \end{equation}
 
 El primer término del lado derecho reúne los demás canales que afectan el esfuerzo de ejecución, mientras que el segundo identifica el retorno adicional de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), una mayor exposición sancionadora puede incrementar este componente e inducir un mayor esfuerzo de ejecución.
@@ -567,12 +592,16 @@ Se supone además que \(\Gamma_r^m(\mu)\) alcanza, para alguna exposición finit
 
 \begin{equation}
 \label{eq:multa_suficiente}
+\begin{aligned}
 a_{r,-}'(e_r^{\mathrm{sat}})
 \Gamma_r^m(\mu_r^{m,*})
-=
+&=
 \psi_r'(e_r^{\mathrm{sat}})
+\\
+&\quad
 -
 \mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}}).
+\end{aligned}
 \end{equation}
 
 La exposición suficiente depende de los demás incentivos que actúan sobre la misma inversión. Cuanto mayor sea el retorno proveniente del desempeño reputacional, del ahorro u otros canales recogidos en \(\mathrm{BM}_{r,e}^{m,-\mu}\), menor será, manteniendo lo demás constante, la exposición sancionadora necesaria para llevar el esfuerzo de ejecución hasta su región saturada. Se define \(\mu_r^{m,*}=0\) cuando \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), pues los canales restantes son suficientes para alcanzar dicha región.
@@ -581,21 +610,23 @@ Bajo las condiciones de concavidad local, para \(\mu_r^m<\mu_r^{m,*}\) una mayor
 
 \begin{equation}
 \label{eq:plateau_esfuerzo}
+\begin{aligned}
 e_r^{m,*}
-\geq
+&\geq
 e_r^{\mathrm{sat}},
-\qquad
-a_r(e_r^{m,*})
-=
-\bar a_r(\bar I_r,g_r),
-\qquad
-a_r'(e_r^{m,*})
-=
-0,
-\qquad
+&
 \mu_r^m
-\geq
-\mu_r^{m,*}.
+&\geq
+\mu_r^{m,*},
+\\
+a_r(e_r^{m,*})
+&=
+\bar a_r(\bar I_r,g_r),
+&
+a_r'(e_r^{m,*})
+&=
+0.
+\end{aligned}
 \end{equation}
 
 La ecuación~\eqref{eq:plateau_esfuerzo} establece un efecto techo sobre el canal de ejecución asociado con la brecha física. Una vez que \(e_r\) alcanza \(e_r^{\mathrm{sat}}\), una exposición adicional no incrementa \(a_r\) y, por tanto, deja de generar un beneficio marginal adicional a través de este canal. Los demás canales pueden continuar operando mientras los resultados correspondientes sigan siendo sensibles a las decisiones del gerente.
@@ -606,25 +637,21 @@ Cuando \(\bar a_r<1\), la saturación deja una brecha física \(1-\bar a_r(\bar 
 
 \begin{equation}
 \label{eq:utilidad_multa_excesiva}
-\frac{\partial
-U_G^m}
-{\partial \mu_r^m}
-\bigg|_{e_r\geq e_r^{\mathrm{sat}}}
-=
+\begin{aligned}
+\left.
+\frac{\partial U_G^m}{\partial \mu_r^m}
+\right|_{e_r\geq e_r^{\mathrm{sat}}}
+&=
 -
+\gamma^m
+\\
+&\quad\times
 \left[
 1-\bar a_r(\bar I_r,g_r)
 \right]
-p
-\left[
-K'(M^m)
-+
-d_M\ell_M
-V'\!\left(\mathrm{Rep}^m\right)
-R_M'\!\left(M^m\right)
-\right]
 <
 0.
+\end{aligned}
 \end{equation}
 
 Por tanto, cuando el avance físico se encuentra saturado por debajo de la culminación, una mayor exposición deja de aportar incentivo por esa vía y continúa imponiendo un costo al gerente sobre la brecha física remanente.
@@ -635,15 +662,18 @@ El problema del gerente determina la respuesta de esfuerzo inducida por cada dis
 
 \begin{equation}
 \label{eq:resultado_servicio_no_truncado}
+\begin{aligned}
 \widetilde q_S^m
-\equiv
+&\equiv
 \sum_{j\in J^S}
 \vartheta_j
 \frac{q_j^m}{\bar q_j},
-\qquad
-\vartheta_j\geq0,
+\\
+\vartheta_j
+&\geq0,
 \qquad
 \sum_{j\in J^S}\vartheta_j=1.
+\end{aligned}
 \end{equation}
 
 Esta medida permite que mejoras de los resultados por encima de las metas regulatorias sigan siendo valoradas por el regulador, aun cuando ya no modifiquen \(C_S\). Sobre esta base, se define el criterio reducido de bienestar regulatorio como
