@@ -176,7 +176,13 @@ f_F
 \nu_r^{F}f_r,
 \end{equation}
 
-con ponderadores no negativos y normalizados en sus respectivos dominios. Esta formulación distingue dos márgenes de decisión: \(e_r\) incide en la magnitud física ejecutada dentro de los recursos disponibles, mientras que \(g_r\) incide en los recursos requeridos para alcanzarla. Por ello, el avance físico \(a_r\) y el avance financiero \(f_r\) no tienen por qué coincidir.
+donde los ponderadores se fijan proporcionalmente a los recursos programados:
+\[
+\nu_r^{R}=\frac{\bar I_r}{\sum_{k\in R}\bar I_k},
+\qquad
+\nu_r^{F}=\frac{\bar I_r}{\sum_{k\in R^{F}}\bar I_k}.
+\]
+Por tanto, \(f_R=\sum_{r\in R}I_r/\sum_{r\in R}\bar I_r\) y \(f_F=\sum_{r\in R^F}I_r/\sum_{r\in R^F}\bar I_r\), en correspondencia con una medida financiera agregada. Esta formulación distingue dos márgenes de decisión: \(e_r\) incide en la magnitud física ejecutada dentro de los recursos disponibles, mientras que \(g_r\) incide en los recursos requeridos para alcanzarla. Por ello, el avance físico \(a_r\) y el avance financiero \(f_r\) no tienen por qué coincidir.
 
 A diferencia de las metas asociadas con subconjuntos específicos de inversiones, la relación de trabajo puede depender de la ejecución física del programa de inversiones en su conjunto:
 
@@ -189,7 +195,7 @@ RT(\mathbf F),
 \mathbf F=(F_r)_{r\in R}.
 \end{equation}
 
-El vector \(\mathbf F\) reúne la magnitud física ejecutada de cada inversión. Esta representación permite que el indicador responda a la ejecución física del programa sin depender directamente del monto monetario invertido, que también puede variar por efecto de \(g_r\). Dado que un menor valor de la relación de trabajo representa un mejor desempeño, su cumplimiento normalizado se define como
+El vector \(\mathbf F\) reúne la magnitud física ejecutada de cada inversión. Esta representación permite que el indicador responda a la ejecución física del programa sin depender directamente del monto monetario invertido, que también puede variar por efecto de \(g_r\). Se supone \(\partial RT/\partial F_r\leq0\) para toda inversión relevante: una mayor ejecución física no empeora la relación de trabajo. Dado que un menor valor de la relación de trabajo representa un mejor desempeño, este supuesto implica \(\partial c_{RT}/\partial e_r\geq0\) en el tramo no truncado. Su cumplimiento normalizado se define como
 
 \begin{equation}
 \label{eq:cumplimiento_rt}
@@ -388,6 +394,16 @@ D^m
 
 donde \(D^m\) es el factor de normalización y \(\mathrm{Sig}^m\) denota el conjunto de bloques que integra la señal pública del esquema \(m\). En particular, se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) se mantiene como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas del esquema cuando corresponda.
 
+La normalización anterior corresponde a una reasignación completa de la saliencia cuando un bloque deja de publicarse. Para mostrar qué resultados dependen de ese supuesto, se considera como ejercicio de sensibilidad la familia
+\[
+\widetilde\alpha_H^m(\theta)
+=
+\frac{s_H\mathbf 1\{H\in\mathrm{Sig}^m\}}{(D^m)^\theta},
+\qquad
+\theta\in[0,1].
+\]
+El caso \(\theta=1\) reproduce el \textit{benchmark} normalizado de \eqref{eq:ponderaciones_reputacionales}; con \(\theta=0\), la salida de un bloque no eleva mecánicamente el coeficiente de los restantes. En consecuencia, los ordenamientos que utilizan un aumento de \(\alpha_H^m\) deben interpretarse como condicionados al grado de reasignación de saliencia, y no como una consecuencia automática de retirar componentes del índice.
+
 Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
 
 \begin{equation}
@@ -405,7 +421,7 @@ Los parámetros \(d_I,d_E,d_M\in[0,1]\) recogen la difusión de cada señal, mie
 
 La función \(V(\mathrm{Rep}^m)\) transforma la reputación de la empresa en utilidad gerencial. Una evaluación externa más favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, en línea con la lógica de los modelos de \textit{career concerns}, en los que el gerente valora los efectos de su desempeño sobre su reputación profesional futura \citep{holmstrom1999managerial,dewatripont1999economics}. El término \(-pK(M^m)\) representa el costo monetario esperado que el gerente asocia con la multa impuesta a la empresa. Se supone que \(K(0)=0\) y \(K'(M)>0\), de modo que este costo aumenta con la magnitud de la multa sin imponer que equivalga a una fracción constante de ella. La función \(K\) es común a todos los esquemas y se mantiene fuera de \(\mathrm{Rep}^m\) para distinguir el costo monetario de la sanción de su efecto reputacional.\footnote{El modelo base abstrae de premios, penalidades o compensaciones asociados directamente con indicadores individuales. La incorporación de un término común a todos los esquemas no alteraría las comparaciones centrales siempre que dicho término no dependa de la ejecución financiera ni de las reglas regulatorias que varían entre esquemas.}
 
-Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan, respectivamente, los costos gerenciales de los esfuerzos de ejecución y eficiencia.\footnote{La separación entre ambas dimensiones sigue la lógica de los modelos multitarea, en los que las actividades pueden presentar distinta visibilidad y distinto retorno para el agente \citep{holmstrom1991multitask}.} Se supone \(V'(\mathrm{Rep}^m)>0\), \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\). Dentro de cada región en la que los componentes continuos de la función objetivo son diferenciables se supone concavidad suficiente para caracterizar el óptimo local. Asimismo, la capacidad gerencial no constituye una restricción vinculante, por lo que el esfuerzo destinado a una inversión no desplaza mecánicamente el asignado a las demás.
+Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan, respectivamente, los costos gerenciales de los esfuerzos de ejecución y eficiencia.\footnote{La separación permite representar márgenes con distinta visibilidad y retorno. No obstante, al no imponerse una restricción común de capacidad ni costos cruzados, el modelo no reproduce el mecanismo completo de reasignación de esfuerzo de los modelos multitarea \citep{holmstrom1991multitask}.} Se supone \(V'(\mathrm{Rep}^m)>0\), \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\). Dentro de cada región en la que los componentes continuos de la función objetivo son diferenciables se supone concavidad suficiente para caracterizar el óptimo local. Asimismo, la capacidad gerencial no constituye una restricción vinculante, por lo que el esfuerzo destinado a una inversión no desplaza mecánicamente el asignado a las demás.
 
 Las comparaciones de esfuerzo se basan en comparativa estática monótona: si el beneficio marginal se desplaza débilmente hacia arriba para todo nivel del esfuerzo en la región relevante, el costo marginal es creciente y el óptimo es único, entonces el esfuerzo óptimo no disminuye. Los ordenamientos resultantes se interpretan, por tanto, como comparaciones \textit{ceteris paribus} de los canales regulatorios modificados.
 
@@ -498,28 +514,13 @@ K'(M^m)
 
 Así, \(\lambda^m\) mide el retorno marginal asociado con el desempeño percibido \(P^m\), \(\varpi^m\) la valoración marginal del ahorro reconocido y \(\gamma^m\) el costo marginal de una mayor multa percibido por el gerente, considerando tanto su efecto reputacional como el costo monetario directamente internalizado. La separación entre \(P^m\) e \(ICG^m\) permite que el peso reputacional de un bloque difiera de su ponderación regulatoria sin modificar las reglas formales del índice. Como \(p\) es común a todos los esquemas, no constituye una fuente de diferencias entre diseños, aunque reduce la intensidad con la que una misma multa regulatoria se transmite hacia el gerente. Estos términos tienen una interpretación local y no se consideran parámetros globales de la función objetivo.
 
-Los esfuerzos también pueden modificar las condiciones en las que cambian \(\mathbf 1\{c_j<1\}\), \(d_F^m\), \(\chi^m\) o el reconocimiento de \(S_r\). Sean \(\Delta_{r,e}^m\) y \(\Delta_{r,g}^m\) los efectos asociados con estos cambios discretos. Las condiciones marginales pueden expresarse entonces como
-
-\begin{subequations}
-\label{eq:foc_completas}
-\begin{align}
-\psi_r'(e_r)
-&=
-\mathrm{BM}_{r,e}^{m}
-+
-\Delta_{r,e}^{m},
-\label{eq:foc_e_completa}
-\\
-\xi_r'(g_r)
-&=
-\mathrm{BM}_{r,g}^{m}
-+
-\Delta_{r,g}^{m}.
-\label{eq:foc_g_completa}
-\end{align}
-\end{subequations}
-
-Esta separación distingue el margen intensivo, que modifica continuamente los resultados dentro de una misma región regulatoria, del margen discreto, asociado con el paso de una región a otra. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) introduce un incentivo asociado con la culminación de la inversión, mientras que \(\mathbf 1\{c_j<1\}\), \(d_F^m\) y \(\chi^m\) generan efectos adicionales cuando el esfuerzo modifica la configuración o activación de la multa.
+Los esfuerzos también pueden modificar las condiciones en las que cambian \(\mathbf 1\{c_j<1\}\), \(d_F^m\), \(\chi^m\) o el reconocimiento de \(S_r\). Dentro de una región en la que esos indicadores permanecen constantes, las condiciones interiores son
+\[
+\psi_r'(e_r)=\mathrm{BM}_{r,e}^{m},
+\qquad
+\xi_r'(g_r)=\mathrm{BM}_{r,g}^{m}.
+\]
+Los cambios discretos no se incorporan como términos diferenciales en estas condiciones: se evalúan comparando la utilidad del gerente a ambos lados del umbral correspondiente. Así se distingue el margen intensivo, que modifica continuamente los resultados dentro de una misma región regulatoria, del margen extensivo asociado con el paso de una región a otra. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) introduce un incentivo de culminación, mientras que \(\mathbf 1\{c_j<1\}\), \(d_F^m\) y \(\chi^m\) pueden generar saltos en la utilidad cuando cambia la configuración o activación de la multa.
 
 El esfuerzo de ejecución \(e_r\) actúa a través de \(F_r\) y sus efectos dependen del grupo al que pertenece la inversión. Para \(r\in R^{S}\), una mayor ejecución física puede elevar el resultado \(q_j\) y su grado de cumplimiento \(c_j\). Para \(r\in R^{G}\), incrementa directamente el cumplimiento de la meta asociada a través de \(a_r\); la misma lógica se aplica a \(r\in R^{F}\) cuando estas inversiones se verifican mediante indicadores de \(J^{F}\). Asimismo, \(e_r\) puede modificar la relación de trabajo, el avance financiero a través de \(F_r\) y las bases de las multas al reducir el alcance físico pendiente, siempre que los recursos disponibles permitan materializar ese mayor avance.
 
@@ -604,13 +605,13 @@ a_{r,-}'(e_r^{\mathrm{sat}})
 
 La exposición suficiente depende de los demás incentivos que actúan sobre la misma inversión. Cuanto mayor sea el retorno proveniente del desempeño reputacional, del ahorro u otros canales recogidos en \(\mathrm{BM}_{r,e}^{m,-\mu}\), menor será, manteniendo lo demás constante, la exposición sancionadora necesaria para llevar el esfuerzo de ejecución hasta su región saturada. Se define \(\mu_r^{m,*}=0\) cuando \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), pues los canales restantes son suficientes para alcanzar dicha región.
 
-Bajo las condiciones de concavidad local, para \(\mu_r^m<\mu_r^{m,*}\) una mayor exposición puede seguir incrementando el esfuerzo a través de \(a_r'(e_r)\Gamma_r^m(\mu_r^m)\). Cuando \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para que el esfuerzo alcance al menos la región en la que el avance físico se encuentra saturado. Por tanto,
+Bajo las condiciones de concavidad local, para \(\mu_r^m<\mu_r^{m,*}\) una mayor exposición puede seguir incrementando el esfuerzo a través de \(a_r'(e_r)\Gamma_r^m(\mu_r^m)\). Cuando \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para llevar el esfuerzo al punto en que el avance físico se satura. Como \(e_r\) solo produce beneficios mediante variables que dependen de \(a_r\) y \(\psi_r'(e_r)>0\), ningún óptimo elige esfuerzo estrictamente mayor que \(e_r^{\mathrm{sat}}\), manteniendo \(g_r\) fijo. Por tanto,
 
 \begin{equation}
 \label{eq:plateau_esfuerzo}
 \begin{aligned}
 e_r^{m,*}
-&\geq
+&=
 e_r^{\mathrm{sat}},
 &
 \mu_r^m
