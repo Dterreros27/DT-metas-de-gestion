@@ -6,11 +6,54 @@ El modelo distingue la identificación del incumplimiento, la activación de sus
 
 La secuencia \(A_0\to A\to A'\to A''\to B\) recoge modificaciones sucesivas del diseño regulatorio. \(A_0\) representa el esquema de referencia, en el cual el indicador de avance financiero comprende todo el programa de inversiones y la relación de trabajo forma parte del ICG. El paso de \(A_0\) a \(A\) focaliza el indicador de avance financiero y retira la relación de trabajo de la medida agregada; \(A\to A'\) elimina el umbral del ICG como condición para la imposición de sanciones; \(A'\to A''\) sustituye la verificación financiera restante por indicadores de cumplimiento físico o funcional; y, finalmente, \(A''\to B\) concentra el ICG en los resultados del servicio.
 
+La Tabla~\ref{tab:guia_notacion_modelo} reúne los principales objetos utilizados en la formalización. Las definiciones completas y sus propiedades se presentan en las subsecciones correspondientes.
+
+\begin{table*}[!t]
+\centering
+\caption{Guía de la notación principal del modelo}
+\label{tab:guia_notacion_modelo}
+\scriptsize
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\textwidth}{
+@{}
+>{\centering\arraybackslash}p{0.12\textwidth}
+>{\raggedright\arraybackslash}X
+>{\centering\arraybackslash}p{0.13\textwidth}
+>{\raggedright\arraybackslash}X
+@{}
+}
+\hline
+\textbf{Símbolo} & \textbf{Interpretación} &
+\textbf{Símbolo} & \textbf{Interpretación} \\
+\hline
+\(m\) & Diseño regulatorio: \(A_0,A,A',A'',B\) o \(B^+\). &
+\(J^S,J^G,J^F\) & Indicadores de resultados, de gestión y de cumplimiento físico o funcional. \\
+\(R^S,R^G,R^F\) & Inversiones vinculadas con cada grupo de indicadores. &
+\(e_r,g_r\) & Esfuerzos de ejecución y de eficiencia de la inversión \(r\). \\
+\(F_r,a_r\) & Magnitud física ejecutada y avance físico normalizado. &
+\(\bar I_r,I_r,f_r\) & Recursos programados, inversión efectiva y avance financiero. \\
+\(C_S,C_G\) & Cumplimiento agregado de resultados y de metas de gestión. &
+\(ICG^m,P^m\) & Índice regulatorio y desempeño percibido bajo \(m\). \\
+\(\mathrm{Rep}^m,M^m\) & Reputación del gerente y multa impuesta a la empresa. &
+\(\lambda^m,\varpi^m,\gamma^m\) & Retornos marginales del desempeño, el ahorro y la reducción de la multa. \\
+\(\mu_r^m,\delta_r^m\) & Exposición sancionadora y multiplicidad de bases físicas. &
+\(\alpha_H^m,s_H,\theta\) & Peso, saliencia y grado de reasignación reputacional del bloque \(H\). \\
+\(\widetilde q_S^m,Q^m\) & Resultados no truncados y agregado valorado por el regulador. &
+\(C_I^m,C_{OM}^m,\Omega(M^m)\) & Inversión, operación y mantenimiento, y carga sectorial de la multa. \\
+\(\zeta_j,h_j,\bar h_j\) & Elegibilidad, sobrecumplimiento reconocido y límite aplicable. &
+\(b_j,\kappa_j,T_j\) & Costo unitario, proporción reconocida y bonificación. \\
+\(W_R^m\) & Criterio reducido de evaluación regulatoria. &
+\(\bar q_j\) & Meta regulatoria aplicable al resultado \(j\). \\
+\hline
+\end{tabularx}
+\end{table*}
+
 La empresa prestadora constituye la unidad regulada, mientras que las decisiones de esfuerzo corresponden al gerente general. Para cada inversión, el modelo distingue el esfuerzo destinado a completar su alcance físico o funcional, \(e_r\), y el orientado a reducir los recursos necesarios para ejecutarla, \(g_r\). El gerente valora además las señales reputacionales asociadas con el ICG, el ahorro reconocido y las consecuencias del incumplimiento, cuya difusión y legibilidad pueden diferir entre esquemas, mientras que solo una parte de la multa impuesta a la empresa puede transmitirse directamente hacia quien decide el esfuerzo. Esta estructura permite analizar conjuntamente los incentivos de ejecución, eficiencia y respuesta reputacional.
 
 La intuición central puede ilustrarse a partir de una única inversión. El gerente puede aumentar su esfuerzo de ejecución para movilizar los recursos asignados y avanzar hacia su culminación, pero dicho esfuerzo le genera un costo, por lo que su intensidad dependerá de los incentivos reputacionales y sancionadores asociados al cumplimiento. Este margen se encuentra condicionado por los recursos disponibles para la inversión: una vez agotados, un esfuerzo adicional no puede generar mayor ejecución si dichos recursos resultan insuficientes para culminarla. En ese caso, una mayor exposición sancionadora puede incrementar el costo esperado asociado al incumplimiento sin producir mejoras adicionales en la ejecución. Paralelamente, el gerente puede realizar un esfuerzo de eficiencia que reduzca los recursos necesarios para alcanzar un mismo nivel de avance físico. Si la inversión culmina utilizando menos recursos que los programados, la diferencia constituye un ahorro que también puede generar un beneficio reputacional.
 
-La Subsección~4.1 formaliza el entorno común a los distintos diseños, la decisión gerencial, las consecuencias del incumplimiento y el criterio del regulador; la Subsección~4.2 especifica los esquemas; la Subsección~4.3 compara sus incentivos, resultados y condiciones de bienestar; la Subsección~4.4 incorpora \(B^{+}\); y la Subsección~4.5 sintetiza los resultados. El análisis constituye un ejercicio de estática comparada entre diseños dados: no determina un diseño globalmente óptimo ni desarrolla una estructura dinámica completa.
+La Subsección~4.1 formaliza el entorno común a los distintos diseños, la decisión gerencial, las consecuencias del incumplimiento y el criterio del regulador; la Subsección~4.2 especifica los esquemas; la Subsección~4.3 compara sus incentivos, resultados y el criterio regulatorio; la Subsección~4.4 incorpora \(B^{+}\); y la Subsección~4.5 sintetiza los resultados. El análisis constituye un ejercicio de estática comparada entre diseños dados: no determina un diseño globalmente óptimo ni desarrolla una estructura dinámica completa.
 
 \input{secciones/04_modelo/01_decision_gerencial}
 
