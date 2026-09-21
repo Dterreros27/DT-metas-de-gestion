@@ -48,43 +48,15 @@ Por tanto, las medidas agregadas de desempeño quedan definidas por
 \begin{subequations}
 \label{eq:icg_esquemas}
 \begin{align}
-ICG^{A_0}
-&=
-\frac{n_S}{N^{A_0}}C_S
-+
-\frac{n_G}{N^{A_0}}C_G
-\notag\\
-&\quad
-+
-\frac{1}{N^{A_0}}f_R
-+
-\frac{1}{N^{A_0}}c_{RT},
-\label{eq:icg_a0_esquemas}
-\\
-ICG^{A}
-&=
-\frac{n_S}{N^{A}}C_S
-+
-\frac{n_G}{N^{A}}C_G
-+
-\frac{1}{N^{A}}f_F,
-\label{eq:icg_a}
-\\
-ICG^{A'}
-&=
-ICG^{A},
-\label{eq:icg_ap}
-\\
-ICG^{A''}
-&=
-\frac{n_S}{N^{A''}}C_S
-+
-\frac{n_G}{N^{A''}}C_G,
-\label{eq:icg_app}
-\\
-ICG^{B}
-&=
-C_S.
+ICG^{A_0} &= \frac{n_S}{N^{A_0}}C_S+\frac{n_G}{N^{A_0}}C_G+\frac{1}{N^{A_0}}f_R+\frac{1}{N^{A_0}}c_{RT},
+\label{eq:icg_a0_esquemas}\\
+ICG^{A} &= \frac{n_S}{N^{A}}C_S+\frac{n_G}{N^{A}}C_G+\frac{1}{N^{A}}f_F,
+\label{eq:icg_a}\\
+ICG^{A'} &= ICG^{A},
+\label{eq:icg_ap}\\
+ICG^{A''} &= \frac{n_S}{N^{A''}}C_S+\frac{n_G}{N^{A''}}C_G,
+\label{eq:icg_app}\\
+ICG^{B} &= C_S.
 \label{eq:icg_b}
 \end{align}
 \end{subequations}
@@ -259,33 +231,11 @@ Dentro de esa región, la exposición puede descomponerse como
 \begin{subequations}
 \label{eq:descomposicion_exposicion_esquemas}
 \begin{align}
-\mu_{r,\mathrm{fis}}^m
-&=
-\chi^m\,
-\mathrm{WACC}\,
-\bar I_r\,
-\delta_r^m,
-\label{eq:exposicion_fisica_esquemas}
-\\
-\mu_{r,\mathrm{fin}}^m
-&=
-\eta_F^m\,
-\chi^m\,
-\mathrm{WACC}
-\notag\\
-&\quad\times
-\left(
-B_{\mathrm{fin},N}^m
--
-B_{\mathrm{fin},C}^m
-\right),
-\label{eq:exposicion_financiera_esquemas}
-\\
-\mu_r^m
-&=
-\mu_{r,\mathrm{fis}}^m
-+
-\mu_{r,\mathrm{fin}}^m.
+\mu_{r,\mathrm{fis}}^m &= \chi^m\,\mathrm{WACC}\,\bar I_r\,\delta_r^m,
+\label{eq:exposicion_fisica_esquemas}\\
+\mu_{r,\mathrm{fin}}^m &= \eta_F^m\,\chi^m\,\mathrm{WACC}\left(B_{\mathrm{fin},N}^m-B_{\mathrm{fin},C}^m\right),
+\label{eq:exposicion_financiera_esquemas}\\
+\mu_r^m &= \mu_{r,\mathrm{fis}}^m+\mu_{r,\mathrm{fin}}^m.
 \label{eq:exposicion_total_esquemas}
 \end{align}
 \end{subequations}

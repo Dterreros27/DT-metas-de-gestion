@@ -53,18 +53,8 @@ Para \(r\in R_j^{S}\), mientras la meta se encuentre en el tramo no truncado, la
 
 \begin{equation}
 \label{eq:derivada_cs_ejecucion}
-\begin{aligned}
-C_{S,e_r}
-&\equiv
-\frac{\partial C_S}{\partial e_r}
-\\
-&=
-\frac{1}{n_S}
-\frac{\beta_{rj}}{\bar q_j}
-\frac{\partial F_r}{\partial e_r}
->
-0.
-\end{aligned}
+C_{S,e_r}\equiv\frac{\partial C_S}{\partial e_r}
+=\frac{1}{n_S}\frac{\beta_{rj}}{\bar q_j}\frac{\partial F_r}{\partial e_r}>0.
 \end{equation}
 
 Para las demás dimensiones se utiliza la notación \(C_{G,e_r}\equiv\partial C_G/\partial e_r\), \(c_{RT,e_r}\equiv\partial c_{RT}/\partial e_r\) y \(c_{j,e_r}\equiv\partial c_j/\partial e_r\) para \(r\in R_j^{F}\). Asimismo,
@@ -102,20 +92,8 @@ La reducción marginal de una base física asociada con \(r\) se recoge mediante
 
 \begin{equation}
 \label{eq:canal_reduccion_base}
-\begin{aligned}
-H_{r,e}
-&\equiv
-\mathrm{WACC}\,
-\bar I_r
-\frac{\partial a_r}{\partial e_r}
-\\
-&=
-\mathrm{WACC}\,
-\frac{\bar I_r}{\bar F_r}
-\frac{\partial F_r}{\partial e_r}
->
-0.
-\end{aligned}
+H_{r,e}\equiv\mathrm{WACC}\,\bar I_r\frac{\partial a_r}{\partial e_r}
+=\mathrm{WACC}\,\frac{\bar I_r}{\bar F_r}\frac{\partial F_r}{\partial e_r}>0.
 \end{equation}
 
 Cuando el esquema mantiene una base financiera, se define
@@ -142,26 +120,9 @@ Mientras \(d_F^m\) permanezca constante y \(r\in\mathrm{Fin}^m\), se tiene \(K_{
 \begin{subequations}
 \label{eq:derivadas_multa_esfuerzos}
 \begin{align}
--
-\frac{\partial M^m}{\partial e_r}
-&=
-\chi^m
-\left[
-\delta_r^m H_{r,e}
-\right.
-\notag\\
-&\qquad\left.
-+
-\eta_F^m K_{r,e}^{m}
-\right],
-\label{eq:derivada_multa_ejecucion}
-\\
--
-\frac{\partial M^m}{\partial g_r}
-&=
-\chi^m
-\eta_F^m
-K_{r,g}^{m}.
+-\frac{\partial M^m}{\partial e_r} &= \chi^m\left[\delta_r^m H_{r,e}+\eta_F^m K_{r,e}^{m}\right],
+\label{eq:derivada_multa_ejecucion}\\
+-\frac{\partial M^m}{\partial g_r} &= \chi^m\eta_F^m K_{r,g}^{m}.
 \label{eq:derivada_multa_eficiencia}
 \end{align}
 \end{subequations}
@@ -302,23 +263,8 @@ La transición \(A'\to A''\) opera por una razón distinta. El canal sancionador
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_ap_app_rh}
-\begin{aligned}
-\mathrm{BM}_{r,e}^{A''}
--
-\mathrm{BM}_{r,e}^{A'}
-&=
-\lambda
-\\
-&\quad\times
-\left(
-\alpha_H^{A''}
--
-\alpha_H^{A'}
-\right)
-C_{H,e_r}
->
-0.
-\end{aligned}
+\mathrm{BM}_{r,e}^{A''}-\mathrm{BM}_{r,e}^{A'}
+=\lambda\left(\alpha_H^{A''}-\alpha_H^{A'}\right)C_{H,e_r}>0.
 \end{equation}
 
 \paragraph{Intervenciones vinculadas con resultados del servicio.}
@@ -327,20 +273,8 @@ La última transición concentra la señal pública en los resultados del servic
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_app_b_rs}
-\begin{aligned}
-\mathrm{BM}_{r,e}^{B}
--
-\mathrm{BM}_{r,e}^{A''}
-&=
-\left[
-\lambda^B
--
-\alpha_S^{A''}\lambda
-\right]
-\\
-&\quad\times
-C_{S,e_r}.
-\end{aligned}
+\mathrm{BM}_{r,e}^{B}-\mathrm{BM}_{r,e}^{A''}
+=\left[\lambda^B-\alpha_S^{A''}\lambda\right]C_{S,e_r}.
 \end{equation}
 
 Una condición suficiente para que el incentivo no disminuya es
@@ -413,25 +347,9 @@ El caso de \(R^{F}\) es distinto porque \(A'\to A''\) cambia simultáneamente la
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_ap_app_rf}
-\begin{aligned}
-\mathrm{BM}_{r,e}^{A''}
--
-\mathrm{BM}_{r,e}^{A'}
-&=
--
-\lambda
-\alpha_F^{A'}
-f_{F,e_r}
-\\
-&\quad
-+
-\gamma
-\left[
-\delta_r^{A''}H_{r,e}
--
-K_{r,e}^{A'}
-\right].
-\end{aligned}
+\mathrm{BM}_{r,e}^{A''}-\mathrm{BM}_{r,e}^{A'}
+=-\lambda\alpha_F^{A'}f_{F,e_r}
++\gamma\left[\delta_r^{A''}H_{r,e}-K_{r,e}^{A'}\right].
 \end{equation}
 
 Aquí aparece una comparación genuinamente abierta: sin restricciones adicionales sobre la magnitud relativa de los términos, no es posible ordenar el esfuerzo de ejecución. Desde \(A''\), en cambio, \(B\) mantiene la misma estructura sancionadora y \(R^{F}\) permanece fuera del ICG, por lo que ambos esquemas generan el mismo incentivo marginal bajo las normalizaciones locales.
@@ -464,21 +382,10 @@ El \textit{benchmark} \(A_0\to A\) no permite aislar un único mecanismo: modifi
 
 \begin{equation}
 \label{eq:derivadas_icg_a0_a_rs}
-\begin{aligned}
 \frac{\partial P^{A_0}}{\partial e_r}
-&=
-\alpha_S^{A_0}C_{S,e_r}
-+
-\alpha_F^{A_0}f_{R,e_r}
-\\
-&\quad
-+
-\alpha_{RT}^{A_0}c_{RT,e_r},
-\\
-\frac{\partial P^{A}}{\partial e_r}
-&=
-\alpha_S^{A}C_{S,e_r}.
-\end{aligned}
+=\alpha_S^{A_0}C_{S,e_r}+\alpha_F^{A_0}f_{R,e_r}+\alpha_{RT}^{A_0}c_{RT,e_r},
+\qquad
+\frac{\partial P^{A}}{\partial e_r}=\alpha_S^{A}C_{S,e_r}.
 \end{equation}
 
 Como \(A\) retira el bloque \(RT\) de la señal publicada, se tiene \(\alpha_S^{A}>\alpha_S^{A_0}\). Por tanto, la transición aumenta la ponderación reputacional de \(C_S\). El efecto sobre su retorno depende además de cómo cambie la legibilidad, para la cual no se impone un ordenamiento previo. Sin embargo, desaparecen simultáneamente los retornos asociados con el avance financiero general y la relación de trabajo, se reducen bases sancionadoras superpuestas y puede cambiar la exposición \(\mu_r^m\). El signo total del efecto sobre el esfuerzo continúa siendo, en general, indeterminado.
@@ -491,44 +398,17 @@ La transición \(A_0\to A\) no permite establecer un orden general del esfuerzo 
 
 Para no dejar esta ambigüedad como una afirmación abstracta, conviene mostrar de dónde proviene mediante un caso concreto. Supóngase que una intervención pendiente \(r\in R_j^{S}\) participa en la base de su propia meta y en \(B_{RT}\) bajo \(A_0\), mientras que en \(A\) permanece únicamente la primera y la consecuencia está activa en ambos esquemas. Entonces, \(\delta_r^{A_0}=2\) y \(\delta_r^{A}=1\). Para aislar estos canales, se mantienen localmente \(V'(\mathrm{Rep}^{A})=V'(\mathrm{Rep}^{A_0})\equiv V'\), \(R_I'(P^{A})=R_I'(P^{A_0})\equiv R_I'\), \(d_I\) y \(\gamma^{A_0}=\gamma^{A}\equiv\gamma\). Asimismo, se supone \(\ell_I^{A}\alpha_S^{A}>\ell_I^{A_0}\alpha_S^{A_0}\), condición que recoge conjuntamente la legibilidad y la ponderación de \(C_S\). Bajo estas condiciones, se definen
 
-\begin{equation}
+\begin{subequations}
 \label{eq:componentes_benchmark_a0_a}
-\begin{aligned}
-G_P
-&\equiv
-V'd_I R_I' C_{S,e_r}
-\\
-&\quad\times
-\left[
-\ell_I^{A}\alpha_S^{A}
--
-\ell_I^{A_0}\alpha_S^{A_0}
-\right]
->0,
-\\[3pt]
-L_P
-&\equiv
-V'd_I R_I'\ell_I^{A_0}
-\\
-&\quad\times
-\left[
-\alpha_F^{A_0}f_{R,e_r}
-+
-\alpha_{RT}^{A_0}c_{RT,e_r}
-\right]
-\geq0,
-\\[3pt]
-L_M
-&\equiv
-\gamma
-\left[
-H_{r,e}
-+
-K_{r,e}^{A_0}
-\right]
->0.
-\end{aligned}
-\end{equation}
+\begin{align}
+G_P &\equiv V'd_I R_I'C_{S,e_r}\left[\ell_I^{A}\alpha_S^{A}-\ell_I^{A_0}\alpha_S^{A_0}\right]>0,
+\label{eq:componente_gp_benchmark_a0_a}\\
+L_P &\equiv V'd_I R_I'\ell_I^{A_0}\left[\alpha_F^{A_0}f_{R,e_r}+\alpha_{RT}^{A_0}c_{RT,e_r}\right]\geq 0,
+\label{eq:componente_lp_benchmark_a0_a}\\
+L_M &\equiv \gamma\left[H_{r,e}+K_{r,e}^{A_0}\right]>0.
+\label{eq:componente_lm_benchmark_a0_a}
+\end{align}
+\end{subequations}
 
 Los términos \(G_P\), \(L_P\) y \(L_M\) representan, respectivamente, la ganancia por focalización y legibilidad, la pérdida de canales reputacionales y la pérdida de canales sancionadores.
 

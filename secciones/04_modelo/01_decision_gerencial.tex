@@ -25,41 +25,30 @@ Por otro lado, \(R^{F}\) agrupa las inversiones cuyo impacto no puede ser evalua
 
 \subsubsection{Ejecución física, resultados y cumplimiento de metas}
 
-La ejecución de cada inversión se representa mediante una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\) y un esfuerzo de eficiencia \(g_r\). El grado de avance físico y la magnitud alcanzada al cierre del periodo se representan como
+La ejecución de cada inversión se caracteriza por una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\), que determina el avance físico, y un esfuerzo de eficiencia \(g_r\), que reduce los recursos necesarios para alcanzar una magnitud dada. El grado de avance físico y la magnitud ejecutada se representan como
 
 \begin{equation}
 \label{eq:ejecucion_fisica}
-a_r
-=
-a_r(e_r;\bar I_r,g_r),
+a_r=a_r(e_r),
 \qquad
-F_r
-=
-\bar F_r a_r,
-\qquad
-0
-\leq
-a_r
-\leq
-1.
+F_r=\bar F_r a_r.
 \end{equation}
 
-Aquí, \(a_r\) representa el grado de avance físico de la inversión y \(F_r\) la magnitud efectivamente alcanzada. La especificación concentra el análisis en la relación entre las decisiones gerenciales, los recursos programados y la ejecución, sin modelar separadamente otros factores que también pueden afectar este resultado.\footnote{La evidencia documenta la relevancia de factores gerenciales, institucionales, financieros y geográficos para la ejecución de inversiones de las empresas prestadoras; véase \citet{escobar2025determinantes}. Su omisión explícita responde al carácter reducido del modelo y no implica atribuir al esfuerzo gerencial una interpretación causal exclusiva.}
+Por definición, \(0\leq a_r\leq1\). El esfuerzo de eficiencia no produce directamente avance físico, pero puede ampliar el nivel alcanzable con los recursos programados.\footnote{La evidencia documenta la relevancia de factores gerenciales, institucionales, financieros y geográficos para la ejecución de inversiones de las empresas prestadoras; véase \citet{escobar2025determinantes}. Su omisión explícita responde al carácter reducido del modelo y no implica atribuir al esfuerzo gerencial una interpretación causal exclusiva.}
 
-Para analizar el margen de culminación, se mantienen dados \(\bar I_r\) y \(g_r\) y, por economía de notación, se escribe \(a_r(e_r)\). Se supone que existe un nivel finito \(e_r^{\mathrm{sat}}=e_r^{\mathrm{sat}}(\bar I_r,g_r)\) a partir del cual un mayor esfuerzo de ejecución deja de incrementar el avance físico. Antes de alcanzar ese nivel, el esfuerzo aumenta \(a_r\), aunque a una tasa no creciente; una vez alcanzado, el avance permanece constante en \(\bar a_r=\bar a_r(\bar I_r,g_r)\leq1\). Formalmente,
+Para caracterizar el margen de culminación, se supone que existe un nivel finito \(e_r^{\mathrm{sat}}=e_r^{\mathrm{sat}}(\bar I_r,g_r)\) antes del cual el esfuerzo incrementa el avance físico a una tasa no creciente. A partir de ese nivel, el avance permanece constante en \(\bar a_r=\bar a_r(\bar I_r,g_r)\leq1\):
 
 \begin{equation}
 \label{eq:saturacion_probabilidad}
 \begin{aligned}
-a_r'(e_r)>0,\qquad a_r''(e_r)\leq0,
-&\qquad e_r<e_r^{\mathrm{sat}},
-\\
-a_r(e_r)=\bar a_r,
-&\qquad e_r\geq e_r^{\mathrm{sat}}.
+a_r'(e_r)>0,\quad a_r''(e_r)\leq0
+&\quad \text{si } e_r<e_r^{\mathrm{sat}},\\
+a_r(e_r)=\bar a_r
+&\quad \text{si } e_r\geq e_r^{\mathrm{sat}}.
 \end{aligned}
 \end{equation}
 
-Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\) y se admite un quiebre en dicho punto, con \(a_{r,-}'(e_r^{\mathrm{sat}})>0\) y \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). La dependencia de \(e_r^{\mathrm{sat}}\) y \(\bar a_r\) respecto de \(\bar I_r\) y \(g_r\) recoge, de forma reducida, que los recursos disponibles y la eficiencia condicionan hasta dónde un mayor esfuerzo de ejecución puede traducirse en un mayor avance físico. Cuando \(\bar a_r=1\), la culminación es alcanzable; cuando \(\bar a_r<1\), permanece una brecha física que un mayor esfuerzo de ejecución no puede reducir. A partir de \(e_r^{\mathrm{sat}}\), otros canales, como el asociado con el esfuerzo de eficiencia \(g_r\), pueden continuar operando mientras exista margen para reducir los recursos necesarios para alcanzar una magnitud física dada.
+Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\), aunque puede presentar un quiebre en ese punto, con \(a_{r,-}'(e_r^{\mathrm{sat}})>0\) y \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). La dependencia de \(e_r^{\mathrm{sat}}\) y \(\bar a_r\) respecto de \(\bar I_r\) y \(g_r\) recoge que los recursos disponibles y la eficiencia condicionan el avance máximo alcanzable. Si \(\bar a_r=1\), la culminación es posible; si \(\bar a_r<1\), persiste una brecha física que un mayor esfuerzo de ejecución no puede reducir.
 
 Para las inversiones pertenecientes a \(R^{S}\), la magnitud física ejecutada contribuye a la producción de resultados del servicio. Sea \(q_j\) el resultado correspondiente a \(j\in J^{S}\), orientado de manera que un mayor valor represente un mejor desempeño:
 
@@ -94,94 +83,61 @@ c_j
 
 Mientras \(q_j<\bar q_j\), una mayor ejecución física de cualquier \(r\in R_j^{S}\) incrementa \(q_j\) y, con ello, \(c_j\); una vez alcanzada la meta, \(c_j\) permanece igual a uno.
 
-Para las metas de \(J^{G}\), el grado de cumplimiento depende directamente del avance físico de las inversiones asociadas. El mismo criterio se aplica a los indicadores de \(J^{F}\) cuando estos se utilizan para verificar el cumplimiento físico o funcional de las inversiones de \(R^{F}\). Para \(H\in\{G,F\}\) y \(j\in J^{H}\), se define
+Para las metas de \(J^{G}\), el grado de cumplimiento depende directamente del avance físico de las inversiones asociadas. El mismo criterio se aplica a los indicadores de \(J^{F}\) cuando estos verifican el cumplimiento físico o funcional de las inversiones de \(R^{F}\). Para representar ambos casos de manera conjunta, se utiliza \(H\in\{G,F\}\) como índice del grupo considerado. Así, para cada \(j\in J^{H}\), se define
 
 \begin{equation}
 \label{eq:cumplimiento_g_f}
-\begin{aligned}
-c_j
-&=
-\sum_{r\in R_j^{H}}
-\eta_{rj}^{H}a_r,
-\\
-\eta_{rj}^{H}
-&\geq0,
+c_j=\sum_{r\in R_j^{H}}\eta_{rj}^{H}a_r,
+\qquad
+\eta_{rj}^{H}\geq 0,
 \qquad
 \sum_{r\in R_j^{H}}\eta_{rj}^{H}=1.
-\end{aligned}
 \end{equation}
 
-Para los indicadores de \(J^{S}\), \(J^{G}\) y \(J^{F}\), se considera incumplimiento cuando \(c_j<1\), sin incorporar los umbrales específicos aplicables a cada indicador en la práctica. Los agregados utilizados para representar los resultados del servicio y las demás metas de gestión se definen como
+Para los indicadores de \(J^{S}\), \(J^{G}\) y \(J^{F}\), se considera incumplimiento cuando \(c_j<1\), sin reproducir los umbrales específicos aplicables a cada indicador en la práctica. Los resultados del servicio y las demás metas de gestión se resumen mediante sus respectivos grados de cumplimiento promedio. Sea \(n_S\) el número de indicadores de \(J^{S}\) y \(n_G\) el número de indicadores de \(J^{G}\). Se define
 
 \begin{equation}
 \label{eq:agregados_cumplimiento}
-\begin{aligned}
-C_S
-&=
-\frac{1}{n_S}
-\sum_{j\in J^{S}}c_j,
-&
-n_S
-&\equiv
-|J^{S}|,
-\\
-C_G
-&=
-\frac{1}{n_G}
-\sum_{j\in J^{G}}c_j,
-&
-n_G
-&\equiv
-|J^{G}|.
-\end{aligned}
+C_S=\frac{1}{n_S}\sum_{j\in J^{S}}c_j,
+\qquad
+C_G=\frac{1}{n_G}\sum_{j\in J^{G}}c_j.
 \end{equation}
 
-Equivalentemente, \(\omega_j^{S}=1/n_S\) y \(\omega_j^{G}=1/n_G\). Esta especificación reproduce la media aritmética de los indicadores individuales dentro de cada grupo. Así, \(C_S\) resume el cumplimiento promedio de las metas asociadas con los resultados del servicio y \(C_G\) el de las demás obligaciones de gestión o ejecución consideradas en la medida agregada de los esquemas que las incorporan. Estos agregados se utilizan posteriormente para caracterizar la señal reputacional y, en el caso de \(C_G\), su posible contribución neta a los resultados valorados por el regulador.
+Esta especificación asigna el mismo peso a todos los indicadores de cada grupo, de modo que \(\omega_j^{S}=1/n_S\) y \(\omega_j^{G}=1/n_G\). Así, \(C_S\) resume el cumplimiento de las metas asociadas con los resultados del servicio, mientras que \(C_G\) resume el de las demás metas de gestión o ejecución incluidas en la medida agregada. Ambos se utilizan posteriormente para caracterizar la señal reputacional y, en el caso de \(C_G\), su posible contribución neta a los resultados valorados por el regulador.
 
 \subsubsection{Ejecución financiera, relación de trabajo y ahorro}
 
-Además del esfuerzo destinado a completar físicamente cada inversión, el gerente decide cuánto esfuerzo dedicar a reducir los recursos necesarios para ejecutarla. Para distinguir la inversión de los recursos destinados a su ejecución, \(I_r\) denota el monto ejecutado en la inversión \(r\). Este monto depende de la magnitud física alcanzada y del esfuerzo de eficiencia \(g_r\):
+Además del esfuerzo destinado a completar físicamente cada inversión, el gerente decide cuánto esfuerzo dedicar a reducir los recursos necesarios para ejecutarla. Para distinguir la inversión de los recursos destinados a su ejecución, \(I_r\) denota el monto ejecutado en la inversión \(r\). Este monto depende de la magnitud física alcanzada y del esfuerzo de eficiencia \(g_r\). El grado de ejecución financiera \(f_r\) se define como la proporción de los recursos programados que ha sido ejecutada:
 
 \begin{equation}
 \label{eq:inversion_ejecutada}
-I_r
-=
-I_r(F_r,g_r),
+I_r=I_r(F_r,g_r),
 \qquad
-0\leq I_r\leq\bar I_r,
-\qquad
-f_r
-\equiv
-\frac{I_r}{\bar I_r},
-\qquad
-0\leq f_r\leq1.
+f_r\equiv\frac{I_r}{\bar I_r}.
 \end{equation}
 
-El término \(\bar I_r>0\) representa los recursos programados para financiar la inversión, mientras que \(f_r\) mide el grado de ejecución financiera reconocido para efectos del cumplimiento. Se supone \(I_{r,F}>0\) e \(I_{r,g}<0\): una mayor magnitud física requiere más recursos de inversión, mientras que, para una magnitud física dada, un mayor esfuerzo de eficiencia reduce los recursos necesarios para ejecutarla. La restricción \(I_r\leq\bar I_r\) recoge que la ejecución financiera reconocida no puede exceder los recursos programados considerados en el modelo. Cuando estos recursos resultan insuficientes para completar la magnitud física programada, dicha limitación se refleja de forma reducida en \(\bar a_r(\bar I_r,g_r)<1\) y en el correspondiente punto de saturación \(e_r^{\mathrm{sat}}(\bar I_r,g_r)\): un mayor esfuerzo de ejecución no puede sustituir el financiamiento faltante.
+El término \(\bar I_r>0\) representa los recursos programados para financiar la inversión. Puesto que \(0\leq I_r\leq\bar I_r\), se tiene \(0\leq f_r\leq1\). Se supone \(I_{r,F}>0\) e \(I_{r,g}<0\): una mayor magnitud física requiere más recursos de inversión, mientras que, para una magnitud física dada, un mayor esfuerzo de eficiencia reduce los recursos necesarios para ejecutarla. La restricción \(I_r\leq\bar I_r\) recoge que la ejecución financiera reconocida no puede exceder los recursos programados considerados en el modelo. Cuando estos recursos resultan insuficientes para completar la magnitud física programada, dicha limitación se refleja de forma reducida en \(\bar a_r(\bar I_r,g_r)<1\) y en el correspondiente punto de saturación \(e_r^{\mathrm{sat}}(\bar I_r,g_r)\): un mayor esfuerzo de ejecución no puede sustituir el financiamiento faltante.
 
 La especificación supone que el esfuerzo de eficiencia reduce los recursos requeridos para alcanzar una magnitud física dada sin afectar directamente el resultado del servicio. Se trata, por tanto, de una mejora de eficiencia condicionada a \(F_r\), y no de una reducción de costos obtenida mediante una menor calidad. Este supuesto permite aislar la distorsión que aparece cuando la ejecución financiera penaliza una inversión físicamente equivalente realizada con menos recursos. En entornos más generales, los incentivos de reducción de costos pueden afectar la calidad cuando ambas dimensiones mantienen un vínculo tecnológico, como muestra \citet{ovaere2023} para las empresas de redes de energía.
 
-A partir de los avances financieros individuales se construyen dos medidas agregadas. \(f_R\) recoge el avance del programa de inversiones en su conjunto, mientras que \(f_F\) mide el avance financiero focalizado exclusivamente en las inversiones de \(R^{F}\):
+A partir de los avances financieros individuales se construyen dos medidas agregadas. \(f_R\) recoge el avance del programa de inversiones en su conjunto, mientras que \(f_F\) mide el avance financiero focalizado en las inversiones de \(R^{F}\):
 
 \begin{equation}
 \label{eq:avance_financiero_agregado}
-f_R
-=
-\sum_{r\in R}
-\nu_r^{R}f_r,
+f_R=\sum_{r\in R}\nu_r^{R}f_r,
 \qquad
-f_F
-=
-\sum_{r\in R^{F}}
-\nu_r^{F}f_r,
+f_F=\sum_{r\in R^{F}}\nu_r^{F}f_r.
 \end{equation}
 
-donde los ponderadores se fijan proporcionalmente a los recursos programados:
-\[
+Los ponderadores se fijan proporcionalmente a los recursos programados:
+
+\begin{equation}
+\label{eq:ponderadores_avance_financiero}
 \nu_r^{R}=\frac{\bar I_r}{\sum_{k\in R}\bar I_k},
 \qquad
 \nu_r^{F}=\frac{\bar I_r}{\sum_{k\in R^{F}}\bar I_k}.
-\]
+\end{equation}
+
 Por tanto, \(f_R=\sum_{r\in R}I_r/\sum_{r\in R}\bar I_r\) y \(f_F=\sum_{r\in R^F}I_r/\sum_{r\in R^F}\bar I_r\), en correspondencia con una medida financiera agregada. Esta formulación distingue dos márgenes de decisión: \(e_r\) incide en la magnitud física ejecutada dentro de los recursos disponibles, mientras que \(g_r\) incide en los recursos requeridos para alcanzarla. Por ello, el avance físico \(a_r\) y el avance financiero \(f_r\) no tienen por qué coincidir.
 
 A diferencia de las metas asociadas con subconjuntos específicos de inversiones, la relación de trabajo puede depender de la ejecución física del programa de inversiones en su conjunto:
@@ -243,9 +199,9 @@ El superíndice \(m\) se utiliza únicamente para mantener una notación homogé
 
 \subsubsection{Configuración y cuantificación de las consecuencias}
 
-Las consecuencias pecuniarias consideradas en el modelo distinguen tres elementos: la configuración del incumplimiento, que determina si la obligación fue incumplida; la activación de la consecuencia, representada por una regla específica de cada diseño; y su cuantificación, que determina la base sobre la cual se calcula la multa.
+Las consecuencias pecuniarias consideradas en el modelo distinguen tres elementos: la configuración del incumplimiento, que determina si la obligación fue incumplida; la activación de la consecuencia, representada por una regla específica de cada diseño; y su cuantificación, que establece el monto de referencia sobre el cual se calcula la multa.
 
-Para las obligaciones verificadas mediante indicadores de \(J^{S}\), \(J^{G}\) o \(J^{F}\), las bases físicas comparten una misma estructura. Para \(H\in\{S,G,F\}\), se define
+Cuando el incumplimiento se verifica mediante indicadores de \(J^{S}\), \(J^{G}\) o \(J^{F}\), la base de cuantificación se determina a partir de la ejecución física pendiente. Por ello, se denomina base por incumplimiento físico al valor monetario de la proporción no ejecutada de las inversiones vinculadas con cada meta incumplida. Para representar conjuntamente los tres grupos, se utiliza \(H\in\{S,G,F\}\):
 
 \begin{equation}
 \label{eq:base_fisica_generica}
@@ -257,7 +213,7 @@ B_H
 \bar I_r(1-a_r).
 \end{equation}
 
-Así, \(B_S\), \(B_G\) y \(B_F\) toman como referencia la inversión programada asociada con el alcance físico pendiente de las inversiones vinculadas con cada meta incumplida. Cuando la relación de trabajo constituye una obligación sancionable, su base se representa como
+El indicador \(\mathbf{1}\{c_j<1\}\) toma el valor de uno si la meta \(j\) fue incumplida y de cero en caso contrario. A su vez, \(\bar I_r(1-a_r)\) valora, utilizando el monto programado, la proporción físicamente pendiente de la inversión \(r\). En consecuencia, \(B_S\), \(B_G\) y \(B_F\) son bases monetarias construidas a partir del incumplimiento físico de las inversiones vinculadas con cada grupo de metas. Cuando la relación de trabajo constituye una obligación sancionable, su base se representa como:
 
 \begin{equation}
 \label{eq:base_rt}
