@@ -199,9 +199,9 @@ El superíndice \(m\) se utiliza únicamente para mantener una notación homogé
 
 \subsubsection{Configuración y cuantificación de las consecuencias}
 
-Las consecuencias pecuniarias consideradas en el modelo distinguen tres elementos: la configuración del incumplimiento, que determina si la obligación fue incumplida; la activación de la consecuencia, representada por una regla específica de cada diseño; y su cuantificación, que establece el monto de referencia sobre el cual se calcula la multa.
+Las consecuencias pecuniarias consideradas en el modelo distinguen tres elementos: la configuración del incumplimiento, que determina si una obligación fue incumplida; la activación de la consecuencia; y su cuantificación, que establece el monto de referencia sobre el cual se calcula la multa. Para cada esquema \(m\), \(\chi^m\in\{0,1\}\) representa la regla de activación: toma el valor de uno cuando los incumplimientos configurados generan las consecuencias correspondientes y de cero cuando estas son desactivadas por el diseño regulatorio. La regla específica de cada esquema se define en la Subsección~4.2.
 
-Cuando el incumplimiento se verifica mediante indicadores de \(J^{S}\), \(J^{G}\) o \(J^{F}\), la base de cuantificación se determina a partir de la ejecución física pendiente. Por ello, se denomina base por incumplimiento físico al valor monetario de la proporción no ejecutada de las inversiones vinculadas con cada meta incumplida. Para representar conjuntamente los tres grupos, se utiliza \(H\in\{S,G,F\}\):
+Cuando el incumplimiento se verifica mediante indicadores de \(J^{S}\), \(J^{G}\) o \(J^{F}\), la base de cuantificación se determina a partir de la ejecución física pendiente. Se denomina base por incumplimiento físico al valor monetario de la proporción no ejecutada de las inversiones vinculadas con cada meta incumplida. Para representar conjuntamente los tres grupos, se utiliza \(H\in\{S,G,F\}\):
 
 \begin{equation}
 \label{eq:base_fisica_generica}
@@ -213,7 +213,7 @@ B_H
 \bar I_r(1-a_r).
 \end{equation}
 
-El indicador \(\mathbf{1}\{c_j<1\}\) toma el valor de uno si la meta \(j\) fue incumplida y de cero en caso contrario. A su vez, \(\bar I_r(1-a_r)\) valora, utilizando el monto programado, la proporción físicamente pendiente de la inversión \(r\). En consecuencia, \(B_S\), \(B_G\) y \(B_F\) son bases monetarias construidas a partir del incumplimiento físico de las inversiones vinculadas con cada grupo de metas. Cuando la relación de trabajo constituye una obligación sancionable, su base se representa como:
+El indicador \(\mathbf{1}\{c_j<1\}\) toma el valor de uno si la meta \(j\) fue incumplida y de cero en caso contrario. A su vez, \(\bar I_r(1-a_r)\) valora, utilizando el monto programado, la proporción físicamente pendiente de la inversión \(r\). En consecuencia, \(B_S\), \(B_G\) y \(B_F\) son bases monetarias construidas a partir del incumplimiento físico de las inversiones vinculadas con cada grupo de metas. Cuando la relación de trabajo constituye una obligación sancionable, su base se representa como
 
 \begin{equation}
 \label{eq:base_rt}
@@ -255,7 +255,7 @@ d_F^m
 \right\}.
 \end{equation}
 
-Por construcción, \(d_F^m\in\{0,1\}\). Una ejecución financiera inferior a la programada configura incumplimiento únicamente cuando existe alcance físico pendiente entre las inversiones evaluadas. En cambio, una brecha financiera originada exclusivamente en el ahorro generado por inversiones culminadas no activa \(d_F^m\). Cuando el incumplimiento se determina a partir del avance financiero, la base correspondiente se define como
+Por construcción, \(d_F^m\in\{0,1\}\). Una ejecución financiera inferior a la programada configura incumplimiento únicamente cuando existe alcance físico pendiente entre las inversiones evaluadas. En cambio, una brecha financiera originada exclusivamente en el ahorro generado por inversiones culminadas no activa \(d_F^m\). Cuando se configura el incumplimiento financiero, la base correspondiente se define como
 
 \begin{equation}
 \label{eq:base_financiera}
@@ -267,7 +267,7 @@ d_F^m
 \bar I_r.
 \end{equation}
 
-Una misma inversión puede incidir en más de una base cuando participa simultáneamente en una meta específica y en una obligación de alcance transversal. Esta superposición es relevante porque puede aumentar la exposición sancionadora atribuible a una misma brecha de ejecución. La composición de las bases aplicables, el universo financiero \(\mathrm{Fin}^m\) y la regla de activación \(\chi^m\in\{0,1\}\) dependen del diseño regulatorio considerado.
+Una misma inversión puede incidir en más de una base cuando participa simultáneamente en una meta específica y en una obligación de alcance transversal. Esta superposición puede aumentar la exposición sancionadora atribuible a una misma brecha de ejecución. La composición de las bases aplicables, el universo financiero \(\mathrm{Fin}^m\) y el valor de \(\chi^m\) se especifican para cada diseño regulatorio en la Subsección~4.2.
 
 \subsubsection{Problema del gerente e incentivos marginales}
 
@@ -319,39 +319,43 @@ P^m
 \end{aligned}
 \end{equation}
 
-Los coeficientes \(\alpha_H^m\) recogen la saliencia reputacional relativa de cada bloque de información publicado en el esquema \(m\). Los términos \(C_S\) y \(C_G\) mantienen la definición de la ecuación~\eqref{eq:agregados_cumplimiento}: son agregados de los grupos \(J^S\) y \(J^G\), respectivamente, y no indicadores individuales. Cuando un componente no forma parte de la señal publicada en un esquema, su ponderación se fija en cero. Para disciplinar la comparación entre diseños, se supone que las saliencias intrínsecas \(s_H>0\) son comunes entre esquemas y que las ponderaciones se obtienen normalizando sobre los componentes efectivamente publicados,
+Los coeficientes \(\alpha_H^m\) representan la importancia reputacional relativa de cada bloque de información publicado en el esquema \(m\), donde \(H\in\{S,G,F,RT\}\). Los términos \(C_S\) y \(C_G\) conservan la definición de la ecuación~\eqref{eq:agregados_cumplimiento}: son los grados de cumplimiento promedio de los grupos \(J^S\) y \(J^G\), respectivamente, y no indicadores individuales.
+
+Sea \(\mathrm{Sig}^m\) el conjunto de bloques incluidos en la señal pública del esquema \(m\), donde \(H\in\{S,G,F,RT\}\). Por saliencia reputacional se entiende la capacidad relativa de la información de cada bloque para atraer la atención de los agentes externos e incidir en su percepción sobre el desempeño del gerente. El parámetro \(s_H>0\) representa esta importancia antes de considerar qué bloques publica cada esquema y se supone común entre ellos. Las saliencias se normalizan respecto del conjunto completo, de modo que \(\sum_{H\in\{S,G,F,RT\}}s_H=1\). Por su parte, \(D^m=\sum_{K\in\mathrm{Sig}^m}s_K\) mide la proporción de la saliencia total correspondiente a los bloques que permanecen publicados en el esquema \(m\).
+
+En el caso base, la saliencia de los bloques excluidos se reasigna completamente entre aquellos que permanecen en la señal pública. Las ponderaciones reputacionales se definen como
 
 \begin{equation}
 \label{eq:ponderaciones_reputacionales}
-\begin{aligned}
-D^m
-&\equiv
-\sum_{K\in\{S,G,F,RT\}}
-s_K\,
-\mathbf 1\{K\in\mathrm{Sig}^m\},
-\\
 \alpha_H^m
-&=
-\frac{
-s_H\,
-\mathbf 1\{H\in\mathrm{Sig}^m\}
-}{
-D^m
-}.
-\end{aligned}
+=
+\begin{cases}
+\displaystyle
+\frac{s_H}{D^m},
+&
+\text{si } H\in\mathrm{Sig}^m,
+\\[8pt]
+0,
+&
+\text{si } H\notin\mathrm{Sig}^m.
+\end{cases}
 \end{equation}
 
-donde \(D^m\) es el factor de normalización y \(\mathrm{Sig}^m\) denota el conjunto de bloques que integra la señal pública del esquema \(m\). En particular, se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) se mantiene como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas del esquema cuando corresponda.
+Así, los bloques excluidos reciben una ponderación igual a cero y las ponderaciones de los bloques publicados suman uno. Se supone \(s_S>s_G\), por lo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) permanece como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas de cada esquema cuando corresponda.
 
-La normalización anterior corresponde a una reasignación completa de la saliencia cuando un bloque deja de publicarse. Para mostrar qué resultados dependen de ese supuesto, se considera como ejercicio de sensibilidad la familia
-\[
-\widetilde\alpha_H^m(\theta)
+La normalización de la ecuación~\eqref{eq:ponderaciones_reputacionales} supone una reasignación completa de la saliencia cuando un bloque deja de publicarse. Para identificar qué resultados dependen de este supuesto, se considera la siguiente familia de coeficientes reputacionales:
+
+\begin{equation}
+\label{eq:ponderaciones_reputacionales_sensibilidad}
+\widetilde{\alpha}_H^m(\theta)
 =
-\frac{s_H\mathbf 1\{H\in\mathrm{Sig}^m\}}{(D^m)^\theta},
+\frac{s_H\mathbf{1}\{H\in\mathrm{Sig}^m\}}
+{(D^m)^\theta},
 \qquad
 \theta\in[0,1].
-\]
-El caso \(\theta=1\) reproduce el \textit{benchmark} normalizado de \eqref{eq:ponderaciones_reputacionales}; con \(\theta=0\), la salida de un bloque no eleva mecánicamente el coeficiente de los restantes. En consecuencia, los ordenamientos que utilizan un aumento de \(\alpha_H^m\) deben interpretarse como condicionados al grado de reasignación de saliencia, y no como una consecuencia automática de retirar componentes del índice.
+\end{equation}
+
+El caso \(\theta=1\) reproduce la reasignación completa de la ecuación~\eqref{eq:ponderaciones_reputacionales}. Cuando \(\theta=0\), cada bloque publicado conserva su saliencia intrínseca, por lo que la exclusión de un componente no incrementa el coeficiente de los restantes. Para valores intermedios de \(\theta\), la reasignación es parcial y la suma de los coeficientes publicados es \((D^m)^{1-\theta}\). En consecuencia, los ordenamientos sustentados en un aumento de \(\alpha_H^m\) deben interpretarse como condicionados al grado de reasignación de la saliencia, y no como una consecuencia automática de retirar componentes de la señal pública.
 
 Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
 
