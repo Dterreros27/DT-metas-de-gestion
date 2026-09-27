@@ -47,7 +47,7 @@ El objetivo de cada comparación es atribuir el cambio de esfuerzo al componente
 
 Estas igualdades no atribuyen valores estructuralmente idénticos a los parámetros; solo aíslan el efecto de cada modificación. En \(A''\to B\), \(\lambda^B\) puede diferir de \(\lambda^{A''}\) porque cambia la legibilidad de la señal; en \(A_0\to A\), esa diferencia también forma parte de la comparación. Salvo indicación expresa, los ordenamientos están condicionados a estas normalizaciones y no constituyen dominancia general.
 
-A lo largo de la subsección se aplica una regla común: una mayor exposición sancionadora solo puede elevar el avance físico mientras el margen de culminación no esté saturado. Una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), la exposición adicional deja de aumentar \(a_r\), aunque los demás canales continuos pueden seguir afectando la decisión del gerente.
+A lo largo de la subsección se aplica una regla común: una mayor exposición sancionadora solo puede elevar el avance físico mientras el margen de culminación no esté saturado. En el escenario base, la saturación coincide con la culminación, \(a_r=1\). Una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), la exposición adicional deja de aumentar \(a_r\), aunque los demás canales continuos pueden seguir afectando la decisión del gerente. La posibilidad de saturación con \(\bar a_r<1\) se utiliza únicamente en la extensión con contingencias posteriores a la aprobación regulatoria.
 
 Para \(r\in R_j^{S}\), mientras la meta se encuentre en el tramo no truncado, la definición de \(C_S\) como promedio aritmético implica
 
@@ -468,9 +468,9 @@ Si la reducción de exposición lleva a \(\mu_r^{A}<\mu_r^{A,*}\) mientras \(A_0
 ambos esquemas sitúan el avance físico en su región saturada.
 
 \begin{resultadobox}
-{Saturación, superposición y sobredisuasión}
+{Saturación y superposición de la exposición}
 \label{res:saturacion_superposicion}
-Si se cumple \eqref{eq:condicion_saturacion_ambos_a0_a} y \(\mu_r^{A}<\mu_r^{A_0}\), la transición \(A_0\to A\) reduce la exposición sancionadora sin reducir el avance físico inducido por este margen:
+Si se cumple \eqref{eq:condicion_saturacion_ambos_a0_a} y \(\mu_r^{A}<\mu_r^{A_0}\), la transición \(A_0\to A\) reduce la exposición sin disminuir el avance físico inducido por este margen:
 \begin{equation}
 \mu_r^{A}
 <
@@ -482,7 +482,7 @@ a_r(e_r^{A_0,*})
 =
 \bar a_r.
 \end{equation}
-En términos regulatorios, \(A_0\) sanciona con mayor intensidad la misma brecha sin obtener más culminación por este margen. Esa exposición adicional constituye sobredisuasión, aunque el esfuerzo total todavía puede diferir por los demás canales.
+En el escenario base, \(\bar a_r=1\): ambos esquemas culminan la inversión y la mayor exposición de \(A_0\) es redundante respecto del incentivo, pero no genera una multa sobre esta brecha, porque \(1-a_r=0\). Solo en la extensión con contingencias, cuando \(\bar a_r<1\), la exposición adicional de \(A_0\) aumenta la carga sobre una brecha que ya no responde al esfuerzo y puede constituir sobredisuasión respecto de este canal.
 \end{resultadobox}
 
 Bajo la saturación de ambos esquemas, la condición para que la focalización de \(A\) no reduzca el beneficio marginal de ejecución de las intervenciones relevantes de \(R^{S}\) es
@@ -881,7 +881,7 @@ Por ello, una mejora de \(\widetilde q_S\) no basta por sí sola para ordenar \(
 
 \paragraph{Exposición redundante y criterio regulatorio.}
 
-La propiedad de saturación de la Subsección~4.1 permite precisar el costo regulatorio de una exposición sancionadora adicional. Supóngase que, una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), una variación marginal de \(\mu_r^m\) no modifica localmente \(\widetilde q_S^m\), \(C_G^m\) ni \(C_I^m\). Si \(\bar a_r<1\), a partir de \eqref{eq:exposicion_sancionadora_r} se obtiene
+La propiedad de saturación de la Subsección~4.1 permite precisar el efecto regulatorio de una exposición sancionadora adicional. Supóngase que, una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), una variación marginal de \(\mu_r^m\) no modifica localmente \(\widetilde q_S^m\), \(C_G^m\) ni \(C_I^m\). A partir de \eqref{eq:exposicion_sancionadora_r},
 
 \begin{equation}
 \label{eq:derivada_multa_exposicion_regulador}
@@ -889,7 +889,7 @@ La propiedad de saturación de la Subsección~4.1 permite precisar el costo regu
 \bigg|_{e_r\geq e_r^{\mathrm{sat}}}
 =
 1-\bar a_r
->
+\geq
 0.
 \end{equation}
 
@@ -906,18 +906,18 @@ Por tanto,
 \Omega'\!\left(M^m\right)
 (1-\bar a_r)
 \\
-&<
+&\leq
 0.
 \end{aligned}
 \end{equation}
 
-Así, una vez agotado el margen de culminación, una mayor exposición deja de aportar mejoras por esa vía y, si tampoco mejora otros componentes del criterio regulatorio, reduce \(W_R^m\). En particular, si dos diseños mantienen el avance físico saturado y generan localmente los mismos \(Q\) y \(C_I\), el diseño con menor exposición sancionadora obtiene mayor bienestar regulatorio. Esta comparación constituye una mejora de eficiencia sancionadora y no una dominancia global cuando los diseños modifican simultáneamente otros canales.
+En el escenario base, \(\bar a_r=1\), la inversión culmina y ambas derivadas son iguales a cero: una exposición superior al nivel suficiente es redundante para inducir ejecución, pero no aumenta la multa realizada por esa brecha. En la extensión con contingencias, \(\bar a_r<1\), las desigualdades son estrictas. En ese caso, si dos diseños generan localmente los mismos \(Q\) y \(C_I\), el diseño con menor exposición obtiene un mayor valor de \(W_R\) al evitar una carga sobre la brecha remanente. Esta comparación constituye una mejora de eficiencia sancionadora dentro de la extensión y no una dominancia global cuando los diseños modifican simultáneamente otros canales.
 
 \paragraph{\textit{Benchmark} institucional \(A_0\to A\): exposición redundante y focalización.}
 
 El \textit{benchmark} permite aplicar directamente la lógica anterior. Si se cumple \eqref{eq:condicion_saturacion_ambos_a0_a}, \(\mu_r^{A}<\mu_r^{A_0}\) y la condición de focalización \eqref{eq:condicion_focalizacion_a_a0} se satisface para las intervenciones relevantes de \(R^{S}\), el Resultado~\ref{res:desempeno_agregado} implica \(\widetilde q_S^A\geq\widetilde q_S^{A_0}\). Ello no basta para ordenar \(Q^A\) y \(Q^{A_0}\) si \(C_G\) también cambia.
 
-Para una intervención cuya brecha física saturada es \(1-\bar a_r>0\), la reducción de exposición disminuye el componente de la multa atribuible a dicha brecha en
+La contribución de esta diferencia de exposición a la reducción de la multa es
 
 \begin{equation}
 \label{eq:reduccion_multa_esperada_a_a0}
@@ -929,11 +929,11 @@ Para una intervención cuya brecha física saturada es \(1-\bar a_r>0\), la redu
 -
 \mu_r^{A}
 \right)
->
+\geq
 0.
 \end{equation}
 
-Esta expresión identifica únicamente la contribución de la exposición de \(r\); el orden de la multa total requiere considerar los demás componentes e intervenciones. En términos agregados, la definición de \(W_R^m\) implica que \(W_R^A>W_R^{A_0}\) si y solo si
+En el escenario base, \(\bar a_r=1\) y \(\Delta_M^{A_0,A}(r)=0\): la menor exposición de \(A\) no reduce la multa realizada por una inversión culminada. La desigualdad es estricta únicamente en la extensión con contingencias, cuando \(\bar a_r<1\). Esta expresión identifica solo la contribución de la inversión \(r\); el orden de la multa total requiere considerar los demás componentes e intervenciones. En términos agregados, la definición de \(W_R^m\) implica que \(W_R^A>W_R^{A_0}\) si y solo si
 
 \begin{equation}
 \label{eq:condicion_bienestar_a_a0}
@@ -958,7 +958,7 @@ C_I^{A_0}.
 
 Bajo la monotonía de \(\Phi\) y \(\Omega\), una condición suficiente para que el criterio favorezca a \(A\) es que \(Q^{A}\geq Q^{A_0}\), \(C_I^{A}\leq C_I^{A_0}\) y \(M^{A}<M^{A_0}\). Estas desigualdades son requisitos sobre resultados, gasto de inversión y carga sancionadora; el modelo no demuestra que se cumplan simultáneamente.
 
-Por tanto, el modelo no establece una dominancia incondicional de \(A\) sobre \(A_0\), pero identifica condiciones suficientes bajo las cuales el diseño focalizado mejora el criterio regulatorio: que los resultados agregados no disminuyan, que el gasto efectivo de inversión no aumente y que la menor exposición reduzca la multa total. Bajo estas condiciones, \(A\) elimina una carga sancionadora redundante sin sacrificar los resultados valorados por el regulador.
+Por tanto, el modelo no establece una dominancia incondicional de \(A\) sobre \(A_0\), pero identifica condiciones suficientes bajo las cuales el diseño focalizado mejora el criterio regulatorio: que los resultados agregados no disminuyan, que el gasto efectivo de inversión no aumente y que la multa total sea menor. En el escenario base, esta última diferencia no proviene de la exposición sobre una inversión ya culminada; debe originarse en otros componentes de la multa. Solo en la extensión con una brecha física remanente la menor exposición reduce directamente la carga atribuible a \(r\).
 
 \paragraph{Secuencia principal \(A\to A'\to A''\to B\).}
 
@@ -1009,8 +1009,8 @@ C_G^{A''}
 \end{aligned}
 \end{equation}
 
-Para cada transición, \eqref{eq:condicion_general_mejora_bienestar} funciona como regla contable de evaluación. No se presenta como proposición independiente porque afirmar que \(W_R^{m'}>W_R^m\) cuando su diferencia es positiva reproduce la definición del criterio. La comparación sustantiva exige estimar o restringir sus cuatro componentes.
+Para cada transición, \eqref{eq:condicion_general_mejora_bienestar} funciona como regla contable de evaluación. No se presenta como proposición independiente porque afirmar que \(W_R^{m'}>W_R^m\) cuando su diferencia es positiva reproduce la definición del criterio. La comparación sustantiva exige estimar o restringir sus tres componentes.
 
-Por tanto, el modelo no genera un ordenamiento general de bienestar entre \(A_0,A,A',A'',B\). Una cadena creciente solo podría establecerse después de verificar, transición por transición, que la ganancia en resultados y la reducción de la carga sancionadora superan los mayores costos de inversión y operación. Esta verificación es empírica o depende de supuestos adicionales sobre primitivas; no se obtiene por transitividad sin comprobar cada eslabón.
+Por tanto, el modelo no genera un ordenamiento general de bienestar entre \(A_0,A,A',A'',B\). Una cadena creciente solo podría establecerse después de verificar, transición por transición, que la ganancia en resultados y la reducción de la carga sancionadora superan el mayor gasto de inversión. Esta verificación es empírica o depende de supuestos adicionales sobre primitivas; no se obtiene por transitividad sin comprobar cada eslabón.
 
 La extensión \(B^{+}\) se analiza en la Subsección~4.4, porque introduce un reconocimiento económico por sobrecumplimiento y, con ello, un componente adicional en la comparación de bienestar.
