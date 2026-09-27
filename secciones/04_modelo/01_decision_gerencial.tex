@@ -479,9 +479,9 @@ El esfuerzo de eficiencia \(g_r\), por su parte, reduce \(I_r\) para una magnitu
 
 \subsubsection{Exposición sancionadora y saturación del margen de culminación}
 
-Esta subsubsección formaliza el límite de la respuesta del esfuerzo de ejecución ante una mayor exposición sancionadora. Una misma inversión puede incidir en varios componentes de la multa, de modo que la superposición de bases puede elevar la exposición asociada con una misma brecha de avance físico.
+Esta subsubsección especializa las condiciones marginales del problema del gerente para determinar hasta qué punto una mayor exposición sancionadora puede incrementar el esfuerzo de ejecución. Las bases definidas en \eqref{eq:base_fisica_generica}, \eqref{eq:base_rt} y \eqref{eq:base_financiera} muestran que una misma inversión puede incidir simultáneamente en una meta específica y en obligaciones de alcance transversal. Por ello, una misma brecha de avance físico puede quedar comprendida en varios componentes activos de la multa.
 
-Para aislar este margen, considérese una región regulatoria en la que los indicadores discretos que determinan la configuración y activación de la multa permanecen constantes. Localmente, la parte de la multa atribuible a la brecha física de la inversión \(r\) puede representarse como
+Para aislar este canal, considérese una región regulatoria en la que \(\mathbf 1\{c_j<1\}\), \(d_F^m\) y \(\chi^m\) permanecen constantes. Dentro de esa región, la parte de la multa que varía directamente con la brecha física de la inversión \(r\) se representa localmente como
 
 \begin{equation}
 \label{eq:exposicion_sancionadora_r}
@@ -494,17 +494,31 @@ M_{-r}^m
 \mu_r^m\geq0,
 \end{equation}
 
-donde \(M_{-r}^m\) reúne los componentes de la multa que, en la región considerada, no varían directamente con \(a_r\), mientras que \(\mu_r^m\) recoge la exposición sancionadora nominal asociada con una brecha unitaria de avance físico. Si una misma inversión participa simultáneamente en varios componentes activos de la multa, esa superposición se refleja en un mayor \(\mu_r^m\).
+donde \(M_{-r}^m\) reúne los componentes que no varían directamente con \(a_r\) en la región considerada. El coeficiente \(\mu_r^m\) mide la exposición sancionadora nominal asociada con una unidad de brecha física. Si la inversión participa en varias bases activas, sus contribuciones se acumulan en \(\mu_r^m\); por tanto, la superposición de bases se refleja en una mayor exposición sobre la misma brecha.
 
-Dado \eqref{eq:exposicion_sancionadora_r}, el retorno marginal que el gerente obtiene al reducir la brecha física por efecto de la sanción viene dado por el producto \(\gamma^m(\mu_r^m)\mu_r^m\). El término \(\mu_r^m\) mide la exposición nominal asociada con una unidad de brecha, mientras que \(\gamma^m(\mu_r^m)\) recoge el costo marginal que esa exposición representa para el gerente, considerando la probabilidad de detección \(p\), el costo monetario marginal \(K'(M^m)\) y el efecto reputacional de la sanción. Se supone que el producto \(\gamma^m(\mu)\mu\) es continuo y creciente en \(\mu\) en la región relevante.
+La ecuación~\eqref{eq:exposicion_sancionadora_r} permite vincular esta exposición con las condiciones marginales derivadas previamente. Como \(a_r=a_r(e_r)\) en \eqref{eq:ejecucion_fisica}, la regla de la cadena implica
 
-Para separar este canal de los demás incentivos, sea \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r)\) el beneficio marginal de ejecución proveniente del desempeño reputacional, el ahorro, otros componentes de la multa y los cambios discretos, excluyendo el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. La condición que sigue se obtiene al combinar la condición de primer orden \eqref{eq:foc_e_esperada} con la descomposición del beneficio marginal de ejecución en \eqref{eq:incentivo_marginal_e}. En particular, a partir de \eqref{eq:exposicion_sancionadora_r} y de \(a_r=a_r(e_r)\), la regla de la cadena implica
 \[
 \frac{\partial M^m}{\partial e_r}
 =
+\frac{\partial M^m}{\partial a_r}
+\frac{\partial a_r}{\partial e_r}
+=
 -\mu_r^m a_r'(e_r).
 \]
-Por tanto, el término sancionador de \eqref{eq:incentivo_marginal_e} es \(-\gamma^m(\partial M^m/\partial e_r)=a_r'(e_r)\gamma^m(\mu_r^m)\mu_r^m\), donde \(\gamma^m\) se define en \eqref{eq:gamma_m}. En el tramo no saturado, la condición marginal puede escribirse como
+
+A su vez, \(\gamma^m\), definido en \eqref{eq:gamma_m}, mide el costo marginal de una mayor multa percibido por el gerente. En consecuencia, el término sancionador de \eqref{eq:incentivo_marginal_e} es
+
+\[
+-\gamma^m
+\frac{\partial M^m}{\partial e_r}
+=
+a_r'(e_r)\gamma^m(\mu_r^m)\mu_r^m.
+\]
+
+La notación \(\gamma^m(\mu_r^m)\) hace explícita la dependencia inducida por el efecto de \(\mu_r^m\) sobre \(M^m\), manteniendo constantes los demás componentes en la región analizada. Así, \(\mu_r^m\) recoge la exposición nominal, mientras que \(\gamma^m(\mu_r^m)\) recoge el grado en que una variación de la multa es internalizada por el gerente, incluida la probabilidad de detección \(p\), el efecto reputacional y el costo monetario marginal \(K'(M^m)\). Se supone que el producto \(\gamma^m(\mu)\mu\) es continuo y creciente en \(\mu\) en la región relevante.
+
+Sea \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r)\) el beneficio marginal de ejecución generado por los demás canales continuos de \eqref{eq:incentivo_marginal_e}, excluido el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. Al sustituir la derivada anterior en la condición de primer orden \eqref{eq:foc_e_esperada}, se obtiene, para \(e_r<e_r^{\mathrm{sat}}\),
 
 \begin{equation}
 \label{eq:foc_probabilidad_cumplimiento}
@@ -516,9 +530,15 @@ a_r'(e_r)
 \gamma^m(\mu_r^m)\mu_r^m.
 \end{equation}
 
-Esta condición se aplica cuando \(e_r<e_r^{\mathrm{sat}}\). El primer término del lado derecho reúne los demás canales que afectan el esfuerzo de ejecución, mientras que el segundo identifica el retorno adicional de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), una mayor exposición sancionadora puede incrementar este componente e inducir un mayor esfuerzo de ejecución.
+El primer término del lado derecho reúne los retornos marginales provenientes del desempeño reputacional, el ahorro y los demás componentes continuos de la multa. El segundo es el retorno de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), conforme a \eqref{eq:saturacion_probabilidad}, una mayor exposición puede reforzar este último canal e incrementar el esfuerzo de ejecución.
 
-Supóngase inicialmente que
+Para determinar cuándo se agota esa respuesta, evalúese \eqref{eq:foc_probabilidad_cumplimiento} al aproximarse a \(e_r^{\mathrm{sat}}\) por la izquierda. Si los demás canales ya satisfacen
+\[
+\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})
+\geq
+\psi_r'(e_r^{\mathrm{sat}}),
+\]
+no se requiere exposición adicional para alcanzar la región saturada y se define \(\mu_r^{m,*}=0\). El caso relevante para una exposición positiva es, por tanto,
 
 \begin{equation}
 \label{eq:condicion_exposicion_positiva}
@@ -529,7 +549,7 @@ Supóngase inicialmente que
 0.
 \end{equation}
 
-Se supone además que el producto \(\gamma^m(\mu)\mu\) alcanza, para alguna exposición finita, el nivel requerido para llevar este canal hasta \(e_r^{\mathrm{sat}}\). Bajo esta condición existe una exposición mínima suficiente \(\mu_r^{m,*}<\infty\). Cuando esta exposición es positiva, queda caracterizada por
+La diferencia en \eqref{eq:condicion_exposicion_positiva} es el incentivo marginal que debe aportar el canal sancionador para llevar el esfuerzo hasta el punto de saturación. Si el producto \(\gamma^m(\mu)\mu\) alcanza ese nivel para alguna exposición finita, existe una exposición mínima suficiente \(\mu_r^{m,*}<\infty\). Esta se obtiene igualando el retorno sancionador, evaluado con la derivada por la izquierda de \(a_r\), con la diferencia anterior:
 
 \begin{equation}
 \label{eq:multa_suficiente}
@@ -541,9 +561,9 @@ a_{r,-}'(e_r^{\mathrm{sat}})
 \mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}}).
 \end{equation}
 
-La exposición suficiente depende de los demás incentivos que actúan sobre la misma inversión. Cuanto mayor sea el retorno proveniente del desempeño reputacional, del ahorro u otros canales recogidos en \(\mathrm{BM}_{r,e}^{m,-\mu}\), menor será, manteniendo lo demás constante, la exposición sancionadora necesaria para llevar el esfuerzo de ejecución hasta su región saturada. Se define \(\mu_r^{m,*}=0\) cuando \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), pues los canales restantes son suficientes para alcanzar dicha región.
+La ecuación~\eqref{eq:multa_suficiente} muestra que la exposición suficiente depende de los demás incentivos que actúan sobre la inversión. Cuanto mayor sea \(\mathrm{BM}_{r,e}^{m,-\mu}\), menor será, manteniendo lo demás constante, la exposición necesaria para alcanzar \(e_r^{\mathrm{sat}}\).
 
-Bajo las condiciones de concavidad local, cuando \(\mu_r^m<\mu_r^{m,*}\), una mayor exposición puede seguir incrementando el esfuerzo mediante \(a_r'(e_r)\gamma^m(\mu_r^m)\mu_r^m\). Si \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para llevar el esfuerzo hasta el punto de saturación. Como \(e_r\) solo genera beneficios a través de variables que dependen de \(a_r\) y \(\psi_r'(e_r)>0\), manteniendo \(g_r\) fijo ningún óptimo elige un esfuerzo superior a \(e_r^{\mathrm{sat}}\). Por tanto, para \(\mu_r^m\geq\mu_r^{m,*}\),
+Bajo las condiciones de concavidad local, si \(\mu_r^m<\mu_r^{m,*}\), una mayor exposición todavía puede incrementar el esfuerzo a través del segundo término de \eqref{eq:foc_probabilidad_cumplimiento}. Si \(\mu_r^m\geq\mu_r^{m,*}\), el incentivo es suficiente para alcanzar el punto de saturación. A partir de ese punto, \eqref{eq:saturacion_probabilidad} establece que \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). Como \(e_r\) solo genera beneficios mediante variables que dependen de \(a_r\) y \(\psi_r'(e_r)>0\), manteniendo \(g_r\) fijo ningún óptimo elige un esfuerzo superior. Por tanto,
 
 \begin{equation}
 \label{eq:plateau_esfuerzo}
@@ -553,14 +573,20 @@ e_r^{\mathrm{sat}},
 \qquad
 a_r(e_r^{m,*})
 =
-\bar a_r(\bar I_r,g_r).
+\bar a_r(\bar I_r,g_r),
+\qquad
+\text{si }\mu_r^m\geq\mu_r^{m,*}.
 \end{equation}
 
-La ecuación~\eqref{eq:plateau_esfuerzo} establece un efecto techo sobre el canal de ejecución asociado con la brecha física. A partir de \(e_r^{\mathrm{sat}}\), el avance permanece constante y su derivada por la derecha es nula, \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). En consecuencia, una exposición adicional deja de generar beneficios mediante este canal. Otros márgenes de decisión, como el esfuerzo de eficiencia \(g_r\), pueden continuar operando mientras los resultados correspondientes permanezcan sensibles a ellos.
+La ecuación~\eqref{eq:plateau_esfuerzo} establece un efecto techo: una vez alcanzado \(e_r^{\mathrm{sat}}\), una exposición adicional deja de mejorar el avance físico mediante este canal. Ello no impide que otros márgenes de decisión, como el esfuerzo de eficiencia \(g_r\), continúen respondiendo mientras los resultados correspondientes permanezcan sensibles a ellos.
 
-Existe \emph{subdisuasión} respecto de este canal cuando \(\mu_r^m<\mu_r^{m,*}\) y una mayor exposición todavía puede incrementar el esfuerzo de ejecución. Puede existir \emph{sobresanción} cuando la exposición nominal es elevada, pero una probabilidad de detección \(p<1\) o una transmisión monetaria débil hacia el gerente reducen su efecto efectivo y permiten que la exposición permanezca por debajo del nivel suficiente. Existe \emph{sobredisuasión} respecto de este canal cuando la exposición supera el nivel suficiente y un incremento adicional deja de mejorar el avance físico. Para caracterizar sobredisuasión del diseño en sentido más amplio debe verificarse, además, que la mayor exposición no genere mejoras compensatorias relevantes a través de otros márgenes de comportamiento.
+Existe \emph{subdisuasión} respecto del canal de ejecución física cuando \(\mu_r^m<\mu_r^{m,*}\), pues una mayor exposición todavía puede aumentar el esfuerzo y el avance. Una exposición nominal elevada puede, sin embargo, permanecer por debajo del nivel suficiente si una probabilidad de detección \(p<1\) o una débil transmisión monetaria o reputacional hacia el gerente reducen su efecto efectivo; en ese caso puede existir \emph{sobresanción} nominal sin que se haya alcanzado una disuasión suficiente. En cambio, existe \emph{sobredisuasión respecto de este canal} cuando \(\mu_r^m>\mu_r^{m,*}\) y una exposición adicional ya no mejora el avance físico. Esta conclusión no basta para establecer sobredisuasión del diseño en su conjunto: también debe verificarse que la mayor exposición no produzca mejoras compensatorias a través de otros márgenes de comportamiento.
 
-Cuando \(\bar a_r<1\), la saturación deja una brecha física \(1-\bar a_r(\bar I_r,g_r)>0\). En ese caso, una mayor exposición sancionadora continúa imponiendo un costo al gerente sin aumentar el avance físico. A partir de \eqref{eq:exposicion_sancionadora_r}, y manteniendo constantes los demás componentes y márgenes de respuesta, se obtiene
+Finalmente, si \(\bar a_r<1\), la saturación deja una brecha física que el esfuerzo de ejecución no puede reducir:
+\[
+1-\bar a_r(\bar I_r,g_r)>0.
+\]
+A partir del problema del gerente en \eqref{eq:problema_gerente}, \(\partial U_G^m/\partial M^m=-\gamma^m\). Asimismo, \eqref{eq:exposicion_sancionadora_r} implica \(\partial M^m/\partial\mu_r^m=1-a_r\). Por la regla de la cadena y evaluando en la región saturada,
 
 \begin{equation}
 \label{eq:utilidad_multa_excesiva}
@@ -568,14 +594,14 @@ Cuando \(\bar a_r<1\), la saturación deja una brecha física \(1-\bar a_r(\bar 
 \frac{\partial U_G^m}{\partial \mu_r^m}
 \right|_{e_r\geq e_r^{\mathrm{sat}}}
 =
--\gamma^m
+-\gamma^m(\mu_r^m)
 \left[
 1-\bar a_r(\bar I_r,g_r)
 \right]
 <0.
 \end{equation}
 
-Por tanto, cuando el avance físico se encuentra saturado por debajo de la culminación, una mayor exposición deja de aportar incentivo por esa vía y continúa imponiendo un costo al gerente sobre la brecha física remanente.
+Por tanto, cuando el avance máximo alcanzable se encuentra por debajo de la culminación, una mayor exposición deja de aportar incentivos por el canal de ejecución física, pero continúa imponiendo un costo sobre la brecha remanente.
 
 \subsubsection{Problema de elección del regulador: versión reducida}
 
