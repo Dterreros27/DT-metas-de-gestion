@@ -299,7 +299,7 @@ pK\left(M^{m}\right)
 \end{aligned}
 \end{equation}
 
-La señal reputacional combina tres dimensiones observables: el desempeño derivado de las metas publicadas, el ahorro reconocido, \(S^m\), y la multa asociada con los incumplimientos, \(M^m\). Para distinguir la ponderación regulatoria utilizada en el \(ICG^m\) de la importancia reputacional de sus componentes, se define el desempeño percibido como
+La señal reputacional combina tres dimensiones observables: el desempeño comunicado mediante las metas publicadas, el ahorro reconocido, \(S^m\), y la multa asociada con los incumplimientos, \(M^m\). Estas dimensiones cumplen funciones distintas. El desempeño publicado informa sobre los resultados y obligaciones alcanzados; el ahorro comunica eficiencia en la ejecución; y la multa constituye una señal adversa sobre los incumplimientos detectados. Para representar la primera dimensión se define el desempeño percibido como
 
 \begin{equation}
 \label{eq:desempeno_percibido}
@@ -321,11 +321,27 @@ P^m
 \end{aligned}
 \end{equation}
 
-Los coeficientes \(\alpha_H^m\) representan la importancia reputacional relativa de cada bloque de información publicado en el esquema \(m\), donde \(H\in\{S,G,F,RT\}\). Los términos \(C_S\) y \(C_G\) conservan la definición de la ecuación~\eqref{eq:agregados_cumplimiento}: son los grados de cumplimiento promedio de los grupos \(J^S\) y \(J^G\), respectivamente, y no indicadores individuales.
+Los cuatro términos corresponden, respectivamente, a los resultados del servicio, las demás metas de gestión, el avance financiero y la relación de trabajo. Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, son los grados de cumplimiento promedio de los grupos \(J^S\) y \(J^G\), no indicadores individuales. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable.
 
-Sea \(\mathrm{Sig}^m\) el conjunto de bloques incluidos en la señal pública del esquema \(m\), donde \(H\in\{S,G,F,RT\}\). Por saliencia reputacional se entiende la capacidad relativa de la información de cada bloque para atraer la atención de los agentes externos e incidir en su percepción sobre el desempeño del gerente. El parámetro \(s_H>0\) representa esta importancia antes de considerar qué bloques publica cada esquema y se supone común entre ellos. Las saliencias se normalizan respecto del conjunto completo, de modo que \(\sum_{H\in\{S,G,F,RT\}}s_H=1\). Por su parte, \(D^m=\sum_{K\in\mathrm{Sig}^m}s_K\) mide la proporción de la saliencia total correspondiente a los bloques que permanecen publicados en el esquema \(m\).
+La ecuación~\eqref{eq:desempeno_percibido} no reproduce las ponderaciones regulatorias del \(ICG^m\). Este último es un índice formal construido con los pesos fijados por el regulador y utilizado en las reglas de cada esquema cuando corresponde. En cambio, los coeficientes \(\alpha_H^m\) representan la importancia reputacional relativa de la información publicada: un bloque puede tener un peso regulatorio reducido y, al mismo tiempo, atraer una atención considerable de usuarios, autoridades u otros agentes externos. Esta separación permite que el efecto reputacional de cada bloque difiera de su contribución aritmética al \(ICG^m\).
 
-En el caso base, la saliencia de los bloques excluidos se reasigna completamente entre aquellos que permanecen en la señal pública. Las ponderaciones reputacionales se definen como
+Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto de bloques incluidos en la señal pública del esquema \(m\). Por saliencia reputacional se entiende la capacidad relativa de la información de cada bloque para atraer la atención de los agentes externos e incidir en su percepción sobre el desempeño del gerente. El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\), antes de considerar qué información publica cada esquema, y se supone común entre ellos. Las saliencias se normalizan respecto del conjunto completo:
+
+\[
+\sum_{H\in\{S,G,F,RT\}}s_H=1.
+\]
+
+La saliencia intrínseca total de los bloques que permanecen publicados se denota por
+
+\[
+D^m
+=
+\sum_{K\in\mathrm{Sig}^m}s_K.
+\]
+
+Si todos los bloques se publican, \(D^m=1\); si alguno se excluye, \(D^m<1\). Por tanto, \(D^m\) mide la proporción de la saliencia original que corresponde a la información conservada en el esquema \(m\), antes de cualquier reasignación.
+
+En el caso base se supone que la atención asociada con los bloques excluidos se reasigna completamente entre los que permanecen publicados. Las ponderaciones reputacionales se definen como
 
 \begin{equation}
 \label{eq:ponderaciones_reputacionales}
@@ -343,9 +359,9 @@ En el caso base, la saliencia de los bloques excluidos se reasigna completamente
 \end{cases}
 \end{equation}
 
-Así, los bloques excluidos reciben una ponderación igual a cero y las ponderaciones de los bloques publicados suman uno. Se supone \(s_S>s_G\), por lo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable. El \(ICG^m\) permanece como un objeto regulatorio distinto, construido con las ponderaciones establecidas por el regulador y utilizado en las reglas de cada esquema cuando corresponda.
+La división entre \(D^m\) vuelve a normalizar las saliencias de los bloques publicados. En consecuencia, los bloques excluidos reciben un coeficiente igual a cero, los coeficientes restantes suman uno y cada uno aumenta respecto de su saliencia intrínseca cuando \(D^m<1\). Así, retirar un bloque no solo elimina su contribución a \(P^m\), sino que incrementa la importancia reputacional de la información que permanece. Se supone \(s_S>s_G\), por lo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión.
 
-La normalización de la ecuación~\eqref{eq:ponderaciones_reputacionales} supone una reasignación completa de la saliencia cuando un bloque deja de publicarse. Para identificar qué resultados dependen de este supuesto, se considera la siguiente familia de coeficientes reputacionales:
+La reasignación completa es un supuesto sustantivo: la desaparición de un bloque de la señal pública no necesariamente traslada toda la atención que recibía hacia los demás. Parte de esa atención puede perderse. Para determinar qué resultados dependen de este supuesto, se considera la siguiente familia de coeficientes, que sustituye a \(\alpha_H^m\) en el análisis de sensibilidad:
 
 \begin{equation}
 \label{eq:ponderaciones_reputacionales_sensibilidad}
@@ -357,7 +373,18 @@ La normalización de la ecuación~\eqref{eq:ponderaciones_reputacionales} supone
 \theta\in[0,1].
 \end{equation}
 
-El caso \(\theta=1\) reproduce la reasignación completa de la ecuación~\eqref{eq:ponderaciones_reputacionales}. Cuando \(\theta=0\), cada bloque publicado conserva su saliencia intrínseca, por lo que la exclusión de un componente no incrementa el coeficiente de los restantes. Para valores intermedios de \(\theta\), la reasignación es parcial y la suma de los coeficientes publicados es \((D^m)^{1-\theta}\). En consecuencia, los ordenamientos sustentados en un aumento de \(\alpha_H^m\) deben interpretarse como condicionados al grado de reasignación de la saliencia, y no como una consecuencia automática de retirar componentes de la señal pública.
+El parámetro \(\theta\) determina el grado de reasignación. Cuando \(\theta=1\), se recupera la normalización completa de \eqref{eq:ponderaciones_reputacionales}: toda la atención se distribuye entre los bloques publicados y sus coeficientes suman uno. Cuando \(\theta=0\), cada bloque conserva su saliencia intrínseca; retirar información no aumenta el coeficiente de los bloques restantes y la atención asociada con lo excluido desaparece de la señal. Para \(0<\theta<1\), la reasignación es parcial.
+
+En efecto, la suma de los coeficientes publicados es
+
+\[
+\sum_{H\in\{S,G,F,RT\}}
+\widetilde{\alpha}_H^m(\theta)
+=
+(D^m)^{1-\theta}.
+\]
+
+Si \(D^m<1\) y \(\theta<1\), esta suma es menor que uno. Ello representa una reducción de la intensidad total de la señal pública, no un cambio adicional en la importancia relativa de los bloques que permanecen, pues la razón entre dos de sus coeficientes continúa siendo \(s_H/s_K\). En consecuencia, los ordenamientos sustentados en el aumento de la ponderación reputacional de los bloques conservados están condicionados al grado de reasignación representado por \(\theta\); no constituyen una consecuencia automática de retirar componentes de la señal pública.
 
 Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
 
