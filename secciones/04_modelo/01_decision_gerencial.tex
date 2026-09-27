@@ -36,7 +36,9 @@ F_r=\bar F_r a_r.
 
 Por definición, \(0\leq a_r\leq1\). El esfuerzo de eficiencia no produce directamente avance físico, pero puede ampliar el nivel alcanzable con los recursos programados.\footnote{La evidencia documenta la relevancia de factores gerenciales, institucionales, financieros y geográficos para la ejecución de inversiones de las empresas prestadoras; véase \citet{escobar2025determinantes}. Su omisión explícita responde al carácter reducido del modelo y no implica atribuir al esfuerzo gerencial una interpretación causal exclusiva.}
 
-Para caracterizar el margen de culminación, se supone que existe un nivel finito \(e_r^{\mathrm{sat}}=e_r^{\mathrm{sat}}(\bar I_r,g_r)\) antes del cual el esfuerzo incrementa el avance físico a una tasa no creciente. A partir de ese nivel, el avance permanece constante en \(\bar a_r=\bar a_r(\bar I_r,g_r)\leq1\):
+El programa de inversiones y los recursos destinados a financiarlo son evaluados por el regulador al aprobar el estudio tarifario. Por ello, el escenario base supone que el monto programado \(\bar I_r\) es suficiente, bajo las condiciones consideradas en dicha evaluación, para ejecutar la magnitud física prevista \(\bar F_r\). En ese escenario, el esfuerzo deseable conduce a la culminación, \(a_r=1\), aunque el gasto efectivo puede ser inferior a \(\bar I_r\) si la empresa ejecuta con mayor eficiencia.
+
+Para representar conjuntamente este caso y una extensión con contingencias posteriores a la aprobación, se supone que existe un nivel finito \(e_r^{\mathrm{sat}}=e_r^{\mathrm{sat}}(\bar I_r,g_r)\) antes del cual el esfuerzo incrementa el avance físico a una tasa no creciente. A partir de ese nivel, el avance permanece constante en \(\bar a_r=\bar a_r(\bar I_r,g_r)\leq1\):
 
 \begin{equation}
 \label{eq:saturacion_probabilidad}
@@ -48,7 +50,7 @@ a_r(e_r)=\bar a_r
 \end{aligned}
 \end{equation}
 
-Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\), aunque puede presentar un quiebre en ese punto, con \(a_{r,-}'(e_r^{\mathrm{sat}})>0\) y \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). La dependencia de \(e_r^{\mathrm{sat}}\) y \(\bar a_r\) respecto de \(\bar I_r\) y \(g_r\) recoge que los recursos disponibles y la eficiencia condicionan el avance máximo alcanzable. Si \(\bar a_r=1\), la culminación es posible; si \(\bar a_r<1\), persiste una brecha física que un mayor esfuerzo de ejecución no puede reducir.
+Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\), aunque puede presentar un quiebre en ese punto, con \(a_{r,-}'(e_r^{\mathrm{sat}})>0\) y \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). En el escenario base, \(\bar a_r=1\) y \(e_r^{\mathrm{sat}}\) coincide con el esfuerzo de culminación. La posibilidad \(\bar a_r<1\) se reserva para una extensión en la que contingencias posteriores a la aprobación regulatoria reducen el avance alcanzable con los recursos disponibles; en ese caso, un mayor esfuerzo de ejecución no puede cerrar la brecha remanente.
 
 Para las inversiones pertenecientes a \(R^{S}\), la magnitud física ejecutada contribuye a la producción de resultados del servicio. Sea \(q_j\) el resultado correspondiente a \(j\in J^{S}\), orientado de manera que un mayor valor represente un mejor desempeño:
 
@@ -116,7 +118,16 @@ I_r=I_r(F_r,g_r),
 f_r\equiv\frac{I_r}{\bar I_r}.
 \end{equation}
 
-El término \(\bar I_r>0\) representa los recursos programados para financiar la inversión. Puesto que \(0\leq I_r\leq\bar I_r\), se tiene \(0\leq f_r\leq1\). Se supone \(I_{r,F}>0\) e \(I_{r,g}<0\): una mayor magnitud física requiere más recursos de inversión, mientras que, para una magnitud física dada, un mayor esfuerzo de eficiencia reduce los recursos necesarios para ejecutarla. La restricción \(I_r\leq\bar I_r\) recoge que la ejecución financiera reconocida no puede exceder los recursos programados considerados en el modelo. Cuando estos recursos resultan insuficientes para completar la magnitud física programada, dicha limitación se refleja de forma reducida en \(\bar a_r(\bar I_r,g_r)<1\) y en el correspondiente punto de saturación \(e_r^{\mathrm{sat}}(\bar I_r,g_r)\): un mayor esfuerzo de ejecución no puede sustituir el financiamiento faltante.
+El término \(\bar I_r>0\) representa los recursos programados para financiar la inversión. Puesto que \(0\leq I_r\leq\bar I_r\), se tiene \(0\leq f_r\leq1\). Se supone \(I_{r,F}>0\) e \(I_{r,g}<0\): una mayor magnitud física requiere más recursos de inversión, mientras que, para una magnitud física dada, un mayor esfuerzo de eficiencia reduce los recursos necesarios para ejecutarla. Sea \(g_r^0\) el nivel de eficiencia considerado al determinar regulatoriamente los recursos de la inversión. La suficiencia financiera del escenario base se expresa como
+
+\begin{equation}
+\label{eq:suficiencia_recursos_programados}
+I_r(\bar F_r,g_r^0)
+\leq
+\bar I_r.
+\end{equation}
+
+La condición \eqref{eq:suficiencia_recursos_programados} hace factible la culminación con los recursos aprobados. Si \(I_r(\bar F_r,g_r)=\bar I_r\), la inversión culmina utilizando todo el monto programado; si \(I_r(\bar F_r,g_r)<\bar I_r\), culmina con ahorro. La restricción \(I_r\leq\bar I_r\) recoge que la ejecución financiera reconocida no puede exceder los recursos programados. Solo en la extensión con contingencias posteriores se admite que dichos recursos resulten insuficientes; esa limitación se representa de forma reducida mediante \(\bar a_r(\bar I_r,g_r)<1\), pues un mayor esfuerzo de ejecución no puede sustituir el financiamiento faltante.
 
 La especificación supone que el esfuerzo de eficiencia reduce los recursos requeridos para alcanzar una magnitud física dada sin afectar directamente el resultado del servicio. Se trata, por tanto, de una mejora de eficiencia condicionada a \(F_r\), y no de una reducción de costos obtenida mediante una menor calidad. Este supuesto permite aislar la distorsión que aparece cuando la ejecución financiera penaliza una inversión físicamente equivalente realizada con menos recursos. En entornos más generales, los incentivos de reducción de costos pueden afectar la calidad cuando ambas dimensiones mantienen un vínculo tecnológico, como muestra \citet{ovaere2023} para las empresas de redes de energía.
 
@@ -612,9 +623,12 @@ a_r(e_r^{m,*})
 
 La ecuación~\eqref{eq:plateau_esfuerzo} establece un efecto techo: una vez alcanzado \(e_r^{\mathrm{sat}}\), una exposición adicional deja de mejorar el avance físico mediante este canal. Ello no impide que otros márgenes de decisión, como el esfuerzo de eficiencia \(g_r\), continúen respondiendo mientras los resultados correspondientes permanezcan sensibles a ellos.
 
-Existe \emph{subdisuasión} respecto del canal de ejecución física cuando \(\mu_r^m<\mu_r^{m,*}\), pues una mayor exposición todavía puede aumentar el esfuerzo y el avance. Una exposición nominal elevada puede, sin embargo, permanecer por debajo del nivel suficiente si una probabilidad de detección \(p<1\) o una débil transmisión monetaria o reputacional hacia el gerente reducen su efecto efectivo; en ese caso puede existir \emph{sobresanción} nominal sin que se haya alcanzado una disuasión suficiente. En cambio, existe \emph{sobredisuasión respecto de este canal} cuando \(\mu_r^m>\mu_r^{m,*}\) y una exposición adicional ya no mejora el avance físico. Esta conclusión no basta para establecer sobredisuasión del diseño en su conjunto: también debe verificarse que la mayor exposición no produzca mejoras compensatorias a través de otros márgenes de comportamiento.
+Existe \emph{subdisuasión} respecto del canal de ejecución física cuando \(\mu_r^m<\mu_r^{m,*}\), pues una mayor exposición todavía puede aumentar el esfuerzo y el avance. Una exposición nominal elevada puede, sin embargo, permanecer por debajo del nivel suficiente si una probabilidad de detección \(p<1\) o una débil transmisión monetaria o reputacional hacia el gerente reducen su efecto efectivo; en ese caso puede existir \emph{sobresanción} nominal sin que se haya alcanzado una disuasión suficiente. Cuando \(\mu_r^m>\mu_r^{m,*}\), la exposición adicional es redundante respecto del canal de ejecución porque ya no mejora el avance físico. En el escenario base, esta redundancia no genera una multa sobre la brecha una vez culminada la inversión, pues \(\bar a_r=1\). Para caracterizar una carga sancionadora estrictamente excesiva se requiere, además, una brecha remanente positiva u otro costo que no produzca mejoras compensatorias.
 
-Finalmente, si \(\bar a_r<1\), la saturación deja una brecha física que el esfuerzo de ejecución no puede reducir:
+\medskip
+\noindent\textit{Extensión con contingencias posteriores.}
+
+Si una contingencia posterior a la aprobación regulatoria reduce el avance máximo a \(\bar a_r<1\), la saturación deja una brecha física que el esfuerzo de ejecución no puede cerrar:
 \[
 1-\bar a_r(\bar I_r,g_r)>0.
 \]
@@ -633,7 +647,7 @@ A partir del problema del gerente en \eqref{eq:problema_gerente}, \(\partial U_G
 <0.
 \end{equation}
 
-Por tanto, cuando el avance máximo alcanzable se encuentra por debajo de la culminación, una mayor exposición deja de aportar incentivos por el canal de ejecución física, pero continúa imponiendo un costo sobre la brecha remanente.
+Por tanto, la carga estrictamente positiva sobre una brecha que ya no responde al esfuerzo pertenece a esta extensión contingente. En el escenario base, \(\bar a_r=1\) y la misma derivada es igual a cero una vez culminada la inversión.
 
 \subsubsection{Problema de elección del regulador: versión reducida}
 
