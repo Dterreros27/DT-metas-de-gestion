@@ -498,18 +498,7 @@ M_{-r}^m
 
 donde \(M_{-r}^m\) reúne los componentes de la multa que, en la región considerada, no varían directamente con \(a_r\), mientras que \(\mu_r^m\) recoge la exposición sancionadora nominal asociada con una brecha unitaria de avance físico. Si una misma inversión participa simultáneamente en varios componentes activos de la multa, esa superposición se refleja en un mayor \(\mu_r^m\).
 
-Dado \eqref{eq:exposicion_sancionadora_r}, el retorno marginal que el gerente obtiene al reducir la brecha física por efecto de la sanción puede escribirse como
-
-\begin{equation}
-\label{eq:ganancia_evitar_incumplimiento}
-\Gamma_r^m(\mu_r^m)
-\equiv
-\gamma^m(\mu_r^m)\mu_r^m,
-\qquad
-\Gamma_r^m(\mu_r^m)\geq0.
-\end{equation}
-
-Se supone que \(\Gamma_r^m(\mu)\) es continua y creciente en \(\mu\) en la región relevante. Esta expresión incorpora la probabilidad de detección \(p\), el costo monetario marginal \(K'(M^m)\) y el efecto reputacional de la sanción a través de \(\gamma^m\).
+Dado \eqref{eq:exposicion_sancionadora_r}, el retorno marginal que el gerente obtiene al reducir la brecha física por efecto de la sanción viene dado por el producto \(\gamma^m(\mu_r^m)\mu_r^m\). El término \(\mu_r^m\) mide la exposición nominal asociada con una unidad de brecha, mientras que \(\gamma^m(\mu_r^m)\) recoge el costo marginal que esa exposición representa para el gerente, considerando la probabilidad de detección \(p\), el costo monetario marginal \(K'(M^m)\) y el efecto reputacional de la sanción. Se supone que el producto \(\gamma^m(\mu)\mu\) es continuo y creciente en \(\mu\) en la región relevante.
 
 Para separar este canal de los demás incentivos, sea \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r)\) el beneficio marginal de ejecución proveniente del desempeño reputacional, el ahorro, otros componentes de la multa y los cambios discretos, excluyendo el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. En el tramo no saturado, la condición marginal puede escribirse como
 
@@ -520,7 +509,7 @@ Para separar este canal de los demás incentivos, sea \(\mathrm{BM}_{r,e}^{m,-\m
 \mathrm{BM}_{r,e}^{m,-\mu}(e_r)
 +
 a_r'(e_r)
-\Gamma_r^m(\mu_r^m).
+\gamma^m(\mu_r^m)\mu_r^m.
 \end{equation}
 
 Esta condición se aplica cuando \(e_r<e_r^{\mathrm{sat}}\). El primer término del lado derecho reúne los demás canales que afectan el esfuerzo de ejecución, mientras que el segundo identifica el retorno adicional de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), una mayor exposición sancionadora puede incrementar este componente e inducir un mayor esfuerzo de ejecución.
@@ -536,12 +525,12 @@ Supóngase inicialmente que
 0.
 \end{equation}
 
-Se supone además que \(\Gamma_r^m(\mu)\) alcanza, para alguna exposición finita, el nivel requerido para llevar este canal hasta \(e_r^{\mathrm{sat}}\). Bajo esta condición existe una exposición mínima suficiente \(\mu_r^{m,*}<\infty\). Cuando esta exposición es positiva, queda caracterizada por
+Se supone además que el producto \(\gamma^m(\mu)\mu\) alcanza, para alguna exposición finita, el nivel requerido para llevar este canal hasta \(e_r^{\mathrm{sat}}\). Bajo esta condición existe una exposición mínima suficiente \(\mu_r^{m,*}<\infty\). Cuando esta exposición es positiva, queda caracterizada por
 
 \begin{equation}
 \label{eq:multa_suficiente}
 a_{r,-}'(e_r^{\mathrm{sat}})
-\Gamma_r^m(\mu_r^{m,*})
+\gamma^m(\mu_r^{m,*})\mu_r^{m,*}
 =
 \psi_r'(e_r^{\mathrm{sat}})
 -
@@ -550,7 +539,7 @@ a_{r,-}'(e_r^{\mathrm{sat}})
 
 La exposición suficiente depende de los demás incentivos que actúan sobre la misma inversión. Cuanto mayor sea el retorno proveniente del desempeño reputacional, del ahorro u otros canales recogidos en \(\mathrm{BM}_{r,e}^{m,-\mu}\), menor será, manteniendo lo demás constante, la exposición sancionadora necesaria para llevar el esfuerzo de ejecución hasta su región saturada. Se define \(\mu_r^{m,*}=0\) cuando \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), pues los canales restantes son suficientes para alcanzar dicha región.
 
-Bajo las condiciones de concavidad local, cuando \(\mu_r^m<\mu_r^{m,*}\), una mayor exposición puede seguir incrementando el esfuerzo mediante \(a_r'(e_r)\Gamma_r^m(\mu_r^m)\). Si \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para llevar el esfuerzo hasta el punto de saturación. Como \(e_r\) solo genera beneficios a través de variables que dependen de \(a_r\) y \(\psi_r'(e_r)>0\), manteniendo \(g_r\) fijo ningún óptimo elige un esfuerzo superior a \(e_r^{\mathrm{sat}}\). Por tanto, para \(\mu_r^m\geq\mu_r^{m,*}\),
+Bajo las condiciones de concavidad local, cuando \(\mu_r^m<\mu_r^{m,*}\), una mayor exposición puede seguir incrementando el esfuerzo mediante \(a_r'(e_r)\gamma^m(\mu_r^m)\mu_r^m\). Si \(\mu_r^m\geq\mu_r^{m,*}\), la exposición es suficiente para llevar el esfuerzo hasta el punto de saturación. Como \(e_r\) solo genera beneficios a través de variables que dependen de \(a_r\) y \(\psi_r'(e_r)>0\), manteniendo \(g_r\) fijo ningún óptimo elige un esfuerzo superior a \(e_r^{\mathrm{sat}}\). Por tanto, para \(\mu_r^m\geq\mu_r^{m,*}\),
 
 \begin{equation}
 \label{eq:plateau_esfuerzo}
