@@ -388,7 +388,11 @@ La presencia de umbrales y reglas discretas requiere distinguir entre los efecto
 \frac{\partial}{\partial e_r}
 \left[
 V(\mathrm{Rep}^m)-pK(M^m)
-\right],
+\right]
+\notag
+\\
+&=
+\mathrm{BM}_{r,e}^{m},
 \label{eq:foc_e_esperada}
 \\
 \xi_r'(g_r)
@@ -396,7 +400,11 @@ V(\mathrm{Rep}^m)-pK(M^m)
 \frac{\partial}{\partial g_r}
 \left[
 V(\mathrm{Rep}^m)-pK(M^m)
-\right].
+\right]
+\notag
+\\
+&=
+\mathrm{BM}_{r,g}^{m}.
 \label{eq:foc_g_esperada}
 \end{align}
 \end{subequations}
@@ -467,13 +475,7 @@ K'(M^m)
 
 Así, \(\lambda^m\) mide el retorno marginal asociado con el desempeño percibido \(P^m\), \(\varpi^m\) la valoración marginal del ahorro reconocido y \(\gamma^m\) el costo marginal de una mayor multa percibido por el gerente, considerando tanto su efecto reputacional como el costo monetario directamente internalizado. La separación entre \(P^m\) e \(ICG^m\) permite que el peso reputacional de un bloque difiera de su ponderación regulatoria sin modificar las reglas formales del índice. Como \(p\) es común a todos los esquemas, no constituye una fuente de diferencias entre diseños, aunque reduce la intensidad con la que una misma multa regulatoria se transmite hacia el gerente. Estos términos tienen una interpretación local y no se consideran parámetros globales de la función objetivo.
 
-Los esfuerzos también pueden modificar las condiciones en las que cambian \(\mathbf 1\{c_j<1\}\), \(d_F^m\), \(\chi^m\) o el reconocimiento de \(S_r\). Dentro de una región en la que esos indicadores permanecen constantes, las condiciones interiores son
-\[
-\psi_r'(e_r)=\mathrm{BM}_{r,e}^{m},
-\qquad
-\xi_r'(g_r)=\mathrm{BM}_{r,g}^{m}.
-\]
-Los cambios discretos no se incorporan como términos diferenciales en estas condiciones: se evalúan comparando la utilidad del gerente a ambos lados del umbral correspondiente. Así se distingue el margen intensivo, que modifica continuamente los resultados dentro de una misma región regulatoria, del margen extensivo asociado con el paso de una región a otra. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) introduce un incentivo de culminación, mientras que \(\mathbf 1\{c_j<1\}\), \(d_F^m\) y \(\chi^m\) pueden generar saltos en la utilidad cuando cambia la configuración o activación de la multa.
+Los esfuerzos también pueden modificar las condiciones en las que cambian \(\mathbf 1\{c_j<1\}\), \(d_F^m\), \(\chi^m\) o el reconocimiento de \(S_r\). Las condiciones interiores de \eqref{eq:foc_esperadas} se aplican dentro de una región en la que esos indicadores permanecen constantes. Los cambios discretos no se incorporan como términos diferenciales en dichas condiciones: se evalúan comparando la utilidad del gerente a ambos lados del umbral correspondiente. Así se distingue el margen intensivo, que modifica continuamente los resultados dentro de una misma región regulatoria, del margen extensivo asociado con el paso de una región a otra. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) introduce un incentivo de culminación, mientras que \(\mathbf 1\{c_j<1\}\), \(d_F^m\) y \(\chi^m\) pueden generar saltos en la utilidad cuando cambia la configuración o activación de la multa.
 
 El esfuerzo de ejecución \(e_r\) actúa a través de \(F_r\) y sus efectos dependen del grupo al que pertenece la inversión. Para \(r\in R^{S}\), una mayor ejecución física puede elevar el resultado \(q_j\) y su grado de cumplimiento \(c_j\). Para \(r\in R^{G}\), incrementa directamente el cumplimiento de la meta asociada a través de \(a_r\); la misma lógica se aplica a \(r\in R^{F}\) cuando estas inversiones se verifican mediante indicadores de \(J^{F}\). Asimismo, \(e_r\) puede modificar la relación de trabajo, el avance financiero a través de \(F_r\) y las bases de las multas al reducir el alcance físico pendiente, siempre que los recursos disponibles permitan materializar ese mayor avance.
 
