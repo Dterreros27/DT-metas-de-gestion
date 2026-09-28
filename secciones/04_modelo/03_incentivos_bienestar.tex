@@ -1061,8 +1061,50 @@ C_G^{A''}
 \end{aligned}
 \end{equation}
 
+Cuando \(\widetilde q_S^B>\widetilde q_S^{A''}\) y \(C_G^B<C_G^{A''}\), defínase la contribución marginal relativa de las metas de gestión como
+
+\begin{equation}
+\label{eq:rho_resultados_app_b}
+\rho
+\equiv
+\frac{\partial Q/\partial C_G}
+{\partial Q/\partial \widetilde q_S}
+\geq
+0.
+\end{equation}
+
+Dado que \(\partial Q/\partial\widetilde q_S>0\), la condición local \eqref{eq:condicion_resultados_app_b} equivale a
+
+\begin{equation}
+\label{eq:umbral_rho_app_b}
+\rho
+\leq
+\frac{
+\widetilde q_S^B-\widetilde q_S^{A''}
+}{
+C_G^{A''}-C_G^B
+}.
+\end{equation}
+
+El cociente del lado derecho mide la ganancia directa en resultados del servicio por unidad de cumplimiento perdido en \(J^G\). El umbral es local: constituye una equivalencia exacta para la aproximación diferencial de \eqref{eq:condicion_resultados_app_b}, pero no para cambios finitos cuando las derivadas de \(Q\) varían a lo largo de la transición. Si \(C_G^B=C_G^{A''}\), cualquier mejora estricta de \(\widetilde q_S\) favorece el canal de resultados de \(B\).
+
 Si se satisface \eqref{eq:condicion_resultados_app_b}, una condición suficiente adicional para que \(B\) mejore el criterio regulatorio es que \(C_I^B\leq C_I^{A''}\) y \(M^B\leq M^{A''}\), con al menos una de las tres comparaciones estricta. El modelo no impone estas desigualdades: aunque \(A''\) y \(B\) generan el mismo incentivo marginal de eficiencia, la reasignación del esfuerzo de ejecución puede modificar tanto el gasto como las brechas sancionables.
 
-En síntesis, el modelo establece \(Q^{A''}\geq Q^{A'}\geq Q^A\), pero no traslada automáticamente este orden al bienestar porque el gasto efectivo y la carga sancionadora pueden contrarrestar la mejora de resultados. En \(A''\to B\), incluso el orden de \(Q\) requiere \eqref{eq:condicion_resultados_app_b}. Por ello, el modelo no genera un ordenamiento general de bienestar entre \(A_0,A,A',A'',B\): una cadena creciente exige verificar las condiciones suficientes de cada transición y no se obtiene por transitividad sin comprobar cada eslabón.
+La comparación entre los extremos de la secuencia puede expresarse mediante la identidad telescópica
+
+\begin{equation}
+\label{eq:descomposicion_telescopica_a_b}
+W_R^B-W_R^A
+=
+\left(W_R^{A'}-W_R^A\right)
++
+\left(W_R^{A''}-W_R^{A'}\right)
++
+\left(W_R^B-W_R^{A''}\right).
+\end{equation}
+
+Esta descomposición atribuye sucesivamente los cambios a la eliminación del umbral, la sustitución de la verificación financiera y la salida de \(C_G\) de la señal pública. La diferencia total entre \(A\) y \(B\) no depende de esta descomposición, pero la atribución a cada modificación sí depende de la trayectoria institucional utilizada para construir los esquemas intermedios.
+
+En síntesis, el modelo establece \(Q^{A''}\geq Q^{A'}\geq Q^A\), pero no traslada automáticamente este orden al bienestar porque el gasto efectivo y la carga sancionadora pueden contrarrestar la mejora de resultados. En \(A''\to B\), incluso el orden de \(Q\) requiere \eqref{eq:condicion_resultados_app_b}. Por ello, el modelo no establece por sí solo cada uno de los ordenamientos necesarios para construir una cadena creciente de bienestar entre \(A_0,A,A',A'',B\). Esta solo puede obtenerse después de verificar las condiciones suficientes correspondientes a cada transición.
 
 La extensión \(B^{+}\) se analiza en la Subsección~4.4, porque introduce un reconocimiento económico por sobrecumplimiento y, con ello, un componente adicional en la comparación de bienestar.

@@ -6,7 +6,7 @@ La Tabla~\ref{tab:sintesis_resultados_esquemas} resume los resultados sin reprod
 
 \begin{table*}[t]
 \centering
-\caption{Síntesis de los principales resultados por transición}
+\caption{Signos de los principales componentes por transición}
 \label{tab:sintesis_resultados_esquemas}
 \scriptsize
 \renewcommand{\arraystretch}{1.35}
@@ -15,9 +15,9 @@ La Tabla~\ref{tab:sintesis_resultados_esquemas} resume los resultados sin reprod
 \begin{tabularx}{\textwidth}{
 @{}
 >{\centering\arraybackslash}p{0.075\textwidth}
->{\raggedright\arraybackslash}p{0.205\textwidth}
+>{\raggedright\arraybackslash}p{0.20\textwidth}
+>{\raggedright\arraybackslash}p{0.18\textwidth}
 >{\raggedright\arraybackslash}p{0.17\textwidth}
->{\raggedright\arraybackslash}p{0.19\textwidth}
 >{\raggedright\arraybackslash}X
 @{}
 }
@@ -25,70 +25,70 @@ La Tabla~\ref{tab:sintesis_resultados_esquemas} resume los resultados sin reprod
 
 \textbf{Transición}
 &
-\textbf{Ejecución y resultados del servicio}
+\textbf{Resultados agregados \(Q\)}
 &
-\textbf{Cumplimiento de gestión (\(C_G\))}
+\textbf{Incentivo de eficiencia \(g\)}
 &
-\textbf{Eficiencia}
+\textbf{Gasto de inversión \(C_I\)}
 &
-\textbf{Criterio regulatorio}
+\textbf{Exposición \(\mu\), multa \(M\) y bienestar}
 \\
 
 \hline
 
 \(A_0\to A\)
 &
-Orden abierto; si ambos esquemas alcanzan la culminación factible del escenario base y se cumple \eqref{eq:condicion_focalizacion_a_a0}, \(\widetilde q_S^{A}\geq\widetilde q_S^{A_0}\) (Resultado~\ref{res:desempeno_agregado}).
+Orden abierto; bajo las condiciones del \textit{benchmark}, \(\widetilde q_S^A\geq\widetilde q_S^{A_0}\), pero \(C_G\) permanece abierto.
 &
-Orden abierto.
+Mejora débil en \(R^S\cup R^G\); abierto en \(R^F\) (Resultado~\ref{res:eficiencia_benchmark_a0_a}).
 &
-Mejora débil para \(R^{S}\cup R^{G}\); orden abierto para \(R^{F}\) (Resultado~\ref{res:eficiencia_benchmark_a0_a}).
+Orden agregado abierto.
 &
-Comparación abierta; evaluar con la descomposición \eqref{eq:cambio_bienestar_transicion}.
+\(\mu\) disminuye para las intervenciones consideradas; \(M\) solo disminuye estrictamente si subsiste una brecha. Bienestar bajo \eqref{eq:condicion_suficiente_bienestar_a_a0}.
 \\[5pt]
 
 \(A\to A'\)
 &
-\(\widetilde q_S^{A'}\geq\widetilde q_S^{A}\) (Resultados~\ref{res:incentivo_ejecucion_rs} y~\ref{res:desempeno_agregado}).
+\(Q^{A'}\geq Q^A\) por \eqref{eq:orden_q_a_ap_app}.
 &
-\(C_G^{A'}\geq C_G^{A}\) (Resultado~\ref{res:cumplimiento_agregado_g}).
+Sin cambio en \(R^S\cup R^G\); deterioro débil en \(R^F\) (Resultado~\ref{res:eficiencia_secuencia_principal}).
 &
-Sin cambio para \(R^{S}\cup R^{G}\); \(g_r^{A,*}\geq g_r^{A',*}\) para \(R^{F}\) (Resultado~\ref{res:eficiencia_secuencia_principal}).
+Orden abierto: la mayor ejecución puede aumentar el gasto.
 &
-Evaluar con \eqref{eq:cambio_bienestar_transicion}; no hay orden automático.
+\(\mu\) aumenta al eliminarse el umbral; \(M\) permanece abierto porque las brechas responden al esfuerzo. Bienestar según \eqref{eq:bienestar_a_ap}.
 \\[5pt]
 
 \(A'\to A''\)
 &
-\(\widetilde q_S^{A''}\geq\widetilde q_S^{A'}\); ejecución de \(R^{F}\) con orden abierto (Resultado~\ref{res:desempeno_agregado}).
+\(Q^{A''}\geq Q^{A'}\) por \eqref{eq:orden_q_a_ap_app}.
 &
-\(C_G^{A''}\geq C_G^{A'}\) (Resultado~\ref{res:cumplimiento_agregado_g}).
+Mejora en \(R^F\); sin cambio en los demás bloques (Resultado~\ref{res:eficiencia_secuencia_principal}).
 &
-\(g_r^{A'',*}\geq g_r^{A',*}\) para \(R^{F}\) (Resultado~\ref{res:eficiencia_secuencia_principal}).
+Orden abierto por el cambio simultáneo de ejecución en \(R^F\).
 &
-Evaluar con \eqref{eq:cambio_bienestar_transicion}; no hay orden automático.
+\(\mu\) es igual en \(R^S,R^G\) y abierto en \(R^F\); \(M\) permanece abierto. Bienestar según \eqref{eq:bienestar_ap_app}.
 \\[5pt]
 
 \(A''\to B\)
 &
-Bajo \eqref{eq:condicion_lambda_b}, \(\widetilde q_S^{B}\geq\widetilde q_S^{A''}\) (Resultado~\ref{res:desempeno_agregado}).
-&
-\(C_G^{A''}\geq C_G^{B}\) (Resultado~\ref{res:cumplimiento_agregado_g}).
+Orden abierto; el canal de resultados favorece a \(B\) bajo \eqref{eq:umbral_rho_app_b}.
 &
 Sin cambio bajo las normalizaciones locales.
 &
-Comparación abierta; debe incluir la oposición entre \(\widetilde q_S\) y \(C_G\).
+Orden abierto por la reasignación del esfuerzo de ejecución.
+&
+La exposición nominal no cambia, pero \(M\) puede variar con las brechas. Bienestar sujeto además a los signos de \(C_I\) y \(M\).
 \\[5pt]
 
 \(B\to B^{+}\)
 &
-\(\widetilde q_S^{B^{+}}\geq\widetilde q_S^{B}\) y \(Q^{B^{+}}\geq Q^{B}\) (Resultado~\ref{res:desempeno_bplus}).
+\(Q^{B^{+}}\geq Q^{B}\) (Resultado~\ref{res:desempeno_bplus}).
 &
-Sin canal directo adicional.
+Sin efecto tecnológico directo de \(g_r\).
 &
-Sin efecto tecnológico directo de \(g_r\) sobre el sobrecumplimiento o la bonificación.
+Puede aumentar con el sobrecumplimiento; orden abierto.
 &
-Evaluar con \eqref{eq:condicion_bienestar_bplus}, incluido el costo neto de la bonificación.
+La exposición sancionadora no es el margen relevante; evaluar con \eqref{eq:condicion_bienestar_bplus}, incluido el costo neto de la bonificación.
 \\
 
 \hline
