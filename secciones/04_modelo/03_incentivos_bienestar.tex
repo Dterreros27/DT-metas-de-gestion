@@ -933,32 +933,37 @@ La contribución de esta diferencia de exposición a la reducción de la multa e
 0.
 \end{equation}
 
-En el escenario base, \(\bar a_r=1\) y \(\Delta_M^{A_0,A}(r)=0\): la menor exposición de \(A\) no reduce la multa realizada por una inversión culminada. La desigualdad es estricta únicamente en la extensión con contingencias, cuando \(\bar a_r<1\). Esta expresión identifica solo la contribución de la inversión \(r\); el orden de la multa total requiere considerar los demás componentes e intervenciones. En términos agregados, la definición de \(W_R^m\) implica que \(W_R^A>W_R^{A_0}\) si y solo si
+En el escenario base, \(\bar a_r=1\) y \(\Delta_M^{A_0,A}(r)=0\): la menor exposición de \(A\) no reduce la multa realizada por una inversión culminada. La desigualdad es estricta únicamente en la extensión con contingencias, cuando \(\bar a_r<1\). Esta expresión identifica solo la contribución de la inversión \(r\); la multa total puede ser menor bajo \(A\) por las demás intervenciones o componentes en los que subsista una brecha sancionable. En términos agregados, la definición de \(W_R^m\) implica la identidad
 
 \begin{equation}
 \label{eq:condicion_bienestar_a_a0}
 \begin{aligned}
-&
-\Phi(Q^{A})
--
-\Phi(Q^{A_0})
+W_R^A-W_R^{A_0}
+&=
+\Phi(Q^{A})-\Phi(Q^{A_0})
 \\
-&\quad
-+
-\Omega(M^{A_0})
--
-\Omega(M^{A})
+&\quad+
+C_I^{A_0}-C_I^{A}
 \\
-&>
-C_I^{A}
--
-C_I^{A_0}.
+&\quad+
+\Omega(M^{A_0})-\Omega(M^{A}).
 \end{aligned}
 \end{equation}
 
-Bajo la monotonía de \(\Phi\) y \(\Omega\), una condición suficiente para que el criterio favorezca a \(A\) es que \(Q^{A}\geq Q^{A_0}\), \(C_I^{A}\leq C_I^{A_0}\) y \(M^{A}<M^{A_0}\). Estas desigualdades son requisitos sobre resultados, gasto de inversión y carga sancionadora; el modelo no demuestra que se cumplan simultáneamente.
+Si \(C_I^{A}\leq C_I^{A_0}\), el término de gasto favorece débilmente a \(A\). Por ello, una condición suficiente, más restrictiva que la comparación exacta porque prescinde de esa eventual ganancia de eficiencia, es
 
-Por tanto, el modelo no establece una dominancia incondicional de \(A\) sobre \(A_0\), pero identifica condiciones suficientes bajo las cuales el diseño focalizado mejora el criterio regulatorio: que los resultados agregados no disminuyan, que el gasto efectivo de inversión no aumente y que la multa total sea menor. En el escenario base, esta última diferencia no proviene de la exposición sobre una inversión ya culminada; debe originarse en otros componentes de la multa. Solo en la extensión con una brecha física remanente la menor exposición reduce directamente la carga atribuible a \(r\).
+\begin{equation}
+\label{eq:condicion_suficiente_bienestar_a_a0}
+\Phi(Q^{A})-\Phi(Q^{A_0})
++
+\Omega(M^{A_0})-\Omega(M^{A})
+>
+0.
+\end{equation}
+
+Bajo la monotonía de \(\Phi\) y \(\Omega\), \eqref{eq:condicion_suficiente_bienestar_a_a0} se satisface si \(Q^{A}\geq Q^{A_0}\) y \(M^{A}<M^{A_0}\). Junto con \(C_I^{A}\leq C_I^{A_0}\), estas desigualdades implican \(W_R^A>W_R^{A_0}\) sin imponer una forma funcional específica para \(Q\).
+
+Por tanto, el modelo no establece una dominancia incondicional de \(A\) sobre \(A_0\), pero sí un resultado condicional nítido: el diseño focalizado mejora el criterio regulatorio cuando preserva el desempeño agregado, no aumenta el gasto efectivo de inversión y reduce la multa total. La última diferencia no proviene, en el escenario base, de la exposición sobre una inversión ya culminada, sino de intervenciones o componentes en los que permanezca una brecha sancionable. Solo en la extensión con una brecha física remanente la menor exposición reduce directamente la carga atribuible a una inversión saturada.
 
 \paragraph{Secuencia principal \(A\to A'\to A''\to B\).}
 
