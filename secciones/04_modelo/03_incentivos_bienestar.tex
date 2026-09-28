@@ -967,9 +967,56 @@ Por tanto, el modelo no establece una dominancia incondicional de \(A\) sobre \(
 
 \paragraph{Secuencia principal \(A\to A'\to A''\to B\).}
 
-En cada transición se aplica \eqref{eq:condicion_general_mejora_bienestar}. En \(A\to A'\), el cambio en \(Q\) y la eliminación del umbral deben compensar cualquier aumento de la carga efectiva de la multa y de los costos que resulte de activar consecuencias antes desactivadas. En \(A'\to A''\), el fortalecimiento de los retornos reputacionales de \(C_S\) y \(C_G\), junto con la corrección de los incentivos de eficiencia de \(R^{F}\), debe compensar cualquier cambio desfavorable en el gasto de inversión o la carga sancionadora derivado de sustituir la base financiera por una física.
+En cada transición se aplica \eqref{eq:condicion_general_mejora_bienestar}, pero el grado de indeterminación no es el mismo. Entre \(A\) y \(A''\), los Resultados~\ref{res:desempeno_agregado} y~\ref{res:cumplimiento_agregado_g}, junto con la monotonía de \(Q\), implican
 
-Finalmente, en \(A''\to B\), los dos argumentos de \(Q\) se mueven potencialmente en direcciones opuestas:
+\begin{equation}
+\label{eq:orden_q_a_ap_app}
+Q^{A''}
+\geq
+Q^{A'}
+\geq
+Q^{A}.
+\end{equation}
+
+Por tanto, en \(A\to A'\),
+
+\begin{equation}
+\label{eq:bienestar_a_ap}
+\begin{aligned}
+W_R^{A'}-W_R^{A}
+&=
+\Phi(Q^{A'})-\Phi(Q^{A})
+\\
+&\quad+
+C_I^{A}-C_I^{A'}
+\\
+&\quad+
+\Omega(M^{A})-\Omega(M^{A'}),
+\end{aligned}
+\end{equation}
+
+donde el primer término es no negativo. La eliminación del umbral puede elevar la ejecución, pero también el gasto y la carga efectiva de la multa al activar consecuencias antes desactivadas. En consecuencia, \(A'\) mejora el criterio regulatorio cuando la ganancia de resultados compensa el efecto neto de estos dos componentes. Una condición suficiente es que, además de \(Q^{A'}\geq Q^A\), se cumplan \(C_I^{A'}\leq C_I^A\) y \(M^{A'}\leq M^A\), con al menos una desigualdad estricta.
+
+En \(A'\to A''\), la comparación exacta es
+
+\begin{equation}
+\label{eq:bienestar_ap_app}
+\begin{aligned}
+W_R^{A''}-W_R^{A'}
+&=
+\Phi(Q^{A''})-\Phi(Q^{A'})
+\\
+&\quad+
+C_I^{A'}-C_I^{A''}
+\\
+&\quad+
+\Omega(M^{A'})-\Omega(M^{A''}).
+\end{aligned}
+\end{equation}
+
+También aquí el primer término es no negativo. La salida de \(f_F\) fortalece los retornos reputacionales de \(C_S\) y \(C_G\) y corrige el incentivo de eficiencia de \(R^{F}\); sin embargo, el esfuerzo de ejecución de estas intervenciones y el efecto de sustituir la base financiera por una física permanecen abiertos. Por ello, no se ordenan en general \(C_I^{A''}\) y \(C_I^{A'}\), ni \(M^{A''}\) y \(M^{A'}\). Si ambos componentes no aumentan, \(Q^{A''}\geq Q^{A'}\), junto con al menos una mejora estricta, es suficiente para que \(W_R^{A''}>W_R^{A'}\).
+
+La transición \(A''\to B\) permanece más abierta porque los dos argumentos de \(Q\) se mueven potencialmente en direcciones opuestas:
 
 \begin{equation}
 \label{eq:canales_bienestar_app_b}
@@ -986,7 +1033,7 @@ C_G^{A''}
 0.
 \end{equation}
 
-Por tanto, la mejora de los resultados directos del servicio debe ser suficiente para compensar, cuando exista, la pérdida asociada con el menor cumplimiento de \(J^G\), además de las diferencias en el gasto de inversión y la carga sectorial efectiva de las multas. Localmente, el canal de resultados favorece a \(B\) cuando
+Por tanto, la mejora de los resultados directos del servicio debe ser suficiente para compensar, cuando exista, la pérdida asociada con el menor cumplimiento de \(J^G\). Localmente, el canal de resultados favorece a \(B\) cuando
 
 \begin{equation}
 \label{eq:condicion_resultados_app_b}
@@ -1014,8 +1061,8 @@ C_G^{A''}
 \end{aligned}
 \end{equation}
 
-Para cada transición, \eqref{eq:condicion_general_mejora_bienestar} funciona como regla contable de evaluación. No se presenta como proposición independiente porque afirmar que \(W_R^{m'}>W_R^m\) cuando su diferencia es positiva reproduce la definición del criterio. La comparación sustantiva exige estimar o restringir sus tres componentes.
+Si se satisface \eqref{eq:condicion_resultados_app_b}, una condición suficiente adicional para que \(B\) mejore el criterio regulatorio es que \(C_I^B\leq C_I^{A''}\) y \(M^B\leq M^{A''}\), con al menos una de las tres comparaciones estricta. El modelo no impone estas desigualdades: aunque \(A''\) y \(B\) generan el mismo incentivo marginal de eficiencia, la reasignación del esfuerzo de ejecución puede modificar tanto el gasto como las brechas sancionables.
 
-Por tanto, el modelo no genera un ordenamiento general de bienestar entre \(A_0,A,A',A'',B\). Una cadena creciente solo podría establecerse después de verificar, transición por transición, que la ganancia en resultados y la reducción de la carga sancionadora superan el mayor gasto de inversión. Esta verificación es empírica o depende de supuestos adicionales sobre primitivas; no se obtiene por transitividad sin comprobar cada eslabón.
+En síntesis, el modelo establece \(Q^{A''}\geq Q^{A'}\geq Q^A\), pero no traslada automáticamente este orden al bienestar porque el gasto efectivo y la carga sancionadora pueden contrarrestar la mejora de resultados. En \(A''\to B\), incluso el orden de \(Q\) requiere \eqref{eq:condicion_resultados_app_b}. Por ello, el modelo no genera un ordenamiento general de bienestar entre \(A_0,A,A',A'',B\): una cadena creciente exige verificar las condiciones suficientes de cada transición y no se obtiene por transitividad sin comprobar cada eslabón.
 
 La extensión \(B^{+}\) se analiza en la Subsección~4.4, porque introduce un reconocimiento económico por sobrecumplimiento y, con ello, un componente adicional en la comparación de bienestar.
