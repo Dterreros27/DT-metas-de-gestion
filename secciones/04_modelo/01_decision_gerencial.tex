@@ -675,33 +675,45 @@ g_r^{m,*}
 \right).
 \end{equation}
 
-Sobre esta base, se define el criterio reducido de evaluación regulatoria como
+El programa de inversiones y su financiamiento son comunes a los esquemas del modelo base. Sea \(\bar I=\sum_{r\in R}\bar I_r\) el monto previsto en el fondo. Las diferencias de eficiencia se recogen mediante el ahorro reconocido de las inversiones que han completado su alcance, evaluado en las decisiones óptimas:
+
+\begin{equation}
+\label{eq:ahorro_eficiencia_regulador}
+S_I^m\equiv\sum_{r\in R}\mathbf{1}\{a_r^{m,*}=1\}\left[\bar I_r-I_r(F_r^{m,*},g_r^{m,*})\right].
+\end{equation}
+
+Esta definición coincide con el ahorro de \eqref{eq:ahorro_agregado} evaluado bajo cada esquema. Su reconocimiento exige preservar el alcance, la calidad y las demás condiciones exigibles. Los recursos sin ejecutar de inversiones pendientes permanecen comprometidos y no constituyen ahorro por eficiencia. Por ello, \(\bar I-S_I^m\) representa los recursos utilizados o todavía comprometidos con el programa común; no se identifica con el desembolso observado \(C_I^m\) cuando existen inversiones pendientes. Esta distinción evita atribuir una ganancia de bienestar a la sola postergación de la ejecución.
+
+Siguiendo la estructura de ponderación de \citet{ovaere2023}, se distinguen el excedente del consumidor y el excedente financiero de la empresa, ajustado por los recursos comprometidos con el programa. Sea \(T_0\) el pago agregado de los usuarios que constituye ingreso de la EP, común a los esquemas del modelo base:
+
+\begin{equation}
+\label{eq:excedente_consumidor_regulador}
+CS^m=\Phi(Q^m)-T_0,\qquad Q^m=Q(\widetilde q_S^m,C_G^m).
+\end{equation}
+
+\begin{equation}
+\label{eq:excedente_productor_regulador}
+\Pi^m=T_0-\bar I+S_I^m-C_{OM}-M^m.
+\end{equation}
 
 \begin{equation}
 \label{eq:bienestar_regulador}
-W_R^m
-\equiv
-\Phi\!\left(
-Q(\widetilde q_S^m,C_G^m)
-\right)
--
-C_I^m
--
-C_{OM}
--
-\Omega(M^m).
+W_R^m\equiv CS^m+(1-\alpha)\Pi^m,\qquad 0\leq\alpha\leq1.
 \end{equation}
 
-La función \(Q(\widetilde q_S^m,C_G^m)\) representa, en forma reducida, el agregado de resultados valorado por el regulador. Se supone que es estrictamente creciente en los resultados del servicio, \(\partial Q/\partial\widetilde q_S>0\), y no decreciente en el cumplimiento de las metas de gestión, \(\partial Q/\partial C_G\geq0\).
+Al sustituir los excedentes,
 
-El primer argumento recoge directamente los resultados alcanzados en las distintas dimensiones de la prestación, sin truncarlos en las metas regulatorias. El segundo permite que las metas de \(J^G\), aun cuando no constituyan resultados finales del servicio, contribuyan a ellos mediante capacidades, instrumentos de gestión o ejecución física que facilitan su obtención. Esta relación resume, dentro de un modelo de un periodo, vínculos tecnológicos y organizacionales que en la práctica pueden materializarse con distinta intensidad. Dado que \(C_G\) agrega indicadores heterogéneos, la condición \(\partial Q/\partial C_G\geq0\) se interpreta como una propiedad neta del bloque y es compatible con que algunos componentes de \(J^G\) tengan un vínculo nulo con los resultados finales.
+\begin{equation}
+\label{eq:bienestar_regulador_expandido}
+\begin{aligned}W_R^m&=\Phi(Q^m)-\alpha T_0\\&\quad-(1-\alpha)(\bar I-S_I^m+C_{OM}+M^m).\end{aligned}
+\end{equation}
 
-La función \(\Omega(M^m)\) representa la carga sectorial efectiva de las multas y satisface \(\Omega(0)=0\) y \(\Omega'(M)>0\).
+El parámetro \(\alpha\) expresa la menor ponderación del excedente de la EP respecto del excedente de los usuarios. Con \(\alpha=0\), ambos reciben igual peso; con \(\alpha=1\), el criterio recoge únicamente el excedente del consumidor. Este parámetro es distinto de las ponderaciones reputacionales \(\alpha_H^m\). Para las conclusiones que dependen estrictamente del ahorro o de las multas se requiere \(\alpha<1\).
 
-El término \(C_I^m\) incorpora los recursos de inversión efectivamente utilizados y permite distinguir entre esquemas que alcanzan resultados semejantes con distintos montos de inversión, en línea con la literatura que evalúa conjuntamente los incentivos de eficiencia en costos y de calidad \citep{ovaere2023}. Los costos de operación y mantenimiento se mantienen constantes entre los diseños considerados, \(C_{OM}^m\equiv C_{OM}\), pues el modelo no incorpora un margen operativo específico mediante el cual las modificaciones regulatorias analizadas alteren dichos costos. Este término común afecta el nivel de \(W_R^m\), pero se cancela en las comparaciones entre esquemas.
+La función \(Q(\widetilde q_S^m,C_G^m)\) es estrictamente creciente en los resultados del servicio y no decreciente en el cumplimiento de las metas de gestión: \(\partial Q/\partial\widetilde q_S>0\) y \(\partial Q/\partial C_G\geq0\). El segundo argumento recoge únicamente la contribución neta de las capacidades, instrumentos de gestión y ejecución física a los resultados valorados por los usuarios, sin contabilizar nuevamente efectos ya incluidos en el primero. Algunos componentes de \(J^G\) pueden tener una contribución nula.
 
-La función \(\Omega(M^m)\) representa la carga sectorial efectiva de la multa. Esta formulación no trata necesariamente su valor nominal como una pérdida social íntegra: la sanción puede constituir parcialmente una transferencia, pero también detraer recursos disponibles para la prestación, desplazar inversiones o generar otros costos financieros y administrativos. El caso \(\Omega(M)=M\) reproduce la especificación lineal anterior. A diferencia del gerente, el regulador evalúa esta carga bajo el supuesto de detección cierta utilizado para cuantificar \(M^m\).
+El ahorro permanece afectado al fondo de inversiones y reservas. Por tanto, \(\Pi^m\) no representa utilidades distribuibles ni recursos de libre disposición: recoge el excedente financiero después de reservar los recursos del programa pendiente. Su posible contribución a inversiones y calidad futuras no se contabiliza adicionalmente en este modelo estático. Los pagos \(T_0\), el monto previsto \(\bar I\) y los costos de operación y mantenimiento \(C_{OM}\) son comunes y se cancelan en las comparaciones.
 
-La sanción cumple una función instrumental: puede resultar conveniente cuando modifica la conducta del gerente y genera una mejora compensatoria en los resultados o en otros componentes valorados por el regulador, pero representa una carga cuando una mayor severidad no induce beneficios adicionales. Como el criterio no incorpora la desutilidad privada de los esfuerzos \(\psi_r\) y \(\xi_r\) ni valora a todos los receptores de las transferencias, \(W_R^m\) debe interpretarse como una medida reducida de bienestar sectorial y no como una función exhaustiva de bienestar social.
+La multa \(M^m\) reduce los recursos de la EP y no retorna a los usuarios dentro del ámbito sectorial evaluado. Se incorpora una sola vez, en \(\Pi^m\), ponderada por \(1-\alpha\). Su efecto incentivador opera mediante las decisiones del gerente y los resultados inducidos; no constituye un beneficio adicional separado. El regulador mantiene el supuesto de detección cierta utilizado para cuantificar la multa.
 
-El regulador evalúa cada diseño tomando como dadas las respuestas óptimas del gerente, de modo que \(W_R^m\) depende de \(\mathbf e^{m,*}\) y \(\mathbf g^{m,*}\). En consecuencia, las comparaciones entre esquemas deben considerar los cambios en \(\widetilde q_S^m\) y \(C_G^m\), las diferencias en el gasto de inversión y la carga sectorial efectiva de las multas.
+Esta formulación adapta la estructura de Ovaere, sin reproducir íntegramente su concepto de excedente del productor: el modelo mantiene separadas la empresa y la decisión gerencial, y no incorpora en \(\Pi^m\) la desutilidad privada de los esfuerzos \(\psi_r\) y \(\xi_r\). Por ello, \(W_R^m\) es un criterio reducido de bienestar sectorial, no una función exhaustiva de bienestar social. La evaluación considera las respuestas óptimas \((\mathbf e^{m,*},\mathbf g^{m,*})\) de cada diseño y sus efectos sobre los resultados, el ahorro reconocido y las multas.

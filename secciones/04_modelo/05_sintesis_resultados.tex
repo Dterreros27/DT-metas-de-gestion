@@ -29,7 +29,7 @@ La Tabla~\ref{tab:sintesis_resultados_esquemas} resume los resultados sin reprod
 &
 \textbf{Incentivo de eficiencia \(g\)}
 &
-\textbf{Gasto de inversión \(C_I\)}
+\textbf{Ahorro por eficiencia \(S_I\)}
 &
 \textbf{Exposición \(\mu\), multa \(M\) y bienestar}
 \\
@@ -42,9 +42,9 @@ Orden abierto; bajo las condiciones del \textit{benchmark}, \(\widetilde q_S^A\g
 &
 Mejora débil en \(R^S\cup R^G\); abierto en \(R^F\) (Resultado~\ref{res:eficiencia_benchmark_a0_a}).
 &
-Orden agregado abierto.
+Orden agregado abierto; solo se reconoce ahorro con alcance culminado.
 &
-\(\mu\) disminuye para las intervenciones consideradas; \(M\) solo disminuye estrictamente si subsiste una brecha. Bienestar bajo \eqref{eq:condicion_suficiente_bienestar_a_a0}.
+La menor exposición reduce la multa local con brecha remanente; la multa total puede aumentar al activarse consecuencias. Bienestar bajo \eqref{eq:condicion_suficiente_bienestar_a_a0}.
 \\[5pt]
 
 \(A\to A'\)
@@ -53,7 +53,7 @@ Orden agregado abierto.
 &
 Sin cambio en \(R^S\cup R^G\); deterioro débil en \(R^F\) (Resultado~\ref{res:eficiencia_secuencia_principal}).
 &
-Orden abierto: la mayor ejecución puede aumentar el gasto.
+Orden abierto: cambia la culminación y el ahorro reconocido.
 &
 \(\mu\) aumenta al eliminarse el umbral; \(M\) permanece abierto porque las brechas responden al esfuerzo. Bienestar según \eqref{eq:bienestar_a_ap}.
 \\[5pt]
@@ -64,7 +64,7 @@ Orden abierto: la mayor ejecución puede aumentar el gasto.
 &
 Mejora en \(R^F\); sin cambio en los demás bloques (Resultado~\ref{res:eficiencia_secuencia_principal}).
 &
-Orden abierto por el cambio simultáneo de ejecución en \(R^F\).
+Orden abierto por el cambio simultáneo de culminación en \(R^F\).
 &
 \(\mu\) es igual en \(R^S,R^G\) y abierto en \(R^F\); \(M\) permanece abierto. Bienestar según \eqref{eq:bienestar_ap_app}.
 \\[5pt]
@@ -75,9 +75,9 @@ Orden abierto; el canal de resultados favorece a \(B\) bajo \eqref{eq:umbral_rho
 &
 Sin cambio bajo las normalizaciones locales.
 &
-Orden abierto por la reasignación del esfuerzo de ejecución.
+Orden abierto por la respuesta de culminación y eficiencia.
 &
-La exposición nominal no cambia, pero \(M\) puede variar con las brechas. Bienestar sujeto además a los signos de \(C_I\) y \(M\).
+La exposición nominal no cambia, pero \(M\) puede variar con las brechas. Bienestar sujeto además a los signos de \(S_I\) y \(M\).
 \\[5pt]
 
 \(B\to B^{+}\)
@@ -86,9 +86,9 @@ La exposición nominal no cambia, pero \(M\) puede variar con las brechas. Biene
 &
 Sin efecto tecnológico directo de \(g_r\).
 &
-Puede aumentar con el sobrecumplimiento; orden abierto.
+No incluye la bonificación ni recursos pendientes; orden abierto.
 &
-La exposición sancionadora no es el margen relevante; evaluar con \eqref{eq:condicion_bienestar_bplus}, incluido el costo neto de la bonificación.
+La exposición sancionadora no es el margen relevante; evaluar con \eqref{eq:condicion_bienestar_bplus}, incluido el efecto distributivo y los costos adicionales de la bonificación.
 \\
 
 \hline
@@ -99,11 +99,11 @@ La exposición sancionadora no es el margen relevante; evaluar con \eqref{eq:con
 \begin{minipage}{0.98\textwidth}
 \raggedright
 \footnotesize
-\textit{Nota:} Los ordenamientos se interpretan bajo las condiciones locales de las Subsecciones~4.1--4.4. Las comparaciones de bienestar del modelo base remiten a \eqref{eq:condicion_general_mejora_bienestar}; la extensión \(B^{+}\) incorpora además el costo neto de la bonificación.
+\textit{Nota:} Los ordenamientos se interpretan bajo las condiciones locales de las Subsecciones~4.1--4.4. Las comparaciones de bienestar del modelo base remiten a \eqref{eq:condicion_general_mejora_bienestar}; la extensión \(B^{+}\) incorpora además el efecto distributivo y los costos adicionales de la bonificación.
 \end{minipage}
 
 \end{table*}
 
 La tabla no implica la cadena \(W_R^{B^{+}}>W_R^{B}>W_R^{A''}>W_R^{A'}>W_R^{A}>W_R^{A_0}\). Esa cadena solo podría sostenerse después de verificar empíricamente o mediante supuestos adicionales que cada transición genera una ganancia neta positiva. El modelo identifica los canales y sus signos locales, pero deja abierto el orden global del criterio regulatorio.
 
-En conjunto, el modelo separa progresivamente tres funciones que en los diseños iniciales aparecen parcialmente superpuestas: la evaluación regulatoria mediante el \(ICG^m\), la señal reputacional resumida por \(P^m\) y la estructura de consecuencias. La salida de componentes del ICG reasigna mecánicamente sus ponderaciones regulatorias, mientras que la composición de \(P^m\) determina, a partir de las saliencias \(s_H\), el peso reputacional de los bloques que permanecen. Esta separación puede corregir distorsiones, pero no implica que todas las transiciones mejoren simultáneamente todos los márgenes. Un diseño puede fortalecer los incentivos de una tarea específica o elevar los resultados directos del servicio y, aun así, no mejorar el bienestar regulatorio. Esta última conclusión exige que el efecto conjunto sobre \(Q(\widetilde q_S,C_G)\), el gasto efectivo de inversión y la carga sectorial de las multas sea favorable. En consecuencia, incluso cuando \(B^{+}\) eleva el desempeño potencial, su posición en el criterio regulatorio depende del costo de la bonificación, de los recursos adicionales y de la carga sancionadora. La comparación debe realizarse transición por transición.
+En conjunto, el modelo separa progresivamente tres funciones que en los diseños iniciales aparecen parcialmente superpuestas: la evaluación regulatoria mediante el \(ICG^m\), la señal reputacional resumida por \(P^m\) y la estructura de consecuencias. La salida de componentes del ICG reasigna mecánicamente sus ponderaciones regulatorias, mientras que la composición de \(P^m\) determina, a partir de las saliencias \(s_H\), el peso reputacional de los bloques que permanecen. Esta separación puede corregir distorsiones, pero no implica que todas las transiciones mejoren simultáneamente todos los márgenes. Un diseño puede fortalecer los incentivos de una tarea específica o elevar los resultados directos del servicio y, aun así, no mejorar el bienestar regulatorio. Esta última conclusión exige que el efecto conjunto sobre \(Q(\widetilde q_S,C_G)\), el ahorro por eficiencia y las multas, ponderados por \(1-\alpha\) sea favorable. En consecuencia, incluso cuando \(B^{+}\) eleva el desempeño potencial, su posición en el criterio regulatorio depende del efecto distributivo de financiar la bonificación, de sus costos adicionales, del ahorro reconocido y de las multas. La comparación debe realizarse transición por transición.
