@@ -662,17 +662,11 @@ El problema del gerente determina la respuesta de esfuerzo inducida por cada dis
 \frac{q_j^m}{\bar q_j}.
 \end{equation}
 
-Esta medida permite que las mejoras por encima de las metas regulatorias continúen siendo valoradas por el regulador, aun cuando ya no modifiquen \(C_S\). El costo de inversión inducido por cada esquema se define como
+Esta medida permite valorar las mejoras por encima de las metas regulatorias aun cuando ya no modifiquen \(C_S\). Para distinguir el desembolso observado de los recursos utilizados o comprometidos con el programa común, se define
 
 \begin{equation}
-\label{eq:costo_inversion_regulador}
-C_I^m
-\equiv
-\sum_{r\in R}
-I_r\!\left(
-F_r^{m,*},
-g_r^{m,*}
-\right).
+\label{eq:desembolso_inversion_regulador}
+D_I^m\equiv\sum_{r\in R}I_r(F_r^{m,*},g_r^{m,*}).
 \end{equation}
 
 El programa de inversiones y su financiamiento son comunes a los esquemas del modelo base. Sea \(\bar I=\sum_{r\in R}\bar I_r\) el monto previsto en el fondo. Las diferencias de eficiencia se recogen mediante el ahorro reconocido de las inversiones que han completado su alcance, evaluado en las decisiones óptimas:
@@ -682,7 +676,14 @@ El programa de inversiones y su financiamiento son comunes a los esquemas del mo
 S_I^m\equiv\sum_{r\in R}\mathbf{1}\{a_r^{m,*}=1\}\left[\bar I_r-I_r(F_r^{m,*},g_r^{m,*})\right].
 \end{equation}
 
-Esta definición coincide con el ahorro de \eqref{eq:ahorro_agregado} evaluado bajo cada esquema. Su reconocimiento exige preservar el alcance, la calidad y las demás condiciones exigibles. Los recursos sin ejecutar de inversiones pendientes permanecen comprometidos y no constituyen ahorro por eficiencia. Por ello, \(\bar I-S_I^m\) representa los recursos utilizados o todavía comprometidos con el programa común; no se identifica con el desembolso observado \(C_I^m\) cuando existen inversiones pendientes. Esta distinción evita atribuir una ganancia de bienestar a la sola postergación de la ejecución.
+Esta definición coincide con el ahorro de \eqref{eq:ahorro_agregado} evaluado bajo cada esquema. Su reconocimiento exige preservar el alcance, la calidad y las demás condiciones exigibles. Los recursos sin ejecutar de inversiones pendientes permanecen comprometidos y no constituyen ahorro por eficiencia. El costo de inversión utilizado en el criterio de bienestar mantiene reservado el financiamiento de las obligaciones pendientes y descuenta únicamente el ahorro por eficiencia reconocido:
+
+\begin{equation}
+\label{eq:costo_inversion_regulador}
+C_I^m=\bar I-S_I^m.
+\end{equation}
+
+Así, \(C_I^m\) representa los recursos utilizados o todavía comprometidos con el programa común; no equivale al desembolso observado \(D_I^m\) cuando existen inversiones pendientes. Ambos coinciden cuando todas las inversiones culminan. Esta convención permite comparar los esquemas con el mismo programa y fondo, sin atribuir una ganancia de bienestar a la sola postergación de la ejecución.
 
 Siguiendo la estructura de ponderación de \citet{ovaere2023}, se distinguen el excedente del consumidor y el excedente financiero de la empresa, ajustado por los recursos comprometidos con el programa. Sea \(T_0\) el pago agregado de los usuarios que constituye ingreso de la EP, común a los esquemas del modelo base:
 
