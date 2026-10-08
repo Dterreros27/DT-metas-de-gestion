@@ -294,6 +294,34 @@ Una condición suficiente para que el incentivo no disminuya es
 
 Dado que \(\lambda^m=V'(\mathrm{Rep}^m)d_I\ell_I^mR_I'(P^m)\), una mayor legibilidad bajo \(B\) elevaría \(\lambda^B\), manteniendo los demás términos constantes, y facilitaría el cumplimiento de \eqref{eq:condicion_lambda_b}. Sin embargo, ese aumento no se impone de antemano: la comparación queda regida por dicha condición, pues cambios en \(V'(\mathrm{Rep}^m)\) o \(R_I'(P^m)\) pueden compensar o revertir el efecto de la legibilidad.
 
+\paragraph{Sensibilidad a la reasignación de atención.}
+
+La condición anterior corresponde a la normalización completa. Con los coeficientes de \eqref{eq:ponderaciones_reputacionales_sensibilidad}, el canal reputacional de \(A''\to B\) no disminuye si
+\begin{equation}
+\label{eq:condicion_lambda_theta}
+\lambda^B s_S^{1-\theta}
+\geq
+\lambda^{A''}\frac{s_S}{(s_S+s_G)^\theta}.
+\end{equation}
+Para retornos locales positivos, esta condición equivale a
+\begin{equation}
+\label{eq:umbral_cociente_lambda_theta}
+\frac{\lambda^B}{\lambda^{A''}}
+\geq
+\left(\frac{s_S}{s_S+s_G}\right)^\theta.
+\end{equation}
+Manteniendo ambos retornos fijos en este ejercicio de sensibilidad, si \(0<\lambda^B/\lambda^{A''}<1\), se obtiene
+\begin{equation}
+\label{eq:umbral_theta_reputacion}
+\theta\geq\theta^*
+\equiv
+\frac{\ln(\lambda^{A''}/\lambda^B)}
+{\ln((s_S+s_G)/s_S)}.
+\end{equation}
+Si \(\theta^*>1\), ningún grado admisible de reasignación satisface la condición. Si \(\lambda^B\geq\lambda^{A''}>0\), esta se cumple para todo \(\theta\in[0,1]\). Con retornos iguales, cualquier \(\theta>0\) aumenta estrictamente el coeficiente reputacional de \(C_S\); con \(\theta=0\), lo conserva. Por tanto, la reasignación parcial no revierte necesariamente el ordenamiento.
+
+Estos umbrales caracterizan el canal marginal, no una dominancia de bienestar. Si los retornos \(\lambda^m\) también varían con \(\theta\), debe evaluarse \eqref{eq:condicion_lambda_theta} con esa dependencia; el umbral cerrado \eqref{eq:umbral_theta_reputacion} deja de ser aplicable sin restricciones adicionales. Su contraste requiere información sobre atención, legibilidad y respuesta gerencial, además de los pesos regulatorios del ICG.
+
 \begin{resultadobox}
 {Ejecución en \(R^{S}\): secuencia principal}
 \label{res:incentivo_ejecucion_rs}
@@ -307,7 +335,7 @@ e_r^{A',*}
 \geq
 e_r^{A,*}.
 \end{equation}
-En términos regulatorios, la secuencia no debilita el esfuerzo dirigido a los resultados del servicio. La inclusión de \(B\) en este orden exige, sin embargo, que la señal concentrada en \(C_S\) conserve el retorno mínimo establecido en \eqref{eq:condicion_lambda_b}.
+En términos regulatorios, la secuencia no debilita el esfuerzo dirigido a los resultados del servicio. La inclusión de \(B\) en este orden exige, sin embargo, que la señal concentrada en \(C_S\) conserve el retorno mínimo establecido en \eqref{eq:condicion_lambda_b}; con reasignación parcial, corresponde utilizar \eqref{eq:condicion_lambda_theta}. Los aumentos estrictos del incentivo marginal se traducen en mayor esfuerzo cuando el óptimo inicial es interior, la ejecución continúa respondiendo y la comparación permanece en la región considerada. La culminación o una esquina común pueden producir igualdad de esfuerzos pese a una diferencia de incentivos.
 \end{resultadobox}
 
 \medskip
@@ -485,7 +513,7 @@ a_r(e_r^{A_0,*})
 En el escenario base, \(\bar a_r=1\): ambos esquemas culminan la inversión y la mayor exposición de \(A_0\) es redundante respecto del incentivo, pero no genera una multa sobre esta brecha, porque \(1-a_r=0\). Solo en la extensión con contingencias, cuando \(\bar a_r<1\), la exposición adicional de \(A_0\) aumenta la carga sobre una brecha que ya no responde al esfuerzo y puede constituir sobredisuasión respecto de este canal.
 \end{resultadobox}
 
-Bajo la saturación de ambos esquemas, la condición para que la focalización de \(A\) no reduzca el beneficio marginal de ejecución de las intervenciones relevantes de \(R^{S}\) es
+La comparación anterior debe distinguirse del caso en que el esfuerzo todavía puede elevar el avance. Antes de la saturación, y bajo las normalizaciones utilizadas para definir \(G_P\), \(L_P\) y \(L_M\), la condición para que la focalización de \(A\) no reduzca el beneficio marginal de ejecución es
 
 \begin{equation}
 \label{eq:condicion_focalizacion_a_a0}
@@ -494,7 +522,7 @@ G_P
 L_P+L_M.
 \end{equation}
 
-Esta condición se utiliza posteriormente para trasladar la comparación de esfuerzos al desempeño agregado.
+Para trasladar esta condición al esfuerzo óptimo, debe cumplirse en toda la región relevante de comparación, con costo marginal creciente y óptimo único, manteniendo fijos los demás márgenes. Si el óptimo inicial es interior, la diferencia marginal es estrictamente positiva en él y el nuevo óptimo permanece en esa región, el esfuerzo aumenta estrictamente. Cuando ambos esquemas ya saturan la inversión, la igualdad del avance se obtiene, a tecnología y esfuerzo de eficiencia dados, sin requerir esta condición adicional. Si la reforma induce un cruce de umbral, debe compararse la utilidad entre regiones antes de establecer el orden de las decisiones.
 
 \subsubsection{Incentivo de eficiencia}
 
@@ -764,7 +792,7 @@ Bajo las normalizaciones locales que aíslan cada transición y la condición \e
 \geq
 \widetilde q_S^{A}.
 \end{equation}
-La cadena traduce el ordenamiento de esfuerzos en resultados observables del servicio. \(A_0\) solo puede incorporarse bajo condiciones adicionales: si sus exposiciones y las de \(A\) saturan el margen de culminación y se cumple \eqref{eq:condicion_focalizacion_a_a0} para las inversiones relevantes de \(R^{S}\), entonces \(\widetilde q_S^{A}\geq \widetilde q_S^{A_0}\).
+La cadena traduce el ordenamiento de esfuerzos en resultados observables del servicio. \(A_0\) solo puede incorporarse bajo condiciones adicionales. A tecnología y esfuerzo de eficiencia dados, si ambos esquemas saturan todas las inversiones relevantes de \(R^{S}\), sus resultados directos coinciden. Si el margen no está saturado, \eqref{eq:condicion_focalizacion_a_a0} permite obtener \(\widetilde q_S^{A}\geq\widetilde q_S^{A_0}\) cuando se sostiene en las regiones relevantes bajo las condiciones de comparativa estática anteriores y no se producen cambios de régimen que reviertan la comparación. La mejora agregada es estricta si aumenta el avance de al menos una inversión con contribución y ponderación positivas, sin disminuciones compensatorias en las demás.
 \end{resultadobox}
 
 Bajo la monotonicidad de \(C_G\) respecto de las magnitudes físicas de \(R^{G}\), los resultados de ejecución obtenidos anteriormente implican:
