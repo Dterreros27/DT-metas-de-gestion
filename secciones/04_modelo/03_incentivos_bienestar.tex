@@ -417,7 +417,7 @@ L_M &\equiv \gamma\left[H_{r,e}+K_{r,e}^{A_0}\right]>0.
 \end{align}
 \end{subequations}
 
-Los términos \(G_P\), \(L_P\) y \(L_M\) representan, respectivamente, la ganancia por focalización y legibilidad, la pérdida de canales reputacionales y la pérdida de canales sancionadores.
+Los términos \(G_P\), \(L_P\) y \(L_M\) representan, respectivamente, la ganancia por focalización y legibilidad, la pérdida de canales reputacionales y la pérdida de canales sancionadores. La superposición describe la participación de una inversión en varias bases; no implica por sí sola que la exposición adicional sea redundante para inducir esfuerzo. Esta última conclusión requiere comprobar que su eliminación no altera el desempeño inducido por el margen considerado.
 
 La desigualdad \(G_P>0\) se deriva de la condición local \(\ell_I^{A}\alpha_S^{A}>\ell_I^{A_0}\alpha_S^{A_0}\) y de \(C_{S,e_r}>0\). Como la diferencia total de los canales continuos es exactamente \(G_P-L_P-L_M\), en esta región \(A\) genera un mayor incentivo local de ejecución si y solo si
 
@@ -882,6 +882,57 @@ Esta reducción es cero cuando la inversión culmina. No determina el signo de l
 \begin{aligned}W_R^A-W_R^{A_0}&=\Phi(Q^A)-\Phi(Q^{A_0})\\&\quad+(1-\alpha)[S_I^A-S_I^{A_0}-(M^A-M^{A_0})].\end{aligned}
 \end{equation}
 
+La Tabla~\ref{tab:casos_multas_a0_a} distingue la contribución de las multas, evaluadas en las decisiones óptimas de cada esquema, del cambio total de bienestar.
+
+\begin{table*}[t]
+\centering
+\caption{Contribución de las multas a la diferencia de bienestar entre \(A\) y \(A_0\)}
+\label{tab:casos_multas_a0_a}
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.47\textwidth}>{\raggedright\arraybackslash}X@{}}
+\hline
+\textbf{Situación final} & \textbf{Contribución de \((1-\alpha)(M^{A_0}-M^A)\)}\\
+\hline
+Ambos esquemas sin multa & Nula.\\
+Ambos con multa y \(M^A<M^{A_0}\) & Positiva.\\
+Ambos con la misma multa positiva & Nula.\\
+Ambos con multa y \(M^A>M^{A_0}\) & Negativa; requiere compensación mediante servicio o eficiencia.\\
+\(A_0\) sin multa y \(A\) con multa & Negativa; requiere compensación mediante servicio o eficiencia.\\
+\(A_0\) con multa y \(A\) sin multa & Positiva.\\
+\hline
+\end{tabularx}
+\vspace{1mm}
+\begin{minipage}{0.98\textwidth}
+\footnotesize
+\textit{Nota:} se supone \(0\leq\alpha<1\). Con \(\alpha=1\), la contribución financiera directa es nula en todos los casos. La tabla no ordena el bienestar total: deben incorporarse los cambios del servicio y del ahorro reconocido. Una menor multa para una conducta dada no garantiza el mismo orden después del ajuste gerencial.
+\end{minipage}
+\end{table*}
+
+Para aislar el efecto directo de las reglas, sea \(x=(\mathbf e,\mathbf g)\) un vector factible de decisiones común a ambos esquemas. Como el programa, la tecnología y la regla de reconocimiento del ahorro no cambian, mantener \(x\) fijo implica el mismo \(Q(x)\) y \(S_I(x)\). Por tanto,
+
+\begin{equation}
+\label{eq:bienestar_a_a0_conducta_constante}
+W_R^A(x)-W_R^{A_0}(x)
+=(1-\alpha)\left[M^{A_0}(x)-M^A(x)\right].
+\end{equation}
+
+Si las consecuencias están activas en ambos esquemas, retirar \(B_{RT}\) y restringir la base financiera a \(R^F\) reduce débilmente la multa para ese mismo desempeño: la base focalizada comprende un subconjunto de brechas financieras no negativas de la base general. La reducción es estricta cuando los componentes excluidos aportan un monto positivo. Este resultado identifica el efecto directo del diseño; no supone que el gerente mantenga sus decisiones después de la reforma. Si cambia la activación, el signo debe evaluarse considerando las multas efectivamente aplicables.
+
+Al permitir el ajuste gerencial, defínase \(D_M\equiv M^{A_0}-M^A\), evaluado en las decisiones óptimas, y \(\Delta S_I\equiv S_I^A-S_I^{A_0}\). Cuando \(D_M>0\), de \eqref{eq:condicion_bienestar_a_a0} se obtiene
+
+\begin{equation}
+\label{eq:bienestar_a_a0_ajuste_gerencial}
+\begin{aligned}
+W_R^A>W_R^{A_0}
+\quad\Longleftrightarrow\quad&
+\Phi(Q^A)-\Phi(Q^{A_0})\\
+&+(1-\alpha)\Delta S_I>-(1-\alpha)D_M.
+\end{aligned}
+\end{equation}
+
+Para \(\alpha<1\), una reducción estricta de la multa final basta para mejorar el bienestar si \(Q^A\geq Q^{A_0}\) y \(\Delta S_I\geq0\). Estas condiciones son suficientes, no necesarias: si disminuye el beneficio del servicio, \(A\) todavía es superior cuando esa pérdida es menor que \((1-\alpha)(D_M+\Delta S_I)\). La comparación no exige conducta constante ni disuasión suficiente para culminar todo el programa; exige verificar conjuntamente los resultados, el ahorro y las multas finales. La condición local \eqref{eq:condicion_focalizacion_a_a0} ayuda a evaluar un margen de ejecución, pero no sustituye esa verificación ni la comparación de utilidad al cruzar umbrales.
+
 Si \(S_I^A\geq S_I^{A_0}\), una condición suficiente que prescinde de esa ganancia es
 
 \begin{equation}
@@ -1001,3 +1052,4 @@ W_R^B-W_R^A=(W_R^{A'}-W_R^A)+(W_R^{A''}-W_R^{A'})+(W_R^B-W_R^{A''}).
 \end{equation}
 
 La identidad atribuye los cambios a la trayectoria de modificaciones considerada, sin establecer una cadena creciente de bienestar. La extensión \(B^+\) incorpora, además, el financiamiento del reconocimiento por sobrecumplimiento.
+
