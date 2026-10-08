@@ -804,61 +804,32 @@ Aunque el modelo es estático, los ahorros pueden financiar inversiones posterio
 
 \subsubsection{Descomposición del criterio regulatorio}
 
-El último paso traslada los resultados agregados al criterio del regulador definido en \eqref{eq:bienestar_regulador}. Un mayor esfuerzo o un mejor resultado del servicio no bastan para preferir un esquema: \(Q^m=Q(\widetilde q_S^m,C_G^m)\) valora también las metas de gestión que contribuyen a esos resultados, y la comparación incorpora el gasto efectivo de inversión y la carga sectorial efectiva de las multas. El regulador evalúa estos componentes tomando como dadas las respuestas óptimas \((\mathbf e^{m,*},\mathbf g^{m,*})\).
-
-Para dos esquemas consecutivos \(m\) y \(m'\), se definen
+El regulador compara los resultados inducidos, el ahorro por eficiencia y las multas, manteniendo el mismo programa y monto previsto en el fondo. Los recursos pendientes de ejecución no se contabilizan como ahorro. Para una transición \(m\to m'\), se definen
 
 \begin{subequations}
 \label{eq:componentes_cambio_bienestar}
 \begin{align}
-\Delta_{\Phi}^{m,m'}
-&\equiv
-\Phi(Q^{m'})
--
-\Phi(Q^{m}),
-\label{eq:cambio_valor_resultados}
-\\
-\Delta_{\Omega}^{m,m'}
-&\equiv
-\Omega(M^{m})
--
-\Omega(M^{m'}),
-\label{eq:cambio_carga_multa_bienestar}
-\\
-\Delta_{I}^{m,m'}
-&\equiv
-C_I^{m'}
--
-C_I^{m}.
-\label{eq:cambio_inversion_bienestar}
+\Delta_\Phi^{m,m'}&\equiv\Phi(Q^{m'})-\Phi(Q^m),\label{eq:cambio_valor_resultados}\\
+\Delta_S^{m,m'}&\equiv S_I^{m'}-S_I^m,\label{eq:cambio_ahorro_bienestar}\\
+\Delta_M^{m,m'}&\equiv M^{m'}-M^m.\label{eq:cambio_carga_multa_bienestar}
 \end{align}
 \end{subequations}
 
-Entonces,
+De \eqref{eq:bienestar_regulador},
 
 \begin{equation}
 \label{eq:cambio_bienestar_transicion}
-W_R^{m'}
--
-W_R^{m}
-=
-\Delta_{\Phi}^{m,m'}
-+
-\Delta_{\Omega}^{m,m'}
--
-\Delta_{I}^{m,m'},
+W_R^{m'}-W_R^m=\Delta_\Phi^{m,m'}+(1-\alpha)(\Delta_S^{m,m'}-\Delta_M^{m,m'}).
 \end{equation}
 
-Esta identidad descompone el cambio del criterio regulatorio en valor de resultados, carga sancionadora y gasto de inversión. No constituye por sí misma una condición estructural ni un resultado causal: sin formas funcionales o una calibración adicional, solo permite identificar qué magnitudes deben medirse. Algebraicamente, una mejora del criterio equivale a
+La condición exacta de mejora es
 
 \begin{equation}
 \label{eq:condicion_general_mejora_bienestar}
-\Delta_{\Phi}^{m,m'}
-+
-\Delta_{\Omega}^{m,m'}
->
-\Delta_{I}^{m,m'}.
+\Delta_\Phi^{m,m'}+(1-\alpha)\Delta_S^{m,m'}>(1-\alpha)\Delta_M^{m,m'}.
 \end{equation}
+
+Esta identidad identifica las magnitudes que deben evaluarse; no demuestra por sí misma la superioridad de un diseño. La mayor ejecución incide en los resultados y puede modificar el ahorro reconocido al culminar inversiones, pero no cambia el presupuesto común del programa ni convierte los recursos pendientes en una ganancia de eficiencia.
 
 El cambio en \(Q^m\) incorpora dos canales. Localmente,
 
@@ -881,140 +852,74 @@ Por ello, una mejora de \(\widetilde q_S\) no basta por sí sola para ordenar \(
 
 \paragraph{Exposición redundante y criterio regulatorio.}
 
-La propiedad de saturación de la Subsección~4.1 permite precisar el efecto regulatorio de una exposición sancionadora adicional. Supóngase que, una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), una variación marginal de \(\mu_r^m\) no modifica localmente \(\widetilde q_S^m\), \(C_G^m\) ni \(C_I^m\). A partir de \eqref{eq:exposicion_sancionadora_r},
+Si una variación marginal de la exposición en la región saturada no modifica \(Q^m\) ni \(S_I^m\),
 
 \begin{equation}
 \label{eq:derivada_multa_exposicion_regulador}
-\frac{\partial M^m}{\partial\mu_r^m}
-\bigg|_{e_r\geq e_r^{\mathrm{sat}}}
-=
-1-\bar a_r
-\geq
-0.
+\left.\frac{\partial M^m}{\partial\mu_r^m}\right|_{e_r\geq e_r^{\mathrm{sat}}}=1-\bar a_r\geq0.
 \end{equation}
-
-Por tanto,
 
 \begin{equation}
 \label{eq:bienestar_exposicion_excesiva_general}
-\begin{aligned}
-\left.
-\frac{\partial W_R^m}{\partial\mu_r^m}
-\right|_{e_r\geq e_r^{\mathrm{sat}}}
-&=
--
-\Omega'\!\left(M^m\right)
-(1-\bar a_r)
-\\
-&\leq
-0.
-\end{aligned}
+\left.\frac{\partial W_R^m}{\partial\mu_r^m}\right|_{e_r\geq e_r^{\mathrm{sat}}}=-(1-\alpha)(1-\bar a_r)\leq0.
 \end{equation}
 
-En el escenario base, \(\bar a_r=1\), la inversión culmina y ambas derivadas son iguales a cero: una exposición superior al nivel suficiente es redundante para inducir ejecución, pero no aumenta la multa realizada por esa brecha. En la extensión con contingencias, \(\bar a_r<1\), las desigualdades son estrictas. En ese caso, si dos diseños generan localmente los mismos \(Q\) y \(C_I\), el diseño con menor exposición obtiene un mayor valor de \(W_R\) al evitar una carga sobre la brecha remanente. Esta comparación constituye una mejora de eficiencia sancionadora dentro de la extensión y no una dominancia global cuando los diseños modifican simultáneamente otros canales.
+En el escenario base, \(\bar a_r=1\), ambas derivadas son cero. En la extensión con contingencias, la pérdida es estricta si \(\bar a_r<1\) y \(\alpha<1\). Este resultado local no requiere ni implica que todas las inversiones alcancen una disuasión suficiente; cuando el esfuerzo continúa respondiendo, deben considerarse también los resultados y el ahorro inducidos.
 
-\paragraph{\textit{Benchmark} institucional \(A_0\to A\): exposición redundante y focalización.}
+\paragraph{\textit{Benchmark} institucional \(A_0\to A\).}
 
-El \textit{benchmark} permite aplicar directamente la lógica anterior. Si se cumple \eqref{eq:condicion_saturacion_ambos_a0_a}, \(\mu_r^{A}<\mu_r^{A_0}\) y la condición de focalización \eqref{eq:condicion_focalizacion_a_a0} se satisface para las intervenciones relevantes de \(R^{S}\), el Resultado~\ref{res:desempeno_agregado} implica \(\widetilde q_S^A\geq\widetilde q_S^{A_0}\). Ello no basta para ordenar \(Q^A\) y \(Q^{A_0}\) si \(C_G\) también cambia.
-
-La contribución de esta diferencia de exposición a la reducción de la multa es
+Las condiciones de ejecución y focalización desarrolladas anteriormente pueden favorecer \(\widetilde q_S^A\), pero no ordenan por sí solas \(Q^A\) cuando también cambia \(C_G\). En una inversión saturada, la contribución de la menor exposición a la reducción de la multa es
 
 \begin{equation}
 \label{eq:reduccion_multa_esperada_a_a0}
-\Delta_M^{A_0,A}(r)
-\equiv
-(1-\bar a_r)
-\left(
-\mu_r^{A_0}
--
-\mu_r^{A}
-\right)
-\geq
-0.
+\Delta_M^{A_0,A}(r)\equiv(1-\bar a_r)(\mu_r^{A_0}-\mu_r^A)\geq0.
 \end{equation}
 
-En el escenario base, \(\bar a_r=1\) y \(\Delta_M^{A_0,A}(r)=0\): la menor exposición de \(A\) no reduce la multa realizada por una inversión culminada. La desigualdad es estricta únicamente en la extensión con contingencias, cuando \(\bar a_r<1\). Esta expresión identifica solo la contribución de la inversión \(r\); la multa total puede ser menor bajo \(A\) por las demás intervenciones o componentes en los que subsista una brecha sancionable. En términos agregados, la definición de \(W_R^m\) implica la identidad
+Esta reducción es cero cuando la inversión culmina. No determina el signo de la multa total de equilibrio, que depende de las demás brechas y de la activación sancionadora. La comparación exacta es
 
 \begin{equation}
 \label{eq:condicion_bienestar_a_a0}
-\begin{aligned}
-W_R^A-W_R^{A_0}
-&=
-\Phi(Q^{A})-\Phi(Q^{A_0})
-\\
-&\quad+
-C_I^{A_0}-C_I^{A}
-\\
-&\quad+
-\Omega(M^{A_0})-\Omega(M^{A}).
-\end{aligned}
+\begin{aligned}W_R^A-W_R^{A_0}&=\Phi(Q^A)-\Phi(Q^{A_0})\\&\quad+(1-\alpha)[S_I^A-S_I^{A_0}-(M^A-M^{A_0})].\end{aligned}
 \end{equation}
 
-Si \(C_I^{A}\leq C_I^{A_0}\), el término de gasto favorece débilmente a \(A\). Por ello, una condición suficiente, más restrictiva que la comparación exacta porque prescinde de esa eventual ganancia de eficiencia, es
+Si \(S_I^A\geq S_I^{A_0}\), una condición suficiente que prescinde de esa ganancia es
 
 \begin{equation}
 \label{eq:condicion_suficiente_bienestar_a_a0}
-\Phi(Q^{A})-\Phi(Q^{A_0})
-+
-\Omega(M^{A_0})-\Omega(M^{A})
->
-0.
+\Phi(Q^A)-\Phi(Q^{A_0})>(1-\alpha)(M^A-M^{A_0}).
 \end{equation}
 
-Bajo la monotonía de \(\Phi\) y \(\Omega\), \eqref{eq:condicion_suficiente_bienestar_a_a0} se satisface si \(Q^{A}\geq Q^{A_0}\) y \(M^{A}<M^{A_0}\). Junto con \(C_I^{A}\leq C_I^{A_0}\), estas desigualdades implican \(W_R^A>W_R^{A_0}\) sin imponer una forma funcional específica para \(Q\).
+En particular, cuando \(M^{A_0}=0\) y \(M^A>0\), con \(\Delta S_I=S_I^A-S_I^{A_0}\), la condición necesaria y suficiente para \(W_R^A>W_R^{A_0}\) es
 
-Por tanto, el modelo no establece una dominancia incondicional de \(A\) sobre \(A_0\), pero sí un resultado condicional nítido: el diseño focalizado mejora el criterio regulatorio cuando preserva el desempeño agregado, no aumenta el gasto efectivo de inversión y reduce la multa total. La última diferencia no proviene, en el escenario base, de la exposición sobre una inversión ya culminada, sino de intervenciones o componentes en los que permanezca una brecha sancionable. Solo en la extensión con una brecha física remanente la menor exposición reduce directamente la carga atribuible a una inversión saturada.
+\begin{equation}
+\label{eq:bienestar_a_a0_multa_activada}
+\Phi(Q^A)-\Phi(Q^{A_0})>(1-\alpha)(M^A-\Delta S_I).
+\end{equation}
+
+Si la ganancia de eficiencia cubre la multa adicional, una mejora estricta de \(Q\) basta para preferir \(A\). Si no la cubre, el beneficio de calidad debe compensar la diferencia ponderada. El mayor peso reputacional de los resultados y la activación de consecuencias pueden contribuir a esa mejora, pero su magnitud no queda establecida únicamente por identificar ambos canales.
 
 \paragraph{Secuencia principal \(A\to A'\to A''\to B\).}
 
-En cada transición se aplica \eqref{eq:condicion_general_mejora_bienestar}, pero el grado de indeterminación no es el mismo. Entre \(A\) y \(A''\), los Resultados~\ref{res:desempeno_agregado} y~\ref{res:cumplimiento_agregado_g}, junto con la monotonía de \(Q\), implican
+Bajo las condiciones locales de los resultados anteriores,
 
 \begin{equation}
 \label{eq:orden_q_a_ap_app}
-Q^{A''}
-\geq
-Q^{A'}
-\geq
-Q^{A}.
+Q^{A''}\geq Q^{A'}\geq Q^A.
 \end{equation}
 
-Por tanto, en \(A\to A'\),
+Las comparaciones son
 
 \begin{equation}
 \label{eq:bienestar_a_ap}
-\begin{aligned}
-W_R^{A'}-W_R^{A}
-&=
-\Phi(Q^{A'})-\Phi(Q^{A})
-\\
-&\quad+
-C_I^{A}-C_I^{A'}
-\\
-&\quad+
-\Omega(M^{A})-\Omega(M^{A'}),
-\end{aligned}
+\begin{aligned}W_R^{A'}-W_R^A&=\Phi(Q^{A'})-\Phi(Q^A)\\&\quad+(1-\alpha)[S_I^{A'}-S_I^A-(M^{A'}-M^A)].\end{aligned}
 \end{equation}
-
-donde el primer término es no negativo. La eliminación del umbral puede elevar la ejecución, pero también el gasto y la carga efectiva de la multa al activar consecuencias antes desactivadas. En consecuencia, \(A'\) mejora el criterio regulatorio cuando la ganancia de resultados compensa el efecto neto de estos dos componentes. Una condición suficiente es que, además de \(Q^{A'}\geq Q^A\), se cumplan \(C_I^{A'}\leq C_I^A\) y \(M^{A'}\leq M^A\), con al menos una desigualdad estricta.
-
-En \(A'\to A''\), la comparación exacta es
 
 \begin{equation}
 \label{eq:bienestar_ap_app}
-\begin{aligned}
-W_R^{A''}-W_R^{A'}
-&=
-\Phi(Q^{A''})-\Phi(Q^{A'})
-\\
-&\quad+
-C_I^{A'}-C_I^{A''}
-\\
-&\quad+
-\Omega(M^{A'})-\Omega(M^{A''}).
-\end{aligned}
+\begin{aligned}W_R^{A''}-W_R^{A'}&=\Phi(Q^{A''})-\Phi(Q^{A'})\\&\quad+(1-\alpha)[S_I^{A''}-S_I^{A'}-(M^{A''}-M^{A'})].\end{aligned}
 \end{equation}
 
-También aquí el primer término es no negativo. La salida de \(f_F\) fortalece los retornos reputacionales de \(C_S\) y \(C_G\) y corrige el incentivo de eficiencia de \(R^{F}\); sin embargo, el esfuerzo de ejecución de estas intervenciones y el efecto de sustituir la base financiera por una física permanecen abiertos. Por ello, no se ordenan en general \(C_I^{A''}\) y \(C_I^{A'}\), ni \(M^{A''}\) y \(M^{A'}\). Si ambos componentes no aumentan, \(Q^{A''}\geq Q^{A'}\), junto con al menos una mejora estricta, es suficiente para que \(W_R^{A''}>W_R^{A'}\).
+Eliminar el umbral puede mejorar los resultados y activar multas antes desactivadas. Sustituir la verificación financiera corrige el incentivo de eficiencia de \(R^F\), pero el orden del ahorro agregado reconocido exige considerar qué inversiones culminan y con cuánto ahorro. Ninguna transición requiere un presupuesto distinto del programa común. En cada caso, la mejora se verifica mediante \eqref{eq:condicion_general_mejora_bienestar}; con \(\alpha<1\), resultados no menores, ahorro no menor y multas no mayores son suficientes si al menos una comparación es estricta. Con \(\alpha=1\), se requiere una mejora estricta del beneficio de los usuarios.
 
 La transición \(A''\to B\) permanece más abierta porque los dos argumentos de \(Q\) se mueven potencialmente en direcciones opuestas:
 
@@ -1088,23 +993,11 @@ C_G^{A''}-C_G^B
 
 El cociente del lado derecho mide la ganancia directa en resultados del servicio por unidad de cumplimiento perdido en \(J^G\). El umbral es local: constituye una equivalencia exacta para la aproximación diferencial de \eqref{eq:condicion_resultados_app_b}, pero no para cambios finitos cuando las derivadas de \(Q\) varían a lo largo de la transición. Si \(C_G^B=C_G^{A''}\), cualquier mejora estricta de \(\widetilde q_S\) favorece el canal de resultados de \(B\).
 
-Si se satisface \eqref{eq:condicion_resultados_app_b}, una condición suficiente adicional para que \(B\) mejore el criterio regulatorio es que \(C_I^B\leq C_I^{A''}\) y \(M^B\leq M^{A''}\), con al menos una de las tres comparaciones estricta. El modelo no impone estas desigualdades: aunque \(A''\) y \(B\) generan el mismo incentivo marginal de eficiencia, la reasignación del esfuerzo de ejecución puede modificar tanto el gasto como las brechas sancionables.
-
-La comparación entre los extremos de la secuencia puede expresarse mediante la identidad telescópica
+Si la comparación finita satisface \(Q^B\geq Q^{A''}\), una condición suficiente adicional, para \(\alpha<1\), es \(S_I^B\geq S_I^{A''}\) y \(M^B\leq M^{A''}\), con al menos una mejora estricta. La condición local \eqref{eq:condicion_resultados_app_b} caracteriza únicamente una aproximación diferencial y no sustituye la comparación finita. El mismo incentivo marginal de eficiencia no garantiza el mismo ahorro reconocido si cambia la culminación de inversiones.
 
 \begin{equation}
 \label{eq:descomposicion_telescopica_a_b}
-W_R^B-W_R^A
-=
-\left(W_R^{A'}-W_R^A\right)
-+
-\left(W_R^{A''}-W_R^{A'}\right)
-+
-\left(W_R^B-W_R^{A''}\right).
+W_R^B-W_R^A=(W_R^{A'}-W_R^A)+(W_R^{A''}-W_R^{A'})+(W_R^B-W_R^{A''}).
 \end{equation}
 
-Esta descomposición atribuye sucesivamente los cambios a la eliminación del umbral, la sustitución de la verificación financiera y la salida de \(C_G\) de la señal pública. La diferencia total entre \(A\) y \(B\) no depende de esta descomposición, pero la atribución a cada modificación sí depende de la trayectoria institucional utilizada para construir los esquemas intermedios.
-
-En síntesis, el modelo establece \(Q^{A''}\geq Q^{A'}\geq Q^A\), pero no traslada automáticamente este orden al bienestar porque el gasto efectivo y la carga sancionadora pueden contrarrestar la mejora de resultados. En \(A''\to B\), incluso el orden de \(Q\) requiere \eqref{eq:condicion_resultados_app_b}. Por ello, el modelo no establece por sí solo cada uno de los ordenamientos necesarios para construir una cadena creciente de bienestar entre \(A_0,A,A',A'',B\). Esta solo puede obtenerse después de verificar las condiciones suficientes correspondientes a cada transición.
-
-La extensión \(B^{+}\) se analiza en la Subsección~4.4, porque introduce un reconocimiento económico por sobrecumplimiento y, con ello, un componente adicional en la comparación de bienestar.
+La identidad atribuye los cambios a la trayectoria de modificaciones considerada, sin establecer una cadena creciente de bienestar. La extensión \(B^+\) incorpora, además, el financiamiento del reconocimiento por sobrecumplimiento.
