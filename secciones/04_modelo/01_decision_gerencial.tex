@@ -291,25 +291,18 @@ La señal reputacional combina tres dimensiones observables: el desempeño comun
 
 \begin{equation}
 \label{eq:desempeno_percibido}
-\begin{aligned}
 P^m
-&=
+=
 \alpha_S^m C_S
 +
 \alpha_G^m C_G
 +
 \alpha_F^m f^m
 +
-\alpha_{RT}^m c_{RT},
-\\
-&\hspace{0.5cm}
-\alpha_H^m\geq0,
-\qquad
-\sum_{H\in\{S,G,F,RT\}}\alpha_H^m=1.
-\end{aligned}
+\alpha_{RT}^m c_{RT}.
 \end{equation}
 
-Los cuatro términos corresponden, respectivamente, a los resultados del servicio, las demás metas de gestión, el avance financiero y la relación de trabajo. Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, son los grados de cumplimiento promedio de los grupos \(J^S\) y \(J^G\), no indicadores individuales. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable.
+Los cuatro términos corresponden, respectivamente, a los resultados del servicio, las demás metas de gestión, el avance financiero y la relación de trabajo. En el caso base, las ponderaciones reputacionales satisfacen \(\alpha_H^m\geq0\) para \(H\in\{S,G,F,RT\}\) y \(\sum_{H\in\{S,G,F,RT\}}\alpha_H^m=1\). Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, son los grados de cumplimiento promedio de los grupos \(J^S\) y \(J^G\), no indicadores individuales. La medida \(f^m\) corresponde a \(f_R\) o \(f_F\), según el diseño aplicable.
 
 La ecuación~\eqref{eq:desempeno_percibido} no reproduce las ponderaciones regulatorias del \(ICG^m\). Este último es un índice formal construido con los pesos fijados por el regulador y utilizado en las reglas de cada esquema cuando corresponde. En cambio, los coeficientes \(\alpha_H^m\) representan la importancia reputacional relativa de la información publicada: un bloque puede tener un peso regulatorio reducido y, al mismo tiempo, atraer una atención considerable de usuarios, autoridades u otros agentes externos. Esta separación permite que el efecto reputacional de cada bloque difiera de su contribución aritmética al \(ICG^m\).
 
@@ -394,16 +387,12 @@ Dentro de una región diferenciable en la que la configuración del incumplimien
 \label{eq:foc_esperadas}
 \begin{align}
 \psi_r'(e_r)
-&=\mathrm{BM}_{r,e}^{m}\notag\\
-&=\lambda^m\frac{\partial P^m}{\partial e_r}
-+\varpi^m\frac{\partial S^m}{\partial e_r}\notag\\
-&\quad-\gamma^m\frac{\partial M^m}{\partial e_r},
+&=\mathrm{BM}_{r,e}^{m}=\lambda^m\frac{\partial P^m}{\partial e_r}
++\varpi^m\frac{\partial S^m}{\partial e_r}-\gamma^m\frac{\partial M^m}{\partial e_r},
 \label{eq:incentivo_marginal_e}\\
 \xi_r'(g_r)
-&=\mathrm{BM}_{r,g}^{m}\notag\\
-&=\lambda^m\frac{\partial P^m}{\partial g_r}
-+\varpi^m\frac{\partial S^m}{\partial g_r}\notag\\
-&\quad-\gamma^m\frac{\partial M^m}{\partial g_r}.
+&=\mathrm{BM}_{r,g}^{m}=\lambda^m\frac{\partial P^m}{\partial g_r}
++\varpi^m\frac{\partial S^m}{\partial g_r}-\gamma^m\frac{\partial M^m}{\partial g_r}.
 \label{eq:incentivo_marginal_g}
 \end{align}
 \end{subequations}
