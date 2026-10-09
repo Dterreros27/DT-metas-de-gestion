@@ -308,17 +308,17 @@ La ecuación~\eqref{eq:desempeno_percibido} no reproduce las ponderaciones regul
 
 Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto de bloques incluidos en la señal pública del esquema \(m\). Por saliencia reputacional se entiende la capacidad relativa de la información de cada bloque para atraer la atención de los agentes externos e incidir en su percepción sobre el desempeño del gerente. El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\), antes de considerar qué información publica cada esquema, y se supone común entre ellos. Las saliencias se normalizan respecto del conjunto completo:
 
-\[
+\begin{equation}
 \sum_{H\in\{S,G,F,RT\}}s_H=1.
-\]
+\end{equation}
 
 La saliencia intrínseca total de los bloques que permanecen publicados se denota por
 
-\[
+\begin{equation}
 D^m
 =
 \sum_{K\in\mathrm{Sig}^m}s_K.
-\]
+\end{equation}
 
 Si todos los bloques se publican, \(D^m=1\); si alguno se excluye, \(D^m<1\). Por tanto, \(D^m\) mide la proporción de la saliencia original que corresponde a la información conservada en el esquema \(m\), antes de cualquier reasignación.
 
@@ -342,7 +342,9 @@ En el caso base se supone que la atención asociada con los bloques excluidos se
 
 La división entre \(D^m\) vuelve a normalizar las saliencias de los bloques publicados. En consecuencia, los bloques excluidos reciben un coeficiente igual a cero, los coeficientes restantes suman uno y cada uno aumenta respecto de su saliencia intrínseca cuando \(D^m<1\). Así, retirar un bloque no solo elimina su contribución a \(P^m\), sino que incrementa la importancia reputacional de la información que permanece. Se supone \(s_S>s_G\), por lo que los resultados del servicio poseen mayor saliencia reputacional que las demás metas de gestión.
 
-La reasignación completa es un supuesto sustantivo: la desaparición de un bloque de la señal pública no necesariamente traslada toda la atención que recibía hacia los demás. Parte de esa atención puede perderse. Para determinar qué resultados dependen de este supuesto, se considera la siguiente familia de coeficientes, que sustituye a \(\alpha_H^m\) en el análisis de sensibilidad:
+Como ejemplo ilustrativo, supóngase que las saliencias intrínsecas son \(s_S=0.4\), \(s_G=0.3\), \(s_F=0.2\) y \(s_{RT}=0.1\). Si se publican los cuatro bloques, \(D^m=1\) y las ponderaciones reputacionales coinciden con estas saliencias. Si solo permanecen publicados los bloques \(S\) y \(G\), entonces \(D^m=0.7\). Bajo reasignación completa, sus ponderaciones pasan a ser \(\alpha_S^m=0.4/0.7\approx0.571\) y \(\alpha_G^m=0.3/0.7\approx0.429\), mientras que las de los bloques excluidos son cero. El bloque \(S\) adquiere así una mayor ponderación en el desempeño percibido, aunque su saliencia intrínseca no cambia. Estos valores ilustran el mecanismo y no constituyen estimaciones empíricas.
+
+La atención asociada con los bloques excluidos puede perderse en parte, en lugar de reasignarse completamente. Para evaluar esta posibilidad, se considera la siguiente familia de coeficientes, que sustituye a \(\alpha_H^m\) en el análisis de sensibilidad:
 
 \begin{equation}
 \label{eq:ponderaciones_reputacionales_sensibilidad}
@@ -354,9 +356,9 @@ La reasignación completa es un supuesto sustantivo: la desaparición de un bloq
 \theta\in[0,1].
 \end{equation}
 
-El parámetro \(\theta\) determina el grado de reasignación. Cuando \(\theta=1\), se recupera la normalización completa de \eqref{eq:ponderaciones_reputacionales}: toda la atención se distribuye entre los bloques publicados y sus coeficientes suman uno. Cuando \(\theta=0\), cada bloque conserva su saliencia intrínseca; retirar información no aumenta el coeficiente de los bloques restantes y la atención asociada con lo excluido desaparece de la señal. Para \(0<\theta<1\), la reasignación es parcial.
+Con \(\theta=1\), se recupera la reasignación completa de \eqref{eq:ponderaciones_reputacionales}; con \(\theta=0\), los bloques publicados conservan sus saliencias intrínsecas; para \(0<\theta<1\), la reasignación es parcial. En el ejemplo anterior, los coeficientes de \(S\) y \(G\) permanecen en \(0.4\) y \(0.3\) cuando \(\theta=0\), y pasan a aproximadamente \(0.571\) y \(0.429\) cuando \(\theta=1\). La suma de los coeficientes es \((D^m)^{1-\theta}\), por lo que la pérdida de atención reduce la intensidad total de la señal, sin alterar la importancia relativa \(s_H/s_K\) entre bloques conservados.
 
-La suma de los coeficientes publicados es \((D^m)^{1-\theta}\), menor que uno cuando \(D^m<1\) y \(\theta<1\). Esto representa una menor intensidad total de la señal; la importancia relativa entre bloques conservados sigue siendo \(s_H/s_K\). Los efectos de retirar información dependen, por tanto, del grado de reasignación de atención.
+Esta familia se utiliza en la Subsección~4.3, en el análisis de sensibilidad a la reasignación de atención, para determinar bajo qué condiciones la transición \(A''\to B\) preserva o aumenta el incentivo reputacional dirigido a los resultados del servicio. La condición \eqref{eq:umbral_cociente_lambda_theta} y el umbral \eqref{eq:umbral_theta_reputacion} consideran tanto el grado de reasignación como los retornos marginales locales \(\lambda^m\), definidos más adelante.
 
 Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
 
