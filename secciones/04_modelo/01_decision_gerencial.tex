@@ -306,18 +306,12 @@ Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento},
 
 Las ponderaciones reputacionales de \eqref{eq:desempeno_percibido} se distinguen de los pesos regulatorios del \(ICG^m\). Estos últimos determinan la contribución aritmética de cada bloque al índice formal; los coeficientes \(\alpha_H^m\) representan su importancia en la evaluación externa del desempeño. Un bloque puede tener un peso regulatorio reducido y atraer una atención considerable de usuarios, autoridades u otros agentes externos.
 
-Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto de bloques incluidos en la señal pública del esquema \(m\). El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\): su capacidad relativa de atraer la atención de los agentes externos e incidir en su percepción del desempeño del gerente, antes de considerar qué bloques se publican. Se supone común entre esquemas y se establece \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia que las demás metas de gestión. Las saliencias se normalizan respecto del conjunto completo:
+Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto de bloques incluidos en la señal pública del esquema \(m\). El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\): su capacidad relativa de atraer la atención de los agentes externos e incidir en su percepción del desempeño del gerente, antes de considerar qué bloques se publican. Se supone común entre esquemas y se establece \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia que las demás metas de gestión. Las saliencias se normalizan respecto del conjunto completo y su suma para los bloques publicados se denota por \(D^m\):
 
 \begin{equation}
-\sum_{H\in\{S,G,F,RT\}}s_H=1.
-\end{equation}
-
-La saliencia intrínseca total de los bloques que permanecen publicados se denota por
-
-\begin{equation}
-D^m
-=
-\sum_{K\in\mathrm{Sig}^m}s_K.
+\sum_{H\in\{S,G,F,RT\}}s_H=1,
+\qquad
+D^m=\sum_{K\in\mathrm{Sig}^m}s_K.
 \end{equation}
 
 Si se publican los cuatro bloques, \(D^m=1\); si alguno se excluye, \(D^m<1\).
@@ -356,9 +350,7 @@ La atención asociada con los bloques excluidos puede perderse en parte, en luga
 
 Con \(\theta=1\), se recupera la reasignación completa de \eqref{eq:ponderaciones_reputacionales}; con \(\theta=0\), los bloques publicados conservan sus saliencias intrínsecas; para \(0<\theta<1\), la reasignación es parcial. La suma de los coeficientes es \((D^m)^{1-\theta}\), menor que uno cuando \(D^m<1\) y \(\theta<1\). La intensidad total de la señal disminuye, mientras que la importancia relativa entre bloques conservados sigue siendo \(s_H/s_K\).
 
-Como ejemplo ilustrativo, sean \(s_S=0.4\), \(s_G=0.3\), \(s_F=0.2\) y \(s_{RT}=0.1\). Si se publican todos los bloques, \(D^m=1\) y los coeficientes coinciden con estas saliencias para cualquier \(\theta\). Si solo permanecen \(S\) y \(G\), entonces \(D^m=0.7\): con \(\theta=1\), sus coeficientes son \(0.4/0.7\approx0.571\) y \(0.3/0.7\approx0.429\); con \(\theta=0\), permanecen en \(0.4\) y \(0.3\). Los bloques excluidos reciben un coeficiente igual a cero en ambos casos. Estos valores ilustran el mecanismo y no constituyen estimaciones empíricas.
-
-Esta familia se utiliza en la Subsección~4.3, en el análisis de sensibilidad a la reasignación de atención, para determinar bajo qué condiciones la transición \(A''\to B\) preserva o aumenta el incentivo reputacional dirigido a los resultados del servicio. La condición \eqref{eq:umbral_cociente_lambda_theta} y el umbral \eqref{eq:umbral_theta_reputacion} consideran tanto el grado de reasignación como los retornos marginales locales \(\lambda^m\), definidos más adelante.
+Como ejemplo ilustrativo, sean \(s_S=0.4\), \(s_G=0.3\), \(s_F=0.2\) y \(s_{RT}=0.1\). Si se publican todos los bloques, \(D^m=1\) y los coeficientes coinciden con estas saliencias para cualquier \(\theta\). Si solo permanecen \(S\) y \(G\), entonces \(D^m=0.7\): con \(\theta=1\), sus coeficientes son \(0.4/0.7\approx0.571\) y \(0.3/0.7\approx0.429\); con \(\theta=0\), permanecen en \(0.4\) y \(0.3\). Los bloques excluidos reciben un coeficiente igual a cero en ambos casos.
 
 Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
 
