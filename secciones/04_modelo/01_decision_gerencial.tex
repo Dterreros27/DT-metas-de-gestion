@@ -425,7 +425,13 @@ Las condiciones interiores de \eqref{eq:foc_esperadas} se aplican dentro de una 
 
 \subsubsection{Exposición sancionadora y saturación del margen de culminación}
 
-Una misma brecha de ejecución puede quedar comprendida en varias bases activas de la multa, como muestran \eqref{eq:base_fisica_generica}, \eqref{eq:base_rt} y \eqref{eq:base_financiera}. Esta superposición aumenta la exposición sancionadora por unidad de brecha. Una mayor exposición puede reforzar el esfuerzo de ejecución mientras el avance responda a él; al alcanzar el máximo factible, ese canal deja de producir mejoras. El análisis deriva la exposición a partir de las bases aplicables y determina bajo qué condiciones existe un umbral suficiente para alcanzar esa saturación.
+La brecha de ejecución física es la proporción del alcance previsto que permanece pendiente. Como \(a_r=F_r/\bar F_r\), se expresa como\footnote{Por ejemplo, si una inversión ha ejecutado el \(80\%\) de su alcance previsto, \(a_r=0.8\) y su brecha es \(1-a_r=0.2\).}
+
+\begin{equation}
+1-a_r=\frac{\bar F_r-F_r}{\bar F_r}.
+\end{equation}
+
+Esta proporción pendiente aporta a cada base física activa que comprende la inversión; su contribución a la base financiera depende, además, de la relación entre avance físico y gasto ejecutado. Las bases de \eqref{eq:base_fisica_generica}, \eqref{eq:base_rt} y \eqref{eq:base_financiera} pueden acumular contribuciones de una misma inversión. Una mayor exposición puede reforzar el esfuerzo mientras el avance responda a él; al alcanzar el máximo factible, ese canal deja de producir mejoras. El análisis deriva la exposición y determina bajo qué condiciones existe un umbral suficiente para alcanzar esa saturación.
 
 Para separar la contribución de una inversión a la multa, se mantienen fijos \(g_r\), las demás decisiones y los indicadores \(\mathbf1\{c_j<1\}\), \(\mathbf1\{c_{RT}<1\}\), \(d_F^m\) y \(\chi^m\). Sea \(B_{\mathrm{fis}}^m\) la suma de las bases físicas aplicables al esquema, incluida \(B_{RT}\) cuando corresponde, y sea \(\eta_F^m\in\{0,1\}\) el indicador de inclusión de la base financiera. La regla común de cuantificación, cuyas bases específicas se detallan en la Subsección~4.2, es
 
@@ -447,12 +453,12 @@ B_{\mathrm{fis},-r}^m
 
 donde \(B_{\mathrm{fis},-r}^m\) no varía con \(a_r\). La base financiera requiere una condición adicional. A partir de \eqref{eq:avance_financiero_agregado} y \eqref{eq:base_financiera}, con \(d_F^m\) fijo,
 
-\[
+\begin{equation}
 B_{\mathrm{fin}}^m
 =
 d_F^m\sum_{k\in\mathrm{Fin}^m}
 \left[\bar I_k-I_k(F_k,g_k)\right].
-\]
+\end{equation}
 
 Para que la representación siguiente sea exacta, se supone, únicamente en este análisis del canal de exposición, que el gasto de \(r\) es afín en su avance físico dentro de la región considerada, a eficiencia dada:
 
@@ -463,6 +469,8 @@ I_r(\bar F_r a_r,g_r)
 u_r(g_r)+v_r(g_r)a_r,
 \qquad v_r(g_r)>0.
 \end{equation}
+
+Con un gasto no afín, la contribución financiera solo admite una aproximación de primer orden alrededor del avance evaluado, cuyo coeficiente puede variar con \(a_r\). Los resultados que tratan \(\mu_r^m\) como constante se condicionan a la representación afín; las bases físicas admiten la separación exacta sin ese supuesto.
 
 La identidad \(\bar I_r-I_r=(\bar I_r-u_r-v_r)+v_r(1-a_r)\) permite separar los términos independientes de \(a_r\):
 
@@ -496,9 +504,26 @@ Con \(M_{-r}^m=\chi^m\,\mathrm{WACC}(B_{\mathrm{fis},-r}^m+\eta_F^m B_{\mathrm{f
 M^m=M_{-r}^m+\mu_r^m(1-a_r).
 \end{equation}
 
-El coeficiente \(\mu_r^m\) acumula las contribuciones sancionadoras por unidad de brecha física; su interpretación marginal, \(-\partial M^m/\partial a_r=\mu_r^m\), se deriva de esta separación. Como ejemplo ilustrativo, sean \(\chi^m=1\), \(\mathrm{WACC}=0.10\), \(\bar I_r=100\) unidades monetarias y \(a_r=0.8\), sin contribución financiera. Si solo está activa la base de la propia meta, \(\mu_r^m=10\) y la contribución de la brecha de \(r\) a la multa es \(10(1-0.8)=2\). Si también está activa la base de relación de trabajo y comprende la misma inversión, \(\mu_r^m=20\) y esa contribución aumenta a \(4\), con el mismo avance físico. La multa total incluye además \(M_{-r}^m\). Estos valores no constituyen estimaciones empíricas.
+\(M_{-r}^m\) es constante al variar \(a_r\) dentro de la región, pero no necesariamente equivale a la multa efectiva al culminar: la culminación puede cambiar los indicadores de incumplimiento o activación y debe evaluarse como un cambio de régimen.
 
-La igualdad es exacta para las bases físicas y, bajo \eqref{eq:afinidad_gasto_exposicion}, para la contribución financiera. Con una tecnología de gasto no afín, solo corresponde una aproximación de primer orden alrededor del avance evaluado, cuyo coeficiente puede variar con \(a_r\); los resultados posteriores que tratan \(\mu_r^m\) como constante se condicionan a la representación afín. \(M_{-r}^m\) es un término constante dentro de la región, no necesariamente la multa efectiva al culminar \(r\): la culminación puede cambiar los indicadores de incumplimiento o activación y exige evaluar el cambio de régimen por separado.
+El coeficiente \(\mu_r^m\) acumula las contribuciones sancionadoras por unidad de brecha física y satisface \(-\partial M^m/\partial a_r=\mu_r^m\). Para ilustrarlo, sean \(\chi^m=1\), \(\mathrm{WACC}=0.10\), \(\bar I_r=100\) unidades monetarias y \(a_r=0.8\). Cada base física activa comprende la inversión por su monto previsto completo y recibe un aporte de \(100(1-0.8)=20\). Para la base financiera se supone además \(r\in\mathrm{Fin}^m\), \(d_F^m=1\) e \(I_r=100a_r\), a eficiencia dada; el gasto es \(80\) y el aporte a esa base también es \(20\).
+
+\begin{table}[htbp]
+\centering
+\caption{Ejemplo ilustrativo de acumulación de bases sancionadoras}
+\label{tab:ejemplo_exposicion_bases}
+\begin{tabularx}{\linewidth}{@{}Xcc@{}}
+\toprule
+Bases activas & \(\mu_r^m\) & \(\mu_r^m(1-a_r)\) \\
+\midrule
+Solo la meta & \(0.10(100)=10\) & \(2\) \\
+Meta y relación de trabajo & \(0.10(100+100)=20\) & \(4\) \\
+Meta, relación de trabajo y financiera & \(0.10(100+100+100)=30\) & \(6\) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+La Tabla~\ref{tab:ejemplo_exposicion_bases} mantiene el mismo avance físico y modifica las bases activas. La tercera fila corresponde a una posible configuración de \(A_0\), donde una inversión de \(R^S\) o \(R^G\) puede participar en su propia meta, en relación de trabajo y en avance financiero general. En \(A\) y \(A'\), el universo financiero se limita a \(R^F\) y no incluye esas inversiones. Los valores representan el aporte de la brecha de \(r\), no la multa total, que incluye \(M_{-r}^m\); son ilustrativos y no constituyen estimaciones empíricas.
 
 La ecuación~\eqref{eq:exposicion_sancionadora_r} permite vincular esta exposición con las condiciones marginales derivadas previamente. Como \(a_r=a_r(e_r)\) en \eqref{eq:ejecucion_fisica}, la regla de la cadena implica
 
@@ -522,7 +547,16 @@ a_r'(e_r)\gamma^m(\mu_r^m)\mu_r^m.
 
 \(\mu_r^m\) mide la exposición nominal y \(\gamma^m\) su internalización marginal por el gerente, considerando detección, reputación y costo monetario. La notación \(\gamma^m(\mu_r^m)\) recoge la dependencia inducida por la multa dentro de la región considerada. El producto \(\gamma^m(\mu)\mu\) representa el retorno sancionador por unidad adicional de avance físico dentro de la región considerada; al multiplicarlo por \(a_r'(e_r)\), se obtiene el retorno por unidad adicional de esfuerzo. Se supone continuo y creciente en \(\mu\) en la región relevante.
 
-Sea \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r)\) el beneficio marginal de ejecución generado por los demás canales continuos de \eqref{eq:incentivo_marginal_e}, excluido el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. Al sustituir la derivada anterior en la condición de primer orden \eqref{eq:incentivo_marginal_e}, se obtiene, para \(e_r<e_r^{\mathrm{sat}}\),
+Como \(M_{-r}^m\) no varía con \(a_r\), toda la derivada de la multa respecto del esfuerzo de ejecución queda recogida en \(-\mu_r^m a_r'(e_r)\). El beneficio marginal de los demás canales se define como
+
+\begin{equation}
+\label{eq:beneficio_marginal_sin_exposicion}
+\mathrm{BM}_{r,e}^{m,-\mu}(e_r)
+\equiv\lambda^m\frac{\partial P^m}{\partial e_r}
++\varpi^m\frac{\partial S^m}{\partial e_r}.
+\end{equation}
+
+La exclusión del canal sancionador directo en \eqref{eq:beneficio_marginal_sin_exposicion} no implica independencia respecto de \(\mu\): los retornos \(\lambda^m\) y \(\varpi^m\) pueden variar con la reputación total. Al sustituir la derivada de la multa en \eqref{eq:incentivo_marginal_e}, para un óptimo interior con \(0<e_r<e_r^{\mathrm{sat}}\),
 
 \begin{equation}
 \label{eq:foc_probabilidad_cumplimiento}
@@ -534,7 +568,7 @@ a_r'(e_r)
 \gamma^m(\mu_r^m)\mu_r^m.
 \end{equation}
 
-El primer término del lado derecho reúne los retornos marginales provenientes del desempeño reputacional, el ahorro y los demás componentes continuos de la multa. El segundo es el retorno de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), conforme a \eqref{eq:saturacion_probabilidad}, una mayor exposición puede reforzar este último canal e incrementar el esfuerzo de ejecución.
+El primer término del lado derecho reúne los retornos marginales provenientes del desempeño reputacional, el ahorro reconocido. El segundo es el retorno de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), conforme a \eqref{eq:saturacion_probabilidad}, una mayor exposición puede reforzar este último canal e incrementar el esfuerzo de ejecución.
 
 El umbral se determina comparando los incentivos y el costo marginal inmediatamente antes de saturar, mediante sus límites por la izquierda. Si \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), los demás canales bastan y se define \(\mu_r^{m,*}=0\). Si la diferencia \(\psi_r'(e_r^{\mathrm{sat}})-\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\) es positiva, el canal sancionador debe cubrirla. Se denota por \(a_{r,-}'(e_r^{\mathrm{sat}})\) la derivada del avance por la izquierda, que mide su respuesta al esfuerzo antes de alcanzar el máximo factible. Si existe una exposición finita que cubre la diferencia, la exposición mínima suficiente satisface
 
@@ -549,6 +583,18 @@ a_{r,-}'(e_r^{\mathrm{sat}})
 \end{equation}
 
 Un mayor beneficio marginal de los demás canales reduce la exposición necesaria, manteniendo lo demás constante. La existencia de un umbral finito requiere que el lado izquierdo de \eqref{eq:multa_suficiente} alcance la diferencia positiva. Si \(a_{r,-}'(e_r^{\mathrm{sat}})=0\) y esa diferencia es positiva, ninguna exposición finita la cubre mediante este canal.
+
+En el caso base, \(\bar a_r=1\), puede obtenerse una expresión cerrada adicional. Para este ejercicio se mantienen fijos \(M_{-r}^m\), las demás decisiones, los parámetros y los indicadores del régimen anterior a la culminación al variar \(\mu\). Si los retornos admiten límites finitos por la izquierda, \(M^m\to M_{-r}^m\) cuando \(e_r\uparrow e_r^{\mathrm{sat}}\). Se denota por \(\gamma_{\mathrm{sat},-}^m\) el límite de \(\gamma^m\), que bajo estas condiciones no depende de \(\mu\). Si también el límite de \(\mathrm{BM}_{r,e}^{m,-\mu}\) es independiente de \(\mu\), la diferencia de incentivos es positiva y \(a_{r,-}'(e_r^{\mathrm{sat}})\gamma_{\mathrm{sat},-}^m>0\), la condición \eqref{eq:multa_suficiente} se reduce a
+
+\begin{equation}
+\label{eq:umbral_exposicion_caso_base}
+\mu_r^{m,*}
+=\frac{\psi_r'(e_r^{\mathrm{sat}})
+-\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})}
+{a_{r,-}'(e_r^{\mathrm{sat}})\gamma_{\mathrm{sat},-}^m}.
+\end{equation}
+
+En \eqref{eq:umbral_exposicion_caso_base}, los retornos se evalúan por la izquierda, antes de cualquier cambio en el reconocimiento del ahorro o la activación de las consecuencias. Si los demás incentivos bastan, el umbral es cero. Esta especialización no elimina las condiciones de monotonía para el tramo interior, donde la multa y los retornos pueden depender de \(\mu\); tampoco reemplaza la evaluación de los saltos entre regímenes.
 
 Bajo las condiciones de concavidad local y manteniendo los demás márgenes fijos, se distinguen dos regímenes. Con \(\mu_r^m<\mu_r^{m,*}\), existe subdisuasión respecto del canal de ejecución: una mayor exposición todavía puede incrementar el esfuerzo y el avance. Si el umbral es finito y \(\mu_r^m\geq\mu_r^{m,*}\), los incentivos bastan para alcanzar la saturación. A su derecha, \(a_{r,+}'(e_r^{\mathrm{sat}})=0\); como \(\psi_r'(e_r)>0\) y los beneficios de ejecución dependen de \(a_r\), ningún óptimo condicionado a \(g_r\) elige un esfuerzo superior. El resultado es
 
@@ -567,11 +613,9 @@ a_r(e_r^{m,*})
 
 La igualdad de \eqref{eq:plateau_esfuerzo} describe un techo de esfuerzo, no una condición de primer orden interior en la saturación. Cuando la tecnología presenta un quiebre, el óptimo puede ubicarse allí con un beneficio marginal por la izquierda superior al costo y un beneficio marginal por la derecha igual a cero. Otros márgenes, como \(g_r\), pueden continuar respondiendo.
 
-Una exposición nominal elevada puede permanecer por debajo del umbral suficiente si la detección o la transmisión de la sanción al gerente son débiles; puede entonces existir sobresanción nominal sin disuasión suficiente. Una vez alcanzado el techo, elevar la exposición es redundante para la ejecución. En el escenario base, \(\bar a_r=1\) y la culminación elimina la multa sobre esa brecha. Una carga estrictamente excesiva requiere una brecha residual positiva u otro costo sin mejoras compensatorias.
+Una exposición nominal elevada puede permanecer por debajo del umbral suficiente si la detección o la transmisión al gerente son débiles; puede entonces existir sobresanción nominal sin disuasión suficiente. Una vez alcanzado el techo, elevar la exposición es redundante para la ejecución. En el caso base, \(\bar a_r=1\) y la culminación elimina la multa sobre esa brecha.
 
-\paragraph{Saturación con contingencias y brecha residual.}
-
-Si una contingencia posterior reduce el avance máximo a \(\bar a_r<1\), alcanzar la saturación deja una brecha que el esfuerzo de ejecución no puede cerrar. Una vez alcanzado ese techo, manteniendo fijos los demás márgenes y el régimen regulatorio, una unidad adicional de exposición aumenta la multa en \(1-\bar a_r\) y reduce la utilidad del gerente en \(\gamma^m(\mu_r^m)(1-\bar a_r)\), cuando \(\gamma^m>0\). La sanción adicional no aumenta la ejecución mediante este canal, aunque otros márgenes podrían responder. Con \(\bar a_r=1\), esa pérdida desaparece al culminar. La incidencia sobre el bienestar sectorial se evalúa en la Subsección~4.3.
+Si una contingencia fija \(\bar a_r<1\), alcanzar el techo deja una brecha \(1-\bar a_r\) que el esfuerzo de ejecución no puede cerrar. Manteniendo fijos los demás márgenes y el régimen regulatorio, cada unidad adicional de exposición eleva la multa en \(1-\bar a_r\) sin mejorar la ejecución mediante este canal. La incidencia sobre el bienestar se evalúa en la Subsección~4.3.
 
 \subsubsection{Criterio de evaluación del regulador}
 
