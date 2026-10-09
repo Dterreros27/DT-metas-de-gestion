@@ -1,10 +1,8 @@
 \subsection{Incentivos, desempeño y criterio regulatorio}
 
-Esta subsección compara los incentivos gerenciales, los resultados inducidos y sus implicancias regulatorias bajo los esquemas \(A_0\), \(A\), \(A'\), \(A''\) y \(B\). El análisis principal sigue la secuencia de transiciones descrita en la Subsección~4.2, mientras que \(A_0\to A\) se mantiene como \textit{benchmark} institucional.
+Esta subsección compara los incentivos gerenciales, los resultados inducidos y sus implicancias regulatorias bajo los esquemas \(A_0\), \(A\), \(A'\), \(A''\) y \(B\). El análisis principal sigue la secuencia de transiciones descrita en la Subsección~4.2, mientras que \(A_0\to A\) se mantiene como contraste con el marco aplicado.
 
-La comparación distingue los efectos marginales dentro de una región regulatoria de los cambios de estado. Mientras \(\mathbf{1}\{c_j<1\}\), \(\mathbf{1}\{c_{RT}<1\}\), \(d_F^m\) y \(\chi^m\) permanezcan constantes, los esfuerzos modifican continuamente \(P^m\), el ahorro y las bases de la multa. Las variaciones de esos indicadores y, en \(A_0\) y \(A\), el cruce del umbral \(ICG^m=\tau\), se analizan por separado.
-
-El análisis sigue la secuencia causal del modelo: incentivos de ejecución y eficiencia, resultados agregados y, finalmente, descomposición del criterio regulatorio. Los ordenamientos de esfuerzo se interpretan bajo la comparativa estática \textit{ceteris paribus} de la Subsección~4.1.
+La comparación distingue los efectos marginales dentro de una región regulatoria de los cambios de estado. Mientras \(\mathbf{1}\{c_j<1\}\), \(\mathbf{1}\{c_{RT}<1\}\), \(d_F^m\) y \(\chi^m\) permanezcan constantes, los esfuerzos modifican continuamente \(P^m\), el ahorro y las bases de la multa. Las variaciones de esos indicadores y, en \(A_0\) y \(A\), el cruce del umbral \(ICG^m=\tau\), se analizan por separado. El análisis sigue la secuencia causal del modelo: incentivos de ejecución y eficiencia, resultados agregados y, finalmente, descomposición del criterio regulatorio. Para comparar el esfuerzo inducido por cada diseño se mantienen constantes los demás elementos, bajo los supuestos de comparativa estática de la Subsección~4.1.
 
 La Tabla~\ref{tab:mapa_transiciones} identifica los cambios de regla antes de comparar sus efectos. Las tres primeras transiciones aíslan modificaciones sucesivas; el contraste institucional \(A_0\to A\) combina varios canales.
 
@@ -15,14 +13,14 @@ La Tabla~\ref{tab:mapa_transiciones} identifica los cambios de regla antes de co
 \small
 \renewcommand{\arraystretch}{1.20}
 \begin{tabularx}{\textwidth}{@{}lXX@{}}
-\toprule
+\hline
 \textbf{Transición} & \textbf{Cambio de regla} & \textbf{Canales afectados}\\
-\midrule
+\hline
 \(A\to A'\) & Eliminación del umbral del ICG. & Activación sancionadora \(\chi^m\).\\
 \(A'\to A''\) & Sustitución de la verificación financiera de \(R^F\) por indicadores físicos o funcionales; salida de \(f_F\) de la señal. & Base sancionadora de \(R^F\) y ponderaciones reputacionales.\\
 \(A''\to B\) & Salida de \(C_G\) de la señal pública. & Ponderación de \(C_S\), retorno \(\lambda^B\) y pérdida del canal reputacional de \(C_G\).\\
 \(A_0\to A\) & Retiro de la relación de trabajo y focalización del avance financiero en \(R^F\). & Composición del ICG, señal reputacional, universo financiero y eliminación de \(B_{RT}\).\\
-\bottomrule
+\hline
 \end{tabularx}
 \end{table*}
 
@@ -73,7 +71,7 @@ Las comparaciones marginales permiten ordenar esfuerzos óptimos bajo las condic
 
 A lo largo de la subsección se aplica una regla común: una mayor exposición sancionadora solo puede elevar el avance físico mientras el margen de culminación no esté saturado. En el escenario base, la saturación coincide con la culminación, \(a_r=1\). Una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), la exposición adicional deja de aumentar \(a_r\), aunque los demás canales continuos pueden seguir afectando la decisión del gerente. La posibilidad de saturación con \(\bar a_r<1\) se utiliza únicamente en la extensión con contingencias posteriores a la aprobación regulatoria.
 
-Para \(r\in R_j^{S}\), mientras la meta se encuentre en el tramo no truncado, la definición de \(C_S\) como promedio aritmético implica
+Para \(r\in R_j^{S}\), mientras el resultado medido se encuentre por debajo de la meta, antes del truncamiento en uno, la definición de \(C_S\) como promedio aritmético implica
 
 \begin{equation}
 \label{eq:derivada_cs_ejecucion}
@@ -103,7 +101,9 @@ x
 \end{aligned}
 \end{equation}
 
-Por construcción, \(f_x^m=0\) cuando \(r\notin\mathrm{Fin}^m\). Cuando \(r\in\mathrm{Fin}^m\), se supone
+El avance financiero mide el gasto ejecutado respecto del monto previsto. Ejecutar más eleva este indicador, mientras que completar el mismo alcance con menor gasto lo reduce. El ahorro puede, por ello, disminuir el desempeño percibido cuando el avance financiero integra la señal pública y, si la base financiera está activa, también puede aumentar la multa. Este último canal requiere \(d_F^m=1\): una brecha originada exclusivamente en ahorros de inversiones culminadas no activa el incumplimiento financiero.
+
+Por construcción, \(f_x^m=0\) cuando \(r\notin\mathrm{Fin}^m\). Cuando \(r\in\mathrm{Fin}^m\), en el tramo en que el avance responde al esfuerzo y la eficiencia reduce el gasto,
 
 \begin{equation}
 \label{eq:signos_avance_financiero}
@@ -116,7 +116,7 @@ La reducción marginal de una base física asociada con \(r\) se recoge mediante
 
 \begin{equation}
 \label{eq:canal_reduccion_base}
-L_{r,e}^{\mathrm{fis}}\equiv\mathrm{WACC}\,\bar I_r\frac{\partial a_r}{\partial e_r}
+\kappa_{r,e}^{\mathrm{fis}}\equiv\mathrm{WACC}\,\bar I_r\frac{\partial a_r}{\partial e_r}
 =\mathrm{WACC}\,\frac{\bar I_r}{\bar F_r}\frac{\partial F_r}{\partial e_r}>0.
 \end{equation}
 
@@ -125,7 +125,7 @@ Cuando el esquema mantiene una base financiera, se define
 \begin{equation}
 \label{eq:canal_financiero_marginal}
 \begin{aligned}
-L_{r,x}^{m,\mathrm{fin}}
+\kappa_{r,x}^{m,\mathrm{fin}}
 &\equiv
 d_F^m\,
 \mathrm{WACC}
@@ -137,19 +137,19 @@ f_x^{m}, x\in\{e_r,g_r\}.
 \end{aligned}
 \end{equation}
 
-Estos canales expresan la reducción marginal de multa por unidad de esfuerzo atribuible a una base física y a la base financiera, respectivamente, antes de aplicar \(\chi^m\). Si \(d_F^m=1\), \(r\in\mathrm{Fin}^m\) y el avance responde al esfuerzo, \(L_{r,e}^{m,\mathrm{fin}}>0\); si además el esfuerzo de eficiencia reduce el gasto, \(L_{r,g}^{m,\mathrm{fin}}<0\). Ambos canales financieros son nulos cuando \(d_F^m=0\) o la inversión queda fuera del universo financiero. Utilizando además la multiplicidad \(\delta_r^m\) definida en la Subsección~4.2, los efectos continuos de los esfuerzos sobre la multa pueden escribirse como
+Estos canales expresan la reducción marginal de multa por unidad de esfuerzo atribuible a una base física y a la base financiera, respectivamente, antes de aplicar \(\chi^m\). Si \(d_F^m=1\), \(r\in\mathrm{Fin}^m\) y el avance responde al esfuerzo, \(\kappa_{r,e}^{m,\mathrm{fin}}>0\); si además el esfuerzo de eficiencia reduce el gasto, \(\kappa_{r,g}^{m,\mathrm{fin}}<0\). Ambos canales financieros son nulos cuando \(d_F^m=0\) o la inversión queda fuera del universo financiero. Utilizando además la multiplicidad \(\delta_r^m\) definida en la Subsección~4.2, los efectos continuos de los esfuerzos sobre la multa pueden escribirse como
 
 \begin{subequations}
 \label{eq:derivadas_multa_esfuerzos}
 \begin{align}
--\frac{\partial M^m}{\partial e_r} &= \chi^m\left[\delta_r^m L_{r,e}^{\mathrm{fis}}+\eta_F^m L_{r,e}^{m,\mathrm{fin}}\right],
+-\frac{\partial M^m}{\partial e_r} &= \chi^m\left[\delta_r^m \kappa_{r,e}^{\mathrm{fis}}+\eta_F^m \kappa_{r,e}^{m,\mathrm{fin}}\right],
 \label{eq:derivada_multa_ejecucion}\\
--\frac{\partial M^m}{\partial g_r} &= \chi^m\eta_F^m L_{r,g}^{m,\mathrm{fin}}.
+-\frac{\partial M^m}{\partial g_r} &= \chi^m\eta_F^m \kappa_{r,g}^{m,\mathrm{fin}}.
 \label{eq:derivada_multa_eficiencia}
 \end{align}
 \end{subequations}
 
-Cuando \(L_{r,g}^{m,\mathrm{fin}}<0\), una reducción eficiente del costo puede aumentar la base financiera de la multa y reducir el incentivo marginal de eficiencia mientras dicho componente permanezca activo. Si una meta alcanza \(c_j=1\), desaparece el componente físico correspondiente; de manera análoga, el cumplimiento de la relación de trabajo o la desaparición de \(d_F^m\) elimina el componente respectivo. En \(A_0\) y \(A\), el cruce del umbral \(\tau\) introduce además el cambio discreto de activación descrito en las Subsecciones~4.1 y~4.2.
+Cuando \(\kappa_{r,g}^{m,\mathrm{fin}}<0\), una reducción eficiente del costo puede aumentar la base financiera de la multa y reducir el incentivo marginal de eficiencia mientras dicho componente permanezca activo. Si una meta alcanza \(c_j=1\), desaparece el componente físico correspondiente; de manera análoga, el cumplimiento de la relación de trabajo o la desaparición de \(d_F^m\) elimina el componente respectivo. En \(A_0\) y \(A\), el cruce del umbral \(\tau\) introduce además el cambio discreto de activación descrito en las Subsecciones~4.1 y~4.2.
 
 \subsubsection{Incentivo de ejecución}
 
@@ -201,10 +201,10 @@ Para las intervenciones de \(R^{S}\) y \(R^{G}\), el canal sancionador continuo 
 &
 \(\begin{array}{c}
 R^{S},R^{G}:\;
-\gamma\chi^A\delta_r L_{r,e}^{\mathrm{fis}}
+\gamma\chi^A\delta_r \kappa_{r,e}^{\mathrm{fis}}
 \\
 R^{F}:\;
-\gamma\chi^A L_{r,e}^{A,\mathrm{fin}}
+\gamma\chi^A \kappa_{r,e}^{A,\mathrm{fin}}
 \end{array}\)
 \\[8pt]
 \(A'\)
@@ -223,10 +223,10 @@ R^{F}:\;
 &
 \(\begin{array}{c}
 R^{S},R^{G}:\;
-\gamma\delta_r L_{r,e}^{\mathrm{fis}}
+\gamma\delta_r \kappa_{r,e}^{\mathrm{fis}}
 \\
 R^{F}:\;
-\gamma L_{r,e}^{A',\mathrm{fin}}
+\gamma \kappa_{r,e}^{A',\mathrm{fin}}
 \end{array}\)
 \\[8pt]
 \(A''\)
@@ -241,7 +241,7 @@ R^{F}:\;
 &
 \(0\)
 &
-\(\gamma\delta_r L_{r,e}^{\mathrm{fis}}\)
+\(\gamma\delta_r \kappa_{r,e}^{\mathrm{fis}}\)
 \\[8pt]
 \(B\)
 &
@@ -251,7 +251,7 @@ R^{F}:\;
 &
 \(0\)
 &
-\(\gamma\delta_r L_{r,e}^{\mathrm{fis}}\)
+\(\gamma\delta_r \kappa_{r,e}^{\mathrm{fis}}\)
 \\
 \hline
 \end{tabularx}
@@ -277,7 +277,7 @@ La transición \(A\to A'\) es la más simple de la secuencia: no cambia la compo
 \gamma
 (1-\chi^A)
 \delta_r
-L_{r,e}^{\mathrm{fis}}
+\kappa_{r,e}^{\mathrm{fis}}
 \geq
 0.
 \end{equation}
@@ -405,34 +405,47 @@ El caso de \(R^{F}\) es distinto porque \(A'\to A''\) cambia simultáneamente la
 \label{eq:diferencia_ejecucion_ap_app_rf}
 \mathrm{BM}_{r,e}^{A''}-\mathrm{BM}_{r,e}^{A'}
 =-\lambda\alpha_F^{A'}f_{F,e_r}
-+\gamma\left[\delta_r^{A''}L_{r,e}^{\mathrm{fis}}-L_{r,e}^{A',\mathrm{fin}}\right].
++\gamma\left[\delta_r^{A''}\kappa_{r,e}^{\mathrm{fis}}-\kappa_{r,e}^{A',\mathrm{fin}}\right].
 \end{equation}
 
-La diferencia no tiene signo general, pero puede acotarse bajo restricciones explícitas sobre el gasto. A esfuerzo de eficiencia dado, supóngase la representación afín de la Subsección~4.1, \(I_r=u_r+v_ra_r\), con \(u_r\geq0\), \(v_r>0\) y \(u_r+v_r\leq\bar I_r\). Esta última condición exige que el gasto al culminar no supere el monto previsto y, junto con \(u_r\geq0\), implica \(v_r\leq\bar I_r\). Para \(r\in R^F\), en el tramo en que el avance responde al esfuerzo,
+La diferencia no tiene signo general, pero puede acotarse bajo restricciones explícitas sobre el gasto. Como supuesto adicional de esta comparación, se adopta, a esfuerzo de eficiencia dado, una representación afín del gasto análoga a la utilizada únicamente para el canal de exposición en la Subsección~4.1: \(I_r=u_r+v_ra_r\), con \(u_r\geq0\), \(v_r>0\) y \(u_r+v_r\leq\bar I_r\). Esta última condición exige que el gasto al culminar no supere el monto previsto y, junto con \(u_r\geq0\), implica \(v_r\leq\bar I_r\). Para \(r\in R^F\), en el tramo en que el avance responde al esfuerzo,
 
 \begin{equation}
 \label{eq:cota_canal_financiero_rf}
-L_{r,e}^{A',\mathrm{fin}}
+\kappa_{r,e}^{A',\mathrm{fin}}
 =\mathrm{WACC}\,d_F^{A'}v_ra_r'(e_r)
 \leq\mathrm{WACC}\,\bar I_ra_r'(e_r)
-=L_{r,e}^{\mathrm{fis}}.
+=\kappa_{r,e}^{\mathrm{fis}}.
 \end{equation}
 
-Si la base física está activa en \(A''\), \(\delta_r^{A''}\geq1\), y \(\gamma\geq0\), el cambio del canal sancionador es no negativo. La comparación se reduce entonces a comprobar si esa ganancia compensa la pérdida reputacional del avance financiero:
+Si la base física está activa en \(A''\), \(\delta_r^{A''}\geq1\), y \(\gamma\geq0\), el cambio del canal sancionador es no negativo. Para determinar si compensa la pérdida reputacional, se utiliza la definición de \(f_F\) y el universo \(\mathrm{Fin}^{A'}=R^F\). Manteniendo fijos los demás esfuerzos,
+
+\begin{equation}
+\label{eq:derivada_financiera_afin_rf}
+f_{F,e_r}
+=\frac{v_ra_r'(e_r)}{\sum_{s\in\mathrm{Fin}^{A'}}\bar I_s}.
+\end{equation}
+
+Al sustituir en \eqref{eq:diferencia_ejecucion_ap_app_rf} y cancelar \(a_r'(e_r)>0\), la condición para que el beneficio marginal de ejecución no disminuya queda expresada como
 
 \begin{equation}
 \label{eq:condicion_ejecucion_rf_ap_app}
-\gamma\left[\delta_r^{A''}L_{r,e}^{\mathrm{fis}}-L_{r,e}^{A',\mathrm{fin}}\right]
-\geq\lambda\alpha_F^{A'}f_{F,e_r}.
+\gamma\,\mathrm{WACC}\left(\delta_r^{A''}\bar I_r-d_F^{A'}v_r\right)
+\geq
+\lambda\,\alpha_F^{A'}\frac{v_r}{\sum_{s\in\mathrm{Fin}^{A'}}\bar I_s}.
 \end{equation}
+
+El lado izquierdo mide la ganancia de utilidad marginal asociada con la diferencia de multa evitada por unidad adicional de avance; el derecho mide la pérdida de utilidad marginal al retirar el avance financiero de la señal pública. La expresión explicita el papel del presupuesto y del gasto marginal, pero conserva los retornos locales \(\gamma\) y \(\lambda\). La cancelación no se aplica en la región saturada, donde \(a_r'(e_r)=0\).
 
 \begin{resultadobox}
 {La verificación física preserva el incentivo de ejecución en \(R^F\) si compensa la pérdida reputacional}
 \label{res:ejecucion_rf_condicional}
-Bajo las restricciones de gasto anteriores, las normalizaciones locales y \eqref{eq:condicion_ejecucion_rf_ap_app}, \(\mathrm{BM}_{r,e}^{A''}\geq\mathrm{BM}_{r,e}^{A'}\). Si la condición se sostiene en la región relevante y se cumplen los supuestos de comparativa estática, \(e_r^{A'',*}\geq e_r^{A',*}\), manteniendo fijos los demás márgenes. Sin estas restricciones, el orden permanece abierto.
+La sustitución de la verificación financiera por la física no reduce el incentivo marginal de ejecución si se cumple \eqref{eq:condicion_ejecucion_rf_ap_app}, bajo las restricciones de gasto anteriores, con la base física activa y los coeficientes locales iguales entre esquemas. Si esa condición se sostiene en la región relevante y se cumplen los supuestos de comparativa estática, \(e_r^{A'',*}\geq e_r^{A',*}\), manteniendo fijos los demás márgenes. Sin estas condiciones, el orden permanece abierto.
 \end{resultadobox}
 
-La base física puede reforzar el incentivo sancionador y, aun así, no compensar la pérdida del retorno asociado con \(f_F\). Desde \(A''\), \(B\) mantiene la misma estructura sancionadora y \(R^F\) permanece fuera de la señal reputacional, por lo que ambos esquemas generan el mismo incentivo marginal bajo las normalizaciones locales.
+Por ejemplo, si \(\delta_r^{A''}=1\), \(d_F^{A'}=1\) y \(v_r=\bar I_r\), la ganancia sancionadora es cero. Si \(\lambda\alpha_F^{A'}>0\), retirar el avance financiero reduce entonces el incentivo marginal de ejecución: que el canal físico sea al menos tan grande como el financiero no basta para preservar el incentivo total.
+
+Desde \(A''\), \(B\) mantiene la misma estructura sancionadora y \(R^F\) permanece fuera de la señal reputacional, por lo que ambos esquemas generan el mismo incentivo marginal bajo las normalizaciones locales.
 
 \medskip
 \noindent\textit{Exposición sancionadora en la secuencia principal.}
@@ -457,7 +470,7 @@ mientras que para \(r\in R^{F}\) se obtiene una relación análoga mediante el c
 
 Para \(A'\to A''\) y \(A''\to B\), la exposición sancionadora de \(R^{S}\) y \(R^{G}\) no cambia mientras permanezcan las mismas bases físicas activas. Sus diferencias de esfuerzo provienen, por tanto, de la reasignación de ponderaciones reputacionales en \(P^m\) y, en \(B\), de la salida de \(C_G\). En \(R^{F}\), \(A'\to A''\) sustituye una base financiera por una física, por lo que ni la exposición ni el esfuerzo pueden ordenarse en general sin supuestos adicionales.
 
-\paragraph{\textit{Benchmark} institucional \(A_0\to A\): ejecución y exposición sancionadora.}
+\paragraph{Contraste con el marco aplicado \(A_0\to A\): ejecución y exposición sancionadora.}
 
 El \textit{benchmark} \(A_0\to A\) no permite aislar un único mecanismo: modifica simultáneamente la composición del ICG, el universo financiero y la estructura de consecuencias. En una inversión de \(R^{S}\), la focalización concentra su canal reputacional en \(C_S\), pero elimina los retornos asociados con \(f_R\) y \(c_{RT}\). Formalmente,
 
@@ -477,7 +490,7 @@ Como \(A\) retira el bloque \(RT\) de la señal publicada, se tiene \(\alpha_S^{
 La transición \(A_0\to A\) no permite establecer un orden general del esfuerzo de ejecución. Una señal más focalizada puede reforzar el retorno de \(C_S\), pero al mismo tiempo elimina otros canales reputacionales y sancionadores; antes de la saturación, también importa la diferencia de exposición.
 \end{resultadobox}
 
-Supóngase que una intervención pendiente \(r\in R_j^{S}\) participa en la base de su propia meta y en \(B_{RT}\) bajo \(A_0\), mientras que en \(A\) permanece únicamente la primera y la consecuencia está activa en ambos esquemas. Entonces, \(\delta_r^{A_0}=2\) y \(\delta_r^{A}=1\). Para aislar estos canales, se mantienen localmente \(V'(\mathrm{Rep}^{A})=V'(\mathrm{Rep}^{A_0})\equiv V'\), \(R_I'(P^{A})=R_I'(P^{A_0})\equiv R_I'\), \(d_I\) y \(\gamma^{A_0}=\gamma^{A}\equiv\gamma\). Asimismo, se supone \(\ell_I^{A}\alpha_S^{A}>\ell_I^{A_0}\alpha_S^{A_0}\), condición que recoge conjuntamente la legibilidad y la ponderación de \(C_S\). Bajo estas condiciones, se definen
+\noindent\textit{Ganancia de focalización y pérdida de canales de incentivo.} La focalización puede mejorar la claridad y aumentar el peso de los resultados del servicio, pero elimina otros indicadores cuyo avance aportaba reputación y bases que sancionaban la ejecución pendiente. Para separar estos efectos, supóngase que una intervención pendiente \(r\in R_j^{S}\) participa en la base de su propia meta y en \(B_{RT}\) bajo \(A_0\), mientras que en \(A\) permanece únicamente la primera y la consecuencia está activa en ambos esquemas. Entonces, \(\delta_r^{A_0}=2\) y \(\delta_r^{A}=1\). Para aislar estos canales, se mantienen localmente \(V'(\mathrm{Rep}^{A})=V'(\mathrm{Rep}^{A_0})\equiv V'\), \(R_I'(P^{A})=R_I'(P^{A_0})\equiv R_I'\), \(d_I\) y \(\gamma^{A_0}=\gamma^{A}\equiv\gamma\). Asimismo, se supone \(\ell_I^{A}\alpha_S^{A}>\ell_I^{A_0}\alpha_S^{A_0}\), condición que recoge conjuntamente la legibilidad y la ponderación de \(C_S\). Bajo estas condiciones, se definen
 
 \begin{subequations}
 \label{eq:componentes_benchmark_a0_a}
@@ -486,7 +499,7 @@ G_P &\equiv V'd_I R_I'C_{S,e_r}\left[\ell_I^{A}\alpha_S^{A}-\ell_I^{A_0}\alpha_S
 \label{eq:componente_gp_benchmark_a0_a}\\
 L_P &\equiv V'd_I R_I'\ell_I^{A_0}\left[\alpha_F^{A_0}f_{R,e_r}+\alpha_{RT}^{A_0}c_{RT,e_r}\right]\geq 0,
 \label{eq:componente_lp_benchmark_a0_a}\\
-L_M &\equiv \gamma\left[L_{r,e}^{\mathrm{fis}}+L_{r,e}^{A_0,\mathrm{fin}}\right]>0.
+L_M &\equiv \gamma\left[\kappa_{r,e}^{\mathrm{fis}}+\kappa_{r,e}^{A_0,\mathrm{fin}}\right]>0.
 \label{eq:componente_lm_benchmark_a0_a}
 \end{align}
 \end{subequations}
@@ -588,7 +601,7 @@ En los esquemas que mantienen una base financiera, el ahorro de una intervenció
 
 Para aislar este margen comparativo, se mantiene localmente fija la ejecución física \(a_r\) frente a variaciones marginales de \(g_r\); la dependencia de \(\bar a_r\) y \(e_r^{\mathrm{sat}}\) respecto de \(g_r\) definida en la Subsección~4.1 opera fuera de esta comparación local.
 
-La Tabla~\ref{tab:canal_eficiencia} resume los incentivos marginales de eficiencia derivados de \eqref{eq:incentivo_marginal_g} y \eqref{eq:derivada_multa_eficiencia}.
+La Tabla~\ref{tab:canal_eficiencia} resume los incentivos marginales de eficiencia derivados de \eqref{eq:incentivo_marginal_g} y \eqref{eq:derivada_multa_eficiencia}. El retorno del ahorro reconocido es positivo; los términos reputacional y sancionador del avance financiero pueden reducirlo. Desde \(A\), esos términos solo aparecen en la columna de \(R^F\); en \(A_0\), afectan a todo el programa.
 
 \begin{table*}[t]
 \centering
@@ -621,16 +634,16 @@ La Tabla~\ref{tab:canal_eficiencia} resume los incentivos marginales de eficienc
 +
 \lambda^{A_0}\alpha_F^{A_0}f_{R,g_r}
 +
-\gamma^{A_0}\chi^{A_0}L_{r,g}^{A_0,\mathrm{fin}}
+\gamma^{A_0}\chi^{A_0}\kappa_{r,g}^{A_0,\mathrm{fin}}
 \)
 }
 \\[8pt]
 \(A\)
 &
-\(\displaystyle
+\multirow{4}{*}{\(\displaystyle
 \varpi
 \left(-\frac{\partial I_r}{\partial g_r}\right)
-\)
+\)}
 &
 \(\displaystyle
 \varpi
@@ -638,15 +651,12 @@ La Tabla~\ref{tab:canal_eficiencia} resume los incentivos marginales de eficienc
 +
 \lambda\alpha_F^{A}f_{F,g_r}
 +
-\gamma\chi^A L_{r,g}^{A,\mathrm{fin}}
+\gamma\chi^A \kappa_{r,g}^{A,\mathrm{fin}}
 \)
 \\[8pt]
 \(A'\)
 &
-\(\displaystyle
-\varpi
-\left(-\frac{\partial I_r}{\partial g_r}\right)
-\)
+
 &
 \(\displaystyle
 \varpi
@@ -654,15 +664,12 @@ La Tabla~\ref{tab:canal_eficiencia} resume los incentivos marginales de eficienc
 +
 \lambda\alpha_F^{A'}f_{F,g_r}
 +
-\gamma L_{r,g}^{A',\mathrm{fin}}
+\gamma \kappa_{r,g}^{A',\mathrm{fin}}
 \)
 \\[8pt]
 \(A''\)
 &
-\(\displaystyle
-\varpi
-\left(-\frac{\partial I_r}{\partial g_r}\right)
-\)
+
 &
 \(\displaystyle
 \varpi
@@ -671,10 +678,7 @@ La Tabla~\ref{tab:canal_eficiencia} resume los incentivos marginales de eficienc
 \\[8pt]
 \(B\)
 &
-\(\displaystyle
-\varpi
-\left(-\frac{\partial I_r}{\partial g_r}\right)
-\)
+
 &
 \(\displaystyle
 \varpi
@@ -704,7 +708,7 @@ En \(R^{S}\) y \(R^{G}\), la secuencia principal no modifica el incentivo margin
 &=
 \gamma
 (1-\chi^A)
-L_{r,g}^{A',\mathrm{fin}}
+\kappa_{r,g}^{A',\mathrm{fin}}
 \leq
 0,
 \label{eq:diferencia_eficiencia_a_ap}
@@ -720,7 +724,7 @@ f_{F,g_r}
 &\quad
 -
 \gamma
-L_{r,g}^{A',\mathrm{fin}}
+\kappa_{r,g}^{A',\mathrm{fin}}
 >
 0,
 \label{eq:diferencia_eficiencia_ap_app}
@@ -737,7 +741,7 @@ f_{F,g_r}
 -
 \gamma
 \chi^A
-L_{r,g}^{A,\mathrm{fin}}
+\kappa_{r,g}^{A,\mathrm{fin}}
 \geq
 0.
 \label{eq:diferencia_eficiencia_a_app}
@@ -762,7 +766,7 @@ g_r^{A',*}.
 En otras palabras, mantener una base financiera activa puede desalentar la eficiencia; sustituirla por verificación física en \(A''\) elimina esa distorsión dentro de la comparación local.
 \end{resultadobox}
 
-\paragraph{\textit{Benchmark} institucional \(A_0\to A\): incentivo de eficiencia.}
+\paragraph{Contraste con el marco aplicado \(A_0\to A\): incentivo de eficiencia.}
 
 Para \(R^{S}\) y \(R^{G}\), bajo \(A_0\) una reducción eficiente del costo disminuye el componente financiero de \(P^{A_0}\) y, cuando \(d_F^{A_0}=1\), puede aumentar también la base financiera de la multa. Desde \(A\), ambos efectos desaparecen. Si \(\varpi^{A_0}=\varpi^{A}\),
 
@@ -781,7 +785,7 @@ f_{R,g_r}
 -
 \gamma^{A_0}
 \chi^{A_0}
-L_{r,g}^{A_0,\mathrm{fin}}
+\kappa_{r,g}^{A_0,\mathrm{fin}}
 \geq
 0.
 \end{aligned}
@@ -790,7 +794,7 @@ L_{r,g}^{A_0,\mathrm{fin}}
 Para \(R^{F}\), la focalización del componente financiero modifica simultáneamente el agregado relevante y su base sancionadora, por lo que la comparación requiere supuestos adicionales.
 
 \begin{resultadobox}
-{Eficiencia: \textit{benchmark} institucional \(A_0\to A\)}
+{Eficiencia: contraste con el marco aplicado \(A_0\to A\)}
 \label{res:eficiencia_benchmark_a0_a}
 Para una intervención completada de \(R^{S}\) o \(R^{G}\),
 \begin{equation}
@@ -936,7 +940,7 @@ Si una variación marginal de la exposición en la región saturada no modifica 
 
 En el escenario base, \(\bar a_r=1\), ambas derivadas son cero. En la extensión con contingencias, la pérdida es estricta si \(\bar a_r<1\) y \(\alpha<1\). Este resultado local no requiere ni implica que todas las inversiones alcancen una disuasión suficiente; cuando el esfuerzo continúa respondiendo, deben considerarse también los resultados y el ahorro inducidos.
 
-\paragraph{\textit{Benchmark} institucional \(A_0\to A\).}
+\paragraph{Contraste con el marco aplicado \(A_0\to A\).}
 
 Las condiciones de ejecución y focalización desarrolladas anteriormente pueden favorecer \(\widetilde q_S^A\), pero no ordenan por sí solas \(Q^A\) cuando también cambia \(C_G\). En una inversión saturada, manteniendo fijos los demás componentes y el mismo avance máximo factible, si \(\mu_r^{A_0}\geq\mu_r^A\), la contribución del cambio de exposición a la variación de multa es
 
@@ -952,32 +956,7 @@ La reducción correspondiente es \(-\Delta_M^{A_0,A}(r)\) y es cero cuando la in
 \begin{aligned}W_R^A-W_R^{A_0}&=\Phi(Q^A)-\Phi(Q^{A_0})\\&\quad+(1-\alpha)[S_I^A-S_I^{A_0}-(M^A-M^{A_0})].\end{aligned}
 \end{equation}
 
-La Tabla~\ref{tab:casos_multas_a0_a} distingue la contribución de las multas, evaluadas en las decisiones óptimas de cada esquema, del cambio total de bienestar.
-
-\begin{table*}[t]
-\centering
-\caption{Contribución de las multas a la diferencia de bienestar entre \(A\) y \(A_0\)}
-\label{tab:casos_multas_a0_a}
-\small
-\renewcommand{\arraystretch}{1.25}
-\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.47\textwidth}>{\raggedright\arraybackslash}X@{}}
-\hline
-\textbf{Situación final} & \textbf{Contribución de \((1-\alpha)(M^{A_0}-M^A)\)}\\
-\hline
-Ambos esquemas sin multa & Nula.\\
-Ambos con multa y \(M^A<M^{A_0}\) & Positiva.\\
-Ambos con la misma multa positiva & Nula.\\
-Ambos con multa y \(M^A>M^{A_0}\) & Negativa; requiere compensación mediante servicio o eficiencia.\\
-\(A_0\) sin multa y \(A\) con multa & Negativa; requiere compensación mediante servicio o eficiencia.\\
-\(A_0\) con multa y \(A\) sin multa & Positiva.\\
-\hline
-\end{tabularx}
-\vspace{1mm}
-\begin{minipage}{0.98\textwidth}
-\footnotesize
-\textit{Nota:} se supone \(0\leq\alpha<1\). Con \(\alpha=1\), la contribución financiera directa es nula en todos los casos. La tabla no ordena el bienestar total: deben incorporarse los cambios del servicio y del ahorro reconocido. Una menor multa para una conducta dada no garantiza el mismo orden después del ajuste gerencial.
-\end{minipage}
-\end{table*}
+Para \(\alpha<1\), la contribución financiera de las multas tiene el signo de \(M^{A_0}-M^A\), evaluado en las decisiones óptimas: es positiva si \(A\) reduce o elimina la multa, nula si no cambia y negativa si la aumenta o activa. Con \(\alpha=1\), esa contribución es nula. Este signo no ordena el bienestar total, que incorpora también los resultados y el ahorro reconocido; una menor multa para una conducta dada tampoco garantiza el mismo orden después del ajuste gerencial.
 
 \noindent\textit{Efecto directo, con conducta constante.} Para aislar el efecto de las reglas, sea \(x=(\mathbf e,\mathbf g)\) un vector factible de decisiones común a ambos esquemas. Como el programa, la tecnología y la regla de reconocimiento del ahorro no cambian, mantener \(x\) fijo implica el mismo \(Q(x)\) y \(S_I(x)\). Por tanto,
 
@@ -1120,5 +1099,4 @@ Si la comparación finita satisface \(Q^B\geq Q^{A''}\), una condición suficien
 W_R^B-W_R^A=(W_R^{A'}-W_R^A)+(W_R^{A''}-W_R^{A'})+(W_R^B-W_R^{A''}).
 \end{equation}
 
-La identidad atribuye los cambios a la trayectoria de modificaciones considerada, sin establecer una cadena creciente de bienestar. Bajo los supuestos locales, sustituir la verificación financiera elimina el desincentivo a la eficiencia en \(R^F\), y la secuencia preserva el esfuerzo de ejecución en servicio si se cumple la condición sobre \(\lambda^B\) o su versión con reasignación parcial. La ejecución en \(R^F\) puede ordenarse bajo \eqref{eq:condicion_ejecucion_rf_ap_app}; sin ella, permanece abierta. Tampoco se obtiene un orden general de bienestar para \(A_0\to A\) ni para \(A''\to B\), y las otras transiciones requieren verificar conjuntamente resultados, ahorro reconocido y multas. Las Subsecciones~4.4 y~4.5 examinan el reconocimiento por sobrecumplimiento en \(B^+\) y reúnen estos resultados y sus condiciones.
-
+La identidad no establece una cadena creciente de bienestar. Bajo los supuestos locales, la secuencia elimina el desincentivo financiero a la eficiencia en \(R^F\) y preserva la ejecución en servicio si se cumple la condición sobre \(\lambda^B\) o su versión con atención parcial. La ejecución en \(R^F\) se ordena bajo \eqref{eq:condicion_ejecucion_rf_ap_app}; sin ella, permanece abierta. El bienestar requiere comparar resultados, ahorro reconocido y multas, sin un orden general para \(A_0\to A\) ni \(A''\to B\). Las Subsecciones~4.4 y~4.5 examinan \(B^+\) y sintetizan los resultados y sus condiciones.
