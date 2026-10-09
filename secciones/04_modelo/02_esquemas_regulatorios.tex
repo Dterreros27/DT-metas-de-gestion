@@ -220,25 +220,27 @@ En \(A_0\), una misma intervención de \(R^{S}\) o \(R^{G}\) puede incidir en la
 
 \subsubsection{Exposición sancionadora por esquema}
 
-Las diferencias anteriores se trasladan a la exposición sancionadora \(\mu_r^m\) definida en \eqref{eq:exposicion_sancionadora_r}. Esta exposición no constituye una multa adicional: representa cuánto aumenta la multa total cuando la intervención \(r\) pasa del estado de culminación al de no culminación, manteniendo constantes las demás condiciones relevantes.
+Las reglas por esquema particularizan el coeficiente \(\mu_r^m\) derivado en \eqref{eq:coeficiente_exposicion_derivado}. Este coeficiente mide la variación de la multa por unidad de brecha física; no constituye una multa adicional ni equivale al monto total asociado con cualquier estado de no culminación.
 
-Considérese una región regulatoria en la que la configuración de las demás obligaciones y la regla de activación \(\chi^m\) permanecen constantes entre ambos estados. Sea \(\delta_r^m\geq0\) el número de bases físicas activas en las que la no culminación de \(r\) incrementa la base sancionadora en \(\bar I_r\). Su valor es local y depende del esquema, de las obligaciones incumplidas y de las bases activas en el estado considerado.
-
-Para evitar ambigüedad, los subíndices \(N\) y \(C\) denotan, respectivamente, el estado en que la inversión \(r\) está \emph{no culminada} (\(a_r<1\)) y el estado en que está \emph{culminada} (\(a_r=1\)), manteniendo constantes las demás decisiones y obligaciones. Así, \(B_{\mathrm{fin},N}^m\) y \(B_{\mathrm{fin},C}^m\) son los valores de la base financiera en ambos estados, mientras que \(M_{r,N}^m\) y \(M_{r,C}^m\) son las multas totales correspondientes.
-
-Dentro de esa región, la exposición puede descomponerse como
+Manteniendo fijos los indicadores de incumplimiento y activación, el esfuerzo de eficiencia y las demás decisiones, la exposición se descompone como
 
 \begin{subequations}
 \label{eq:descomposicion_exposicion_esquemas}
 \begin{align}
-\mu_{r,\mathrm{fis}}^m &= \chi^m\,\mathrm{WACC}\,\bar I_r\,\delta_r^m,
+\mu_{r,\mathrm{fis}}^m
+&=\chi^m\,\mathrm{WACC}\,\bar I_r\,\delta_r^m,
 \label{eq:exposicion_fisica_esquemas}\\
-\mu_{r,\mathrm{fin}}^m &= \eta_F^m\,\chi^m\,\mathrm{WACC}\left(B_{\mathrm{fin},N}^m-B_{\mathrm{fin},C}^m\right),
+\mu_{r,\mathrm{fin}}^m
+&=\eta_F^m\chi^m\,\mathrm{WACC}\,d_F^m\notag\\
+&\quad\times\mathbf1\{r\in\mathrm{Fin}^m\}v_r(g_r),
 \label{eq:exposicion_financiera_esquemas}\\
-\mu_r^m &= \mu_{r,\mathrm{fis}}^m+\mu_{r,\mathrm{fin}}^m.
+\mu_r^m
+&=\mu_{r,\mathrm{fis}}^m+\mu_{r,\mathrm{fin}}^m.
 \label{eq:exposicion_total_esquemas}
 \end{align}
 \end{subequations}
+
+La contribución financiera utiliza la afinidad de \eqref{eq:afinidad_gasto_exposicion}. Para dos avances \(a_{r,N}<a_{r,C}\) que permanecen en la misma región, la diferencia de multas es \(\mu_r^m(a_{r,C}-a_{r,N})\); la diferencia por unidad de brecha se obtiene dividiendo por ese cambio de avance. Esto evita confundir el coeficiente marginal con una diferencia de multas entre estados arbitrarios.
 
 El componente financiero es nulo cuando \(\eta_F^m=0\) o cuando \(r\notin\mathrm{Fin}^m\). La multiplicidad \(\delta_r^m\) recoge, en cambio, la posible superposición de bases físicas. En \(A_0\), por ejemplo, una intervención de \(R^{S}\) o \(R^{G}\) puede participar simultáneamente en la base de su propia meta y en \(B_{RT}\); desde \(A\), esta última fuente de superposición desaparece. Para \(R^{F}\), \(B_F\) en \(A''\) y \(B\) sustituye el mecanismo financiero utilizado en \(A\) y \(A'\).
 
@@ -315,7 +317,7 @@ La descomposición muestra que los esquemas modifican la exposición sancionador
 
 En particular, \(A_0\to A\) reduce las fuentes potenciales de superposición para \(R^{S}\) y \(R^{G}\), al retirar estas intervenciones del avance financiero general y eliminar la relación de trabajo de la estructura sancionadora. Ello puede reducir \(\mu_r^m\), pero no permite inferir por sí solo un ordenamiento del esfuerzo, pues simultáneamente cambian la composición y las ponderaciones regulatorias del ICG, así como la composición y legibilidad de la señal reputacional \(P^m\), además de otros canales continuos de incentivo. Esta comparación se desarrolla en la Subsección~4.3.
 
-La descomposición de \eqref{eq:descomposicion_exposicion_esquemas} requiere que \(\chi^m\) permanezca constante entre los estados de culminación y no culminación. En \(A_0\) y \(A\), la culminación de una intervención puede modificar el ICG y hacer que se cruce el umbral \(\tau\). Cuando ello ocurre, \(M_{r,N}^m-M_{r,C}^m\) incorpora además un cambio de régimen de activación y no puede representarse únicamente mediante las contribuciones física y financiera anteriores. Este efecto pertenece al margen discreto de activación definido en la Subsección~4.1 y se considera separadamente en las comparaciones de la Subsección~4.3.
+La descomposición de \eqref{eq:descomposicion_exposicion_esquemas} requiere mantener constantes los indicadores de configuración del incumplimiento y la regla de activación. En \(A_0\) y \(A\), la culminación de una intervención puede modificar el ICG y hacer que se cruce el umbral \(\tau\). Cuando ello ocurre, la diferencia entre las multas de ambos estados incorpora además un cambio de régimen de activación y no puede representarse únicamente mediante las contribuciones física y financiera anteriores. Este efecto pertenece al margen discreto de activación definido en la Subsección~4.1 y se considera separadamente en las comparaciones de la Subsección~4.3.
 
 \subsubsection{Resumen de los esquemas}
 

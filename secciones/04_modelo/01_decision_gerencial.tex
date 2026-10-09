@@ -451,20 +451,79 @@ El esfuerzo \(e_r\) aumenta la ejecución física y, según el grupo y el diseñ
 
 Esta subsubsección especializa las condiciones marginales del problema del gerente para determinar hasta qué punto una mayor exposición sancionadora puede incrementar el esfuerzo de ejecución. Las bases definidas en \eqref{eq:base_fisica_generica}, \eqref{eq:base_rt} y \eqref{eq:base_financiera} muestran que una misma inversión puede incidir simultáneamente en una meta específica y en obligaciones de alcance transversal. Por ello, una misma brecha de avance físico puede quedar comprendida en varios componentes activos de la multa.
 
-Para aislar este canal, considérese una región regulatoria en la que \(\mathbf 1\{c_j<1\}\), \(d_F^m\) y \(\chi^m\) permanecen constantes. Dentro de esa región, la parte de la multa que varía directamente con la brecha física de la inversión \(r\) se representa localmente como
+Para obtener esta representación a partir de las bases anteriores, se mantienen fijos \(g_r\), las demás decisiones y los indicadores \(\mathbf1\{c_j<1\}\), \(\mathbf1\{c_{RT}<1\}\), \(d_F^m\) y \(\chi^m\). Sea \(B_{\mathrm{fis}}^m\) la suma de las bases físicas aplicables al esquema, incluida \(B_{RT}\) cuando corresponde, y sea \(\eta_F^m\in\{0,1\}\) el indicador de inclusión de la base financiera. La regla común de cuantificación, cuyas bases específicas se detallan en la Subsección~4.2, es
+
+\begin{equation}
+\label{eq:multa_agregada_derivacion}
+M^m=\chi^m\,\mathrm{WACC}
+\left(B_{\mathrm{fis}}^m+\eta_F^m B_{\mathrm{fin}}^m\right),
+\end{equation}
+
+donde \(\mathrm{WACC}>0\) es la tasa utilizada para cuantificar la multa sobre las bases monetarias. Por \eqref{eq:base_fisica_generica} y \eqref{eq:base_rt}, cada base física activa que comprende \(r\) aporta \(\bar I_r(1-a_r)\). Si \(\delta_r^m\) cuenta dichas bases, su suma se separa como
+
+\begin{equation}
+\label{eq:separacion_base_fisica_r}
+B_{\mathrm{fis}}^m
+=
+B_{\mathrm{fis},-r}^m
++\delta_r^m\bar I_r(1-a_r),
+\end{equation}
+
+donde \(B_{\mathrm{fis},-r}^m\) no varía con \(a_r\). La base financiera requiere una condición adicional. A partir de \eqref{eq:avance_financiero_agregado} y \eqref{eq:base_financiera}, con \(d_F^m\) fijo,
+
+\[
+B_{\mathrm{fin}}^m
+=
+d_F^m\sum_{k\in\mathrm{Fin}^m}
+\left[\bar I_k-I_k(F_k,g_k)\right].
+\]
+
+Para que la representación siguiente sea exacta, se supone, únicamente en este análisis del canal de exposición, que el gasto de \(r\) es afín en su avance físico dentro de la región considerada, a eficiencia dada:
+
+\begin{equation}
+\label{eq:afinidad_gasto_exposicion}
+I_r(\bar F_r a_r,g_r)
+=
+u_r(g_r)+v_r(g_r)a_r,
+\qquad v_r(g_r)>0.
+\end{equation}
+
+Por tanto, \(\bar I_r-I_r=(\bar I_r-u_r-v_r)+v_r(1-a_r)\). Agrupando los términos independientes de \(a_r\), se obtiene
+
+\begin{equation}
+\label{eq:separacion_base_financiera_r}
+\begin{aligned}
+B_{\mathrm{fin}}^m
+&=B_{\mathrm{fin},-r}^m\\
+&\quad+d_F^m\mathbf1\{r\in\mathrm{Fin}^m\}
+v_r(g_r)(1-a_r).
+\end{aligned}
+\end{equation}
+
+Aquí \(B_{\mathrm{fin},-r}^m\) es el término constante de la representación: puede incluir el componente \(\bar I_r-u_r-v_r\) de la propia inversión, además de las contribuciones de las demás. Al sustituir ambas separaciones en \eqref{eq:multa_agregada_derivacion}, se define
+
+\begin{equation}
+\label{eq:coeficiente_exposicion_derivado}
+\begin{aligned}
+\mu_r^m
+&\equiv\chi^m\,\mathrm{WACC}
+\Bigl[\delta_r^m\bar I_r\\
+&\qquad+\eta_F^m d_F^m
+\mathbf1\{r\in\mathrm{Fin}^m\}v_r(g_r)\Bigr]
+\geq0.
+\end{aligned}
+\end{equation}
+
+Con \(M_{-r}^m=\chi^m\,\mathrm{WACC}(B_{\mathrm{fis},-r}^m+\eta_F^m B_{\mathrm{fin},-r}^m)\), la multa queda expresada como
 
 \begin{equation}
 \label{eq:exposicion_sancionadora_r}
-M^m
-=
-M_{-r}^m
-+
-\mu_r^m(1-a_r),
-\qquad
-\mu_r^m\geq0,
+M^m=M_{-r}^m+\mu_r^m(1-a_r).
 \end{equation}
 
-donde \(M_{-r}^m\) reúne los componentes que no varían directamente con \(a_r\) en la región considerada. El coeficiente \(\mu_r^m\) mide la exposición sancionadora nominal asociada con una unidad de brecha física. Si la inversión participa en varias bases activas, sus contribuciones se acumulan en \(\mu_r^m\); por tanto, la superposición de bases se refleja en una mayor exposición sobre la misma brecha.
+Así, \(\mu_r^m\) es el coeficiente que acumula las contribuciones sancionadoras por unidad de brecha física. Si solo está activa la base de la propia meta, \(\mu_r^m=\chi^m\mathrm{WACC}\bar I_r\); si también está activa la base de relación de trabajo y no hay contribución financiera, el coeficiente se duplica. Su interpretación marginal, \(-\partial M^m/\partial a_r=\mu_r^m\), se deriva de esta separación.
+
+La igualdad es exacta para las bases físicas y, bajo \eqref{eq:afinidad_gasto_exposicion}, para la contribución financiera. Con una tecnología de gasto no afín, solo corresponde una aproximación de primer orden alrededor del avance evaluado, cuyo coeficiente puede variar con \(a_r\); los resultados posteriores que tratan \(\mu_r^m\) como constante se condicionan a la representación afín. \(M_{-r}^m\) es un término constante dentro de la región, no necesariamente la multa efectiva al culminar \(r\): la culminación puede cambiar los indicadores de incumplimiento o activación y exige evaluar el cambio de régimen por separado.
 
 La ecuación~\eqref{eq:exposicion_sancionadora_r} permite vincular esta exposición con las condiciones marginales derivadas previamente. Como \(a_r=a_r(e_r)\) en \eqref{eq:ejecucion_fisica}, la regla de la cadena implica
 
