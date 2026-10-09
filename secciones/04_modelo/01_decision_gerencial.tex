@@ -433,9 +433,9 @@ Las condiciones interiores de \eqref{eq:foc_esperadas} se aplican dentro de una 
 
 \subsubsection{Exposición sancionadora y saturación del margen de culminación}
 
-Esta subsubsección especializa las condiciones marginales del problema del gerente para determinar hasta qué punto una mayor exposición sancionadora puede incrementar el esfuerzo de ejecución. Las bases definidas en \eqref{eq:base_fisica_generica}, \eqref{eq:base_rt} y \eqref{eq:base_financiera} muestran que una misma inversión puede incidir simultáneamente en una meta específica y en obligaciones de alcance transversal. Por ello, una misma brecha de avance físico puede quedar comprendida en varios componentes activos de la multa.
+Una misma brecha de ejecución puede quedar comprendida en varias bases activas de la multa, como muestran \eqref{eq:base_fisica_generica}, \eqref{eq:base_rt} y \eqref{eq:base_financiera}. Esta superposición aumenta la exposición sancionadora por unidad de brecha. Una mayor exposición puede reforzar el esfuerzo de ejecución mientras el avance responda a él; al alcanzar el máximo factible, ese canal deja de producir mejoras. El análisis deriva la exposición a partir de las bases aplicables y determina bajo qué condiciones existe un umbral suficiente para alcanzar esa saturación.
 
-Para obtener esta representación a partir de las bases anteriores, se mantienen fijos \(g_r\), las demás decisiones y los indicadores \(\mathbf1\{c_j<1\}\), \(\mathbf1\{c_{RT}<1\}\), \(d_F^m\) y \(\chi^m\). Sea \(B_{\mathrm{fis}}^m\) la suma de las bases físicas aplicables al esquema, incluida \(B_{RT}\) cuando corresponde, y sea \(\eta_F^m\in\{0,1\}\) el indicador de inclusión de la base financiera. La regla común de cuantificación, cuyas bases específicas se detallan en la Subsección~4.2, es
+Para separar la contribución de una inversión a la multa, se mantienen fijos \(g_r\), las demás decisiones y los indicadores \(\mathbf1\{c_j<1\}\), \(\mathbf1\{c_{RT}<1\}\), \(d_F^m\) y \(\chi^m\). Sea \(B_{\mathrm{fis}}^m\) la suma de las bases físicas aplicables al esquema, incluida \(B_{RT}\) cuando corresponde, y sea \(\eta_F^m\in\{0,1\}\) el indicador de inclusión de la base financiera. La regla común de cuantificación, cuyas bases específicas se detallan en la Subsección~4.2, es
 
 \begin{equation}
 \label{eq:multa_agregada_derivacion}
@@ -472,7 +472,7 @@ u_r(g_r)+v_r(g_r)a_r,
 \qquad v_r(g_r)>0.
 \end{equation}
 
-Por tanto, \(\bar I_r-I_r=(\bar I_r-u_r-v_r)+v_r(1-a_r)\). Agrupando los términos independientes de \(a_r\), se obtiene
+La identidad \(\bar I_r-I_r=(\bar I_r-u_r-v_r)+v_r(1-a_r)\) permite separar los términos independientes de \(a_r\):
 
 \begin{equation}
 \label{eq:separacion_base_financiera_r}
@@ -504,7 +504,7 @@ Con \(M_{-r}^m=\chi^m\,\mathrm{WACC}(B_{\mathrm{fis},-r}^m+\eta_F^m B_{\mathrm{f
 M^m=M_{-r}^m+\mu_r^m(1-a_r).
 \end{equation}
 
-Así, \(\mu_r^m\) es el coeficiente que acumula las contribuciones sancionadoras por unidad de brecha física. Si solo está activa la base de la propia meta, \(\mu_r^m=\chi^m\mathrm{WACC}\bar I_r\); si también está activa la base de relación de trabajo y no hay contribución financiera, el coeficiente se duplica. Su interpretación marginal, \(-\partial M^m/\partial a_r=\mu_r^m\), se deriva de esta separación.
+El coeficiente \(\mu_r^m\) acumula las contribuciones sancionadoras por unidad de brecha física; su interpretación marginal, \(-\partial M^m/\partial a_r=\mu_r^m\), se deriva de esta separación. Como ejemplo ilustrativo, sean \(\chi^m=1\), \(\mathrm{WACC}=0.10\), \(\bar I_r=100\) unidades monetarias y \(a_r=0.8\), sin contribución financiera. Si solo está activa la base de la propia meta, \(\mu_r^m=10\) y la contribución de la brecha de \(r\) a la multa es \(10(1-0.8)=2\). Si también está activa la base de relación de trabajo y comprende la misma inversión, \(\mu_r^m=20\) y esa contribución aumenta a \(4\), con el mismo avance físico. La multa total incluye además \(M_{-r}^m\). Estos valores no constituyen estimaciones empíricas.
 
 La igualdad es exacta para las bases físicas y, bajo \eqref{eq:afinidad_gasto_exposicion}, para la contribución financiera. Con una tecnología de gasto no afín, solo corresponde una aproximación de primer orden alrededor del avance evaluado, cuyo coeficiente puede variar con \(a_r\); los resultados posteriores que tratan \(\mu_r^m\) como constante se condicionan a la representación afín. \(M_{-r}^m\) es un término constante dentro de la región, no necesariamente la multa efectiva al culminar \(r\): la culminación puede cambiar los indicadores de incumplimiento o activación y exige evaluar el cambio de régimen por separado.
 
@@ -528,7 +528,7 @@ A su vez, \(\gamma^m\), definido en \eqref{eq:gamma_m}, mide el costo marginal d
 a_r'(e_r)\gamma^m(\mu_r^m)\mu_r^m.
 \]
 
-La notación \(\gamma^m(\mu_r^m)\) hace explícita la dependencia inducida por el efecto de \(\mu_r^m\) sobre \(M^m\), manteniendo constantes los demás componentes en la región analizada. Así, \(\mu_r^m\) recoge la exposición nominal, mientras que \(\gamma^m(\mu_r^m)\) recoge el grado en que una variación de la multa es internalizada por el gerente, incluida la probabilidad de detección \(p\), el efecto reputacional y el costo monetario marginal \(K'(M^m)\). Se supone que el producto \(\gamma^m(\mu)\mu\) es continuo y creciente en \(\mu\) en la región relevante.
+\(\mu_r^m\) mide la exposición nominal y \(\gamma^m\) su internalización marginal por el gerente, considerando detección, reputación y costo monetario. La notación \(\gamma^m(\mu_r^m)\) recoge la dependencia inducida por la multa dentro de la región considerada. El producto \(\gamma^m(\mu)\mu\) representa el retorno sancionador por unidad adicional de avance físico dentro de la región considerada; al multiplicarlo por \(a_r'(e_r)\), se obtiene el retorno por unidad adicional de esfuerzo. Se supone continuo y creciente en \(\mu\) en la región relevante.
 
 Sea \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r)\) el beneficio marginal de ejecución generado por los demás canales continuos de \eqref{eq:incentivo_marginal_e}, excluido el efecto directo de reducir la brecha \(1-a_r\) en \eqref{eq:exposicion_sancionadora_r}. Al sustituir la derivada anterior en la condición de primer orden \eqref{eq:incentivo_marginal_e}, se obtiene, para \(e_r<e_r^{\mathrm{sat}}\),
 
@@ -544,18 +544,7 @@ a_r'(e_r)
 
 El primer término del lado derecho reúne los retornos marginales provenientes del desempeño reputacional, el ahorro y los demás componentes continuos de la multa. El segundo es el retorno de elevar \(e_r\) para reducir la brecha física expuesta a sanción. Mientras \(a_r'(e_r)>0\), conforme a \eqref{eq:saturacion_probabilidad}, una mayor exposición puede reforzar este último canal e incrementar el esfuerzo de ejecución.
 
-Para determinar cuándo se agota esa respuesta, evalúese \eqref{eq:foc_probabilidad_cumplimiento} al aproximarse a \(e_r^{\mathrm{sat}}\) por la izquierda. Si \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), los demás canales bastan para alcanzar la saturación y se define \(\mu_r^{m,*}=0\). Una exposición positiva se requiere cuando
-
-\begin{equation}
-\label{eq:condicion_exposicion_positiva}
-\psi_r'(e_r^{\mathrm{sat}})
--
-\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})
->
-0.
-\end{equation}
-
-La diferencia en \eqref{eq:condicion_exposicion_positiva} es el incentivo marginal que debe aportar el canal sancionador para llevar el esfuerzo hasta el punto de saturación. Si el producto \(\gamma^m(\mu)\mu\) alcanza ese nivel para alguna exposición finita, existe una exposición mínima suficiente \(\mu_r^{m,*}<\infty\). Esta se obtiene igualando el retorno sancionador, evaluado con la derivada por la izquierda de \(a_r\), con la diferencia anterior:
+El umbral se determina comparando los incentivos y el costo marginal inmediatamente antes de saturar, mediante sus límites por la izquierda. Si \(\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\geq\psi_r'(e_r^{\mathrm{sat}})\), los demás canales bastan y se define \(\mu_r^{m,*}=0\). Si la diferencia \(\psi_r'(e_r^{\mathrm{sat}})-\mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}})\) es positiva, el canal sancionador debe cubrirla. Se denota por \(a_{r,-}'(e_r^{\mathrm{sat}})\) la derivada del avance por la izquierda, que mide su respuesta al esfuerzo antes de alcanzar el máximo factible. Si existe una exposición finita que cubre la diferencia, la exposición mínima suficiente satisface
 
 \begin{equation}
 \label{eq:multa_suficiente}
@@ -567,9 +556,9 @@ a_{r,-}'(e_r^{\mathrm{sat}})
 \mathrm{BM}_{r,e}^{m,-\mu}(e_r^{\mathrm{sat}}).
 \end{equation}
 
-La ecuación~\eqref{eq:multa_suficiente} muestra que la exposición suficiente depende de los demás incentivos que actúan sobre la inversión. Cuanto mayor sea \(\mathrm{BM}_{r,e}^{m,-\mu}\), menor será, manteniendo lo demás constante, la exposición necesaria para alcanzar \(e_r^{\mathrm{sat}}\).
+Un mayor beneficio marginal de los demás canales reduce la exposición necesaria, manteniendo lo demás constante. La existencia de un umbral finito requiere que el lado izquierdo de \eqref{eq:multa_suficiente} alcance la diferencia positiva. Si \(a_{r,-}'(e_r^{\mathrm{sat}})=0\) y esa diferencia es positiva, ninguna exposición finita la cubre mediante este canal.
 
-Bajo las condiciones de concavidad local, si \(\mu_r^m<\mu_r^{m,*}\), una mayor exposición todavía puede incrementar el esfuerzo a través del segundo término de \eqref{eq:foc_probabilidad_cumplimiento}. Si \(\mu_r^m\geq\mu_r^{m,*}\), el incentivo es suficiente para alcanzar el punto de saturación. A partir de ese punto, \eqref{eq:saturacion_probabilidad} establece que \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). Como \(e_r\) solo genera beneficios mediante variables que dependen de \(a_r\) y \(\psi_r'(e_r)>0\), manteniendo \(g_r\) fijo ningún óptimo elige un esfuerzo superior. Por tanto,
+Bajo las condiciones de concavidad local y manteniendo los demás márgenes fijos, se distinguen dos regímenes. Con \(\mu_r^m<\mu_r^{m,*}\), existe subdisuasión respecto del canal de ejecución: una mayor exposición todavía puede incrementar el esfuerzo y el avance. Si el umbral es finito y \(\mu_r^m\geq\mu_r^{m,*}\), los incentivos bastan para alcanzar la saturación. A su derecha, \(a_{r,+}'(e_r^{\mathrm{sat}})=0\); como \(\psi_r'(e_r)>0\) y los beneficios de ejecución dependen de \(a_r\), ningún óptimo condicionado a \(g_r\) elige un esfuerzo superior. El resultado es
 
 \begin{equation}
 \label{eq:plateau_esfuerzo}
@@ -584,18 +573,17 @@ a_r(e_r^{m,*})
 \text{si }\mu_r^m\geq\mu_r^{m,*}.
 \end{equation}
 
-La ecuación~\eqref{eq:plateau_esfuerzo} establece un efecto techo: una vez alcanzado \(e_r^{\mathrm{sat}}\), una exposición adicional deja de mejorar el avance físico mediante este canal. Ello no impide que otros márgenes de decisión, como el esfuerzo de eficiencia \(g_r\), continúen respondiendo mientras los resultados correspondientes permanezcan sensibles a ellos.
+La igualdad de \eqref{eq:plateau_esfuerzo} describe un techo de esfuerzo, no una condición de primer orden interior en la saturación. Cuando la tecnología presenta un quiebre, el óptimo puede ubicarse allí con un beneficio marginal por la izquierda superior al costo y un beneficio marginal por la derecha igual a cero. Otros márgenes, como \(g_r\), pueden continuar respondiendo.
 
-Existe \emph{subdisuasión} respecto del canal de ejecución física cuando \(\mu_r^m<\mu_r^{m,*}\), pues una mayor exposición todavía puede aumentar el esfuerzo y el avance. Una exposición nominal elevada puede, sin embargo, permanecer por debajo del nivel suficiente si una probabilidad de detección \(p<1\) o una débil transmisión monetaria o reputacional hacia el gerente reducen su efecto efectivo; en ese caso puede existir \emph{sobresanción} nominal sin que se haya alcanzado una disuasión suficiente. Cuando \(\mu_r^m>\mu_r^{m,*}\), la exposición adicional es redundante respecto del canal de ejecución porque ya no mejora el avance físico. En el escenario base, esta redundancia no genera una multa sobre la brecha una vez culminada la inversión, pues \(\bar a_r=1\). Para caracterizar una carga sancionadora estrictamente excesiva se requiere, además, una brecha remanente positiva u otro costo que no produzca mejoras compensatorias.
+Una exposición nominal elevada puede permanecer por debajo del umbral suficiente si la detección o la transmisión de la sanción al gerente son débiles; puede entonces existir sobresanción nominal sin disuasión suficiente. Una vez alcanzado el techo, elevar la exposición es redundante para la ejecución. En el escenario base, \(\bar a_r=1\) y la culminación elimina la multa sobre esa brecha. Una carga estrictamente excesiva requiere una brecha residual positiva u otro costo sin mejoras compensatorias.
 
-\medskip
-\noindent\textit{Extensión con contingencias posteriores.}
+\paragraph{Saturación con contingencias y brecha residual.}
 
-Si una contingencia posterior reduce el avance máximo a \(\bar a_r<1\), la saturación deja una brecha que el esfuerzo de ejecución no puede cerrar. Manteniendo fijos los demás márgenes y el régimen regulatorio, una mayor exposición eleva la multa y reduce la utilidad del gerente en \(\gamma^m(\mu_r^m)(1-\bar a_r)\) por unidad adicional de exposición, cuando \(\gamma^m>0\), sin aumentar el avance. En el escenario base, esta pérdida marginal desaparece tras culminar la inversión, pues \(\bar a_r=1\). La incidencia sobre el bienestar sectorial se evalúa en la Subsección~4.3.
+Si una contingencia posterior reduce el avance máximo a \(\bar a_r<1\), alcanzar la saturación deja una brecha que el esfuerzo de ejecución no puede cerrar. Una vez alcanzado ese techo, manteniendo fijos los demás márgenes y el régimen regulatorio, una unidad adicional de exposición aumenta la multa en \(1-\bar a_r\) y reduce la utilidad del gerente en \(\gamma^m(\mu_r^m)(1-\bar a_r)\), cuando \(\gamma^m>0\). La sanción adicional no aumenta la ejecución mediante este canal, aunque otros márgenes podrían responder. Con \(\bar a_r=1\), esa pérdida desaparece al culminar. La incidencia sobre el bienestar sectorial se evalúa en la Subsección~4.3.
 
 \subsubsection{Criterio de evaluación del regulador}
 
-El problema del gerente determina la respuesta de esfuerzo inducida por cada diseño. El regulador evalúa esa respuesta considerando los resultados del servicio y los recursos utilizados o comprometidos por la empresa. Siguiendo la estructura de ponderación de \citet{ovaere2023}, se define
+El regulador compara los diseños a partir de los resultados valorados por los usuarios, el ahorro reconocido y las multas inducidas por las decisiones del gerente. Los pagos de los usuarios, el monto del programa y los costos de operación y mantenimiento son comunes y se cancelan en las comparaciones. Siguiendo la estructura de ponderación de \citet{ovaere2023}, se define
 
 \begin{equation}
 \label{eq:bienestar_regulador}
@@ -622,7 +610,7 @@ Como \(C_S\) se encuentra truncado en uno, se define un agregado que permite val
 \end{aligned}
 \end{equation}
 
-Los resultados valorados se representan mediante \(Q^m=Q(\widetilde q_S^m,C_G^m)\), con \(\partial Q/\partial\widetilde q_S>0\) y \(\partial Q/\partial C_G\geq0\). El segundo argumento recoge únicamente la contribución neta de las capacidades, instrumentos de gestión y ejecución física a los resultados valorados por los usuarios, sin contabilizar nuevamente efectos incluidos en el primero. Algunos componentes de \(J^G\) pueden tener una contribución nula.
+Los resultados valorados se representan mediante \(Q^m=Q(\widetilde q_S^m,C_G^m)\), con \(\partial Q/\partial\widetilde q_S>0\) y \(\partial Q/\partial C_G\geq0\). La contribución de \(C_G\) es neta de los efectos incluidos en \(\widetilde q_S\), para evitar contarlos nuevamente; algunos componentes de \(J^G\) pueden tener una contribución nula.
 
 El programa y su financiamiento son comunes a los esquemas del modelo base. Sea \(\bar I=\sum_{r\in R}\bar I_r\) el monto previsto en el fondo. El ahorro reconocido, evaluado en las decisiones óptimas, es
 
@@ -634,7 +622,7 @@ S_I^m
 \left[\bar I_r-I_r(F_r^{m,*},g_r^{m,*})\right].
 \end{equation}
 
-Esta definición coincide con \eqref{eq:ahorro_agregado} evaluada bajo cada esquema. Su reconocimiento exige preservar el alcance, la calidad y las demás condiciones exigibles. Los recursos pendientes permanecen comprometidos: por ello, el criterio considera \(\bar I-S_I^m\) como recursos utilizados o reservados para el programa, en lugar de descontar solo el desembolso observado. Esta convención evita atribuir una ganancia de bienestar a la postergación de la ejecución.
+El ahorro de \eqref{eq:ahorro_agregado} se evalúa aquí en las decisiones óptimas y exige preservar alcance, calidad y demás condiciones exigibles. Los recursos de obligaciones pendientes permanecen comprometidos: \(\bar I-S_I^m\) representa los utilizados o reservados para el programa, evitando atribuir una ganancia a la sola postergación de la ejecución.
 
 Sea \(T_0\) el pago agregado de los usuarios que constituye ingreso de la EP y \(C_{OM}\), los costos de operación y mantenimiento, ambos comunes a los esquemas del modelo base. Los excedentes se definen como
 
@@ -645,9 +633,9 @@ CS^m&=\Phi(Q^m)-T_0,
 \label{eq:excedente_productor_regulador}
 \end{align}
 
-El ahorro permanece afectado al fondo de inversiones y reservas. Por tanto, \(\Pi^m\) recoge el excedente financiero después de reservar los recursos del programa pendiente, sin representar utilidades distribuibles ni recursos de libre disposición. Su posible contribución a inversiones y calidad futuras no se añade en este modelo estático.
+El ahorro permanece afectado al fondo de inversiones y reservas. \(\Pi^m\) representa el excedente financiero después de reservar los recursos pendientes, sin implicar utilidades distribuibles. Su posible contribución a inversiones y calidad futuras no se añade al criterio estático.
 
-La multa \(M^m\) reduce los recursos de la EP y no retorna a los usuarios dentro del ámbito sectorial evaluado. Se incorpora una sola vez, en \(\Pi^m\), ponderada por \(1-\alpha\) en el criterio del regulador. Su efecto incentivador opera mediante las decisiones del gerente y los resultados inducidos, sin constituir un beneficio adicional separado. El regulador mantiene el supuesto de detección cierta utilizado para cuantificar la multa.
+La multa detrae recursos de la EP y no retorna a los usuarios dentro del ámbito sectorial evaluado. Se incorpora una sola vez en \(\Pi^m\), con peso \(1-\alpha\) en el bienestar. Su efecto incentivador queda recogido en las decisiones y resultados inducidos. Para cuantificarla, el regulador mantiene el supuesto de detección cierta.
 
 Al sustituir los excedentes en \eqref{eq:bienestar_regulador}, se obtiene
 
@@ -660,6 +648,6 @@ W_R^m
 \end{aligned}
 \end{equation}
 
-Los términos comunes \(T_0\), \(\bar I\) y \(C_{OM}\) se cancelan en las comparaciones. Las diferencias dependen de los resultados, el ahorro reconocido y las multas, evaluados en las respuestas óptimas \((\mathbf e^{m,*},\mathbf g^{m,*})\).
+Las diferencias de bienestar dependen de los resultados, el ahorro reconocido y las multas, evaluados en las respuestas óptimas \((\mathbf e^{m,*},\mathbf g^{m,*})\). Si los resultados y el ahorro no disminuyen y las multas no aumentan, el bienestar no disminuye; las mejoras estrictas por ahorro o multas requieren \(\alpha<1\).
 
-Esta formulación adapta la estructura de Ovaere, sin reproducir íntegramente su concepto de excedente del productor: mantiene separadas la empresa y la decisión gerencial, y no incorpora en \(\Pi^m\) la desutilidad privada de los esfuerzos \(\psi_r\) y \(\xi_r\). Por ello, \(W_R^m\) no constituye una función exhaustiva de bienestar social.
+La adaptación de Ovaere mantiene separadas la empresa y la decisión gerencial y excluye de \(\Pi^m\) la desutilidad privada de \(\psi_r\) y \(\xi_r\), por lo que constituye un criterio sectorial reducido, no una función exhaustiva de bienestar social.
