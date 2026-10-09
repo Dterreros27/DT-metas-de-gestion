@@ -17,13 +17,13 @@ R^{G}
 R^{F}.
 \end{equation}
 
-Las inversiones de \(R^{S}\) se vinculan con resultados observables del servicio representados por los indicadores de \(J^{S}\), principalmente en las dimensiones de cobertura y calidad. Por su parte, \(R^{G}\) comprende las inversiones asociadas con metas que verifican capacidades, instrumentos de gestión o ejecución física, representadas por los indicadores de \(J^{G}\). Para efectos del modelo, los indicadores que, aun cuando se encuentren institucionalmente ubicados en los grupos de cobertura o calidad, miden directamente ejecución física se tratan como parte de \(J^{G}\), reservando \(J^{S}\) para resultados de la prestación.
+Las inversiones se agrupan según su vinculación con los resultados del servicio y las obligaciones regulatorias. \(R^{S}\) reúne las asociadas con resultados de la prestación, en las dimensiones de cobertura y calidad, medidos por los indicadores de \(J^{S}\). \(R^{G}\) reúne las asociadas con capacidades, instrumentos de gestión o ejecución física, representadas por los indicadores de \(J^{G}\); por ello, los indicadores que, aun ubicados institucionalmente en cobertura o calidad, miden directamente ejecución física se tratan como parte de \(J^{G}\). Finalmente, \(R^{F}\) agrupa las inversiones cuyo impacto no puede evaluarse mediante otro indicador aplicable.\footnote{Esta delimitación corresponde al criterio previsto para los indicadores de avance financiero EP-57 y EP-57-A, cuya aplicación se reserva a inversiones y medidas de mejora cuyo impacto no pueda ser medido mediante otro indicador aplicable.}
 
-Para cada \(j\in J^{H}\), con \(H\in\{S,G\}\), \(R_j^{H}\subseteq R^{H}\) reúne las inversiones vinculadas con el indicador correspondiente. En \(J^{S}\), se trata de las inversiones que contribuyen al resultado del servicio y, en \(J^{G}\), de las asociadas con la meta respectiva. Para simplificar el análisis, cada inversión se asigna a un único subconjunto \(R_j^{H}\), según el resultado o meta con el que mantiene su vínculo principal. Esto no excluye que una misma inversión pueda contribuir a varias dimensiones regulatorias ni que pueda incidir adicionalmente en obligaciones de alcance transversal, como el avance financiero o la relación de trabajo.
+Para cada \(j\in J^{H}\), con \(H\in\{S,G\}\), \(R_j^{H}\subseteq R^{H}\) denota las inversiones vinculadas con el indicador \(j\). Para simplificar el análisis, estos subconjuntos particionan \(R^{H}\): cada inversión se asigna a un único indicador según su vínculo principal. En \(A_0\), estas inversiones también pueden quedar comprendidas en las obligaciones transversales de avance financiero general y relación de trabajo.
 
-Por otro lado, \(R^{F}\) agrupa las inversiones cuyo impacto no puede ser evaluado mediante otro indicador aplicable. Dependiendo del diseño regulatorio, estas inversiones pueden verificarse mediante una medida de avance financiero o mediante indicadores específicos de cumplimiento físico o funcional representados por \(J^{F}\).\footnote{Esta delimitación corresponde al criterio previsto para los indicadores de avance financiero EP-57 y EP-57-A, cuya aplicación se reserva a inversiones y medidas de mejora cuyo impacto no pueda ser medido mediante otro indicador aplicable.} Para cada \(j\in J^{F}\), \(R_j^{F}\subseteq R^{F}\) reúne las inversiones verificadas mediante dicho indicador y se supone, de manera análoga, que estos subconjuntos particionan \(R^{F}\).
+El alcance de la verificación financiera varía según el esquema: en \(A_0\) comprende todo el programa, mientras que en \(A\) y \(A'\) se limita a \(R^{F}\). En \(A''\) y \(B\), la verificación financiera de este grupo se sustituye por indicadores específicos de cumplimiento físico o funcional, representados por \(J^{F}\). Para cada \(j\in J^{F}\), \(R_j^{F}\subseteq R^{F}\) reúne las inversiones verificadas mediante \(j\), y estos subconjuntos también particionan \(R^{F}\).
 
-\subsubsection{Ejecución física, resultados y cumplimiento de metas}
+\subsubsection{Ejecución física, resultados y cumplimiento}
 
 La ejecución de cada inversión se caracteriza por una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\), que determina el avance físico, y un esfuerzo de eficiencia \(g_r\), que reduce los recursos necesarios para alcanzar una magnitud dada. El grado de avance físico y la magnitud ejecutada se representan como
 
@@ -308,17 +308,17 @@ La ecuación~\eqref{eq:desempeno_percibido} no reproduce las ponderaciones regul
 
 Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto de bloques incluidos en la señal pública del esquema \(m\). Por saliencia reputacional se entiende la capacidad relativa de la información de cada bloque para atraer la atención de los agentes externos e incidir en su percepción sobre el desempeño del gerente. El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\), antes de considerar qué información publica cada esquema, y se supone común entre ellos. Las saliencias se normalizan respecto del conjunto completo:
 
-\[
+\begin{equation}
 \sum_{H\in\{S,G,F,RT\}}s_H=1.
-\]
+\end{equation}
 
 La saliencia intrínseca total de los bloques que permanecen publicados se denota por
 
-\[
+\begin{equation}
 D^m
 =
 \sum_{K\in\mathrm{Sig}^m}s_K.
-\]
+\end{equation}
 
 Si todos los bloques se publican, \(D^m=1\); si alguno se excluye, \(D^m<1\). Por tanto, \(D^m\) mide la proporción de la saliencia original que corresponde a la información conservada en el esquema \(m\), antes de cualquier reasignación.
 
@@ -483,8 +483,7 @@ Por tanto, \(\bar I_r-I_r=(\bar I_r-u_r-v_r)+v_r(1-a_r)\). Agrupando los términ
 \label{eq:separacion_base_financiera_r}
 \begin{aligned}
 B_{\mathrm{fin}}^m
-&=B_{\mathrm{fin},-r}^m\\
-&\quad+d_F^m\mathbf1\{r\in\mathrm{Fin}^m\}
+&=B_{\mathrm{fin},-r}^m+d_F^m\mathbf1\{r\in\mathrm{Fin}^m\}
 v_r(g_r)(1-a_r).
 \end{aligned}
 \end{equation}
