@@ -285,13 +285,11 @@ pK\left(M^{m}\right)
 \end{aligned}
 \end{equation}
 
-La función \(V(\mathrm{Rep}^m)\) transforma la reputación en utilidad gerencial: una evaluación externa favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, conforme a la lógica de los modelos de \textit{career concerns} \citep{holmstrom1999managerial,dewatripont1999economics}. Se supone \(V'(\mathrm{Rep}^m)>0\). La reputación depende del desempeño percibido \(P^m\), del ahorro reconocido \(S_I^m\) y de la multa \(M^m\); estos tres argumentos dependen de \(\{e_r,g_r\}_{r\in R}\) mediante las relaciones de ejecución y las reglas del esquema \(m\). En lo que sigue se omiten los argumentos de esfuerzo para aligerar la notación.
+La función \(V(\mathrm{Rep}^m)\) transforma la reputación en utilidad gerencial: una evaluación externa favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, conforme a la lógica de los modelos de \textit{career concerns} \citep{holmstrom1999managerial,dewatripont1999economics}. Se supone \(V'(\mathrm{Rep}^m)>0\).
 
 El término \(pK(M^m)\) representa el costo monetario esperado que el gerente asocia con la multa impuesta a la empresa. La función \(K\) es común a los esquemas, con \(K(0)=0\) y \(K'(M)>0\), sin imponer que el costo internalizado equivalga a una fracción constante de la multa. Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan los costos gerenciales de ejecución y eficiencia, respectivamente. Se supone \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\).
 
-\paragraph{Canales reputacionales y desempeño percibido.}
-
-La reputación combina la evaluación del desempeño, el reconocimiento del ahorro y la penalización reputacional asociada con una multa detectada:
+La reputación combina el desempeño percibido \(P^m\), el ahorro reconocido \(S_I^m\) y la penalización asociada con la multa \(M^m\). Sus valores dependen de los esfuerzos de ejecución y eficiencia mediante las relaciones de \eqref{eq:ejecucion_fisica} y \eqref{eq:inversion_ejecutada}, así como de las reglas del esquema \(m\). Se representa como
 
 \begin{equation}
 \label{eq:reputacion_estructural}
@@ -304,9 +302,9 @@ d_E\ell_E R_E(S_I^m)
 p\,d_M\ell_M R_M(M^m).
 \end{equation}
 
-Los subíndices \(I\), \(E\) y \(M\) identifican, respectivamente, los canales de desempeño informado mediante las metas, eficiencia reconocida y multa. Las funciones \(R_I\), \(R_E\) y \(R_M\) son crecientes y diferenciables. Los parámetros \(d_I,d_E,d_M\in[0,1]\) recogen la difusión de cada canal, es decir, el alcance de la información; \(\ell_I^m,\ell_E,\ell_M\in[0,1]\) representan su legibilidad, entendida como la facilidad de interpretación por los agentes externos. El costo monetario \(K(M^m)\) permanece fuera de \(\mathrm{Rep}^m\) para distinguirlo del efecto reputacional de la sanción.
+Los subíndices \(I\), \(E\) y \(M\) identifican, respectivamente, los canales de desempeño informado mediante las metas, eficiencia reconocida y multa. Las funciones \(R_I\), \(R_E\) y \(R_M\) son crecientes y diferenciables. Los parámetros \(d_I,d_E,d_M\in[0,1]\) recogen la difusión de cada canal, es decir, el alcance de la información; \(\ell_I^m,\ell_E,\ell_M\in[0,1]\) representan su legibilidad, entendida como la facilidad de interpretación por los agentes externos. En el canal de desempeño, \(\ell_I^m\) caracteriza la facilidad de interpretar el conjunto de metas publicado y se distingue de la saliencia \(s_H\), que expresa la atención relativa que recibe cada bloque. El costo monetario \(K(M^m)\) permanece fuera de \(\mathrm{Rep}^m\) para distinguirlo del efecto reputacional de la sanción.
 
-El factor \(p\) pondera el canal reputacional de la multa porque este requiere detección. La normalización \(R_M(0)=0\) establece que una multa nula no genera penalización mediante ese canal; análogamente, \(K(0)=0\) elimina el costo monetario cuando no hay multa. La función objetivo valora esta representación reducida de la reputación, cuyo componente sancionador está ponderado por detección. No se supone que, para una función \(V\) no lineal, valorar la reputación esperada equivalga a calcular la utilidad esperada entre estados de detección.
+El factor \(p\) pondera el canal reputacional de la multa porque este requiere detección. La normalización \(R_M(0)=0\) establece que una multa nula no genera penalización mediante ese canal; análogamente, \(K(0)=0\) elimina el costo monetario cuando no hay multa. La función \(V\) valora una representación reducida de la reputación, en la que el efecto sancionador se pondera por la probabilidad de detección.
 
 El desempeño percibido \(P^m\) reúne el cumplimiento de los bloques publicados:
 
@@ -323,7 +321,7 @@ P^m
 \alpha_{RT}^m c_{RT}.
 \end{equation}
 
-Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, representan el cumplimiento promedio de los indicadores de resultados del servicio y de las demás metas de gestión. La medida \(f^m\) corresponde al avance financiero \(f_R\) o \(f_F\), según el diseño, y \(c_{RT}\), al cumplimiento de la relación de trabajo.
+Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, representan el cumplimiento promedio de los indicadores de resultados del servicio y de las demás metas de gestión. La medida \(f^m\) corresponde al avance financiero \(f_R\) o \(f_F\) de \eqref{eq:avance_financiero_agregado}, según el diseño, y \(c_{RT}\), al cumplimiento de la relación de trabajo definido en \eqref{eq:cumplimiento_rt}. Las ponderaciones \(\alpha_H^m\) se determinan a continuación a partir de la saliencia de cada bloque.
 
 Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto no vacío de bloques publicados en el esquema \(m\). El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\): su capacidad relativa de atraer la atención de los agentes externos antes de considerar qué bloques se publican. Es común entre esquemas y se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia que las demás metas de gestión. Las saliencias se normalizan respecto del conjunto completo; su suma para los bloques publicados se denota por \(D^m\):
 
@@ -356,13 +354,9 @@ Los coeficientes son no negativos, suman uno y son cero para los bloques excluid
 
 Como ejemplo, sean \(s_S=0.4\), \(s_G=0.3\), \(s_F=0.2\) y \(s_{RT}=0.1\). Si se publican todos los bloques, los coeficientes coinciden con estas saliencias. Si solo permanecen \(S\) y \(G\), entonces \(D^m=0.7\), y sus ponderaciones son \(0.4/0.7\approx0.571\) y \(0.3/0.7\approx0.429\); las de los bloques excluidos son cero.
 
-Los parámetros anteriores actúan en niveles distintos: \(s_H\) describe la atención relativa entre bloques; \(\alpha_H^m\) la ajusta según cuáles se publican; \(d\) determina el alcance de cada canal reputacional y \(\ell\), su claridad. En particular, \(\ell_I^m\) caracteriza la interpretación del conjunto de metas publicado, mientras que \(s_H\) distingue la atención que recibe cada bloque.
+Para las comparaciones locales, se supone que \(U_G^m\) es estrictamente cóncava respecto del esfuerzo analizado, manteniendo las demás decisiones fijas y dentro de la región diferenciable considerada. Una solución interior que satisface las condiciones de primer orden es, por tanto, el único máximo condicionado en esa región; ello no establece la unicidad del óptimo conjunto. Sobre un dominio factible común y con los mismos costos de esfuerzo, un aumento del beneficio marginal para todo nivel del esfuerzo en la región relevante no reduce el esfuerzo óptimo condicionado.
 
-\paragraph{Regularidad y alcance de las comparaciones.}
-
-Para las comparaciones locales de un esfuerzo, manteniendo las demás decisiones fijas, se supone que \(U_G^m\) es estrictamente cóncava respecto de ese esfuerzo dentro de la región diferenciable considerada. Esta condición caracteriza el óptimo condicionado, sin establecer por sí sola la unicidad del óptimo conjunto. Las comparaciones de esfuerzo se basan en comparativa estática monótona: si el beneficio marginal se desplaza débilmente hacia arriba para todo nivel del esfuerzo en la región relevante, el costo marginal es creciente y el óptimo es único, el esfuerzo óptimo no disminuye. Los ordenamientos se interpretan como comparaciones \textit{ceteris paribus} de los canales regulatorios modificados.
-
-El modelo no impone una restricción vinculante de capacidad gerencial ni costos cruzados entre tareas \citep{holmstrom1991multitask}. Sin embargo, los agregados reputacionales y sancionadores pueden vincular las decisiones; las comparaciones aíslan esos vínculos mediante las normalizaciones de cada transición.
+El modelo no incorpora una restricción vinculante de capacidad gerencial ni costos cruzados entre tareas \citep{holmstrom1991multitask}. Los agregados reputacionales y sancionadores pueden, sin embargo, vincular las decisiones; por ello, cada comparación explicita los demás márgenes que se mantienen constantes.
 
 \paragraph{Retornos marginales y condiciones interiores.}
 
@@ -396,7 +390,7 @@ K'(M^m)
 \label{eq:gamma_m}
 \end{align}
 
-\(\lambda^m\) mide el retorno marginal del desempeño percibido; \(\varpi^m\), la valoración marginal del ahorro reconocido; y \(\gamma^m\), el costo marginal de una mayor multa para el gerente, incluidos sus efectos reputacional y monetario. Son valores locales que dependen de las decisiones, no parámetros globales de la función objetivo.
+\(\lambda^m\) mide el retorno marginal del desempeño percibido; \(\varpi^m\), la valoración marginal del ahorro reconocido; y \(\gamma^m\), el costo marginal de una mayor multa para el gerente, incluidos sus efectos reputacional y monetario. Son valores locales que dependen de las decisiones, no parámetros globales de la función objetivo. En \(\gamma^m\), la probabilidad \(p\) pondera los efectos reputacional y monetario de la sanción; una menor probabilidad reduce directamente ambos componentes, manteniendo lo demás constante.
 
 Para cualquiera de los esfuerzos \(x_r\in\{e_r,g_r\}\), la regla de la cadena permite expresar el beneficio marginal (BM) como
 
@@ -428,9 +422,9 @@ La condición interior de ejecución se aplica en \(0<e_r<e_r^{\mathrm{sat}}\); 
 \end{align}
 \end{subequations}
 
-La condición \(K'(M)>0\) establece que una mayor multa aumenta el costo monetario internalizado. Sin embargo, retirar una base sancionadora que valora la ejecución pendiente puede reducir cuánto evita pagar la empresa mediante un esfuerzo adicional, recogido en \(-\partial M^m/\partial e_r\). Por ello, una menor multa no garantiza que se conserve el incentivo de ejecución. La probabilidad \(p\) pondera tanto el efecto reputacional como el monetario de la sanción; su reducción debilita directamente ambos componentes, manteniendo lo demás constante.
+La condición \(K'(M)>0\) establece que una mayor multa aumenta el costo monetario internalizado. Sin embargo, retirar una base sancionadora que valora la ejecución pendiente puede reducir cuánto evita pagar la empresa mediante un esfuerzo adicional, recogido en \(-\partial M^m/\partial e_r\). Por ello, una menor multa no garantiza que se conserve el incentivo de ejecución.
 
-Las condiciones interiores caracterizan el margen intensivo. Los cambios de régimen se evalúan comparando la utilidad del gerente a ambos lados del umbral correspondiente, sin incorporarlos mediante derivadas de los indicadores. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) genera un incentivo discreto de culminación; los cambios de incumplimiento o activación también pueden producir saltos en la utilidad.
+Las condiciones interiores caracterizan el margen intensivo. Si una comparación cruza un umbral regulatorio, el ordenamiento local del esfuerzo debe complementarse con la comparación de utilidades entre regiones. Los cambios de régimen se evalúan comparando la utilidad del gerente a ambos lados del umbral correspondiente, sin incorporarlos mediante derivadas de los indicadores. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) genera un incentivo discreto de culminación; los cambios de incumplimiento o activación también pueden producir saltos en la utilidad.
 
 \paragraph{Sensibilidad a la reasignación de atención.}
 
