@@ -1,0 +1,110 @@
+\section{Componentes marginales del incentivo de ejecución}
+\label{app:canales_ejecucion}
+
+Este anexo reúne los componentes reputacionales y sancionadores continuos utilizados en las comparaciones de ejecución de la Subsección~4.3. Se obtienen al sustituir las reglas de cada esquema en \eqref{eq:incentivo_marginal_e}. La tabla permite identificar qué canales permanecen o desaparecen en la secuencia \(A\to A'\to A''\to B\), sin reproducir las derivaciones de cada transición ni establecer por sí sola un ordenamiento del esfuerzo óptimo.
+
+\begin{table*}[t]
+\centering
+\caption{Componentes reputacionales y sancionadores del incentivo marginal de ejecución}
+\label{tab:canal_reputacional_ejecucion}
+\scriptsize
+\renewcommand{\arraystretch}{1.30}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\textwidth}{
+@{}
+>{\centering\arraybackslash}p{0.07\textwidth}
+>{\centering\arraybackslash}p{0.21\textwidth}
+>{\centering\arraybackslash}p{0.19\textwidth}
+>{\centering\arraybackslash}p{0.19\textwidth}
+>{\centering\arraybackslash}X
+@{}
+}
+\hline
+\textbf{Esquema}
+&
+\textbf{\(R^{S}\)}
+&
+\textbf{\(R^{G}\)}
+&
+\textbf{\(R^{F}\)}
+&
+\textbf{Canal sancionador continuo}
+\\
+\hline
+\(A\)
+&
+\(\displaystyle
+\lambda\alpha_S^{A}C_{S,e_r}
+\)
+&
+\(\displaystyle
+\lambda\alpha_G^{A}C_{G,e_r}
+\)
+&
+\(\displaystyle
+\lambda\alpha_F^{A}f_{F,e_r}
+\)
+&
+\(\begin{array}{c}
+R^{S},R^{G}:\;
+\gamma\chi^A\delta_r \kappa_{r,e}^{\mathrm{fis}}
+\\
+R^{F}:\;
+\gamma\chi^A \kappa_{r,e}^{A,\mathrm{fin}}
+\end{array}\)
+\\[8pt]
+\(A'\)
+&
+\(\displaystyle
+\lambda\alpha_S^{A'}C_{S,e_r}
+\)
+&
+\(\displaystyle
+\lambda\alpha_G^{A'}C_{G,e_r}
+\)
+&
+\(\displaystyle
+\lambda\alpha_F^{A'}f_{F,e_r}
+\)
+&
+\(\begin{array}{c}
+R^{S},R^{G}:\;
+\gamma\delta_r \kappa_{r,e}^{\mathrm{fis}}
+\\
+R^{F}:\;
+\gamma \kappa_{r,e}^{A',\mathrm{fin}}
+\end{array}\)
+\\[8pt]
+\(A''\)
+&
+\(\displaystyle
+\lambda\alpha_S^{A''}C_{S,e_r}
+\)
+&
+\(\displaystyle
+\lambda\alpha_G^{A''}C_{G,e_r}
+\)
+&
+\(0\)
+&
+\(\gamma\delta_r \kappa_{r,e}^{\mathrm{fis}}\)
+\\[8pt]
+\(B\)
+&
+\(\lambda^B C_{S,e_r}\)
+&
+\(0\)
+&
+\(0\)
+&
+\(\gamma\delta_r \kappa_{r,e}^{\mathrm{fis}}\)
+\\
+\hline
+\end{tabularx}
+\vspace{1mm}
+\begin{minipage}{0.98\textwidth}
+\raggedright
+\footnotesize
+\textit{Nota:} las columnas \(R^{S}\), \(R^{G}\) y \(R^{F}\) muestran únicamente el retorno reputacional continuo que opera mediante el desempeño percibido \(P^m\); la última columna recoge el incentivo asociado con la reducción de las bases de la multa. Las expresiones se condicionan a las normalizaciones locales de \eqref{eq:normalizaciones_locales} y a una región con indicadores de incumplimiento y activación constantes. Se mantiene común la multiplicidad física \(\delta_r\) en las comparaciones pertinentes. Las ponderaciones \(\alpha_H^m\) proceden de las saliencias, no de los pesos regulatorios del ICG. Se supone reasignación completa de atención: con los coeficientes de sensibilidad, el término de \(R^{S}\) bajo \(B\) es \(\lambda^B s_S^{1-\theta}C_{S,e_r}\). No se incluyen el canal del ahorro reconocido ni los cambios discretos de utilidad al culminar o cruzar umbrales.
+\end{minipage}
+\end{table*}
