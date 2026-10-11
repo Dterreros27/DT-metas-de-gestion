@@ -285,13 +285,11 @@ pK\left(M^{m}\right)
 \end{aligned}
 \end{equation}
 
-La función \(V(\mathrm{Rep}^m)\) transforma la reputación en utilidad gerencial: una evaluación externa favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, conforme a la lógica de los modelos de \textit{career concerns} \citep{holmstrom1999managerial,dewatripont1999economics}. Se supone \(V'(\mathrm{Rep}^m)>0\). La reputación depende del desempeño percibido \(P^m\), del ahorro reconocido \(S_I^m\) y de la multa \(M^m\); estos tres argumentos dependen de \(\{e_r,g_r\}_{r\in R}\) mediante las relaciones de ejecución y las reglas del esquema \(m\). En lo que sigue se omiten los argumentos de esfuerzo para aligerar la notación.
+La función \(V(\mathrm{Rep}^m)\) transforma la reputación en utilidad gerencial: una evaluación externa favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, conforme a la lógica de los modelos de \textit{career concerns} \citep{holmstrom1999managerial,dewatripont1999economics}. Se supone \(V'(\mathrm{Rep}^m)>0\). 
 
 El término \(pK(M^m)\) representa el costo monetario esperado que el gerente asocia con la multa impuesta a la empresa. La función \(K\) es común a los esquemas, con \(K(0)=0\) y \(K'(M)>0\), sin imponer que el costo internalizado equivalga a una fracción constante de la multa. Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan los costos gerenciales de ejecución y eficiencia, respectivamente. Se supone \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\).
 
-\paragraph{Canales reputacionales y desempeño percibido.}
-
-La reputación combina la evaluación del desempeño, el reconocimiento del ahorro y la penalización reputacional asociada con una multa detectada:
+La reputación depende del desempeño percibido \(P^m\), del ahorro reconocido \(S_I^m\) y de la multa \(M^m\). Estos componentes dependen de los esfuerzos \(\{e_r,g_r\}_{r\in R}\) mediante las relaciones de ejecución y las reglas del esquema \(m\). Omitiendo los argumentos de esfuerzo para aligerar la notación, la reputación se representa como
 
 \begin{equation}
 \label{eq:reputacion_estructural}
@@ -358,11 +356,27 @@ Como ejemplo, sean \(s_S=0.4\), \(s_G=0.3\), \(s_F=0.2\) y \(s_{RT}=0.1\). Si se
 
 Los parámetros anteriores actúan en niveles distintos: \(s_H\) describe la atención relativa entre bloques; \(\alpha_H^m\) la ajusta según cuáles se publican; \(d\) determina el alcance de cada canal reputacional y \(\ell\), su claridad. En particular, \(\ell_I^m\) caracteriza la interpretación del conjunto de metas publicado, mientras que \(s_H\) distingue la atención que recibe cada bloque.
 
-\paragraph{Regularidad y alcance de las comparaciones.}
+\paragraph{Sensibilidad a la reasignación de atención.}
 
-Para las comparaciones locales de un esfuerzo, manteniendo las demás decisiones fijas, se supone que \(U_G^m\) es estrictamente cóncava respecto de ese esfuerzo dentro de la región diferenciable considerada. Esta condición caracteriza el óptimo condicionado, sin establecer por sí sola la unicidad del óptimo conjunto. Las comparaciones de esfuerzo se basan en comparativa estática monótona: si el beneficio marginal se desplaza débilmente hacia arriba para todo nivel del esfuerzo en la región relevante, el costo marginal es creciente y el óptimo es único, el esfuerzo óptimo no disminuye. Los ordenamientos se interpretan como comparaciones \textit{ceteris paribus} de los canales regulatorios modificados.
+La atención de los bloques excluidos puede perderse en parte, en lugar de reasignarse completamente. Para evaluar esta posibilidad, se considera la siguiente familia de coeficientes, que sustituye a \(\alpha_H^m\) en el análisis de sensibilidad:
 
-El modelo no impone una restricción vinculante de capacidad gerencial ni costos cruzados entre tareas \citep{holmstrom1991multitask}. Sin embargo, los agregados reputacionales y sancionadores pueden vincular las decisiones; las comparaciones aíslan esos vínculos mediante las normalizaciones de cada transición.
+\begin{equation}
+\label{eq:ponderaciones_reputacionales_sensibilidad}
+\widetilde{\alpha}_H^m(\theta)
+=
+\frac{s_H\mathbf{1}\{H\in\mathrm{Sig}^m\}}
+{(D^m)^\theta},
+\qquad
+\theta\in[0,1].
+\end{equation}
+
+Con \(\theta=1\), se recupera la reasignación completa de \eqref{eq:ponderaciones_reputacionales}; con \(\theta=0\), los bloques publicados conservan sus saliencias intrínsecas; para \(0<\theta<1\), la reasignación es parcial. La suma de los coeficientes es \((D^m)^{1-\theta}\), menor que uno cuando \(D^m<1\) y \(\theta<1\). Disminuye la intensidad total del componente de desempeño percibido, mientras que la importancia relativa entre bloques conservados sigue siendo \(s_H/s_{H'}\).
+
+En el ejemplo anterior, si solo se publican \(S\) y \(G\), con \(\theta=0\) sus coeficientes permanecen en \(0.4\) y \(0.3\), y suman \(0.7\). Si se publican los cuatro bloques, \(D^m=1\) y los coeficientes coinciden con las saliencias para cualquier \(\theta\).
+
+Para las comparaciones locales, se supone que \(U_G^m\) es estrictamente cóncava respecto del esfuerzo analizado, manteniendo las demás decisiones fijas y dentro de la región diferenciable considerada. Bajo estas condiciones, un aumento del beneficio marginal para todo nivel del esfuerzo en la región relevante no reduce el esfuerzo óptimo condicionado. Este resultado no establece la unicidad del óptimo conjunto.
+
+El modelo no incorpora una restricción vinculante de capacidad gerencial ni costos cruzados entre tareas \citep{holmstrom1991multitask}. Los agregados reputacionales y sancionadores pueden, sin embargo, vincular las decisiones; por ello, cada comparación explicita los demás márgenes que se mantienen constantes.
 
 \paragraph{Retornos marginales y condiciones interiores.}
 
@@ -432,23 +446,7 @@ La condición \(K'(M)>0\) establece que una mayor multa aumenta el costo monetar
 
 Las condiciones interiores caracterizan el margen intensivo. Los cambios de régimen se evalúan comparando la utilidad del gerente a ambos lados del umbral correspondiente, sin incorporarlos mediante derivadas de los indicadores. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) genera un incentivo discreto de culminación; los cambios de incumplimiento o activación también pueden producir saltos en la utilidad.
 
-\paragraph{Sensibilidad a la reasignación de atención.}
 
-La atención de los bloques excluidos puede perderse en parte, en lugar de reasignarse completamente. Para evaluar esta posibilidad, se considera la siguiente familia de coeficientes, que sustituye a \(\alpha_H^m\) en el análisis de sensibilidad:
-
-\begin{equation}
-\label{eq:ponderaciones_reputacionales_sensibilidad}
-\widetilde{\alpha}_H^m(\theta)
-=
-\frac{s_H\mathbf{1}\{H\in\mathrm{Sig}^m\}}
-{(D^m)^\theta},
-\qquad
-\theta\in[0,1].
-\end{equation}
-
-Con \(\theta=1\), se recupera la reasignación completa de \eqref{eq:ponderaciones_reputacionales}; con \(\theta=0\), los bloques publicados conservan sus saliencias intrínsecas; para \(0<\theta<1\), la reasignación es parcial. La suma de los coeficientes es \((D^m)^{1-\theta}\), menor que uno cuando \(D^m<1\) y \(\theta<1\). Disminuye la intensidad total del componente de desempeño percibido, mientras que la importancia relativa entre bloques conservados sigue siendo \(s_H/s_{H'}\).
-
-En el ejemplo anterior, si solo se publican \(S\) y \(G\), con \(\theta=0\) sus coeficientes permanecen en \(0.4\) y \(0.3\), y suman \(0.7\). Si se publican los cuatro bloques, \(D^m=1\) y los coeficientes coinciden con las saliencias para cualquier \(\theta\).
 
 \subsubsection{Exposición sancionadora y saturación del margen de culminación}
 
