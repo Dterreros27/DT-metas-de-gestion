@@ -266,7 +266,7 @@ R^{F}:\;
 \medskip
 \noindent\textit{Transiciones comunes a las intervenciones de \(R^{S}\) y \(R^{G}\).}
 
-La transición \(A\to A'\) es la más simple de la secuencia: no cambia la composición de la señal publicada ni la forma de cuantificar la multa. Solo desaparece la posibilidad de que un ICG agregado superior al umbral desactive la consecuencia pese a existir un incumplimiento. Así, para una intervención pendiente \(r\in R_j^{H}\), con \(H\in\{S,G\}\), y manteniendo \(\delta_r^{A}=\delta_r^{A'}\equiv\delta_r\), el efecto depende exclusivamente de si el umbral impedía aplicar la multa:
+La transición \(A\to A'\) es la más simple de la secuencia: no cambia la composición de la señal publicada ni la forma de cuantificar la multa. Solo desaparece la posibilidad de que un ICG agregado superior al umbral desactive la consecuencia pese a existir un incumplimiento. Así, para una intervención pendiente \(r\in R_j^{H}\), con \(H\in\{S,G\}\), y manteniendo \(\delta_r^{A}=\delta_r^{A'}\equiv\delta_r\), donde \(\delta_r\) cuenta las bases físicas sancionadoras que comprenden la intervención, el efecto depende exclusivamente de si el umbral impedía aplicar la multa:
 
 \begin{equation}
 \label{eq:diferencia_ejecucion_a_ap_rh}
@@ -282,7 +282,7 @@ La transición \(A\to A'\) es la más simple de la secuencia: no cambia la compo
 0.
 \end{equation}
 
-La diferencia es estrictamente positiva cuando el umbral habría desactivado la consecuencia. El eventual aumento de exposición solo puede elevar el avance físico antes de la saturación, conforme a la regla general de la Subsección~4.3.1.
+La diferencia es estrictamente positiva cuando el umbral habría desactivado la consecuencia y la intervención está comprendida en al menos una base física sancionadora, siempre que el esfuerzo todavía pueda aumentar su avance. Una vez culminada la inversión, la mayor exposición deja de aportar un incentivo adicional de ejecución.
 
 La transición \(A'\to A''\) opera por una razón distinta. El canal sancionador físico permanece inalterado, pero la salida de \(f_F\) concentra la señal reputacional en los bloques restantes. Como \(s_F>0\), se obtiene \(\alpha_H^{A''}>\alpha_H^{A'}\) para \(H\in\{S,G\}\) y, por tanto,
 
@@ -303,6 +303,8 @@ La última transición concentra la señal pública en los resultados del servic
 =\left[\lambda^B-\alpha_S^{A''}\lambda\right]C_{S,e_r}.
 \end{equation}
 
+Aquí, \(\lambda\) representa el retorno marginal del desempeño percibido en la utilidad del gerente, que se mantiene común entre los esquemas para aislar el efecto de la transición.
+
 Una condición suficiente para que el incentivo no disminuya es
 
 \begin{equation}
@@ -314,25 +316,19 @@ Una condición suficiente para que el incentivo no disminuya es
 \frac{s_S}{s_S+s_G}\lambda.
 \end{equation}
 
-Como ejemplo ilustrativo, con \(s_S=0.4\) y \(s_G=0.3\), \(C_S\) pasa de una ponderación \(0.4/0.7\simeq0.571\) en \(A''\) a uno en \(B\). Para \(\lambda>0\), la condición~\eqref{eq:condicion_lambda_b} admite una caída de hasta aproximadamente el \(42.9\%\) en el retorno \(\lambda^B\) respecto de \(\lambda\), sin reducir el incentivo marginal de ejecución en servicio. Una caída mayor no queda compensada por la concentración de la señal. Estos valores ilustran la condición y no constituyen una estimación empírica.
+Como ejemplo ilustrativo, con \(s_S=0.4\) y \(s_G=0.3\), \(C_S\) pasa de una ponderación \(0.4/0.7\simeq0.571\) en \(A''\) a uno en \(B\). Para \(\lambda>0\), la condición~\eqref{eq:condicion_lambda_b} admite una caída de hasta aproximadamente el \(42.9\%\) en el retorno \(\lambda^B\) respecto de \(\lambda\), sin reducir el incentivo marginal de ejecución en servicio. Una caída mayor no queda compensada por la concentración de la señal.
 
 \paragraph{Sensibilidad a la reasignación de atención.}
 
-La condición anterior corresponde a la normalización completa. Con los coeficientes de \eqref{eq:ponderaciones_reputacionales_sensibilidad}, el canal reputacional de \(A''\to B\) no disminuye si
+La condición anterior supone una reasignación completa de la atención. Para evaluar una reasignación parcial, se utilizan los coeficientes de \eqref{eq:ponderaciones_reputacionales_sensibilidad}, donde \(\theta=0\) representa ausencia de reasignación y \(\theta=1\), reasignación completa. El incentivo reputacional de ejecución no disminuye al pasar de \(A''\) a \(B\) si \(\lambda^B s_S^{1-\theta}\geq\lambda^{A''}s_S/(s_S+s_G)^\theta\). Para retornos locales positivos, esta condición equivale a
 \begin{equation}
 \label{eq:condicion_lambda_theta}
-\lambda^B s_S^{1-\theta}
-\geq
-\lambda^{A''}\frac{s_S}{(s_S+s_G)^\theta}.
-\end{equation}
-Para retornos locales positivos, esta condición equivale a
-\begin{equation}
-\label{eq:umbral_cociente_lambda_theta}
 \frac{\lambda^B}{\lambda^{A''}}
 \geq
 \left(\frac{s_S}{s_S+s_G}\right)^\theta.
 \end{equation}
-Manteniendo ambos retornos fijos en este ejercicio de sensibilidad, si \(0<\lambda^B/\lambda^{A''}<1\), se obtiene
+
+Manteniendo ambos retornos fijos, si \(0<\lambda^B/\lambda^{A''}<1\), el grado mínimo de reasignación necesario para compensar el menor retorno bajo \(B\) es
 \begin{equation}
 \label{eq:umbral_theta_reputacion}
 \theta\geq\theta^*
@@ -340,14 +336,16 @@ Manteniendo ambos retornos fijos en este ejercicio de sensibilidad, si \(0<\lamb
 \frac{\ln(\lambda^{A''}/\lambda^B)}
 {\ln((s_S+s_G)/s_S)}.
 \end{equation}
-Si \(\theta^*>1\), ningún grado admisible de reasignación satisface la condición. Si \(\lambda^B\geq\lambda^{A''}>0\), esta se cumple para todo \(\theta\in[0,1]\). Con retornos iguales, cualquier \(\theta>0\) aumenta estrictamente el coeficiente reputacional de \(C_S\); con \(\theta=0\), lo conserva. Por tanto, la reasignación parcial no revierte necesariamente el ordenamiento.
 
-Estos umbrales caracterizan el canal marginal, no una dominancia de bienestar. Si los retornos \(\lambda^m\) también varían con \(\theta\), debe evaluarse \eqref{eq:condicion_lambda_theta} con esa dependencia; el umbral cerrado \eqref{eq:umbral_theta_reputacion} deja de ser aplicable sin restricciones adicionales. Su contraste requiere información sobre atención, legibilidad y respuesta gerencial, además de los pesos regulatorios del ICG.
+Como \(\theta\in[0,1]\), la compensación es posible solo si \(\theta^*\leq1\), equivalente a \(\lambda^B/\lambda^{A''}\geq s_S/(s_S+s_G)\). Por debajo de esa proporción, ni siquiera la reasignación completa preserva el incentivo. Si \(\lambda^B/\lambda^{A''}\geq1\), la condición se cumple para cualquier \(\theta\in[0,1]\). Con retornos iguales, una reasignación positiva aumenta el retorno reputacional por una mejora en \(C_S\); sin reasignación, lo mantiene.
+
+Por tanto, una reasignación parcial puede preservar el incentivo, pero su suficiencia depende del cociente de retornos. Este resultado se refiere al canal marginal de ejecución y no establece por sí solo una mejora del bienestar. Si los retornos \(\lambda^m\) también cambian con \(\theta\), debe evaluarse directamente \eqref{eq:condicion_lambda_theta}; la expresión cerrada de \(\theta^*\) no se aplica sin restricciones adicionales. Evaluar estas condiciones requiere información sobre atención, legibilidad y valoración gerencial de la reputación, que no se deduce únicamente de los pesos regulatorios del ICG.
 
 \begin{resultadobox}
-{La secuencia preserva el esfuerzo en servicio bajo la condición de retorno reputacional}
+{El esfuerzo para mejorar el servicio no disminuye si se conserva su incentivo reputacional}
 \label{res:incentivo_ejecucion_rs}
-Bajo las condiciones locales anteriores y \eqref{eq:condicion_lambda_b}, para una intervención pendiente \(r\in R_j^{S}\),
+
+Para una inversión pendiente vinculada con los resultados del servicio, \(r\in R_j^{S}\), pasar de \(A\) a \(A'\), luego a \(A''\) y finalmente a \(B\) mantiene o aumenta el esfuerzo de ejecución. La comparación requiere concavidad, mantener constantes el esfuerzo de eficiencia de esa inversión y los esfuerzos de las demás inversiones, y permanecer en la misma región regulatoria. Incluir a \(B\) exige, además, conservar un incentivo reputacional suficiente al concentrar la señal pública en los resultados del servicio. En esas condiciones,
 \begin{equation}
 e_r^{B,*}
 \geq
@@ -357,14 +355,16 @@ e_r^{A',*}
 \geq
 e_r^{A,*}.
 \end{equation}
-En términos regulatorios, la secuencia no debilita el esfuerzo dirigido a los resultados del servicio. La inclusión de \(B\) en este orden exige, sin embargo, que la señal concentrada en \(C_S\) conserve el retorno mínimo establecido en \eqref{eq:condicion_lambda_b}; con reasignación parcial, corresponde utilizar \eqref{eq:condicion_lambda_theta}. Los aumentos estrictos del incentivo marginal se traducen en mayor esfuerzo cuando el óptimo inicial es interior, la ejecución continúa respondiendo y la comparación permanece en la región considerada. La culminación o una esquina común pueden producir igualdad de esfuerzos pese a una diferencia de incentivos.
+
+Un incentivo mayor puede aumentar el esfuerzo si el gerente no está en un límite de esfuerzo y todavía puede avanzar en la ejecución. Puede haber igualdad entre esquemas si ambos inducen la culminación o el mismo límite de esfuerzo.
 \end{resultadobox}
 
 \medskip
 \noindent\textit{Intervenciones vinculadas con otras metas de gestión.}
 
-Las inversiones vinculadas con \(J^{G}\) siguen la misma lógica en las dos primeras transiciones, conforme a \eqref{eq:diferencia_ejecucion_a_ap_rh} y \eqref{eq:diferencia_ejecucion_ap_app_rh}. El cambio decisivo ocurre en \(A''\to B\): \(C_G\) sale de la señal pública y desaparece su retorno reputacional.
+Para las inversiones vinculadas con \(J^{G}\), pasar de \(A\) a \(A'\) elimina la posibilidad de que el ICG agregado desactive la sanción pese a existir incumplimiento. Pasar de \(A'\) a \(A''\) conserva sus incentivos de ejecución, pues la sustitución de la verificación financiera se limita a \(R^{F}\). Estos efectos se recogen en \eqref{eq:diferencia_ejecucion_a_ap_rh} y \eqref{eq:diferencia_ejecucion_ap_app_rh}.
 
+En cambio, al pasar de \(A''\) a \(B\), el cumplimiento de estas metas, resumido en \(C_G\), deja de formar parte de la señal pública. Bajo las condiciones de comparación establecidas,
 \begin{equation}
 \label{eq:diferencia_ejecucion_app_b_rg}
 \mathrm{BM}_{r,e}^{B}
@@ -378,10 +378,13 @@ C_{G,e_r}
 <0.
 \end{equation}
 
+El producto del lado derecho mide el incentivo reputacional que se pierde: \(\lambda\) es el retorno marginal del desempeño percibido en la utilidad del gerente; \(\alpha_G^{A''}\), la ponderación de estas metas en esa percepción; y \(C_{G,e_r}\equiv\partial C_G/\partial e_r\), cuánto aumenta su cumplimiento con un esfuerzo adicional. El signo negativo indica que, en \(B\), ese avance deja de aportar una recompensa mediante el canal de desempeño publicado, aunque las obligaciones y sus consecuencias por incumplimiento permanecen vigentes. La diferencia es estrictamente negativa mientras ese esfuerzo aumente \(C_G\) y el retorno reputacional sea positivo.
+
 \begin{resultadobox}
-{Mantener las metas de gestión en la señal sostiene su incentivo de ejecución}
+{Retirar las metas de gestión de la señal pública puede reducir el esfuerzo para cumplirlas}
 \label{res:incentivo_ejecucion_rg}
-Para una intervención \(r\in R_j^{G}\),
+
+Para una inversión \(r\in R_j^{G}\), pasar de \(A\) a \(A'\) y luego a \(A''\) mantiene o aumenta el esfuerzo de ejecución. Bajo los supuestos de concavidad, manteniendo constantes el esfuerzo de eficiencia y los esfuerzos de las demás inversiones, y dentro de la misma región regulatoria,
 \begin{equation}
 e_r^{A'',*}
 \geq
@@ -393,7 +396,8 @@ e_r^{A'',*}
 \geq
 e_r^{B,*}.
 \end{equation}
-En términos regulatorios, mantener \(J^{G}\) dentro de la señal pública hasta \(A''\) fortalece el esfuerzo destinado a estas metas. Al retirarlas en \(B\), ese impulso desaparece, aunque las obligaciones continúan siendo exigibles; por ello, el orden entre \(e_r^{B,*}\) y \(e_r^{A,*}\) permanece abierto.
+
+En \(B\), retirar estas metas de la señal pública elimina su recompensa reputacional y puede reducir el esfuerzo respecto de \(A''\), aunque las obligaciones y sus consecuencias siguen vigentes. Esto no determina si el esfuerzo bajo \(B\) es mayor, igual o menor que bajo \(A\).
 \end{resultadobox}
 
 \medskip
