@@ -69,7 +69,7 @@ Estas igualdades no atribuyen valores estructuralmente idénticos a los parámet
 
 Las comparaciones marginales permiten ordenar esfuerzos óptimos bajo las condiciones de comparativa estática de la Subsección~4.1, manteniendo fijos los demás márgenes y dentro de las regiones pertinentes. Si la reforma cruza un umbral o cambia un indicador discreto, se requiere comparar la utilidad entre regiones. Las condiciones diferenciales sobre resultados tampoco sustituyen la comparación finita cuando cambian las derivadas a lo largo de la transición.
 
-A lo largo de la subsección se aplica una regla común: una mayor exposición sancionadora solo puede elevar el avance físico mientras el margen de culminación no esté saturado. En el escenario base, la saturación coincide con la culminación, \(a_r=1\). Una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), la exposición adicional deja de aumentar \(a_r\), aunque los demás canales continuos pueden seguir afectando la decisión del gerente. La posibilidad de saturación con \(\bar a_r<1\) se utiliza únicamente en la extensión con contingencias posteriores a la aprobación regulatoria.
+A lo largo de la subsección se aplica una regla común: una mayor exposición sancionadora solo puede elevar el avance físico mientras la inversión no haya culminado. La saturación coincide con la culminación, \(a_r=1\). Una vez alcanzada la región \(e_r\geq e_r^{\mathrm{sat}}\), la exposición adicional deja de aumentar \(a_r\), aunque los demás canales continuos pueden seguir afectando la decisión del gerente.
 
 Para \(r\in R_j^{S}\), mientras el resultado medido se encuentre por debajo de la meta, antes del truncamiento en uno, la definición de \(C_S\) como promedio aritmético implica
 
@@ -567,9 +567,9 @@ a_r(e_r^{A,*})
 =
 a_r(e_r^{A_0,*})
 =
-\bar a_r.
+1.
 \end{equation}
-En el escenario base, \(\bar a_r=1\): ambos esquemas culminan la inversión y la mayor exposición de \(A_0\) es redundante respecto del incentivo, pero no genera una multa sobre esta brecha, porque \(1-a_r=0\). Solo en la extensión con contingencias, cuando \(\bar a_r<1\), la exposición adicional de \(A_0\) aumenta la carga sobre una brecha que ya no responde al esfuerzo y puede constituir sobredisuasión respecto de este canal.
+Ambos esquemas culminan la inversión. La mayor exposición de \(A_0\) es redundante respecto del incentivo de ejecución y no genera una multa sobre esta brecha, porque \(1-a_r=0\). Esta igualdad no implica que los demás márgenes de decisión ni las multas totales coincidan entre esquemas.
 \end{resultadobox}
 
 La comparación anterior debe distinguirse del caso en que el esfuerzo todavía puede elevar el avance. Antes de la saturación, y bajo las normalizaciones utilizadas para definir \(G_P\), \(L_P\) y \(L_M\), la condición para que la focalización de \(A\) no reduzca el beneficio marginal de ejecución es
@@ -599,7 +599,7 @@ El análisis pasa ahora del esfuerzo destinado a completar la inversión al esfu
 
 En los esquemas que mantienen una base financiera, el ahorro de una intervención culminada no configura por sí solo un incumplimiento financiero. Si existen otras intervenciones pendientes en el universo evaluado, sin embargo, el menor gasto puede reducir \(f^m\) y aumentar \(B_{\mathrm{fin}}^m\). Este canal desaparece en \(A''\) y \(B\).
 
-Para aislar este margen comparativo, se mantiene localmente fija la ejecución física \(a_r\) frente a variaciones marginales de \(g_r\); la dependencia de \(\bar a_r\) y \(e_r^{\mathrm{sat}}\) respecto de \(g_r\) definida en la Subsección~4.1 opera fuera de esta comparación local.
+Para aislar este margen comparativo, se mantiene localmente fija la ejecución física \(a_r\) frente a variaciones marginales de \(g_r\), conforme a la separación entre ejecución y eficiencia establecida en la Subsección~4.1.
 
 La Tabla~\ref{tab:canal_eficiencia} resume los incentivos marginales de eficiencia derivados de \eqref{eq:incentivo_marginal_g} y \eqref{eq:derivada_multa_eficiencia}. El retorno del ahorro reconocido es positivo; los términos reputacional y sancionador del avance financiero pueden reducirlo. Desde \(A\), esos términos solo aparecen en la columna de \(R^F\); en \(A_0\), afectan a todo el programa.
 
@@ -926,30 +926,11 @@ Por ello, una mejora de \(\widetilde q_S\) no basta por sí sola para ordenar \(
 
 \paragraph{Exposición redundante y criterio regulatorio.}
 
-Si una variación marginal de la exposición en la región saturada no modifica \(Q^m\) ni \(S_I^m\),
-
-\begin{equation}
-\label{eq:derivada_multa_exposicion_regulador}
-\left.\frac{\partial M^m}{\partial\mu_r^m}\right|_{e_r\geq e_r^{\mathrm{sat}}}=1-\bar a_r\geq0.
-\end{equation}
-
-\begin{equation}
-\label{eq:bienestar_exposicion_excesiva_general}
-\left.\frac{\partial W_R^m}{\partial\mu_r^m}\right|_{e_r\geq e_r^{\mathrm{sat}}}=-(1-\alpha)(1-\bar a_r)\leq0.
-\end{equation}
-
-En el escenario base, \(\bar a_r=1\), ambas derivadas son cero. En la extensión con contingencias, la pérdida es estricta si \(\bar a_r<1\) y \(\alpha<1\). Este resultado local no requiere ni implica que todas las inversiones alcancen una disuasión suficiente; cuando el esfuerzo continúa respondiendo, deben considerarse también los resultados y el ahorro inducidos.
+Una vez culminada la inversión, su brecha física es cero. Por ello, manteniendo fijos los demás márgenes y el régimen regulatorio, una variación de su exposición sancionadora no modifica la multa ni el bienestar mediante este canal. Este resultado local no requiere ni implica que todas las inversiones culminen; cuando el esfuerzo todavía puede elevar el avance, deben considerarse también los resultados y el ahorro inducidos.
 
 \paragraph{Contraste con el marco aplicado \(A_0\to A\).}
 
-Las condiciones de ejecución y focalización desarrolladas anteriormente pueden favorecer \(\widetilde q_S^A\), pero no ordenan por sí solas \(Q^A\) cuando también cambia \(C_G\). En una inversión saturada, manteniendo fijos los demás componentes y el mismo avance máximo factible, si \(\mu_r^{A_0}\geq\mu_r^A\), la contribución del cambio de exposición a la variación de multa es
-
-\begin{equation}
-\label{eq:reduccion_multa_esperada_a_a0}
-\Delta_M^{A_0,A}(r)\equiv(1-\bar a_r)(\mu_r^A-\mu_r^{A_0})\leq0.
-\end{equation}
-
-La reducción correspondiente es \(-\Delta_M^{A_0,A}(r)\) y es cero cuando la inversión culmina. No determina el signo de la multa total de equilibrio, que depende de las demás brechas y de la activación sancionadora. La comparación exacta es
+Las condiciones de ejecución y focalización desarrolladas anteriormente pueden favorecer \(\widetilde q_S^A\), pero no ordenan por sí solas \(Q^A\) cuando también cambia \(C_G\). Si ambos esquemas culminan una inversión, reducir su exposición no genera un ahorro de multas sobre la brecha física, pues esta ya es cero. El signo de la multa total de equilibrio depende de las demás brechas y de la activación sancionadora. La comparación exacta es
 
 \begin{equation}
 \label{eq:condicion_bienestar_a_a0}

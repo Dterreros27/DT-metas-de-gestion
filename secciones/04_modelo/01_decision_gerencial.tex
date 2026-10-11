@@ -34,23 +34,23 @@ a_r=a_r(e_r),
 F_r=\bar F_r a_r.
 \end{equation}
 
-Por definición, \(0\leq a_r\leq1\). El esfuerzo de eficiencia no produce directamente avance físico, pero puede ampliar el nivel alcanzable con los recursos programados. Esta representación reducida no atribuye al esfuerzo gerencial una interpretación causal exclusiva de la ejecución.
+Por definición, \(0\leq a_r\leq1\). El esfuerzo de eficiencia reduce los recursos necesarios para alcanzar una magnitud física dada, sin modificar directamente el avance físico. Esta representación reducida no atribuye al esfuerzo gerencial una interpretación causal exclusiva de la ejecución.
 
 El programa de inversiones y los recursos destinados a financiarlo son evaluados por el regulador al aprobar el estudio tarifario. Por ello, el escenario base supone que el monto programado \(\bar I_r\) es suficiente, bajo las condiciones consideradas en dicha evaluación, para ejecutar la magnitud física prevista \(\bar F_r\). Esta suficiencia hace factible la culminación, \(a_r=1\), pero no garantiza que el gerente elija el esfuerzo necesario para alcanzarla. El caso de ejecución incompleta con recursos suficientes permanece dentro del escenario base: los incentivos pueden resultar insuficientes aun cuando no exista una restricción financiera. Si la inversión culmina, el gasto efectivo puede ser inferior a \(\bar I_r\) cuando la empresa ejecuta con mayor eficiencia.
 
-Para representar conjuntamente este caso y una extensión con contingencias posteriores a la aprobación, se supone que existe un nivel finito \(e_r^{\mathrm{sat}}=e_r^{\mathrm{sat}}(\bar I_r,g_r)\) antes del cual el esfuerzo incrementa el avance físico a una tasa no creciente. A partir de ese nivel, el avance permanece constante en \(\bar a_r=\bar a_r(\bar I_r,g_r)\leq1\):
+Se supone que existe un nivel finito de esfuerzo de culminación \(e_r^{\mathrm{sat}}\), antes del cual el esfuerzo incrementa el avance físico a una tasa no creciente. A partir de ese nivel, la inversión está completa y el avance permanece igual a uno:
 
 \begin{equation}
 \label{eq:saturacion_probabilidad}
 \begin{aligned}
 a_r'(e_r)>0,\quad a_r''(e_r)\leq0
 &\quad \text{si } e_r<e_r^{\mathrm{sat}},\\
-a_r(e_r)=\bar a_r
+a_r(e_r)=1
 &\quad \text{si } e_r\geq e_r^{\mathrm{sat}}.
 \end{aligned}
 \end{equation}
 
-Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\), aunque puede presentar un quiebre en ese punto, con \(a_{r,-}'(e_r^{\mathrm{sat}})>0\) y \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). En el escenario base, \(\bar a_r=1\) y \(e_r^{\mathrm{sat}}\) coincide con el esfuerzo de culminación. La posibilidad \(\bar a_r<1\) se reserva para una extensión en la que contingencias posteriores a la aprobación regulatoria reducen el avance alcanzable con los recursos disponibles; en ese caso, un mayor esfuerzo de ejecución no puede cerrar la brecha remanente.
+Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\), aunque puede presentar un quiebre en ese punto, con \(a_{r,-}'(e_r^{\mathrm{sat}})>0\) y \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). La saturación coincide con la culminación de la inversión. Mientras \(a_r<1\), persiste un margen de ejecución que puede responder al esfuerzo; que dicho margen exista no implica que los incentivos induzcan al gerente a aprovecharlo.
 
 Para las inversiones pertenecientes a \(R^{S}\), la magnitud física ejecutada contribuye a la producción de resultados del servicio. Sea \(q_j\) el resultado correspondiente a \(j\in J^{S}\), orientado de manera que un mayor valor represente un mejor desempeño:
 
@@ -127,7 +127,7 @@ I_r(\bar F_r,g_r^0)
 \bar I_r.
 \end{equation}
 
-La condición \eqref{eq:suficiencia_recursos_programados} hace factible la culminación con los recursos aprobados. Si \(I_r(\bar F_r,g_r)=\bar I_r\), la inversión culmina utilizando todo el monto programado; si \(I_r(\bar F_r,g_r)<\bar I_r\), culmina con ahorro. La restricción \(I_r\leq\bar I_r\) recoge que la ejecución financiera reconocida no puede exceder los recursos programados. Solo en la extensión con contingencias posteriores se admite que dichos recursos resulten insuficientes; esa limitación se representa de forma reducida mediante \(\bar a_r(\bar I_r,g_r)<1\), pues un mayor esfuerzo de ejecución no puede sustituir el financiamiento faltante.
+La condición \eqref{eq:suficiencia_recursos_programados} hace factible la culminación con los recursos aprobados. Si \(I_r(\bar F_r,g_r)=\bar I_r\), la inversión culmina utilizando todo el monto programado; si \(I_r(\bar F_r,g_r)<\bar I_r\), culmina con ahorro. La restricción \(I_r\leq\bar I_r\) recoge que la ejecución financiera reconocida no puede exceder los recursos programados.
 
 La especificación supone que el esfuerzo de eficiencia reduce los recursos requeridos para alcanzar una magnitud física dada sin afectar directamente el resultado del servicio. Se trata, por tanto, de una mejora de eficiencia condicionada a \(F_r\), y no de una reducción de costos obtenida mediante una menor calidad. Este supuesto permite aislar la distorsión que aparece cuando la ejecución financiera penaliza una inversión físicamente equivalente realizada con menos recursos.
 
@@ -579,7 +579,7 @@ a_{r,-}'(e_r^{\mathrm{sat}})
 
 Un mayor beneficio marginal de los demás canales reduce la exposición necesaria, manteniendo lo demás constante. La existencia de un umbral finito requiere que el lado izquierdo de \eqref{eq:multa_suficiente} alcance la diferencia positiva. Si \(a_{r,-}'(e_r^{\mathrm{sat}})=0\) y esa diferencia es positiva, ninguna exposición finita la cubre mediante este canal.
 
-En el caso base, \(\bar a_r=1\), puede obtenerse una expresión cerrada adicional. Para este ejercicio se mantienen fijos \(M_{-r}^m\), las demás decisiones, los parámetros y los indicadores del régimen anterior a la culminación al variar \(\mu\). Si los retornos admiten límites finitos por la izquierda, \(M^m\to M_{-r}^m\) cuando \(e_r\uparrow e_r^{\mathrm{sat}}\). Se denota por \(\gamma_{\mathrm{sat},-}^m\) el límite de \(\gamma^m\), que bajo estas condiciones no depende de \(\mu\). Si también el límite de \(\mathrm{BM}_{r,e}^{m,-\mu}\) es independiente de \(\mu\), la diferencia de incentivos es positiva y \(a_{r,-}'(e_r^{\mathrm{sat}})\gamma_{\mathrm{sat},-}^m>0\), la condición \eqref{eq:multa_suficiente} se reduce a
+Dado que la saturación coincide con la culminación, puede obtenerse una expresión cerrada adicional. Para este ejercicio se mantienen fijos \(M_{-r}^m\), las demás decisiones, los parámetros y los indicadores del régimen anterior a la culminación al variar \(\mu\). Si los retornos admiten límites finitos por la izquierda, \(M^m\to M_{-r}^m\) cuando \(e_r\uparrow e_r^{\mathrm{sat}}\). Se denota por \(\gamma_{\mathrm{sat},-}^m\) el límite de \(\gamma^m\), que bajo estas condiciones no depende de \(\mu\). Si también el límite de \(\mathrm{BM}_{r,e}^{m,-\mu}\) es independiente de \(\mu\), la diferencia de incentivos es positiva y \(a_{r,-}'(e_r^{\mathrm{sat}})\gamma_{\mathrm{sat},-}^m>0\), la condición \eqref{eq:multa_suficiente} se reduce a
 
 \begin{equation}
 \label{eq:umbral_exposicion_caso_base}
@@ -601,16 +601,14 @@ e_r^{\mathrm{sat}},
 \qquad
 a_r(e_r^{m,*})
 =
-\bar a_r(\bar I_r,g_r),
+1,
 \qquad
 \text{si }\mu_r^m\geq\mu_r^{m,*}.
 \end{equation}
 
 La igualdad de \eqref{eq:plateau_esfuerzo} describe un techo de esfuerzo, no una condición de primer orden interior en la saturación. Cuando la tecnología presenta un quiebre, el óptimo puede ubicarse allí con un beneficio marginal por la izquierda superior al costo y un beneficio marginal por la derecha igual a cero. Otros márgenes, como \(g_r\), pueden continuar respondiendo.
 
-Una exposición nominal elevada puede permanecer por debajo del umbral suficiente si la detección o la transmisión al gerente son débiles; puede entonces existir sobresanción nominal sin disuasión suficiente. Una vez alcanzado el techo, elevar la exposición es redundante para la ejecución. En el caso base, \(\bar a_r=1\) y la culminación elimina la multa sobre esa brecha.
-
-Si una contingencia fija \(\bar a_r<1\), alcanzar el techo deja una brecha \(1-\bar a_r\) que el esfuerzo de ejecución no puede cerrar. Manteniendo fijos los demás márgenes y el régimen regulatorio, cada unidad adicional de exposición eleva la multa en \(1-\bar a_r\) sin mejorar la ejecución mediante este canal. La incidencia sobre el bienestar se evalúa en la Subsección~4.3.
+Una exposición nominal elevada puede permanecer por debajo del umbral suficiente si la detección o la transmisión al gerente son débiles; puede entonces existir sobresanción nominal sin disuasión suficiente. Una vez alcanzado el techo, elevar la exposición es redundante para la ejecución. La culminación elimina la multa sobre esa brecha.
 
 \subsubsection{Criterio de evaluación del regulador}
 
