@@ -176,14 +176,14 @@ La restricción \(0\leq I_r\leq\bar I_r\) garantiza que \(S_r\geq0\) siempre que
 
 \begin{equation}
 \label{eq:ahorro_agregado}
-S
+S_I
 \equiv
 \sum_{r\in R}S_r,
 \qquad
-S^m\equiv S.
+S_I^m\equiv S_I.
 \end{equation}
 
-El superíndice \(m\) se utiliza únicamente para mantener una notación homogénea en la función reputacional. El ahorro permanece en el fondo de inversiones y reservas, por lo que no constituye un recurso de libre disposición de la empresa gestionada por el gerente.
+El subíndice \(I\) identifica el ahorro de inversiones y lo distingue del bloque \(S\) de resultados del servicio. El superíndice \(m\) permite evaluar ese ahorro bajo las decisiones de cada esquema; la regla de reconocimiento es común. El ahorro permanece en el fondo de inversiones y reservas, por lo que no constituye un recurso de libre disposición de la empresa gestionada por el gerente.
 
 \subsubsection{Configuración y cuantificación de las consecuencias}
 
@@ -261,9 +261,7 @@ Una misma inversión puede incidir en más de una base cuando participa simultá
 
 \subsubsection{Problema del gerente e incentivos marginales}
 
-A partir de los elementos anteriores, el problema del gerente se formula de manera común para cualquiera de los esquemas \(m\in\{A_0,A,A',A'',B\}\). La multa \(M^m\) corresponde a la determinada por las reglas regulatorias del esquema \(m\), bajo el supuesto de detección cierta utilizado para su cuantificación. El gerente, en cambio, percibe una probabilidad de detección \(p\in(0,1]\), común a todos los esquemas.
-
-Bajo esta estructura, el gerente elige los esfuerzos de ejecución y eficiencia resolviendo
+El gerente elige los esfuerzos de ejecución y eficiencia de las inversiones del programa \(R\), definido en \eqref{eq:particion_inversiones}, bajo cualquiera de los esquemas \(m\in\{A_0,A,A',A'',B\}\). La multa \(M^m\) es la determinada por las reglas del esquema bajo el supuesto de detección cierta utilizado para su cuantificación. El gerente percibe, en cambio, una probabilidad de detección \(p\in(0,1]\), común a todos los esquemas. Su problema es
 
 \begin{equation}
 \label{eq:problema_gerente}
@@ -287,7 +285,30 @@ pK\left(M^{m}\right)
 \end{aligned}
 \end{equation}
 
-La señal reputacional recoge el desempeño comunicado mediante las metas publicadas, el ahorro reconocido, \(S^m\), y la multa como señal de los incumplimientos detectados, \(M^m\). El desempeño percibido se define como
+La función \(V(\mathrm{Rep}^m)\) transforma la reputación en utilidad gerencial: una evaluación externa favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, conforme a la lógica de los modelos de \textit{career concerns} \citep{holmstrom1999managerial,dewatripont1999economics}. Se supone \(V'(\mathrm{Rep}^m)>0\). La reputación depende del desempeño percibido \(P^m\), del ahorro reconocido \(S_I^m\) y de la multa \(M^m\); estos tres argumentos dependen de \(\{e_r,g_r\}_{r\in R}\) mediante las relaciones de ejecución y las reglas del esquema \(m\). En lo que sigue se omiten los argumentos de esfuerzo para aligerar la notación.
+
+El término \(pK(M^m)\) representa el costo monetario esperado que el gerente asocia con la multa impuesta a la empresa. La función \(K\) es común a los esquemas, con \(K(0)=0\) y \(K'(M)>0\), sin imponer que el costo internalizado equivalga a una fracción constante de la multa. Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan los costos gerenciales de ejecución y eficiencia, respectivamente. Se supone \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\).
+
+\paragraph{Canales reputacionales y desempeño percibido.}
+
+La reputación combina la evaluación del desempeño, el reconocimiento del ahorro y la penalización reputacional asociada con una multa detectada:
+
+\begin{equation}
+\label{eq:reputacion_estructural}
+\mathrm{Rep}^m
+=
+d_I\ell_I^m R_I(P^m)
++
+d_E\ell_E R_E(S_I^m)
+-
+p\,d_M\ell_M R_M(M^m).
+\end{equation}
+
+Los subíndices \(I\), \(E\) y \(M\) identifican, respectivamente, los canales de desempeño informado mediante las metas, eficiencia reconocida y multa. Las funciones \(R_I\), \(R_E\) y \(R_M\) son crecientes y diferenciables. Los parámetros \(d_I,d_E,d_M\in[0,1]\) recogen la difusión de cada canal, es decir, el alcance de la información; \(\ell_I^m,\ell_E,\ell_M\in[0,1]\) representan su legibilidad, entendida como la facilidad de interpretación por los agentes externos. El costo monetario \(K(M^m)\) permanece fuera de \(\mathrm{Rep}^m\) para distinguirlo del efecto reputacional de la sanción.
+
+El factor \(p\) pondera el canal reputacional de la multa porque este requiere detección. La normalización \(R_M(0)=0\) establece que una multa nula no genera penalización mediante ese canal; análogamente, \(K(0)=0\) elimina el costo monetario cuando no hay multa. La función objetivo valora esta representación reducida de la reputación, cuyo componente sancionador está ponderado por detección. No se supone que, para una función \(V\) no lineal, valorar la reputación esperada equivalga a calcular la utilidad esperada entre estados de detección.
+
+El desempeño percibido \(P^m\) reúne el cumplimiento de los bloques publicados:
 
 \begin{equation}
 \label{eq:desempeno_percibido}
@@ -302,21 +323,18 @@ P^m
 \alpha_{RT}^m c_{RT}.
 \end{equation}
 
-Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, representan el cumplimiento promedio de los indicadores de resultados del servicio y de las demás metas de gestión, respectivamente. La medida \(f^m\) corresponde al avance financiero \(f_R\) o \(f_F\), según el diseño, y \(c_{RT}\), al cumplimiento de la relación de trabajo. Las ponderaciones reputacionales satisfacen \(\alpha_H^m\geq0\) para \(H\in\{S,G,F,RT\}\).
+Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, representan el cumplimiento promedio de los indicadores de resultados del servicio y de las demás metas de gestión. La medida \(f^m\) corresponde al avance financiero \(f_R\) o \(f_F\), según el diseño, y \(c_{RT}\), al cumplimiento de la relación de trabajo.
 
-Las ponderaciones reputacionales de \eqref{eq:desempeno_percibido} se distinguen de los pesos regulatorios del \(ICG^m\). Estos últimos determinan la contribución aritmética de cada bloque al índice formal; los coeficientes \(\alpha_H^m\) representan su importancia en la evaluación externa del desempeño. Un bloque puede tener un peso regulatorio reducido y atraer una atención considerable de usuarios, autoridades u otros agentes externos.
-
-Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto de bloques incluidos en la señal pública del esquema \(m\). El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\): su capacidad relativa de atraer la atención de los agentes externos e incidir en su percepción del desempeño del gerente, antes de considerar qué bloques se publican. Se supone común entre esquemas y se establece \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia que las demás metas de gestión. Las saliencias se normalizan respecto del conjunto completo y su suma para los bloques publicados se denota por \(D^m\):
+Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto no vacío de bloques publicados en el esquema \(m\). El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\): su capacidad relativa de atraer la atención de los agentes externos antes de considerar qué bloques se publican. Es común entre esquemas y se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia que las demás metas de gestión. Las saliencias se normalizan respecto del conjunto completo; su suma para los bloques publicados se denota por \(D^m\):
 
 \begin{equation}
+\label{eq:normalizacion_saliencias}
 \sum_{H\in\{S,G,F,RT\}}s_H=1,
 \qquad
-D^m=\sum_{K\in\mathrm{Sig}^m}s_K.
+D^m=\sum_{H'\in\mathrm{Sig}^m}s_{H'}.
 \end{equation}
 
-Si se publican los cuatro bloques, \(D^m=1\); si alguno se excluye, \(D^m<1\).
-
-En el caso base se supone que la atención asociada con los bloques excluidos se reasigna completamente entre los que permanecen publicados. Las ponderaciones reputacionales se definen como
+Si se publican los cuatro bloques, \(D^m=1\); si alguno se excluye, \(0<D^m<1\). En el caso base, la atención asociada con los bloques excluidos se reasigna completamente entre los publicados. Para \(H\in\{S,G,F,RT\}\), las ponderaciones reputacionales se definen como
 
 \begin{equation}
 \label{eq:ponderaciones_reputacionales}
@@ -334,62 +352,21 @@ En el caso base se supone que la atención asociada con los bloques excluidos se
 \end{cases}
 \end{equation}
 
-La división entre \(D^m\) normaliza las saliencias de los bloques publicados: sus coeficientes suman uno y los de los bloques excluidos son cero. Cuando \(D^m<1\), cada bloque conservado adquiere una mayor ponderación en \(P^m\), aunque su saliencia intrínseca no cambia.
+Los coeficientes son no negativos, suman uno y son cero para los bloques excluidos. Cuando \(D^m<1\), cada bloque conservado adquiere una mayor ponderación en \(P^m\), aunque su saliencia intrínseca no cambia. Estas ponderaciones se distinguen de los pesos regulatorios del \(ICG^m\): estos determinan la contribución aritmética al índice formal, mientras que \(\alpha_H^m\) representa la importancia del bloque en la evaluación externa del desempeño. Un bloque con peso regulatorio reducido puede atraer una atención considerable.
 
-La atención asociada con los bloques excluidos puede perderse en parte, en lugar de reasignarse completamente. Para evaluar esta posibilidad, se considera la siguiente familia de coeficientes, que sustituye a \(\alpha_H^m\) en el análisis de sensibilidad:
+Como ejemplo, sean \(s_S=0.4\), \(s_G=0.3\), \(s_F=0.2\) y \(s_{RT}=0.1\). Si se publican todos los bloques, los coeficientes coinciden con estas saliencias. Si solo permanecen \(S\) y \(G\), entonces \(D^m=0.7\), y sus ponderaciones son \(0.4/0.7\approx0.571\) y \(0.3/0.7\approx0.429\); las de los bloques excluidos son cero.
 
-\begin{equation}
-\label{eq:ponderaciones_reputacionales_sensibilidad}
-\widetilde{\alpha}_H^m(\theta)
-=
-\frac{s_H\mathbf{1}\{H\in\mathrm{Sig}^m\}}
-{(D^m)^\theta},
-\qquad
-\theta\in[0,1].
-\end{equation}
+Los parámetros anteriores actúan en niveles distintos: \(s_H\) describe la atención relativa entre bloques; \(\alpha_H^m\) la ajusta según cuáles se publican; \(d\) determina el alcance de cada canal reputacional y \(\ell\), su claridad. En particular, \(\ell_I^m\) caracteriza la interpretación del conjunto de metas publicado, mientras que \(s_H\) distingue la atención que recibe cada bloque.
 
-Con \(\theta=1\), se recupera la reasignación completa de \eqref{eq:ponderaciones_reputacionales}; con \(\theta=0\), los bloques publicados conservan sus saliencias intrínsecas; para \(0<\theta<1\), la reasignación es parcial. La suma de los coeficientes es \((D^m)^{1-\theta}\), menor que uno cuando \(D^m<1\) y \(\theta<1\). La intensidad total de la señal disminuye, mientras que la importancia relativa entre bloques conservados sigue siendo \(s_H/s_K\).
+\paragraph{Regularidad y alcance de las comparaciones.}
 
-Como ejemplo ilustrativo, sean \(s_S=0.4\), \(s_G=0.3\), \(s_F=0.2\) y \(s_{RT}=0.1\). Si se publican todos los bloques, \(D^m=1\) y los coeficientes coinciden con estas saliencias para cualquier \(\theta\). Si solo permanecen \(S\) y \(G\), entonces \(D^m=0.7\): con \(\theta=1\), sus coeficientes son \(0.4/0.7\approx0.571\) y \(0.3/0.7\approx0.429\); con \(\theta=0\), permanecen en \(0.4\) y \(0.3\). Los bloques excluidos reciben un coeficiente igual a cero en ambos casos.
+Para las comparaciones locales de un esfuerzo, manteniendo las demás decisiones fijas, se supone que \(U_G^m\) es estrictamente cóncava respecto de ese esfuerzo dentro de la región diferenciable considerada. Esta condición caracteriza el óptimo condicionado, sin establecer por sí sola la unicidad del óptimo conjunto. Las comparaciones de esfuerzo se basan en comparativa estática monótona: si el beneficio marginal se desplaza débilmente hacia arriba para todo nivel del esfuerzo en la región relevante, el costo marginal es creciente y el óptimo es único, el esfuerzo óptimo no disminuye. Los ordenamientos se interpretan como comparaciones \textit{ceteris paribus} de los canales regulatorios modificados.
 
-Dado que el efecto reputacional de la sanción requiere que el incumplimiento sea detectado, la reputación se representa como
+El modelo no impone una restricción vinculante de capacidad gerencial ni costos cruzados entre tareas \citep{holmstrom1991multitask}. Sin embargo, los agregados reputacionales y sancionadores pueden vincular las decisiones; las comparaciones aíslan esos vínculos mediante las normalizaciones de cada transición.
 
-\begin{equation}
-\label{eq:reputacion_estructural}
-\mathrm{Rep}^m
-=
-d_I\ell_I^m R_I(P^m)
-+
-d_E\ell_E R_E(S^m)
--
-p\,d_M\ell_M R_M(M^m).
-\end{equation}
+\paragraph{Retornos marginales y condiciones interiores.}
 
-Los parámetros \(d_I,d_E,d_M\in[0,1]\) recogen la difusión de cada señal, mientras que \(\ell_I^m,\ell_E,\ell_M\in[0,1]\) representan su legibilidad. La difusión determina el alcance de la información y la legibilidad refleja qué tan claramente puede ser interpretada por los agentes externos. En el canal de desempeño, \(\ell_I^m\) resume la facilidad con la que el conjunto de metas publicado puede ser interpretado y se distingue de la saliencia capturada por \(s_H\). Las funciones \(R_I\), \(R_E\) y \(R_M\) son crecientes y diferenciables, con \(R_M(0)=0\), de modo que el efecto reputacional asociado con la sanción depende de la magnitud de la multa.
-
-La función \(V(\mathrm{Rep}^m)\) transforma la reputación de la empresa en utilidad gerencial: una evaluación externa favorable puede mejorar las perspectivas de permanencia o remuneración del gerente, conforme a la lógica de los modelos de \textit{career concerns} \citep{holmstrom1999managerial,dewatripont1999economics}. El término \(-pK(M^m)\) representa el costo monetario esperado que el gerente asocia con la multa impuesta a la empresa. Se supone que \(K(0)=0\) y \(K'(M)>0\), de modo que este costo aumenta con la magnitud de la multa sin imponer que equivalga a una fracción constante de ella. La función \(K\) es común a todos los esquemas y se mantiene fuera de \(\mathrm{Rep}^m\) para distinguir el costo monetario de la sanción de su efecto reputacional.
-
-Las funciones \(\psi_r(e_r)\) y \(\xi_r(g_r)\) representan los costos gerenciales de ejecución y eficiencia. Se supone \(V'(\mathrm{Rep}^m)>0\), \(\psi_r'(e_r)>0\), \(\xi_r'(g_r)>0\), \(\psi_r''(e_r)>0\) y \(\xi_r''(g_r)>0\). Para las comparaciones locales de un esfuerzo, manteniendo las demás decisiones fijas, se supone que \(U_G^m\) es estrictamente cóncava respecto de ese esfuerzo dentro de la región diferenciable considerada. Esta condición caracteriza el óptimo condicionado, sin establecer por sí sola la unicidad del óptimo conjunto. La capacidad gerencial no constituye una restricción vinculante, pero los agregados reputacionales y sancionadores pueden vincular decisiones; las comparaciones aíslan esos vínculos mediante las normalizaciones de cada transición. El modelo no impone capacidad escasa ni costos cruzados entre tareas \citep{holmstrom1991multitask}.
-
-Las comparaciones de esfuerzo se basan en comparativa estática monótona: si el beneficio marginal se desplaza débilmente hacia arriba para todo nivel del esfuerzo en la región relevante, el costo marginal es creciente y el óptimo es único, entonces el esfuerzo óptimo no disminuye. Los ordenamientos resultantes se interpretan, por tanto, como comparaciones \textit{ceteris paribus} de los canales regulatorios modificados.
-
-Dentro de una región diferenciable en la que el incumplimiento, la activación de las consecuencias y el reconocimiento del ahorro permanecen constantes, el beneficio marginal de cada esfuerzo es la derivada de \(V(\mathrm{Rep}^m)-pK(M^m)\). La condición interior de ejecución se aplica en el tramo \(0<e_r<e_r^{\mathrm{sat}}\); la de eficiencia requiere que \(g_r\) se encuentre en el interior de su dominio factible. Las condiciones de primer orden y su descomposición en canales son
-
-\begin{subequations}
-\label{eq:foc_esperadas}
-\begin{align}
-\psi_r'(e_r)
-&=\mathrm{BM}_{r,e}^{m}=\lambda^m\frac{\partial P^m}{\partial e_r}
-+\varpi^m\frac{\partial S^m}{\partial e_r}-\gamma^m\frac{\partial M^m}{\partial e_r},
-\label{eq:incentivo_marginal_e}\\
-\xi_r'(g_r)
-&=\mathrm{BM}_{r,g}^{m}=\lambda^m\frac{\partial P^m}{\partial g_r}
-+\varpi^m\frac{\partial S^m}{\partial g_r}-\gamma^m\frac{\partial M^m}{\partial g_r}.
-\label{eq:incentivo_marginal_g}
-\end{align}
-\end{subequations}
-
-Los retornos marginales que intervienen en estas expresiones son
+Las derivadas siguientes se aplican dentro de una región diferenciable en la que los indicadores de incumplimiento \(\mathbf1\{c_j<1\}\), \(\mathbf1\{c_{RT}<1\}\), el incumplimiento financiero \(d_F^m\), la activación \(\chi^m\) y el régimen de reconocimiento del ahorro permanecen constantes. Se definen los retornos marginales
 
 \begin{align}
 \lambda^m
@@ -403,7 +380,7 @@ R_I'(P^m),
 &\equiv
 V'(\mathrm{Rep}^m)
 d_E\ell_E
-R_E'(S^m),
+R_E'(S_I^m),
 \notag
 \\
 \gamma^m
@@ -419,9 +396,59 @@ K'(M^m)
 \label{eq:gamma_m}
 \end{align}
 
-\(\lambda^m\) mide el retorno marginal del desempeño percibido, \(\varpi^m\) la valoración marginal del ahorro reconocido y \(\gamma^m\) el costo marginal de una mayor multa percibido por el gerente, incluidos sus efectos reputacional y monetario. La condición \(K'(M)>0\) asegura un costo monetario internalizado, pero no que reducir las bases preserve el incentivo: también puede disminuir la multa evitada mediante esfuerzo, recogida en \(-\partial M^m/\partial e_r\). La probabilidad \(p\), común a todos los esquemas, reduce la transmisión de la sanción hacia el gerente cuando \(p<1\). Los tres retornos tienen una interpretación local y no son parámetros globales de la función objetivo.
+\(\lambda^m\) mide el retorno marginal del desempeño percibido; \(\varpi^m\), la valoración marginal del ahorro reconocido; y \(\gamma^m\), el costo marginal de una mayor multa para el gerente, incluidos sus efectos reputacional y monetario. Son valores locales que dependen de las decisiones, no parámetros globales de la función objetivo.
 
-Las condiciones interiores de \eqref{eq:foc_esperadas} se aplican dentro de una región en la que \(\mathbf 1\{c_j<1\}\), \(d_F^m\), \(\chi^m\) y el reconocimiento de \(S_r\) permanecen constantes. Los cambios de estos indicadores no se incorporan mediante derivadas, sino que se evalúan comparando la utilidad del gerente a ambos lados del umbral correspondiente. Así, las condiciones interiores caracterizan el margen intensivo, mientras que el paso entre regiones regulatorias corresponde al margen extensivo. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) genera un incentivo discreto de culminación, y los cambios en \(\mathbf 1\{c_j<1\}\), \(d_F^m\) o \(\chi^m\) pueden producir saltos en la utilidad.
+Para cualquiera de los esfuerzos \(x_r\in\{e_r,g_r\}\), la regla de la cadena permite expresar el beneficio marginal (BM) como
+
+\begin{equation}
+\label{eq:derivacion_beneficio_marginal}
+\begin{aligned}
+\mathrm{BM}_{r,x}^m
+&\equiv\frac{\partial}{\partial x_r}
+\left[V(\mathrm{Rep}^m)-pK(M^m)\right]\\
+&=\lambda^m\frac{\partial P^m}{\partial x_r}
++\varpi^m\frac{\partial S_I^m}{\partial x_r}
+-\gamma^m\frac{\partial M^m}{\partial x_r}.
+\end{aligned}
+\end{equation}
+
+La condición interior de ejecución se aplica en \(0<e_r<e_r^{\mathrm{sat}}\); la de eficiencia requiere que \(g_r\) se encuentre en el interior de su dominio factible. Ambas igualan el costo marginal del esfuerzo con su beneficio marginal:
+
+\begin{subequations}
+\label{eq:foc_esperadas}
+\begin{align}
+\psi_r'(e_r)
+&=\mathrm{BM}_{r,e}^{m}=\lambda^m\frac{\partial P^m}{\partial e_r}
++\varpi^m\frac{\partial S_I^m}{\partial e_r}-\gamma^m\frac{\partial M^m}{\partial e_r},
+\label{eq:incentivo_marginal_e}\\
+\xi_r'(g_r)
+&=\mathrm{BM}_{r,g}^{m}=\lambda^m\frac{\partial P^m}{\partial g_r}
++\varpi^m\frac{\partial S_I^m}{\partial g_r}-\gamma^m\frac{\partial M^m}{\partial g_r}.
+\label{eq:incentivo_marginal_g}
+\end{align}
+\end{subequations}
+
+La condición \(K'(M)>0\) establece que una mayor multa aumenta el costo monetario internalizado. Sin embargo, retirar una base sancionadora que valora la ejecución pendiente puede reducir cuánto evita pagar la empresa mediante un esfuerzo adicional, recogido en \(-\partial M^m/\partial e_r\). Por ello, una menor multa no garantiza que se conserve el incentivo de ejecución. La probabilidad \(p\) pondera tanto el efecto reputacional como el monetario de la sanción; su reducción debilita directamente ambos componentes, manteniendo lo demás constante.
+
+Las condiciones interiores caracterizan el margen intensivo. Los cambios de régimen se evalúan comparando la utilidad del gerente a ambos lados del umbral correspondiente, sin incorporarlos mediante derivadas de los indicadores. En particular, el reconocimiento de \(S_r\) cuando \(a_r=1\) genera un incentivo discreto de culminación; los cambios de incumplimiento o activación también pueden producir saltos en la utilidad.
+
+\paragraph{Sensibilidad a la reasignación de atención.}
+
+La atención de los bloques excluidos puede perderse en parte, en lugar de reasignarse completamente. Para evaluar esta posibilidad, se considera la siguiente familia de coeficientes, que sustituye a \(\alpha_H^m\) en el análisis de sensibilidad:
+
+\begin{equation}
+\label{eq:ponderaciones_reputacionales_sensibilidad}
+\widetilde{\alpha}_H^m(\theta)
+=
+\frac{s_H\mathbf{1}\{H\in\mathrm{Sig}^m\}}
+{(D^m)^\theta},
+\qquad
+\theta\in[0,1].
+\end{equation}
+
+Con \(\theta=1\), se recupera la reasignación completa de \eqref{eq:ponderaciones_reputacionales}; con \(\theta=0\), los bloques publicados conservan sus saliencias intrínsecas; para \(0<\theta<1\), la reasignación es parcial. La suma de los coeficientes es \((D^m)^{1-\theta}\), menor que uno cuando \(D^m<1\) y \(\theta<1\). Disminuye la intensidad total del componente de desempeño percibido, mientras que la importancia relativa entre bloques conservados sigue siendo \(s_H/s_{H'}\).
+
+En el ejemplo anterior, si solo se publican \(S\) y \(G\), con \(\theta=0\) sus coeficientes permanecen en \(0.4\) y \(0.3\), y suman \(0.7\). Si se publican los cuatro bloques, \(D^m=1\) y los coeficientes coinciden con las saliencias para cualquier \(\theta\).
 
 \subsubsection{Exposición sancionadora y saturación del margen de culminación}
 
@@ -548,7 +575,7 @@ Como \(M_{-r}^m\) no varía con \(a_r\), toda la derivada de la multa respecto d
 \label{eq:beneficio_marginal_sin_exposicion}
 \mathrm{BM}_{r,e}^{m,-\mu}(e_r)
 \equiv\lambda^m\frac{\partial P^m}{\partial e_r}
-+\varpi^m\frac{\partial S^m}{\partial e_r}.
++\varpi^m\frac{\partial S_I^m}{\partial e_r}.
 \end{equation}
 
 La exclusión del canal sancionador directo en \eqref{eq:beneficio_marginal_sin_exposicion} no implica independencia respecto de \(\mu\): los retornos \(\lambda^m\) y \(\varpi^m\) pueden variar con la reputación total. Al sustituir la derivada de la multa en \eqref{eq:incentivo_marginal_e}, para un óptimo interior con \(0<e_r<e_r^{\mathrm{sat}}\),
