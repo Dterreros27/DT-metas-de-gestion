@@ -1,31 +1,12 @@
 \subsection{Decisión gerencial, ejecución de inversiones y mecanismo de incentivos}
 
-Esta subsección formaliza el entorno común a los distintos diseños regulatorios y el problema de decisión del gerente. Asimismo, caracteriza el margen de culminación de las inversiones y el límite de la respuesta del esfuerzo de ejecución ante una mayor exposición sancionadora.
+Esta subsección formaliza el entorno común a los distintos diseños regulatorios y el problema de decisión del gerente. Sobre esta base, caracteriza el margen de culminación de las inversiones y el límite de la respuesta del esfuerzo de ejecución ante una mayor exposición sancionadora.
 
-\subsubsection{Entorno y clasificación de las inversiones}
-
-El programa de inversiones se representa mediante tres grupos de inversiones, según la obligación regulatoria con la que se encuentran principalmente vinculadas:
-
-\begin{equation}
-\label{eq:particion_inversiones}
-R
-=
-R^{S}
-\mathbin{\dot\cup}
-R^{G}
-\mathbin{\dot\cup}
-R^{F}.
-\end{equation}
-
-Las inversiones se agrupan según su vinculación con los resultados del servicio y las obligaciones regulatorias. \(R^{S}\) reúne las asociadas con resultados de la prestación, en las dimensiones de cobertura y calidad, medidos por los indicadores de \(J^{S}\). \(R^{G}\) reúne las asociadas con capacidades, instrumentos de gestión o ejecución física, representadas por los indicadores de \(J^{G}\); por ello, los indicadores que, aun ubicados institucionalmente en cobertura o calidad, miden directamente ejecución física se tratan como parte de \(J^{G}\). Finalmente, \(R^{F}\) agrupa las inversiones cuyo impacto no puede evaluarse mediante otro indicador aplicable.\footnote{Esta delimitación corresponde al criterio previsto para los indicadores de avance financiero EP-57 y EP-57-A, cuya aplicación se reserva a inversiones y medidas de mejora cuyo impacto no pueda ser medido mediante otro indicador aplicable.}
-
-Para cada \(j\in J^{H}\), con \(H\in\{S,G\}\), \(R_j^{H}\subseteq R^{H}\) denota las inversiones vinculadas con el indicador \(j\). Para simplificar el análisis, estos subconjuntos particionan \(R^{H}\): cada inversión se asigna a un único indicador según su vínculo principal. En \(A_0\), estas inversiones también pueden quedar comprendidas en las obligaciones transversales de avance financiero general y relación de trabajo.
-
-El alcance de la verificación financiera varía según el esquema: en \(A_0\) comprende todo el programa, mientras que en \(A\) y \(A'\) se limita a \(R^{F}\). En \(A''\) y \(B\), la verificación financiera de este grupo se sustituye por indicadores específicos de cumplimiento físico o funcional, representados por \(J^{F}\). Para cada \(j\in J^{F}\), \(R_j^{F}\subseteq R^{F}\) reúne las inversiones verificadas mediante \(j\), y estos subconjuntos también particionan \(R^{F}\).
+Para definir ese entorno, el programa de inversiones \(R\) se particiona en tres grupos según el vínculo regulatorio de cada inversión, de modo que \(R=R^{S}\mathbin{\cup}R^{G}\mathbin{\cup}R^{F}\). El grupo \(R^{S}\) reúne las inversiones asociadas directamente con los resultados de la prestación en cobertura y calidad, medidos mediante los indicadores de \(J^{S}\). Entre las inversiones restantes, \(R^{G}\) comprende aquellas cuyo cumplimiento puede evaluarse mediante otros indicadores, agrupados en \(J^{G}\), mientras que \(R^{F}\) reúne las sujetas al indicador de avance financiero focalizado, porque su impacto no puede medirse mediante un indicador distinto.\footnote{La delimitación de \(R^{F}\) recoge el criterio del numeral 13.2 del artículo 13 del Reglamento General de Tarifas: el indicador «Porcentaje de avance financiero focalizado del programa de inversiones y medidas de mejora de la EP», establecido en el SIIGEPSS o el que lo reemplace, solo se utiliza cuando el impacto de las inversiones o medidas de mejora no pueda medirse con un indicador distinto.}
 
 \subsubsection{Ejecución física, resultados y cumplimiento}
 
-La ejecución de cada inversión se caracteriza por una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\), que determina el avance físico, y un esfuerzo de eficiencia \(g_r\), que reduce los recursos necesarios para alcanzar una magnitud dada. El grado de avance físico y la magnitud ejecutada se representan como
+La ejecución de cada inversión se caracteriza por una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\), que determina el avance físico, entendido como la proporción de la magnitud física programada que ha sido ejecutada, y un esfuerzo de eficiencia \(g_r\), que reduce los recursos necesarios para alcanzar una magnitud dada. El grado de avance físico y la magnitud ejecutada se representan como
 
 \begin{equation}
 \label{eq:ejecucion_fisica}
@@ -50,7 +31,9 @@ a_r(e_r)=1
 \end{aligned}
 \end{equation}
 
-Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\), aunque puede presentar un quiebre en ese punto, con \(a_{r,-}'(e_r^{\mathrm{sat}})>0\) y \(a_{r,+}'(e_r^{\mathrm{sat}})=0\). La saturación coincide con la culminación de la inversión. Mientras \(a_r<1\), persiste un margen de ejecución que puede responder al esfuerzo; que dicho margen exista no implica que los incentivos induzcan al gerente a aprovecharlo.
+Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\), de modo que el avance alcanza uno sin saltos. La saturación coincide con la culminación de la inversión. Mientras \(a_r<1\), persiste un margen de ejecución que puede responder al esfuerzo; que dicho margen exista no implica que los incentivos induzcan al gerente a aprovecharlo.
+
+Para cada \(j\in J^{H}\), con \(H\in\{S,G\}\), \(R_j^{H}\subseteq R^{H}\) reúne las inversiones vinculadas con el indicador \(j\). Para simplificar el análisis, cada inversión de estos dos grupos se asigna a un único indicador y los subconjuntos \(R_j^{H}\) particionan \(R^{H}\).
 
 Para las inversiones pertenecientes a \(R^{S}\), la magnitud física ejecutada contribuye a la producción de resultados del servicio. Sea \(q_j\) el resultado correspondiente a \(j\in J^{S}\), orientado de manera que un mayor valor represente un mejor desempeño:
 
@@ -85,18 +68,27 @@ c_j
 
 Mientras \(q_j<\bar q_j\), una mayor ejecución física de cualquier \(r\in R_j^{S}\) incrementa \(q_j\) y, con ello, \(c_j\); una vez alcanzada la meta, \(c_j\) permanece igual a uno.
 
-Para las metas de \(J^{G}\), el grado de cumplimiento depende directamente del avance físico de las inversiones asociadas. El mismo criterio se aplica a los indicadores de \(J^{F}\) cuando estos verifican el cumplimiento físico o funcional de las inversiones de \(R^{F}\). Para representar ambos casos de manera conjunta, se utiliza \(H\in\{G,F\}\) como índice del grupo considerado. Así, para cada \(j\in J^{H}\), se define
-
+Para las metas de \(J^{G}\), el grado de cumplimiento depende directamente del avance físico de las inversiones asociadas. Para cada \(j\in J^{G}\), se define
 \begin{equation}
 \label{eq:cumplimiento_g_f}
-c_j=\sum_{r\in R_j^{H}}\eta_{rj}^{H}a_r,
+c_j=\sum_{r\in R_j^{G}}\eta_{rj}^{G}a_r,
 \qquad
-\eta_{rj}^{H}\geq 0,
+\eta_{rj}^{G}\geq0,
 \qquad
-\sum_{r\in R_j^{H}}\eta_{rj}^{H}=1.
+\sum_{r\in R_j^{G}}\eta_{rj}^{G}=1.
 \end{equation}
 
-Para los indicadores de \(J^{S}\), \(J^{G}\) y \(J^{F}\), se considera incumplimiento cuando \(c_j<1\), sin reproducir los umbrales específicos aplicables a cada indicador en la práctica. Los resultados del servicio y las demás metas de gestión se resumen mediante sus respectivos grados de cumplimiento promedio. Sea \(n_S\) el número de indicadores de \(J^{S}\) y \(n_G\) el número de indicadores de \(J^{G}\). Se define
+El avance físico focalizado de \(R^{F}\) se representa mediante un único indicador. Para agregar inversiones con magnitudes físicas distintas, se ponderan sus proporciones de ejecución por los montos programados:
+\begin{equation}
+\label{eq:avance_fisico_focalizado}
+f_F^{\mathrm{fis}}
+\equiv
+\frac{\sum_{r\in R^{F}}\bar I_r a_r}
+{\sum_{r\in R^{F}}\bar I_r}.
+\end{equation}
+Se supone que \(R^{F}\) es no vacío. Las ponderaciones monetarias permiten agregar las proporciones físicas sin sumar unidades heterogéneas; el indicador depende del alcance ejecutado y no del gasto efectivo. Dado que \(\bar I_r>0\), alcanza uno si y solo si todas las inversiones de \(R^{F}\) culminan. El esfuerzo de eficiencia no lo modifica directamente a ejecución física dada.
+
+Para los indicadores de \(J^{S}\) y \(J^{G}\), se considera incumplimiento cuando \(c_j<1\), sin reproducir los umbrales específicos aplicables a cada indicador en la práctica. Los resultados del servicio y las demás metas de gestión se resumen mediante sus respectivos grados de cumplimiento promedio. Sea \(n_S\) el número de indicadores de \(J^{S}\) y \(n_G\) el número de indicadores de \(J^{G}\). Se define
 
 \begin{equation}
 \label{eq:agregados_cumplimiento}
@@ -191,7 +183,7 @@ Las consecuencias pecuniarias consideradas en el modelo distinguen tres elemento
 
 En los esquemas que conservan un umbral agregado de activación, \(\chi^m\) depende del índice de cumplimiento global \(ICG^m\): la consecuencia se activa cuando \(ICG^m<\tau\), donde \(\tau\in(0,1)\) es el umbral regulatorio aplicable. En los esquemas que eliminan esta condición agregada, \(\chi^m=1\), por lo que la configuración de los incumplimientos individuales basta para activar sus consecuencias. Así, el \(ICG^m\) no determina si cada obligación fue incumplida, sino, cuando el diseño lo establece, si los incumplimientos configurados generan consecuencias pecuniarias. La composición del \(ICG^m\) y la regla específica de activación de cada esquema se definen en la Subsección~4.2.
 
-Cuando el incumplimiento se verifica mediante indicadores de \(J^{S}\), \(J^{G}\) o \(J^{F}\), la base de cuantificación se determina a partir de la ejecución física pendiente. Se denomina base por incumplimiento físico al valor monetario de la proporción no ejecutada de las inversiones vinculadas con cada meta incumplida. Para representar conjuntamente los tres grupos, se utiliza \(H\in\{S,G,F\}\):
+Cuando el incumplimiento se verifica mediante indicadores de \(J^{S}\) o \(J^{G}\), la base de cuantificación se determina a partir de la ejecución física pendiente. Se denomina base por incumplimiento físico al valor monetario de la proporción no ejecutada de las inversiones vinculadas con cada meta incumplida. Para \(H\in\{S,G\}\),
 
 \begin{equation}
 \label{eq:base_fisica_generica}
@@ -203,7 +195,20 @@ B_H
 \bar I_r(1-a_r).
 \end{equation}
 
-El indicador \(\mathbf{1}\{c_j<1\}\) toma el valor de uno si la meta \(j\) fue incumplida y de cero en caso contrario. A su vez, \(\bar I_r(1-a_r)\) valora, utilizando el monto programado, la proporción físicamente pendiente de la inversión \(r\). En consecuencia, \(B_S\), \(B_G\) y \(B_F\) son bases monetarias construidas a partir del incumplimiento físico de las inversiones vinculadas con cada grupo de metas. Cuando la relación de trabajo constituye una obligación sancionable, su base se representa como
+El indicador \(\mathbf{1}\{c_j<1\}\) toma el valor de uno si la meta \(j\) fue incumplida y de cero en caso contrario. A su vez, \(\bar I_r(1-a_r)\) valora, utilizando el monto programado, la proporción físicamente pendiente de la inversión \(r\). En consecuencia, \(B_S\) y \(B_G\) son bases monetarias construidas a partir de las brechas físicas vinculadas con cada meta incumplida. Para el indicador físico focalizado, la base es
+\begin{equation}
+\label{eq:base_fisica_focalizada}
+\begin{aligned}
+B_F
+&\equiv
+\mathbf{1}\{f_F^{\mathrm{fis}}<1\}
+\left(1-f_F^{\mathrm{fis}}\right)
+\sum_{r\in R^{F}}\bar I_r
+\\
+&=\sum_{r\in R^{F}}\bar I_r(1-a_r).
+\end{aligned}
+\end{equation}
+La igualdad se deriva de las ponderaciones de \eqref{eq:avance_fisico_focalizado}; cuando el indicador alcanza uno, todas las brechas son cero. Esta base corresponde a un único indicador agregado, no a metas distintas por inversión. Cuando la relación de trabajo constituye una obligación sancionable, su base se representa como
 
 \begin{equation}
 \label{eq:base_rt}
@@ -261,7 +266,7 @@ Una misma inversión puede incidir en más de una base cuando participa simultá
 
 \subsubsection{Problema del gerente e incentivos marginales}
 
-El gerente elige los esfuerzos de ejecución y eficiencia de las inversiones del programa \(R\), definido en \eqref{eq:particion_inversiones}, bajo cualquiera de los esquemas \(m\in\{A_0,A,A',A'',B\}\). La multa \(M^m\) es la determinada por las reglas del esquema bajo el supuesto de detección cierta utilizado para su cuantificación. El gerente percibe, en cambio, una probabilidad de detección \(p\in(0,1]\), común a todos los esquemas. Su problema es
+El gerente elige los esfuerzos de ejecución y eficiencia de las inversiones del programa \(R\), definido al inicio de esta subsección, bajo cualquiera de los esquemas \(m\in\{A_0,A,A',A'',B\}\). La multa \(M^m\) es la determinada por las reglas del esquema bajo el supuesto de detección cierta utilizado para su cuantificación. El gerente percibe, en cambio, una probabilidad de detección \(p\in(0,1]\), común a todos los esquemas. Su problema es
 
 \begin{equation}
 \label{eq:problema_gerente}
@@ -316,12 +321,22 @@ P^m
 +
 \alpha_G^m C_G
 +
-\alpha_F^m f^m
+\alpha_F^m z_F^m
 +
 \alpha_{RT}^m c_{RT}.
 \end{equation}
 
-Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, representan el cumplimiento promedio de los indicadores de resultados del servicio y de las demás metas de gestión. La medida \(f^m\) corresponde al avance financiero \(f_R\) o \(f_F\) de \eqref{eq:avance_financiero_agregado}, según el diseño, y \(c_{RT}\), al cumplimiento de la relación de trabajo definido en \eqref{eq:cumplimiento_rt}. Las ponderaciones \(\alpha_H^m\) se determinan a continuación a partir de la saliencia de cada bloque.
+Los términos \(C_S\) y \(C_G\), definidos en \eqref{eq:agregados_cumplimiento}, representan el cumplimiento promedio de los indicadores de resultados del servicio y de las demás metas de gestión. El componente \(z_F^m\) distingue la medición del bloque de avance del programa en la señal pública:
+\begin{equation}
+\label{eq:componente_focalizado_senal}
+z_F^m=
+\begin{cases}
+f_R, & m=A_0,\\
+f_F, & m\in\{A,A'\},\\
+f_F^{\mathrm{fis}}, & m\in\{A'',B\}.
+\end{cases}
+\end{equation}
+Se conserva \(f_F\) para el avance financiero focalizado y se utiliza \(f_F^{\mathrm{fis}}\) para el físico. En \(B\), este último sigue verificándose, pero su ponderación reputacional es cero. La medida \(f^m\) se reserva para la verificación financiera de \eqref{eq:avance_financiero_agregado}, mientras que \(c_{RT}\) representa el cumplimiento de la relación de trabajo definido en \eqref{eq:cumplimiento_rt}. Las ponderaciones \(\alpha_H^m\) se determinan a continuación a partir de la saliencia de cada bloque.
 
 Sea \(\mathrm{Sig}^m\subseteq\{S,G,F,RT\}\) el conjunto no vacío de bloques publicados en el esquema \(m\). El parámetro \(s_H>0\) representa la saliencia intrínseca del bloque \(H\): su capacidad relativa de atraer la atención de los agentes externos antes de considerar qué bloques se publican. Es común entre esquemas y se supone \(s_S>s_G\), de modo que los resultados del servicio poseen mayor saliencia que las demás metas de gestión. Las saliencias se normalizan respecto del conjunto completo; su suma para los bloques publicados se denota por \(D^m\):
 
@@ -448,7 +463,7 @@ En el ejemplo anterior, si solo se publican \(S\) y \(G\), con \(\theta=0\) sus 
 
 La brecha de ejecución física es la proporción del alcance previsto que permanece pendiente y se expresa como \(1-a_r=(\bar F_r-F_r)/\bar F_r\), dado que \(a_r=F_r/\bar F_r\).\footnote{Por ejemplo, si una inversión ha ejecutado el \(80\%\) de su alcance previsto, \(a_r=0.8\) y su brecha es \(1-a_r=0.2\).}
 
-Esta proporción pendiente aporta a cada base física activa que comprende la inversión; su contribución a la base financiera depende, además, de la relación entre avance físico y gasto ejecutado. Las bases de \eqref{eq:base_fisica_generica}, \eqref{eq:base_rt} y \eqref{eq:base_financiera} pueden acumular contribuciones de una misma inversión. Una mayor exposición puede reforzar el esfuerzo mientras el avance responda a él; al alcanzar el máximo factible, ese canal deja de producir mejoras. El análisis deriva la exposición y determina bajo qué condiciones existe un umbral suficiente para alcanzar esa saturación.
+Esta proporción pendiente aporta a cada base física activa que comprende la inversión; su contribución a la base financiera depende, además, de la relación entre avance físico y gasto ejecutado. Las bases de \eqref{eq:base_fisica_generica}, \eqref{eq:base_fisica_focalizada}, \eqref{eq:base_rt} y \eqref{eq:base_financiera} pueden acumular contribuciones de una misma inversión. Una mayor exposición puede reforzar el esfuerzo mientras el avance responda a él; al alcanzar el máximo factible, ese canal deja de producir mejoras. El análisis deriva la exposición y determina bajo qué condiciones existe un umbral suficiente para alcanzar esa saturación.
 
 Para separar la contribución de una inversión a la multa, se mantienen fijos \(g_r\), las demás decisiones y los indicadores \(\mathbf1\{c_j<1\}\), \(\mathbf1\{c_{RT}<1\}\), \(d_F^m\) y \(\chi^m\). Sea \(B_{\mathrm{fis}}^m\) la suma de las bases físicas aplicables al esquema, incluida \(B_{RT}\) cuando corresponde, y sea \(\eta_F^m\in\{0,1\}\) el indicador de inclusión de la base financiera. La regla común de cuantificación, cuyas bases específicas se detallan en la Subsección~4.2, es
 
@@ -458,7 +473,7 @@ M^m=\chi^m\,\mathrm{WACC}
 \left(B_{\mathrm{fis}}^m+\eta_F^m B_{\mathrm{fin}}^m\right),
 \end{equation}
 
-donde \(\mathrm{WACC}>0\) es la tasa utilizada para cuantificar la multa sobre las bases monetarias. Por \eqref{eq:base_fisica_generica} y \eqref{eq:base_rt}, cada base física activa que comprende \(r\) aporta \(\bar I_r(1-a_r)\). Si \(\delta_r^m\) cuenta dichas bases, su suma se separa como
+donde \(\mathrm{WACC}>0\) es la tasa utilizada para cuantificar la multa sobre las bases monetarias. Por \eqref{eq:base_fisica_generica}, \eqref{eq:base_fisica_focalizada} y \eqref{eq:base_rt}, cada base física activa que comprende \(r\) aporta \(\bar I_r(1-a_r)\). Si \(\delta_r^m\) cuenta dichas bases, su suma se separa como
 
 \begin{equation}
 \label{eq:separacion_base_fisica_r}
