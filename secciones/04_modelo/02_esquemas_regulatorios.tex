@@ -2,7 +2,7 @@
 
 Esta subsección especifica los cinco diseños regulatorios considerados en el modelo. El esquema \(A_0\) constituye el punto de referencia institucional, mientras que \(A\), \(A'\), \(A''\) y \(B\) introducen modificaciones sucesivas en cuatro dimensiones: la composición del ICG, el universo utilizado para verificar el avance financiero, la regla de activación de las consecuencias pecuniarias y la forma de verificación aplicable a las intervenciones de \(R^{F}\). La tecnología de ejecución, la producción de resultados, el tratamiento del ahorro y las bases definidas en la Subsección~4.1 son comunes a todos los diseños.
 
-La transición \(A_0\to A\) modifica simultáneamente varias dimensiones y se utiliza como \textit{benchmark} institucional. En cambio, la secuencia \(A\to A'\to A''\to B\) introduce cambios más acotados: \(A\to A'\) elimina el umbral agregado de activación; \(A'\to A''\) retira el avance financiero focalizado del ICG y sustituye su verificación por indicadores físicos o funcionales; y \(A''\to B\) concentra el ICG en los resultados del servicio. De acuerdo con la estructura de la Subsección~4.1, \(ICG^m\), \(\chi^m\) y \(M^m\) se evalúan para los niveles de cumplimiento correspondientes a cada esquema.
+La transición \(A_0\to A\) modifica simultáneamente varias dimensiones y se utiliza como \textit{benchmark} institucional. En cambio, la secuencia \(A\to A'\to A''\to B\) introduce cambios más acotados: \(A\to A'\) elimina el umbral agregado de activación; \(A'\to A''\) sustituye la medición financiera del avance focalizado por una física, manteniendo ese bloque en el ICG y en la señal pública; y \(A''\to B\) retira tanto \(C_G\) como el avance físico focalizado y concentra el ICG en los resultados del servicio. De acuerdo con la estructura de la Subsección~4.1, \(ICG^m\), \(\chi^m\) y \(M^m\) se evalúan para los niveles de cumplimiento correspondientes a cada esquema.
 
 \subsubsection{Definición de los esquemas}
 
@@ -23,7 +23,7 @@ n_S+n_G+1,
 \\
 N^{A''}
 &=
-n_S+n_G,
+n_S+n_G+1,
 &
 N^{B}
 &=
@@ -31,7 +31,7 @@ n_S.
 \end{aligned}
 \end{equation}
 
-Los dos componentes adicionales de \(A_0\) son el avance financiero general \(f_R\) y la relación de trabajo \(c_{RT}\); \(A\) y \(A'\) mantienen únicamente el avance financiero focalizado \(f_F\) además de los indicadores de \(J^{S}\) y \(J^{G}\). En \(A''\) permanecen solo estos dos grupos de indicadores y, en \(B\), únicamente los resultados del servicio.
+Los dos componentes adicionales de \(A_0\) son el avance financiero general \(f_R\) y la relación de trabajo \(c_{RT}\); \(A\) y \(A'\) mantienen únicamente el avance financiero focalizado \(f_F\) además de los indicadores de \(J^{S}\) y \(J^{G}\). En \(A''\), el avance físico focalizado \(f_F^{\mathrm{fis}}\) sustituye a \(f_F\) como un único indicador adicional; en \(B\) permanecen únicamente los resultados del servicio.
 
 La representación agregada es equivalente al promedio de los indicadores individuales. Para \(H\in\{S,G\}\),
 
@@ -54,7 +54,7 @@ ICG^{A} &= \frac{n_S}{N^{A}}C_S+\frac{n_G}{N^{A}}C_G+\frac{1}{N^{A}}f_F,
 \label{eq:icg_a}\\
 ICG^{A'} &= ICG^{A},
 \label{eq:icg_ap}\\
-ICG^{A''} &= \frac{n_S}{N^{A''}}C_S+\frac{n_G}{N^{A''}}C_G,
+ICG^{A''} &= \frac{n_S}{N^{A''}}C_S+\frac{n_G}{N^{A''}}C_G+\frac{1}{N^{A''}}f_F^{\mathrm{fis}},
 \label{eq:icg_app}\\
 ICG^{B} &= C_S.
 \label{eq:icg_b}
@@ -78,7 +78,7 @@ Para el canal reputacional definido en la Subsección~4.1, se distingue esta pon
 \\
 \mathrm{Sig}^{A''}
 &=
-\{S,G\},
+\{S,G,F\},
 &
 \mathrm{Sig}^{B}
 &=
@@ -88,7 +88,7 @@ Para el canal reputacional definido en la Subsección~4.1, se distingue esta pon
 
 Las ponderaciones reputacionales \(\alpha_H^m\) se obtienen, por tanto, a partir de las saliencias \(s_H\) definidas en la Subsección~4.1 y no de los cocientes \(n_H/N^m\). Estos últimos continúan siendo exclusivamente las ponderaciones regulatorias del ICG.
 
-La reasignación de ponderaciones es, por tanto, una consecuencia mecánica de la salida de indicadores del ICG. En particular,
+La salida de indicadores del ICG reasigna sus ponderaciones regulatorias, mientras que sustituir la medición de un indicador sin retirarlo conserva el número de componentes. En particular,
 
 \begin{equation}
 \label{eq:reasignacion_pesos_icg}
@@ -97,15 +97,15 @@ La reasignación de ponderaciones es, por tanto, una consecuencia mecánica de l
 \frac{n_S}{N^{A_0}},
 \qquad
 \frac{n_S}{N^{A''}}
->
+=
 \frac{n_S}{N^{A'}},
 \qquad
 \frac{n_G}{N^{A''}}
->
+=
 \frac{n_G}{N^{A'}}.
 \end{equation}
 
-siempre que \(n_S>0\) y \(n_G>0\). Así, \(A_0\to A\) incrementa el peso regulatorio relativo de los resultados del servicio dentro del ICG; \(A'\to A''\) incrementa simultáneamente los pesos regulatorios relativos de \(C_S\) y \(C_G\); y \(A''\to B\) concentra el ICG en \(C_S\). La estática comparada de la Subsección~4.3 distinguirá estas ponderaciones regulatorias de las ponderaciones reputacionales \(\alpha_H^m\).
+siempre que \(n_S>0\) y \(n_G>0\). Así, \(A_0\to A\) incrementa el peso regulatorio relativo de los resultados del servicio dentro del ICG; \(A'\to A''\) mantiene los pesos regulatorios de \(C_S\) y \(C_G\); y \(A''\to B\) concentra el ICG en \(C_S\). La estática comparada de la Subsección~4.3 distinguirá estas ponderaciones regulatorias de las ponderaciones reputacionales \(\alpha_H^m\).
 
 La verificación financiera se aplica únicamente en \(A_0\), \(A\) y \(A'\). De acuerdo con la notación de la Subsección~4.1,
 
@@ -122,7 +122,7 @@ f^{A}=f^{A'}&=f_F,
 \end{aligned}
 \end{equation}
 
-En \(A''\) y \(B\), las intervenciones de \(R^{F}\) se verifican mediante indicadores específicos de \(J^{F}\) sobre su cumplimiento físico o funcional. Para identificar compactamente la presencia de una base financiera se mantiene
+En \(A''\) y \(B\), las mismas inversiones de \(R^{F}\) se verifican mediante el indicador único de avance físico focalizado \(f_F^{\mathrm{fis}}\), definido en \eqref{eq:avance_fisico_focalizado}. Este indicador permanece en el ICG y en la señal de \(A''\); en \(B\) conserva su verificación y su base sancionadora, pero queda fuera del índice y de la señal reputacional del modelo. Para identificar compactamente la presencia de una base financiera se mantiene
 
 \begin{equation}
 \label{eq:indicador_base_financiera}
@@ -216,7 +216,7 @@ B_S+B_G+B_F
 \end{align}
 \end{subequations}
 
-En \(A_0\), una misma intervención de \(R^{S}\) o \(R^{G}\) puede incidir en la base física correspondiente a su propia meta, en la relación de trabajo y, además, en el avance financiero general. La transición \(A_0\to A\) elimina estas dos últimas fuentes de superposición para dichas intervenciones. Por su parte, la salida de \(f_F\) en \(A''\) no elimina la exigibilidad de \(R^{F}\), sino que sustituye la referencia financiera por los indicadores específicos de \(J^{F}\). Del mismo modo, la salida de \(C_G\) en \(B\) lo retira del ICG y, bajo la composición reputacional de \eqref{eq:bloques_reputacionales_esquemas}, concentra \(P^B\) en \(C_S\), pero no modifica la exigibilidad de las metas de \(J^{G}\).
+En \(A_0\), una misma intervención de \(R^{S}\) o \(R^{G}\) puede incidir en la base física correspondiente a su propia meta, en la relación de trabajo y, además, en el avance financiero general. La transición \(A_0\to A\) elimina estas dos últimas fuentes de superposición para dichas intervenciones. Por su parte, \(A''\) conserva el bloque focalizado en el ICG y sustituye su medición financiera por la física, sin eliminar la exigibilidad de \(R^{F}\). La salida de \(C_G\) y \(f_F^{\mathrm{fis}}\) en \(B\) concentra el ICG y, bajo \eqref{eq:bloques_reputacionales_esquemas}, \(P^B\) en \(C_S\), pero no modifica la exigibilidad de las metas de \(J^{G}\) ni del avance físico focalizado.
 
 \subsubsection{Exposición sancionadora por esquema}
 
@@ -296,7 +296,7 @@ Meta propia para \(R^{S}\cup R^{G}\); \(R^{F}\) se verifica financieramente.
 &
 \(\delta_r^m\leq1\)
 &
-Meta propia para \(R^{S}\cup R^{G}\) e indicador específico de \(J^{F}\) para \(R^{F}\).
+Meta propia para \(R^{S}\cup R^{G}\) e indicador físico focalizado para \(R^{F}\).
 \\
 
 \hline
@@ -332,9 +332,9 @@ La Tabla~\ref{tab:resumen_esquemas_regulatorios} resume las diferencias instituc
 
 \begin{tabularx}{\textwidth}{
 @{}
->{\centering\arraybackslash}p{0.045\textwidth}
+>{\centering\arraybackslash}p{0.07\textwidth}
 >{\centering\arraybackslash}p{0.105\textwidth}
->{\centering\arraybackslash}p{0.225\textwidth}
+>{\centering\arraybackslash}p{0.20\textwidth}
 >{\centering\arraybackslash}p{0.105\textwidth}
 >{\centering\arraybackslash}p{0.145\textwidth}
 >{\centering\arraybackslash}p{0.12\textwidth}
@@ -365,11 +365,11 @@ La Tabla~\ref{tab:resumen_esquemas_regulatorios} resume las diferencias instituc
 \(\displaystyle n_S+n_G+2\)
 &
 \(\displaystyle
-\frac{n_S}{N^{A_0}}C_S
-+
-\frac{n_G}{N^{A_0}}C_G
-+
-\frac{f_R+c_{RT}}{N^{A_0}}
+\begin{gathered}
+\frac{n_S C_S+n_G C_G}{N^{A_0}}
+\\
++\frac{f_R+c_{RT}}{N^{A_0}}
+\end{gathered}
 \)
 &
 \(R\)
@@ -381,10 +381,11 @@ La Tabla~\ref{tab:resumen_esquemas_regulatorios} resume las diferencias instituc
 \)
 &
 \(\displaystyle
-\chi^{A_0}\mathrm{WACC}
-\left(
-B_S+B_G+B_{RT}+B_{\mathrm{fin}}^{A_0}
-\right)
+\begin{aligned}
+&\chi^{A_0}\mathrm{WACC}\bigl(B_S+B_G
+\\
+&\qquad+B_{RT}+B_{\mathrm{fin}}^{A_0}\bigr)
+\end{aligned}
 \)
 \\[8pt]
 
@@ -393,11 +394,11 @@ B_S+B_G+B_{RT}+B_{\mathrm{fin}}^{A_0}
 \(\displaystyle n_S+n_G+1\)
 &
 \(\displaystyle
-\frac{n_S}{N^{A}}C_S
-+
-\frac{n_G}{N^{A}}C_G
-+
-\frac{f_F}{N^{A}}
+\begin{gathered}
+\frac{n_S C_S+n_G C_G}{N^{A}}
+\\
++\frac{f_F}{N^{A}}
+\end{gathered}
 \)
 &
 \(R^{F}\)
@@ -409,10 +410,11 @@ B_S+B_G+B_{RT}+B_{\mathrm{fin}}^{A_0}
 \)
 &
 \(\displaystyle
-\chi^{A}\mathrm{WACC}
-\left(
-B_S+B_G+B_{\mathrm{fin}}^{A}
-\right)
+\begin{aligned}
+&\chi^{A}\mathrm{WACC}\bigl(B_S+B_G
+\\
+&\qquad+B_{\mathrm{fin}}^{A}\bigr)
+\end{aligned}
 \)
 \\[8pt]
 
@@ -431,34 +433,38 @@ ICG^{A}
 \(1\)
 &
 \(\displaystyle
-\mathrm{WACC}
-\left(
-B_S+B_G+B_{\mathrm{fin}}^{A'}
-\right)
+\begin{aligned}
+&\mathrm{WACC}\bigl(B_S+B_G
+\\
+&\qquad+B_{\mathrm{fin}}^{A'}\bigr)
+\end{aligned}
 \)
 \\[8pt]
 
 \(A''\)
 &
-\(\displaystyle n_S+n_G\)
+\(\displaystyle n_S+n_G+1\)
 &
 \(\displaystyle
-\frac{n_S}{N^{A''}}C_S
-+
-\frac{n_G}{N^{A''}}C_G
+\begin{gathered}
+\frac{n_S C_S+n_G C_G}{N^{A''}}
+\\
++\frac{f_F^{\mathrm{fis}}}{N^{A''}}
+\end{gathered}
 \)
 &
 ---
 &
-\(J^{S},\,J^{G},\,J^{F}\)
+\(J^{S},\,J^{G},\,f_F^{\mathrm{fis}}\)
 &
 \(1\)
 &
 \(\displaystyle
-\mathrm{WACC}
-\left(
-B_S+B_G+B_F
-\right)
+\begin{aligned}
+&\mathrm{WACC}\bigl(B_S+B_G
+\\
+&\qquad+B_F\bigr)
+\end{aligned}
 \)
 \\[8pt]
 
@@ -472,15 +478,16 @@ C_S
 &
 ---
 &
-\(J^{S},\,J^{G},\,J^{F}\)
+\(J^{S},\,J^{G},\,f_F^{\mathrm{fis}}\)
 &
 \(1\)
 &
 \(\displaystyle
-\mathrm{WACC}
-\left(
-B_S+B_G+B_F
-\right)
+\begin{aligned}
+&\mathrm{WACC}\bigl(B_S+B_G
+\\
+&\qquad+B_F\bigr)
+\end{aligned}
 \)
 \\
 
@@ -492,7 +499,7 @@ B_S+B_G+B_F
 \begin{minipage}{0.98\textwidth}
 \raggedright
 \footnotesize
-\textit{Nota:} \(N^m\) es el número de indicadores incluidos en el ICG; sus ponderaciones regulatorias son distintas de las reputacionales \(\alpha_H^m\). En \(A''\) y \(B\), la verificación financiera se sustituye por la evaluación del cumplimiento físico o funcional mediante \(J^{F}\).
+\textit{Nota:} \(N^m\) es el número de indicadores incluidos en el ICG; sus ponderaciones regulatorias son distintas de las reputacionales \(\alpha_H^m\). En \(A''\) y \(B\), la verificación financiera se sustituye por el indicador físico focalizado, que permanece en el ICG y en la señal de \(A''\), pero se retira de ambos en \(B\).
 \end{minipage}
 
 \end{table*}
