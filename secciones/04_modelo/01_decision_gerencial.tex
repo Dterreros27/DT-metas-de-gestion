@@ -6,21 +6,17 @@ Para definir ese entorno, el programa de inversiones \(R\) se particiona en tres
 
 \subsubsection{Ejecución física, resultados y cumplimiento}
 
-La ejecución de cada inversión se caracteriza por una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\), que determina el avance físico, entendido como la proporción de la magnitud física programada que ha sido ejecutada, y un esfuerzo de eficiencia \(g_r\), que reduce los recursos necesarios para alcanzar una magnitud dada. El grado de avance físico y la magnitud ejecutada se representan como
-
+La ejecución de cada inversión se caracteriza por una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\), que determina el avance físico, entendido como la proporción de la magnitud física programada que ha sido ejecutada. El grado de avance \(a_r\) y la magnitud ejecutada \(F_r\) se representan como
 \begin{equation}
 \label{eq:ejecucion_fisica}
-a_r=a_r(e_r),
+a_r=a_r(e_r),\quad 0\leq a_r\leq1,
 \qquad
 F_r=\bar F_r a_r.
 \end{equation}
 
-Por definición, \(0\leq a_r\leq1\). El esfuerzo de eficiencia reduce los recursos necesarios para alcanzar una magnitud física dada, sin modificar directamente el avance físico. Esta representación reducida no atribuye al esfuerzo gerencial una interpretación causal exclusiva de la ejecución.
+En cuanto a la factibilidad de la ejecución, el programa de inversiones y los recursos destinados a financiarlo son evaluados por el regulador al aprobar el estudio tarifario. Sobre esta base, se supone que el monto programado \(\bar I_r\) es suficiente, bajo las condiciones consideradas en dicha evaluación, para ejecutar la magnitud física prevista \(\bar F_r\). Esta suficiencia hace factible la culminación, \(a_r=1\), pero no garantiza que el gerente elija el esfuerzo necesario para alcanzarla: los incentivos pueden resultar insuficientes aun cuando no exista una restricción financiera.
 
-El programa de inversiones y los recursos destinados a financiarlo son evaluados por el regulador al aprobar el estudio tarifario. Por ello, el escenario base supone que el monto programado \(\bar I_r\) es suficiente, bajo las condiciones consideradas en dicha evaluación, para ejecutar la magnitud física prevista \(\bar F_r\). Esta suficiencia hace factible la culminación, \(a_r=1\), pero no garantiza que el gerente elija el esfuerzo necesario para alcanzarla. El caso de ejecución incompleta con recursos suficientes permanece dentro del escenario base: los incentivos pueden resultar insuficientes aun cuando no exista una restricción financiera. Si la inversión culmina, el gasto efectivo puede ser inferior a \(\bar I_r\) cuando la empresa ejecuta con mayor eficiencia.
-
-Se supone que existe un nivel finito de esfuerzo de culminación \(e_r^{\mathrm{sat}}\), antes del cual el esfuerzo incrementa el avance físico a una tasa no creciente. A partir de ese nivel, la inversión está completa y el avance permanece igual a uno:
-
+Para caracterizar cómo el esfuerzo permite alcanzar esa culminación, se supone que existe un nivel finito \(e_r^{\mathrm{sat}}\), antes del cual el esfuerzo incrementa el avance físico a una tasa no creciente. A partir de ese nivel, la inversión está completa y el avance permanece igual a uno:
 \begin{equation}
 \label{eq:saturacion_probabilidad}
 \begin{aligned}
@@ -31,9 +27,7 @@ a_r(e_r)=1
 \end{aligned}
 \end{equation}
 
-Se supone, además, que \(a_r(\cdot)\) es continua en \(e_r^{\mathrm{sat}}\), de modo que el avance alcanza uno sin saltos. La saturación coincide con la culminación de la inversión. Mientras \(a_r<1\), persiste un margen de ejecución que puede responder al esfuerzo; que dicho margen exista no implica que los incentivos induzcan al gerente a aprovecharlo.
-
-Para cada \(j\in J^{H}\), con \(H\in\{S,G\}\), \(R_j^{H}\subseteq R^{H}\) reúne las inversiones vinculadas con el indicador \(j\). Para simplificar el análisis, cada inversión de estos dos grupos se asigna a un único indicador y los subconjuntos \(R_j^{H}\) particionan \(R^{H}\).
+Además, en el punto de culminación se supone que \(a_r(\cdot)\) es continua, de modo que el avance alcanza uno sin saltos. Así, la saturación coincide con la culminación de la inversión, mientras que, para \(a_r<1\), persiste un margen de ejecución que puede responder al esfuerzo.
 
 Para las inversiones pertenecientes a \(R^{S}\), la magnitud física ejecutada contribuye a la producción de resultados del servicio. Sea \(q_j\) el resultado correspondiente a \(j\in J^{S}\), orientado de manera que un mayor valor represente un mejor desempeño:
 
