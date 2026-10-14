@@ -77,10 +77,13 @@
 %=================================================================
 \usepackage[most]{tcolorbox}
 
+\usepackage[most]{tcolorbox}
+
 \newtcolorbox[
   auto counter
 ]{resultadobox}[1]{
   enhanced,
+  breakable,
   colback=white,
   colframe=black,
   boxrule=0.5pt,
@@ -197,7 +200,7 @@ Metas de gestión, metas de desempeño, separación de instrumentos, incentivos 
 
 
 \maketitle
-
+%\raggedbottom
 %=================================================================
 % Numeración de notas al pie del cuerpo del artículo
 %=================================================================
