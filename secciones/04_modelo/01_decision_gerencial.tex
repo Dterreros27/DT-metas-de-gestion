@@ -25,7 +25,7 @@ El alcance de la verificación financiera varía según el esquema: en \(A_0\) c
 
 \subsubsection{Ejecución física, resultados y cumplimiento}
 
-La ejecución de cada inversión se caracteriza por una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\), que determina el avance físico, entendido como la proporción de la magnitud física programada que ha sido ejecutada. El grado de avance \(a_r\) y la magnitud ejecutada \(F_r\) se representan como:
+La ejecución de cada inversión se caracteriza por una magnitud física programada \(\bar F_r>0\) y un monto de inversión programado \(\bar I_r>0\). Para cada \(r\in R\), el gerente elige un esfuerzo de ejecución \(e_r\), que determina el avance físico, y un esfuerzo de eficiencia \(g_r\), que reduce los recursos necesarios para alcanzar una magnitud dada. El grado de avance físico y la magnitud ejecutada se representan como
 
 \begin{equation}
 \label{eq:ejecucion_fisica}
@@ -34,9 +34,9 @@ a_r=a_r(e_r),
 F_r=\bar F_r a_r.
 \end{equation}
 
-Por definición, \(0\leq a_r\leq1\). Esta representación reducida no atribuye al esfuerzo gerencial una interpretación causal exclusiva de la ejecución.
+Por definición, \(0\leq a_r\leq1\). El esfuerzo de eficiencia reduce los recursos necesarios para alcanzar una magnitud física dada, sin modificar directamente el avance físico. Esta representación reducida no atribuye al esfuerzo gerencial una interpretación causal exclusiva de la ejecución.
 
-El programa de inversiones y los recursos destinados a financiarlo son evaluados por el regulador al aprobar el estudio tarifario. Por ello, el escenario base supone que el monto programado \(\bar I_r\) es suficiente, bajo las condiciones consideradas en dicha evaluación, para ejecutar la magnitud física prevista \(\bar F_r\). Esta suficiencia hace factible la culminación, \(a_r=1\), pero no garantiza que el gerente elija el esfuerzo necesario para alcanzarla. El caso de ejecución incompleta con recursos suficientes permanece dentro del escenario base: los incentivos pueden resultar insuficientes aun cuando no exista una restricción financiera.
+El programa de inversiones y los recursos destinados a financiarlo son evaluados por el regulador al aprobar el estudio tarifario. Por ello, el escenario base supone que el monto programado \(\bar I_r\) es suficiente, bajo las condiciones consideradas en dicha evaluación, para ejecutar la magnitud física prevista \(\bar F_r\). Esta suficiencia hace factible la culminación, \(a_r=1\), pero no garantiza que el gerente elija el esfuerzo necesario para alcanzarla. El caso de ejecución incompleta con recursos suficientes permanece dentro del escenario base: los incentivos pueden resultar insuficientes aun cuando no exista una restricción financiera. Si la inversión culmina, el gasto efectivo puede ser inferior a \(\bar I_r\) cuando la empresa ejecuta con mayor eficiencia.
 
 Se supone que existe un nivel finito de esfuerzo de culminación \(e_r^{\mathrm{sat}}\), antes del cual el esfuerzo incrementa el avance físico a una tasa no creciente. A partir de ese nivel, la inversión está completa y el avance permanece igual a uno:
 
@@ -109,7 +109,7 @@ Esta especificación asigna el mismo peso a todos los indicadores de cada grupo.
 
 \subsubsection{Ejecución financiera, relación de trabajo y ahorro}
 
-Además del esfuerzo de ejecución \(e_r\), el gerente elige un esfuerzo de eficiencia \(g_r\), que reduce los recursos necesarios para alcanzar una magnitud física dada, sin modificar directamente el avance físico. Para distinguir la inversión de los recursos destinados a su ejecución, \(I_r\) denota el monto ejecutado en la inversión \(r\). Este monto depende de la magnitud física alcanzada y del esfuerzo de eficiencia. El grado de ejecución financiera \(f_r\) se define como la proporción de los recursos programados que ha sido ejecutada:
+Además del esfuerzo destinado a completar físicamente cada inversión, el gerente decide cuánto esfuerzo dedicar a reducir los recursos necesarios para ejecutarla. Para distinguir la inversión de los recursos destinados a su ejecución, \(I_r\) denota el monto ejecutado en la inversión \(r\). Este monto depende de la magnitud física alcanzada y del esfuerzo de eficiencia \(g_r\). El grado de ejecución financiera \(f_r\) se define como la proporción de los recursos programados que ha sido ejecutada:
 
 \begin{equation}
 \label{eq:inversion_ejecutada}
